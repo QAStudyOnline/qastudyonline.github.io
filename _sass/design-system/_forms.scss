@@ -1,0 +1,159 @@
+// Form component system
+
+.form-group {
+  margin-bottom: $space-6;
+}
+
+.form-label {
+  display: inline-block;
+  margin-bottom: $space-2;
+  font-weight: $font-weight-medium;
+  color: $gray-700;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  padding: $space-3 $space-4;
+  font-size: $font-size-base;
+  font-weight: $font-weight-normal;
+  line-height: $line-height-normal;
+  color: $gray-900;
+  background-color: $white;
+  background-clip: padding-box;
+  border: 1px solid $gray-300;
+  border-radius: $radius-md;
+  transition: $transition-all;
+
+  &:focus {
+    color: $gray-900;
+    background-color: $white;
+    border-color: $primary-500;
+    outline: 0;
+    box-shadow: 0 0 0 3px rgba($primary-500, 0.1);
+  }
+
+  &::placeholder {
+    color: $gray-500;
+    opacity: 1;
+  }
+
+  &:disabled {
+    background-color: $gray-100;
+    opacity: 1;
+  }
+}
+
+.form-select {
+  @extend .form-control;
+  
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+  background-position: right $space-3 center;
+  background-repeat: no-repeat;
+  background-size: 16px 12px;
+  padding-right: $space-10;
+}
+
+.form-check {
+  display: block;
+  min-height: $space-6;
+  padding-left: $space-6;
+  margin-bottom: $space-3;
+}
+
+.form-check-input {
+  width: 1em;
+  height: 1em;
+  margin-top: 0.25em;
+  margin-left: -$space-6;
+  vertical-align: top;
+  background-color: $white;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border: 1px solid $gray-300;
+  appearance: none;
+  color-adjust: exact;
+
+  &[type="checkbox"] {
+    border-radius: $radius-sm;
+  }
+
+  &[type="radio"] {
+    border-radius: 50%;
+  }
+
+  &:active {
+    filter: brightness(90%);
+  }
+
+  &:focus {
+    border-color: $primary-500;
+    outline: 0;
+    box-shadow: 0 0 0 3px rgba($primary-500, 0.1);
+  }
+
+  &:checked {
+    background-color: $primary-600;
+    border-color: $primary-600;
+  }
+
+  &:checked[type="checkbox"] {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='white'%3e%3cpath fill-rule='evenodd' d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z' clip-rule='evenodd'/%3e%3c/svg%3e");
+  }
+
+  &:checked[type="radio"] {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='white'/%3e%3c/svg%3e");
+  }
+}
+
+.form-check-label {
+  color: $gray-700;
+  cursor: pointer;
+}
+
+// Form sizes
+.form-control-sm {
+  padding: $space-2 $space-3;
+  font-size: $font-size-sm;
+}
+
+.form-control-lg {
+  padding: $space-4 $space-5;
+  font-size: $font-size-lg;
+}
+
+// Form validation
+.is-valid {
+  border-color: $success;
+
+  &:focus {
+    border-color: $success;
+    box-shadow: 0 0 0 3px rgba($success, 0.1);
+  }
+}
+
+.is-invalid {
+  border-color: $error;
+
+  &:focus {
+    border-color: $error;
+    box-shadow: 0 0 0 3px rgba($error, 0.1);
+  }
+}
+
+.valid-feedback {
+  display: block;
+  width: 100%;
+  margin-top: $space-1;
+  font-size: $font-size-sm;
+  color: $success;
+}
+
+.invalid-feedback {
+  display: block;
+  width: 100%;
+  margin-top: $space-1;
+  font-size: $font-size-sm;
+  color: $error;
+} 

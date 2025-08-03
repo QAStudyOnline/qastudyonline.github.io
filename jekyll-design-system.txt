@@ -1,0 +1,3269 @@
+## 📦 Dependencies
+
+### Required Gems
+- jekyll (~> 4.3.0)
+- jekyll-feed
+- jekyll-sitemap
+- jekyll-seo-tag
+
+### Development Dependencies
+- minima theme (customized)
+- sass processor
+- rouge syntax highlighter
+
+## 🎛️ Configuration Options
+
+### Site Settings (_config.yml)
+```yaml
+# Brand customization
+brand:
+  name: "Your Site Name"
+  tagline: "Your Tagline"
+  logo: "/assets/images/logo.svg"
+
+# Navigation menu
+navigation:
+  - name: "Courses"
+    url: "/courses/"
+    dropdown:
+      - name: "Manual Testing"
+        url: "/courses/manual-testing/"
+
+# Footer configuration
+footer:
+  sections:
+    - title: "Learn"
+      links:
+        - name: "Manual Testing"
+          url: "/courses/manual-testing/"
+```
+
+### Color Customization
+```scss
+// Primary color palette (edit in _variables.scss)
+$primary-50: #f3f0ff;   // Lightest
+$primary-600: #7c3aed;  // Main brand color
+$primary-900: #4c1d95;  // Darkest
+```
+
+## 🧩 Component Usage
+
+### Buttons
+```html
+<a href="#" class="btn btn-primary">Primary Button</a>
+<a href="#" class="btn btn-secondary">Secondary Button</a>
+<a href="#" class="btn btn-outline">Outline Button</a>
+<a href="#" class="btn btn-ghost">Ghost Button</a>
+
+<!-- Button sizes -->
+<a href="#" class="btn btn-primary btn-sm">Small</a>
+<a href="#" class="btn btn-primary btn-lg">Large</a>
+```
+
+### Cards
+```html
+<div class="card">
+  <div class="card-header">
+    <h3 class="card-title">Card Title</h3>
+  </div>
+  <div class="card-body">
+    <p class="card-text">Card content goes here.</p>
+  </div>
+  <div class="card-footer">
+    <a href="#" class="btn btn-primary">Action</a>
+  </div>
+</div>
+```
+
+### Forms
+```html
+<form>
+  <div class="form-group">
+    <label class="form-label">Email</label>
+    <input type="email" class="form-control" required>
+  </div>
+  <div class="form-group">
+    <label class="form-label">Message</label>
+    <textarea class="form-control" rows="4"></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+```
+
+### Grid System
+```html
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+  <div class="card">Content 1</div>
+  <div class="card">Content 2</div>
+  <div class="card">Content 3</div>
+</div>
+```
+
+## 📄 Page Types
+
+### Homepage (index.md)
+- Hero section with CTA
+- Featured courses grid
+- Skills/certifications overview
+- Testimonials section
+
+### Course Pages (_courses/filename.md)
+- Course header with metadata
+- Curriculum/syllabus
+- Instructor information
+- Enrollment section
+
+### Blog Posts (_posts/YYYY-MM-DD-title.md)
+- Article layout
+- Author information
+- Tags and categories
+- Related posts
+
+### Static Pages (about.md, contact.md, etc.)
+- Custom layouts available
+- Contact forms
+- Team profiles
+
+## 🎨 Styling Guidelines
+
+### Color Usage
+- **Primary**: Main brand actions, links, highlights
+- **Secondary**: Alternative actions, accent elements
+- **Gray**: Text, borders, backgrounds
+- **Semantic**: Success (green), warning (yellow), error (red)
+
+### Typography
+- **Headings**: Use h1-h6 or .h1-.h6 classes
+- **Body**: Default font-size is 16px (1rem)
+- **Small text**: Use .text-small or .text-xs
+- **Colors**: .text-primary, .text-gray, .text-white
+
+### Spacing
+- **Consistent**: Use spacing scale (1-32)
+- **Responsive**: Adjust spacing for different screens
+- **Utilities**: .mt-4, .p-6, .mx-auto, etc.
+
+## 📱 Mobile Optimization
+
+### Responsive Design
+- Mobile-first approach
+- Flexible grid system
+- Touch-friendly interface
+- Optimized images
+
+### Mobile Navigation
+- Hamburger menu
+- Slide-out navigation
+- Touch gestures
+- Swipe interactions
+
+## 🔍 SEO Features
+
+### Built-in SEO
+- jekyll-seo-tag plugin
+- Automatic meta tags
+- Open Graph support
+- Twitter Cards
+- Schema markup
+
+### Content SEO
+- Semantic HTML structure
+- Proper heading hierarchy
+- Alt text for images
+- Descriptive URLs
+
+## 🚀 Performance
+
+### Optimization
+- Minified CSS/JS
+- Optimized images
+- Lazy loading
+- Compressed assets
+
+### Best Practices
+- Critical CSS inlined
+- Non-blocking JS
+- CDN integration ready
+- Caching headers
+
+## 🧪 Testing
+
+### Browser Support
+- Chrome/Edge (latest 2 versions)
+- Firefox (latest 2 versions)
+- Safari (latest 2 versions)
+- Mobile browsers
+
+### Accessibility
+- WCAG 2.1 AA compliant
+- Screen reader friendly
+- Keyboard navigation
+- Color contrast checked
+
+## 🔧 Development Workflow
+
+### Local Development
+```bash
+# Install dependencies
+bundle install
+
+# Start development server
+bundle exec jekyll serve --livereload
+
+# Build for production
+JEKYLL_ENV=production bundle exec jekyll build
+```
+
+### File Organization
+```
+assets/
+├── css/
+│   └── main.scss           # Main stylesheet
+├── js/
+│   └── main.js            # Main JavaScript
+└── images/
+    ├── logo.svg           # Site logo
+    └── courses/           # Course images
+
+_sass/
+├── design-system/         # Design tokens
+│   ├── _variables.scss    # Color, spacing, typography
+│   ├── _base.scss         # Base styles, reset
+│   ├── _typography.scss   # Text styles
+│   ├── _buttons.scss      # Button components
+│   ├── _cards.scss        # Card components
+│   ├── _forms.scss        # Form elements
+│   └── _utilities.scss    # Utility classes
+├── components/            # UI components
+│   ├── _navbar.scss       # Navigation
+│   ├── _hero.scss         # Hero sections
+│   ├── _footer.scss       # Footer
+│   └── _course-grid.scss  # Course layouts
+└── layouts/               # Page-specific styles
+    ├── _default.scss      # Default layout
+    ├── _course.scss       # Course pages
+    └── _post.scss         # Blog posts
+```
+
+## 📝 Content Guidelines
+
+### Writing Style
+- Clear, concise language
+- Technical accuracy
+- Beginner-friendly explanations
+- Action-oriented CTAs
+
+### Course Content
+- Learning objectives
+- Prerequisites
+- Step-by-step instructions
+- Practical exercises
+- Assessment criteria
+
+### Blog Posts
+- SEO-optimized titles
+- Engaging introductions
+- Scannable content
+- Call-to-action endings
+
+## 🎯 Customization Examples
+
+### Custom Color Scheme
+```scss
+// In _sass/design-system/_variables.scss
+$primary-600: #9333ea;     // Change to your brand color
+$secondary-600: #06b6d4;   // Complementary color
+```
+
+### Custom Typography
+```scss
+// Custom font stack
+$font-family-sans: 'Your Font', 'Inter', sans-serif;
+
+// Custom font sizes
+$font-size-hero: 4rem;     // Large hero text
+$font-size-body: 1.125rem; // Slightly larger body text
+```
+
+### Custom Components
+```scss
+// Create new component in _sass/components/_custom.scss
+.custom-component {
+  background: linear-gradient(135deg, $primary-500, $secondary-500);
+  padding: $space-8;
+  border-radius: $radius-xl;
+  
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: $shadow-xl;
+  }
+}
+```
+
+## 🤝 Contributing
+
+### Code Style
+- Use 2 spaces for indentation
+- Follow BEM methodology for CSS
+- Semantic HTML structure
+- Mobile-first responsive design
+
+### Pull Request Process
+1. Fork the repository
+2. Create feature branch
+3. Make changes
+4. Test thoroughly
+5. Submit pull request
+
+## 📄 License
+
+This design system is released under the MIT License. Feel free to use it for your projects!
+
+## 🆘 Support
+
+### Documentation
+- Design system documentation
+- Component examples
+- Implementation guides
+
+### Community
+- GitHub Issues for bugs
+- Discussions for questions
+- Contributing guidelines
+
+---
+
+**Ready to build your QA education platform?** 🚀
+
+This Jekyll design system provides everything you need to create a professional, modern online learning platform focused on QA and software testing education. The purple/violet color scheme creates a distinctive brand identity while maintaining excellent usability and accessibility.
+
+Start by customizing the colors and content to match your brand, then begin adding your courses and educational content!
+
+# ==========================================
+# index.md (Homepage)
+# ==========================================
+---
+layout: home
+title: "Master QA Testing Skills"
+description: "Learn quality assurance, software testing, and automation from industry experts"
+body_class: "home-page"
+
+hero:
+  title: "Master QA Testing Skills"
+  description: "Learn quality assurance, software testing, and automation from industry experts. Build your career in QA with hands-on projects and real-world experience."
+  primary_cta:
+    text: "Start Learning"
+    url: "/courses/"
+  secondary_cta:
+    text: "View Courses"
+    url: "/courses/"
+  image: "/assets/images/hero-qa-testing.jpg"
+---
+
+<section class="py-20">
+  <div class="text-center mb-16">
+    <h2 class="h2 mb-4">Explore Top QA Skills and Certifications</h2>
+    <p class="text-large text-gray-600">Top companies choose QAStudy.online to build in-demand testing skills.</p>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+    <div class="card">
+      <div class="card-body">
+        <h3 class="h4 text-primary mb-4">Manual Testing</h3>
+        <ul class="space-y-2">
+          <li><a href="/courses/test-case-design/" class="text-gray-600 hover:text-primary">Test Case Design</a></li>
+          <li><a href="/courses/bug-reporting/" class="text-gray-600 hover:text-primary">Bug Reporting</a></li>
+          <li><a href="/courses/test-planning/" class="text-gray-600 hover:text-primary">Test Planning</a></li>
+          <li><a href="/courses/uat/" class="text-gray-600 hover:text-primary">User Acceptance Testing</a></li>
+          <li><a href="/courses/exploratory-testing/" class="text-gray-600 hover:text-primary">Exploratory Testing</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-body">
+        <h3 class="h4 text-primary mb-4">Test Automation</h3>
+        <ul class="space-y-2">
+          <li><a href="/courses/selenium/" class="text-gray-600 hover:text-primary">Selenium WebDriver</a></li>
+          <li><a href="/courses/cypress/" class="text-gray-600 hover:text-primary">Cypress</a></li>
+          <li><a href="/courses/testng-junit/" class="text-gray-600 hover:text-primary">TestNG & JUnit</a></li>
+          <li><a href="/courses/api-testing/" class="text-gray-600 hover:text-primary">API Testing</a></li>
+          <li><a href="/courses/ci-cd/" class="text-gray-600 hover:text-primary">CI/CD Integration</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-body">
+        <h3 class="h4 text-primary mb-4">QA Certifications</h3>
+        <ul class="space-y-2">
+          <li><a href="/certifications/istqb/" class="text-gray-600 hover:text-primary">ISTQB Foundation</a></li>
+          <li><a href="/certifications/agile/" class="text-gray-600 hover:text-primary">Agile Testing</a></li>
+          <li><a href="/certifications/test-management/" class="text-gray-600 hover:text-primary">Test Management</a></li>
+          <li><a href="/certifications/performance/" class="text-gray-600 hover:text-primary">Performance Testing</a></li>
+          <li><a href="/certifications/security/" class="text-gray-600 hover:text-primary">Security Testing</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-body">
+        <h3 class="h4 text-primary mb-4">Career Development</h3>
+        <ul class="space-y-2">
+          <li><a href="/courses/qa-leadership/" class="text-gray-600 hover:text-primary">QA Leadership</a></li>
+          <li><a href="/courses/test-strategy/" class="text-gray-600 hover:text-primary">Test Strategy</a></li>
+          <li><a href="/courses/team-management/" class="text-gray-600 hover:text-primary">Team Management</a></li>
+          <li><a href="/courses/interview-prep/" class="text-gray-600 hover:text-primary">Interview Preparation</a></li>
+          <li><a href="/courses/portfolio/" class="text-gray-600 hover:text-primary">Portfolio Building</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-20 bg-gray-50">
+  <div class="container">
+    <div class="text-center mb-16">
+      <h2 class="h2 mb-4">Featured Courses</h2>
+      <p class="text-large text-gray-600">Start your QA journey with our most popular courses</p>
+    </div>
+
+    <div class="course-grid">
+      <div class="course-card">
+        <div class="course-image">
+          <div class="course-image-content">Manual Testing Fundamentals</div>
+        </div>
+        <div class="course-content">
+          <div class="course-category">Beginner</div>
+          <h3 class="course-title">
+            <a href="/courses/manual-testing-bootcamp/">Complete Manual Testing Bootcamp</a>
+          </h3>
+          <p class="course-description">Learn software testing from scratch with hands-on projects and real-world scenarios.</p>
+          <div class="course-instructor">
+            <div class="instructor-avatar"></div>
+            <span>By QA Expert</span>
+          </div>
+          <div class="course-stats">
+            <div class="stat-item">
+              <svg class="icon" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path>
+              </svg>
+              8 hours
+            </div>
+            <div class="stat-item">
+              <svg class="icon" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"></path>
+              </svg>
+              42 lessons
+            </div>
+          </div>
+        </div>
+        <div class="course-meta">
+          <div class="course-rating">
+            <span class="stars">★★★★★</span>
+            <span>4.8</span>
+            <span class="rating-count">(2,845)</span>
+          </div>
+          <div class="course-price">
+            <span class="current-price">$49.99</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="course-card">
+        <div class="course-image">
+          <div class="course-image-content">Selenium Automation</div>
+        </div>
+        <div class="course-content">
+          <div class="course-category">Intermediate</div>
+          <h3 class="course-title">
+            <a href="/courses/selenium-webdriver/">Selenium WebDriver with Java</a>
+          </h3>
+          <p class="course-description">Master test automation with Selenium WebDriver and build robust test frameworks.</p>
+          <div class="course-instructor">
+            <div class="instructor-avatar"></div>
+            <span>By Automation Expert</span>
+          </div>
+          <div class="course-stats">
+            <div class="stat-item">
+              <svg class="icon" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path>
+              </svg>
+              12 hours
+            </div>
+            <div class="stat-item">
+              <svg class="icon" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"></path>
+              </svg>
+              68 lessons
+            </div>
+          </div>
+        </div>
+        <div class="course-meta">
+          <div class="course-rating">
+            <span class="stars">★★★★★</span>
+            <span>4.9</span>
+            <span class="rating-count">(1,923)</span>
+          </div>
+          <div class="course-price">
+            <span class="current-price">$79.99</span>
+            <span class="original-price">$129.99</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="course-card">
+        <div class="course-image">
+          <div class="course-image-content">API Testing</div>
+        </div>
+        <div class="course-content">
+          <div class="course-category">Intermediate</div>
+          <h3 class="course-title">
+            <a href="/courses/api-testing-postman/">API Testing with Postman & REST Assured</a>
+          </h3>
+          <p class="course-description">Learn to test APIs effectively using popular tools and frameworks.</p>
+          <div class="course-instructor">
+            <div class="instructor-avatar"></div>
+            <span>By API Testing Pro</span>
+          </div>
+          <div class="course-stats">
+            <div class="stat-item">
+              <svg class="icon" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path>
+              </svg>
+              10 hours
+            </div>
+            <div class="stat-item">
+              <svg class="icon" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"></path>
+              </svg>
+              52 lessons
+            </div>
+          </div>
+        </div>
+        <div class="course-meta">
+          <div class="course-rating">
+            <span class="stars">★★★★☆</span>
+            <span>4.7</span>
+            <span class="rating-count">(1,654)</span>
+          </div>
+          <div class="course-price">
+            <span class="current-price">$59.99</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-12">
+      <a href="/courses/" class="btn btn-primary btn-lg">View All Courses</a>
+    </div>
+  </div>
+</section>
+
+<section class="py-20">
+  <div class="container">
+    <div class="text-center mb-16">
+      <h2 class="h2 mb-4">Why Choose QAStudy.online?</h2>
+      <p class="text-large text-gray-600">Join thousands of professionals who've advanced their QA careers with us</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="text-center">
+        <div class="w-16 h-16 bg-primary-100 rounded-full d-flex align-center justify-center mx-auto mb-4">
+          <svg class="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          </svg>
+        </div>
+        <h3 class="h4 mb-3">Industry Expert Instructors</h3>
+        <p class="text-gray-600">Learn from experienced QA professionals who've worked at top tech companies.</p>
+      </div>
+
+      <div class="text-center">
+        <div class="w-16 h-16 bg-primary-100 rounded-full d-flex align-center justify-center mx-auto mb-4">
+          <svg class="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"></path>
+          </svg>
+        </div>
+        <h3 class="h4 mb-3">Hands-on Projects</h3>
+        <p class="text-gray-600">Build real-world testing projects that you can showcase in your portfolio.</p>
+      </div>
+
+      <div class="text-center">
+        <div class="w-16 h-16 bg-primary-100 rounded-full d-flex align-center justify-center mx-auto mb-4">
+          <svg class="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"></path>
+          </svg>
+        </div>
+        <h3 class="h4 mb-3">Career Support</h3>
+        <p class="text-gray-600">Get help with resume reviews, interview preparation, and job placement assistance.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+# ==========================================
+# Sample Course File: _courses/manual-testing-bootcamp.md
+# ==========================================
+---
+title: "Complete Manual Testing Bootcamp"
+description: "Learn software testing from scratch with hands-on projects and real-world scenarios. Perfect for beginners looking to start a career in QA."
+price: 49.99
+original_price: 79.99
+instructor: "Sarah Johnson"
+instructor_title: "Senior QA Engineer at Microsoft"
+rating: 4.8
+students: 2845
+duration: "8 hours"
+lessons: 42
+level: "Beginner"
+category: "Manual Testing"
+image: "/assets/images/courses/manual-testing-bootcamp.jpg"
+
+features:
+  - "Understand software testing fundamentals"
+  - "Create effective test cases and test plans"
+  - "Learn different testing types and techniques"
+  - "Master bug reporting and tracking"
+  - "Practice with real-world testing scenarios"
+  - "Get certified with course completion"
+
+requirements:
+  - "Basic computer skills"
+  - "No prior testing experience required"
+  - "Access to a computer with internet connection"
+
+curriculum:
+  - title: "Introduction to Software Testing"
+    lessons:
+      - title: "What is Software Testing?"
+        duration: "12:30"
+      - title: "Testing vs Quality Assurance"
+        duration: "8:45"
+      - title: "Software Development Life Cycle"
+        duration: "15:20"
+      - title: "Testing Life Cycle"
+        duration: "18:30"
+  - title: "Test Case Design"
+    lessons:
+      - title: "Writing Effective Test Cases"
+        duration: "22:15"
+      - title: "Test Case Components"
+        duration: "16:40"
+      - title: "Boundary Value Analysis"
+        duration: "19:25"
+      - title: "Equivalence Partitioning"
+        duration: "17:30"
+  - title: "Testing Types and Techniques"
+    lessons:
+      - title: "Functional Testing"
+        duration: "25:10"
+      - title: "Non-Functional Testing"
+        duration: "20:35"
+      - title: "Black Box Testing"
+        duration: "18:45"
+      - title: "White Box Testing"
+        duration: "22:20"
+---
+
+## Course Overview
+
+Welcome to the Complete Manual Testing Bootcamp! This comprehensive course is designed for absolute beginners who want to start a career in software testing and quality assurance.
+
+### What You'll Learn
+
+In this course, you'll master the fundamentals of manual testing through a combination of theory and hands-on practice. We'll cover everything from basic testing concepts to advanced techniques used in the industry.
+
+### Course Highlights
+
+- **Comprehensive Curriculum**: 42 lessons covering all aspects of manual testing
+- **Real-World Projects**: Practice with actual applications and scenarios
+- **Industry Best Practices**: Learn techniques used by top QA professionals
+- **Certificate of Completion**: Boost your resume with our recognized certification
+- **Lifetime Access**: Keep learning at your own pace
+
+### Who This Course Is For
+
+- Complete beginners to software testing
+- Career changers looking to enter QA
+- Developers who want to improve their testing skills
+- Students studying computer science or related fields
+
+### Prerequisites
+
+No prior experience in software testing is required. You just need:
+- Basic computer literacy
+- Willingness to learn and practice
+- Access to a computer with internet connection
+
+Start your QA career today with our comprehensive manual testing course!
+
+# ==========================================
+# courses/index.md (Courses Page)
+# ==========================================
+---
+layout: default
+title: "QA Testing Courses"
+description: "Master software testing with our comprehensive courses. From manual testing to automation, build the skills employers demand."
+---
+
+<div class="page-header bg-primary-light py-16">
+  <div class="container">
+    <h1 class="h1 text-center mb-4">QA Testing Courses</h1>
+    <p class="text-large text-center text-gray-600 max-w-3xl mx-auto">
+      Master software testing with our comprehensive courses. From manual testing to automation, build the skills employers demand.
+    </p>
+  </div>
+</div>
+
+<div class="container py-16">
+  <div class="d-flex justify-between align-center mb-8">
+    <div class="course-filters">
+      <button class="btn btn-outline btn-sm mr-2 active" data-filter="all">All Courses</button>
+      <button class="btn btn-outline btn-sm mr-2" data-filter="beginner">Beginner</button>
+      <button class="btn btn-outline btn-sm mr-2" data-filter="intermediate">Intermediate</button>
+      <button class="btn btn-outline btn-sm mr-2" data-filter="advanced">Advanced</button>
+    </div>
+    
+    <div class="course-sort">
+      <select class="form-select">
+        <option value="popular">Most Popular</option>
+        <option value="newest">Newest First</option>
+        <option value="price-low">Price: Low to High</option>
+        <option value="price-high">Price: High to Low</option>
+        <option value="rating">Highest Rated</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="course-grid">
+    {% for course in site.courses %}
+      <div class="course-card" data-level="{{ course.level | downcase }}">
+        <div class="course-image">
+          {% if course.image %}
+            <img src="{{ course.image | relative_url }}" alt="{{ course.title }}">
+          {% else %}
+            <div class="course-image-content">{{ course.title }}</div>
+          {% endif %}
+        </div>
+        <div class="course-content">
+          <div class="course-category">{{ course.level }}</div>
+          <h3 class="course-title">
+            <a href="{{ course.url | relative_url }}">{{ course.title }}</a>
+          </h3>
+          <p class="course-description">{{ course.description | truncate: 120 }}</p>
+          <div class="course-instructor">
+            <div class="instructor-avatar"></div>
+            <span>By {{ course.instructor | default: "QA Expert" }}</span>
+          </div>
+          <div class="course-stats">
+            <div class="stat-item">
+              <svg class="icon" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path>
+              </svg>
+              {{ course.duration | default: "8 hours" }}
+            </div>
+            <div class="stat-item">
+              <svg class="icon" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"></path>
+              </svg>
+              {{ course.lessons | default: "25" }} lessons
+            </div>
+          </div>
+        </div>
+        <div class="course-meta">
+          <div class="course-rating">
+            <span class="stars">★★★★★</span>
+            <span>{{ course.rating | default: "4.8" }}</span>
+            <span class="rating-count">({{ course.students | default: "1,234" }})</span>
+          </div>
+          <div class="course-price">
+            <span class="current-price">${{ course.price | default: "49.99" }}</span>
+            {% if course.original_price %}
+              <span class="original-price">${{ course.original_price }}</span>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Course filtering
+  const filterButtons = document.querySelectorAll('[data-filter]');
+  const courseCards = document.querySelectorAll('.course-card');
+  
+  filterButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      const filter = this.getAttribute('data-filter');
+      
+      // Update active button
+      filterButtons.forEach(btn => btn.classList.remove('active'));
+      this.classList.add('active');
+      
+      // Filter courses
+      courseCards.forEach(card => {
+        if (filter === 'all' || card.getAttribute('data-level') === filter) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+});
+</script>
+
+# ==========================================
+# README.md - Usage Instructions
+# ==========================================
+# QAStudy.online Jekyll Design System
+
+A comprehensive design system built for Jekyll, featuring a purple/violet color scheme inspired by Udemy's design but optimized for QA/testing education.
+
+## 🚀 Quick Start
+
+1. **Clone and Setup**
+   ```bash
+   git clone <your-repo>
+   cd qastudy-online
+   bundle install
+   ```
+
+2. **Development**
+   ```bash
+   bundle exec jekyll serve
+   # Visit http://localhost:4000
+   ```
+
+3. **Build for Production**
+   ```bash
+   bundle exec jekyll build
+   ```
+
+## 📁 Project Structure
+
+```
+├── _config.yml              # Jekyll configuration
+├── _sass/                   # SCSS files
+│   ├── design-system/       # Design tokens and base styles
+│   └── components/          # Component styles
+├── _layouts/                # Page templates
+├── _includes/               # Reusable components
+├── _courses/                # Course collection
+├── assets/                  # Static assets
+└── pages/                   # Site pages
+```
+
+## 🎨 Design System
+
+### Colors
+- **Primary**: Purple/violet shades (#8b5cf6 to #2e1065)
+- **Secondary**: Complementary purple variants
+- **Neutrals**: White, black, and gray scales
+- **Semantic**: Success, warning, error states
+
+### Typography
+- **Font**: Inter (Google Fonts)
+- **Scale**: Responsive type scale from 12px to 48px
+- **Weights**: 300-900 available
+
+### Components
+- Buttons (primary, secondary, outline, ghost)
+- Cards (default, elevated, bordered)
+- Forms (inputs, selects, validation)
+- Navigation (navbar, dropdowns, mobile menu)
+- Course grids and cards
+
+## 📝 Content Management
+
+### Adding Courses
+Create files in `_courses/` directory:
+
+```markdown
+---
+title: "Course Title"
+description: "Course description"
+price: 49.99
+instructor: "Instructor Name"
+level: "Beginner"
+duration: "8 hours"
+# ... other frontmatter
+---
+
+Course content here...
+```
+
+### Course Features
+- Automatic course grids
+- Filtering and sorting
+- Detailed course pages
+- Curriculum display
+- Instructor profiles
+
+## 🎯 Customization
+
+### Colors
+Edit `_sass/design-system/_variables.scss`:
+```scss
+$primary-600: #your-color;
+```
+
+### Layout
+Modify layouts in `_layouts/` directory for different page types.
+
+### Components
+Add new components in `_sass/components/` and import in `main.scss`.
+
+## 🔧 Features
+
+- ✅ Responsive design
+- ✅ Mobile-first approach
+- ✅ Dark mode ready
+- ✅ SEO optimized
+- ✅ Course management
+- ✅ Blog functionality
+- ✅ Contact forms
+- ✅ Social integration
+
+## 📱 Responsive Breakpoints
+
+- **Mobile**: < 640px
+- **Tablet**: 640px - 1024px
+- **Desktop**: 1024px - 1280px
+- **Large**: > 1280px
+
+## 🎨 Utility Classes
+
+Extensive utility classes for:
+- Spacing (margin, padding)
+- Typography (sizes, weights, colors)
+- Layout (flexbox, grid)
+- Display properties
+- Colors and backgrounds
+
+## 🚀 Deployment
+
+### Netlify
+1. Connect GitHub repository
+2. Build command: `bundle exec jekyll build`
+3. Publish directory: `_site`
+
+### GitHub Pages
+1. Enable GitHub Pages in repository settings
+2. Select source branch
+3. Site will be available at `username.github.io/repository`
+
+## 📦 Dependencies# QAStudy.online Jekyll Design System Structure
+# 
+# This is the complete Jekyll project structure for QAStudy.online
+# Copy each section to its respective file as indicated by the comments
+
+# ==========================================
+# _config.yml
+# ==========================================
+title: "QAStudy.online"
+description: "Master QA Testing Skills - Learn quality assurance, software testing, and automation from industry experts"
+baseurl: ""
+url: "https://qastudy.online"
+email: "info@qastudy.online"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Collections
+collections:
+  courses:
+    output: true
+    permalink: /:collection/:name/
+  instructors:
+    output: true
+    permalink: /:collection/:name/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "QAStudy Team"
+  - scope:
+      path: ""
+      type: "courses"
+    values:
+      layout: "course"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+
+# Site settings
+brand:
+  name: "QAStudy.online"
+  tagline: "Master QA Testing Skills"
+  logo: "/assets/images/logo.svg"
+
+# Navigation
+navigation:
+  - name: "Courses"
+    url: "/courses/"
+    dropdown:
+      - name: "Manual Testing"
+        url: "/courses/manual-testing/"
+      - name: "Test Automation"
+        url: "/courses/automation/"
+      - name: "API Testing"
+        url: "/courses/api-testing/"
+  - name: "QA Testing"
+    url: "/qa-testing/"
+  - name: "Automation"
+    url: "/automation/"
+  - name: "Certifications"
+    url: "/certifications/"
+  - name: "About"
+    url: "/about/"
+
+# Footer
+footer:
+  sections:
+    - title: "Learn"
+      links:
+        - name: "Manual Testing"
+          url: "/courses/manual-testing/"
+        - name: "Test Automation"
+          url: "/courses/automation/"
+        - name: "API Testing"
+          url: "/courses/api-testing/"
+        - name: "Performance Testing"
+          url: "/courses/performance/"
+    - title: "Certifications"
+      links:
+        - name: "ISTQB Foundation"
+          url: "/certifications/istqb/"
+        - name: "Agile Testing"
+          url: "/certifications/agile/"
+        - name: "Test Management"
+          url: "/certifications/management/"
+        - name: "Automation Certification"
+          url: "/certifications/automation/"
+    - title: "Support"
+      links:
+        - name: "Help Center"
+          url: "/help/"
+        - name: "Contact Us"
+          url: "/contact/"
+        - name: "Privacy Policy"
+          url: "/privacy/"
+        - name: "Terms of Service"
+          url: "/terms/"
+
+# Social
+social:
+  twitter: "qastudyonline"
+  linkedin: "qastudy-online"
+  youtube: "qastudyonline"
+  github: "qastudy-online"
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - README.md
+  - LICENSE
+  - "*.log"
+
+# ==========================================
+# Gemfile
+# ==========================================
+source "https://rubygems.org"
+
+gem "jekyll", "~> 4.3.0"
+gem "minima", "~> 2.5"
+
+group :jekyll_plugins do
+  gem "jekyll-feed", "~> 0.12"
+  gem "jekyll-sitemap"
+  gem "jekyll-seo-tag"
+end
+
+platforms :mingw, :x64_mingw, :mswin, :jruby do
+  gem "tzinfo", ">= 1", "< 3"
+  gem "tzinfo-data"
+end
+
+gem "wdm", "~> 0.1.1", :platforms => [:mingw, :x64_mingw, :mswin]
+gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
+
+# ==========================================
+# _sass/main.scss
+# ==========================================
+// Import design system
+@import 'design-system/variables';
+@import 'design-system/base';
+@import 'design-system/typography';
+@import 'design-system/buttons';
+@import 'design-system/cards';
+@import 'design-system/forms';
+@import 'design-system/utilities';
+
+// Import components
+@import 'components/navbar';
+@import 'components/hero';
+@import 'components/footer';
+@import 'components/course-grid';
+
+// Import layouts
+@import 'layouts/default';
+@import 'layouts/course';
+@import 'layouts/post';
+
+# ==========================================
+# _sass/design-system/_variables.scss
+# ==========================================
+// QAStudy.online Design System Variables
+
+// Color Palette - Purple/Violet Focus
+$primary-50: #f3f0ff;
+$primary-100: #e9e2ff;
+$primary-200: #d6c8ff;
+$primary-300: #baa3ff;
+$primary-400: #9b73ff;
+$primary-500: #8b5cf6;
+$primary-600: #7c3aed;
+$primary-700: #6d28d9;
+$primary-800: #5b21b6;
+$primary-900: #4c1d95;
+$primary-950: #2e1065;
+
+// Secondary Purple Variants
+$secondary-50: #faf5ff;
+$secondary-100: #f3e8ff;
+$secondary-200: #e9d5ff;
+$secondary-300: #d8b4fe;
+$secondary-400: #c084fc;
+$secondary-500: #a855f7;
+$secondary-600: #9333ea;
+$secondary-700: #7e22ce;
+$secondary-800: #6b21a8;
+$secondary-900: #581c87;
+
+// Neutral Colors
+$white: #ffffff;
+$black: #000000;
+$gray-50: #f9fafb;
+$gray-100: #f3f4f6;
+$gray-200: #e5e7eb;
+$gray-300: #d1d5db;
+$gray-400: #9ca3af;
+$gray-500: #6b7280;
+$gray-600: #4b5563;
+$gray-700: #374151;
+$gray-800: #1f2937;
+$gray-900: #111827;
+
+// Semantic Colors
+$success: #10b981;
+$warning: #f59e0b;
+$error: #ef4444;
+$info: $primary-500;
+
+// Typography
+$font-family-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+$font-family-mono: 'Fira Code', 'Monaco', 'Cascadia Code', 'Roboto Mono', monospace;
+
+$font-size-xs: 0.75rem;    // 12px
+$font-size-sm: 0.875rem;   // 14px
+$font-size-base: 1rem;     // 16px
+$font-size-lg: 1.125rem;   // 18px
+$font-size-xl: 1.25rem;    // 20px
+$font-size-2xl: 1.5rem;    // 24px
+$font-size-3xl: 1.875rem;  // 30px
+$font-size-4xl: 2.25rem;   // 36px
+$font-size-5xl: 3rem;      // 48px
+
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+$font-weight-extrabold: 800;
+$font-weight-black: 900;
+
+$line-height-none: 1;
+$line-height-tight: 1.25;
+$line-height-snug: 1.375;
+$line-height-normal: 1.5;
+$line-height-relaxed: 1.625;
+$line-height-loose: 2;
+
+// Spacing
+$space-0: 0;
+$space-1: 0.25rem;   // 4px
+$space-2: 0.5rem;    // 8px
+$space-3: 0.75rem;   // 12px
+$space-4: 1rem;      // 16px
+$space-5: 1.25rem;   // 20px
+$space-6: 1.5rem;    // 24px
+$space-8: 2rem;      // 32px
+$space-10: 2.5rem;   // 40px
+$space-12: 3rem;     // 48px
+$space-16: 4rem;     // 64px
+$space-20: 5rem;     // 80px
+$space-24: 6rem;     // 96px
+$space-32: 8rem;     // 128px
+
+// Border Radius
+$radius-none: 0;
+$radius-sm: 0.125rem;   // 2px
+$radius-base: 0.25rem;  // 4px
+$radius-md: 0.375rem;   // 6px
+$radius-lg: 0.5rem;     // 8px
+$radius-xl: 0.75rem;    // 12px
+$radius-2xl: 1rem;      // 16px
+$radius-3xl: 1.5rem;    // 24px
+$radius-full: 9999px;
+
+// Shadows
+$shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+$shadow-base: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+$shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+$shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+$shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+$shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+$shadow-inner: inset 0 2px 4px 0 rgb(0 0 0 / 0.05);
+
+// Breakpoints
+$breakpoint-sm: 640px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+$breakpoint-xl: 1280px;
+$breakpoint-2xl: 1536px;
+
+// Container
+$container-sm: 640px;
+$container-md: 768px;
+$container-lg: 1024px;
+$container-xl: 1280px;
+$container-2xl: 1400px;
+
+// Z-index
+$z-dropdown: 1000;
+$z-sticky: 1020;
+$z-fixed: 1030;
+$z-modal-backdrop: 1040;
+$z-modal: 1050;
+$z-popover: 1060;
+$z-tooltip: 1070;
+
+// Transitions
+$transition-none: none;
+$transition-all: all 150ms ease-in-out;
+$transition-default: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform 150ms ease-in-out;
+$transition-colors: background-color, border-color, color, fill, stroke 150ms ease-in-out;
+$transition-opacity: opacity 150ms ease-in-out;
+$transition-shadow: box-shadow 150ms ease-in-out;
+$transition-transform: transform 150ms ease-in-out;
+
+# ==========================================
+# _sass/design-system/_base.scss
+# ==========================================
+// Base styles and reset
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: $font-family-sans;
+  font-size: $font-size-base;
+  font-weight: $font-weight-normal;
+  line-height: $line-height-normal;
+  color: $gray-700;
+  background-color: $white;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// Container
+.container {
+  width: 100%;
+  max-width: $container-xl;
+  margin: 0 auto;
+  padding-left: $space-4;
+  padding-right: $space-4;
+
+  @media (min-width: $breakpoint-sm) {
+    padding-left: $space-6;
+    padding-right: $space-6;
+  }
+
+  @media (min-width: $breakpoint-lg) {
+    padding-left: $space-8;
+    padding-right: $space-8;
+  }
+}
+
+.container-sm { max-width: $container-sm; }
+.container-md { max-width: $container-md; }
+.container-lg { max-width: $container-lg; }
+.container-xl { max-width: $container-xl; }
+.container-2xl { max-width: $container-2xl; }
+
+// Links
+a {
+  color: $primary-600;
+  text-decoration: none;
+  transition: $transition-colors;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba($black, 0.1) 0%, rgba($black, 0.3) 100%);
+    z-index: 1;
+  }
+
+  .course-image-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: $space-4;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: $transition-transform;
+  }
+}
+
+.course-content {
+  padding: $space-6;
+
+  .course-category {
+    display: inline-block;
+    padding: $space-1 $space-3;
+    background-color: $primary-100;
+    color: $primary-700;
+    font-size: $font-size-xs;
+    font-weight: $font-weight-medium;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-radius: $radius-full;
+    margin-bottom: $space-3;
+  }
+
+  .course-title {
+    font-size: $font-size-lg;
+    font-weight: $font-weight-semibold;
+    color: $gray-900;
+    margin-bottom: $space-3;
+    line-height: $line-height-snug;
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: $transition-colors;
+
+      &:hover {
+        color: $primary-600;
+      }
+    }
+  }
+
+  .course-description {
+    color: $gray-600;
+    font-size: $font-size-sm;
+    line-height: $line-height-relaxed;
+    margin-bottom: $space-4;
+  }
+
+  .course-instructor {
+    display: flex;
+    align-items: center;
+    gap: $space-2;
+    margin-bottom: $space-4;
+    font-size: $font-size-sm;
+    color: $gray-500;
+
+    .instructor-avatar {
+      width: 1.5rem;
+      height: 1.5rem;
+      border-radius: $radius-full;
+      background-color: $gray-200;
+    }
+  }
+}
+
+.course-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: $space-4;
+  border-top: 1px solid $gray-200;
+
+  .course-rating {
+    display: flex;
+    align-items: center;
+    gap: $space-1;
+    font-size: $font-size-sm;
+    font-weight: $font-weight-medium;
+
+    .stars {
+      color: $warning;
+    }
+
+    .rating-count {
+      color: $gray-500;
+    }
+  }
+
+  .course-price {
+    display: flex;
+    align-items: center;
+    gap: $space-2;
+
+    .current-price {
+      font-size: $font-size-lg;
+      font-weight: $font-weight-bold;
+      color: $primary-600;
+    }
+
+    .original-price {
+      font-size: $font-size-sm;
+      color: $gray-500;
+      text-decoration: line-through;
+    }
+  }
+}
+
+.course-stats {
+  display: flex;
+  gap: $space-4;
+  margin-bottom: $space-4;
+  font-size: $font-size-sm;
+  color: $gray-500;
+
+  .stat-item {
+    display: flex;
+    align-items: center;
+    gap: $space-1;
+
+    .icon {
+      width: 1rem;
+      height: 1rem;
+    }
+  }
+}
+
+# ==========================================
+# _layouts/default.html
+# ==========================================
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  {% seo %}
+  
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  {% if site.google_analytics %}
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', '{{ site.google_analytics }}');
+    </script>
+  {% endif %}
+</head>
+<body class="{{ page.body_class }}">
+  {% include navbar.html %}
+  
+  <main>
+    {{ content }}
+  </main>
+  
+  {% include footer.html %}
+  
+  <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+</body>
+</html>
+
+# ==========================================
+# _layouts/home.html
+# ==========================================
+---
+layout: default
+---
+
+{% include hero.html %}
+
+<div class="container">
+  {{ content }}
+</div>
+
+# ==========================================
+# _layouts/course.html
+# ==========================================
+---
+layout: default
+---
+
+<div class="course-header bg-primary-light py-16">
+  <div class="container">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 align-center">
+      <div class="lg:col-span-2">
+        <div class="course-breadcrumb mb-4">
+          <nav class="text-sm">
+            <a href="/" class="text-primary hover:text-primary-dark">Home</a>
+            <span class="mx-2 text-gray-500">/</span>
+            <a href="/courses/" class="text-primary hover:text-primary-dark">Courses</a>
+            <span class="mx-2 text-gray-500">/</span>
+            <span class="text-gray-600">{{ page.title }}</span>
+          </nav>
+        </div>
+        
+        <h1 class="h1 mb-4">{{ page.title }}</h1>
+        <p class="text-large text-gray-600 mb-6">{{ page.description }}</p>
+        
+        <div class="course-meta-header d-flex align-center gap-6 mb-6">
+          <div class="rating">
+            <span class="text-warning">★★★★★</span>
+            <span class="font-medium">{{ page.rating | default: "4.8" }}</span>
+            <span class="text-gray-500">({{ page.students | default: "2,845" }} students)</span>
+          </div>
+          <div class="instructor">
+            <span class="text-gray-500">Created by</span>
+            <a href="#" class="text-primary font-medium">{{ page.instructor | default: "QA Expert" }}</a>
+          </div>
+        </div>
+        
+        <div class="course-stats d-flex gap-6 text-sm text-gray-600">
+          <div class="stat-item">
+            <svg class="icon" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path>
+            </svg>
+            {{ page.duration | default: "8 hours" }}
+          </div>
+          <div class="stat-item">
+            <svg class="icon" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"></path>
+            </svg>
+            {{ page.lessons | default: "45" }} lessons
+          </div>
+          <div class="stat-item">
+            <svg class="icon" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V4a1 1 0 112 0v6.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+            </svg>
+            {{ page.level | default: "Beginner" }}
+          </div>
+        </div>
+      </div>
+      
+      <div class="course-card-sidebar">
+        <div class="card">
+          <div class="course-image">
+            {% if page.image %}
+              <img src="{{ page.image | relative_url }}" alt="{{ page.title }}">
+            {% else %}
+              <div class="course-placeholder">{{ page.title }}</div>
+            {% endif %}
+          </div>
+          <div class="card-body">
+            <div class="course-price mb-4">
+              <span class="current-price">${{ page.price | default: "49.99" }}</span>
+              {% if page.original_price %}
+                <span class="original-price">${{ page.original_price }}</span>
+              {% endif %}
+            </div>
+            <button class="btn btn-primary btn-block mb-3">Enroll Now</button>
+            <button class="btn btn-outline btn-block">Add to Favorites</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container py-16">
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+    <div class="lg:col-span-2">
+      <div class="course-content">
+        {{ content }}
+        
+        {% if page.curriculum %}
+        <section class="curriculum mt-12">
+          <h2 class="h2 mb-6">Course Curriculum</h2>
+          <div class="curriculum-list">
+            {% for section in page.curriculum %}
+            <div class="curriculum-section card mb-4">
+              <div class="card-header">
+                <h3 class="h4">{{ section.title }}</h3>
+                <span class="text-sm text-gray-500">{{ section.lessons | size }} lessons</span>
+              </div>
+              {% if section.lessons %}
+              <div class="card-body">
+                <ul class="lesson-list">
+                  {% for lesson in section.lessons %}
+                  <li class="lesson-item d-flex justify-between align-center py-2">
+                    <span>{{ lesson.title }}</span>
+                    <span class="text-sm text-gray-500">{{ lesson.duration }}</span>
+                  </li>
+                  {% endfor %}
+                </ul>
+              </div>
+              {% endif %}
+            </div>
+            {% endfor %}
+          </div>
+        </section>
+        {% endif %}
+      </div>
+    </div>
+    
+    <div class="course-sidebar">
+      <div class="sticky" style="top: 2rem;">
+        {% if page.features %}
+        <div class="card mb-6">
+          <div class="card-header">
+            <h3 class="h4">What you'll learn</h3>
+          </div>
+          <div class="card-body">
+            <ul class="feature-list">
+              {% for feature in page.features %}
+              <li class="feature-item mb-2">
+                <svg class="icon text-success mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                {{ feature }}
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+        {% endif %}
+        
+        {% if page.requirements %}
+        <div class="card">
+          <div class="card-header">
+            <h3 class="h4">Requirements</h3>
+          </div>
+          <div class="card-body">
+            <ul class="requirement-list">
+              {% for requirement in page.requirements %}
+              <li class="requirement-item mb-2">{{ requirement }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+
+# ==========================================
+# _layouts/post.html
+# ==========================================
+---
+layout: default
+---
+
+<article class="post">
+  <header class="post-header bg-gray-50 py-16">
+    <div class="container">
+      <div class="post-meta mb-4">
+        <time class="text-sm text-gray-500" datetime="{{ page.date | date_to_xmlschema }}">
+          {{ page.date | date: "%B %d, %Y" }}
+        </time>
+        {% if page.categories.size > 0 %}
+          <span class="mx-2 text-gray-400">•</span>
+          {% for category in page.categories %}
+            <a href="/categories/{{ category | slugify }}/" class="text-primary text-sm">{{ category }}</a>
+            {% unless forloop.last %}, {% endunless %}
+          {% endfor %}
+        {% endif %}
+      </div>
+      
+      <h1 class="h1 mb-4">{{ page.title }}</h1>
+      
+      {% if page.excerpt %}
+        <p class="text-large text-gray-600">{{ page.excerpt }}</p>
+      {% endif %}
+      
+      {% if page.author %}
+        <div class="author-info d-flex align-center gap-3 mt-6">
+          <div class="author-avatar">
+            <img src="{{ page.author_image | default: '/assets/images/default-avatar.svg' | relative_url }}" 
+                 alt="{{ page.author }}" class="rounded-full" width="48" height="48">
+          </div>
+          <div>
+            <div class="font-medium">{{ page.author }}</div>
+            <div class="text-sm text-gray-500">{{ page.author_title | default: "QA Expert" }}</div>
+          </div>
+        </div>
+      {% endif %}
+    </div>
+  </header>
+
+  <div class="post-content container py-16">
+    <div class="prose prose-lg mx-auto">
+      {{ content }}
+    </div>
+  </div>
+
+  {% if page.tags.size > 0 %}
+  <footer class="post-footer container pb-16">
+    <div class="tags">
+      <h3 class="h4 mb-4">Tags</h3>
+      <div class="tag-list d-flex flex-wrap gap-2">
+        {% for tag in page.tags %}
+          <a href="/tags/{{ tag | slugify }}/" class="tag btn btn-sm btn-outline">{{ tag }}</a>
+        {% endfor %}
+      </div>
+    </div>
+  </footer>
+  {% endif %}
+</article>
+
+# ==========================================
+# _includes/navbar.html
+# ==========================================
+<nav class="navbar">
+  <div class="container">
+    <div class="d-flex justify-between align-center py-4">
+      <a href="{{ '/' | relative_url }}" class="navbar-brand">
+        {% if site.brand.logo %}
+          <img src="{{ site.brand.logo | relative_url }}" alt="{{ site.brand.name }}" class="brand-logo">
+        {% endif %}
+        {{ site.brand.name }}
+      </a>
+
+      <ul class="navbar-nav">
+        {% for item in site.navigation %}
+          <li class="nav-item {% if item.dropdown %}dropdown{% endif %}">
+            <a href="{{ item.url | relative_url }}" class="nav-link">
+              {{ item.name }}
+              {% if item.dropdown %}
+                <svg class="icon ml-1" fill="currentColor" viewBox="0 0 20 20" width="16" height="16">
+                  <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                </svg>
+              {% endif %}
+            </a>
+            {% if item.dropdown %}
+              <div class="dropdown-menu">
+                {% for subitem in item.dropdown %}
+                  <a href="{{ subitem.url | relative_url }}" class="dropdown-item">{{ subitem.name }}</a>
+                {% endfor %}
+              </div>
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+
+      <div class="navbar-actions">
+        <a href="/login/" class="btn btn-ghost">Sign In</a>
+        <a href="/signup/" class="btn btn-primary">Get Started</a>
+        
+        <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+          <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+# ==========================================
+# _includes/hero.html
+# ==========================================
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1>{{ page.hero.title | default: "Master QA Testing Skills" }}</h1>
+        <p class="hero-description">
+          {{ page.hero.description | default: "Learn quality assurance, software testing, and automation from industry experts. Build your career in QA with hands-on projects and real-world experience." }}
+        </p>
+        <div class="hero-actions">
+          <a href="{{ page.hero.primary_cta.url | default: '/courses/' | relative_url }}" class="btn btn-primary btn-lg">
+            {{ page.hero.primary_cta.text | default: "Start Learning" }}
+          </a>
+          <a href="{{ page.hero.secondary_cta.url | default: '/about/' | relative_url }}" class="btn btn-secondary btn-lg">
+            {{ page.hero.secondary_cta.text | default: "Learn More" }}
+          </a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <div class="hero-img-wrapper">
+          {% if page.hero.image %}
+            <img src="{{ page.hero.image | relative_url }}" alt="{{ page.hero.title }}">
+          {% else %}
+            <div class="hero-placeholder">
+              QA Testing Hero
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+# ==========================================
+# _includes/footer.html
+# ==========================================
+<footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-section footer-brand">
+        <div class="brand-info">
+          <h3>{{ site.brand.name }}</h3>
+          <p>{{ site.description }}</p>
+        </div>
+        
+        <div class="social-links">
+          {% if site.social.twitter %}
+            <a href="https://twitter.com/{{ site.social.twitter }}" aria-label="Twitter">
+              <svg fill="currentColor" viewBox="0 0 24 24" width="20" height="20">
+                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+              </svg>
+            </a>
+          {% endif %}
+          
+          {% if site.social.linkedin %}
+            <a href="https://linkedin.com/company/{{ site.social.linkedin }}" aria-label="LinkedIn">
+              <svg fill="currentColor" viewBox="0 0 24 24" width="20" height="20">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+              </svg>
+            </a>
+          {% endif %}
+          
+          {% if site.social.youtube %}
+            <a href="https://youtube.com/{{ site.social.youtube }}" aria-label="YouTube">
+              <svg fill="currentColor" viewBox="0 0 24 24" width="20" height="20">
+                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+              </svg>
+            </a>
+          {% endif %}
+          
+          {% if site.social.github %}
+            <a href="https://github.com/{{ site.social.github }}" aria-label="GitHub">
+              <svg fill="currentColor" viewBox="0 0 24 24" width="20" height="20">
+                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+              </svg>
+            </a>
+          {% endif %}
+        </div>
+      </div>
+
+      {% for section in site.footer.sections %}
+        <div class="footer-section">
+          <h3>{{ section.title }}</h3>
+          <ul class="footer-links">
+            {% for link in section.links %}
+              <li><a href="{{ link.url | relative_url }}">{{ link.name }}</a></li>
+            {% endfor %}
+          </ul>
+        </div>
+      {% endfor %}
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-bottom-content">
+        <p>&copy; {{ 'now' | date: "%Y" }} {{ site.brand.name }}. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="/privacy/">Privacy Policy</a>
+          <a href="/terms/">Terms of Service</a>
+          <a href="/cookies/">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+# ==========================================
+# assets/css/main.scss
+# ==========================================
+---
+---
+
+@import "main";
+
+# ==========================================
+# assets/js/main.js
+# ==========================================
+// QAStudy.online Main JavaScript
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Mobile menu toggle
+  const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+  const navbar = document.querySelector('.navbar');
+  
+  if (mobileMenuToggle) {
+    mobileMenuToggle.addEventListener('click', function() {
+      this.classList.toggle('active');
+      navbar.classList.toggle('mobile-menu-open');
+    });
+  }
+
+  // Smooth scrolling for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        target.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    });
+  });
+
+  // Course card hover effects
+  const courseCards = document.querySelectorAll('.course-card');
+  courseCards.forEach(card => {
+    card.addEventListener('mouseenter', function() {
+      this.style.transform = 'translateY(-8px)';
+    });
+    
+    card.addEventListener('mouseleave', function() {
+      this.style.transform = 'translateY(0)';
+    });
+  });
+
+  // Form validation
+  const forms = document.querySelectorAll('form');
+  forms.forEach(form => {
+    form.addEventListener('submit', function(e) {
+      const requiredFields = form.querySelectorAll('[required]');
+      let isValid = true;
+      
+      requiredFields.forEach(field => {
+        if (!field.value.trim()) {
+          field.classList.add('is-invalid');
+          isValid = false;
+        } else {
+          field.classList.remove('is-invalid');
+          field.classList.add('is-valid');
+        }
+      });
+      
+      if (!isValid) {
+        e.preventDefault();
+      }
+    });
+  });
+
+  // Navbar scroll effect
+  let lastScrollTop = 0;
+  window.addEventListener('scroll', function() {
+    const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+    
+    if (currentScroll > lastScrollTop && currentScroll > 100) {
+      // Scrolling down
+      navbar.style.transform = 'translateY(-100%)';
+    } else {
+      // Scrolling up
+      navbar.style.transform = 'translateY(0)';
+    }
+    
+    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+  });
+
+  // Initialize tooltips and other interactive elements
+  initializeTooltips:hover {
+    color: $primary-700;
+    text-decoration: underline;
+  }
+
+  &:focus {
+    outline: 2px solid $primary-500;
+    outline-offset: 2px;
+  }
+}
+
+// Images
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+// Lists
+ul, ol {
+  margin: 0;
+  padding: 0;
+}
+
+// Remove list styles from navigation lists
+.nav-list,
+.footer-links {
+  list-style: none;
+}
+
+# ==========================================
+# _sass/design-system/_typography.scss
+# ==========================================
+// Typography system
+
+// Headings
+h1, .h1 {
+  font-size: $font-size-4xl;
+  font-weight: $font-weight-extrabold;
+  line-height: $line-height-tight;
+  color: $gray-900;
+  margin-bottom: $space-6;
+
+  @media (min-width: $breakpoint-md) {
+    font-size: $font-size-5xl;
+  }
+}
+
+h2, .h2 {
+  font-size: $font-size-3xl;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-tight;
+  color: $gray-900;
+  margin-bottom: $space-5;
+
+  @media (min-width: $breakpoint-md) {
+    font-size: $font-size-4xl;
+  }
+}
+
+h3, .h3 {
+  font-size: $font-size-2xl;
+  font-weight: $font-weight-semibold;
+  line-height: $line-height-snug;
+  color: $gray-900;
+  margin-bottom: $space-4;
+
+  @media (min-width: $breakpoint-md) {
+    font-size: $font-size-3xl;
+  }
+}
+
+h4, .h4 {
+  font-size: $font-size-xl;
+  font-weight: $font-weight-semibold;
+  line-height: $line-height-snug;
+  color: $gray-900;
+  margin-bottom: $space-3;
+
+  @media (min-width: $breakpoint-md) {
+    font-size: $font-size-2xl;
+  }
+}
+
+h5, .h5 {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-medium;
+  line-height: $line-height-snug;
+  color: $gray-900;
+  margin-bottom: $space-3;
+
+  @media (min-width: $breakpoint-md) {
+    font-size: $font-size-xl;
+  }
+}
+
+h6, .h6 {
+  font-size: $font-size-base;
+  font-weight: $font-weight-medium;
+  line-height: $line-height-snug;
+  color: $gray-900;
+  margin-bottom: $space-2;
+
+  @media (min-width: $breakpoint-md) {
+    font-size: $font-size-lg;
+  }
+}
+
+// Body text
+p {
+  margin-bottom: $space-4;
+  line-height: $line-height-relaxed;
+}
+
+.text-large {
+  font-size: $font-size-lg;
+  line-height: $line-height-relaxed;
+}
+
+.text-small {
+  font-size: $font-size-sm;
+  line-height: $line-height-normal;
+}
+
+.text-xs {
+  font-size: $font-size-xs;
+  line-height: $line-height-normal;
+}
+
+// Text colors
+.text-primary { color: $primary-600; }
+.text-secondary { color: $secondary-600; }
+.text-gray { color: $gray-600; }
+.text-dark { color: $gray-900; }
+.text-light { color: $gray-400; }
+.text-white { color: $white; }
+.text-success { color: $success; }
+.text-warning { color: $warning; }
+.text-error { color: $error; }
+
+// Text alignment
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+.text-justify { text-align: justify; }
+
+// Font weights
+.font-light { font-weight: $font-weight-light; }
+.font-normal { font-weight: $font-weight-normal; }
+.font-medium { font-weight: $font-weight-medium; }
+.font-semibold { font-weight: $font-weight-semibold; }
+.font-bold { font-weight: $font-weight-bold; }
+.font-extrabold { font-weight: $font-weight-extrabold; }
+
+// Line heights
+.leading-none { line-height: $line-height-none; }
+.leading-tight { line-height: $line-height-tight; }
+.leading-snug { line-height: $line-height-snug; }
+.leading-normal { line-height: $line-height-normal; }
+.leading-relaxed { line-height: $line-height-relaxed; }
+.leading-loose { line-height: $line-height-loose; }
+
+# ==========================================
+# _sass/design-system/_buttons.scss
+# ==========================================
+// Button component system
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: $space-3 $space-6;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-medium;
+  line-height: 1;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  border: 1px solid transparent;
+  border-radius: $radius-md;
+  transition: $transition-all;
+
+  &:focus {
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    box-shadow: 0 0 0 3px rgba($primary-500, 0.1);
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
+  // Icon spacing
+  .icon {
+    width: 1em;
+    height: 1em;
+    
+    &:not(:last-child) {
+      margin-right: $space-2;
+    }
+    
+    &:not(:first-child) {
+      margin-left: $space-2;
+    }
+  }
+}
+
+// Button variants
+.btn-primary {
+  color: $white;
+  background-color: $primary-600;
+  border-color: $primary-600;
+
+  &:hover {
+    background-color: $primary-700;
+    border-color: $primary-700;
+    transform: translateY(-1px);
+    box-shadow: $shadow-md;
+  }
+
+  &:active {
+    background-color: $primary-800;
+    border-color: $primary-800;
+    transform: translateY(0);
+  }
+}
+
+.btn-secondary {
+  color: $primary-600;
+  background-color: $white;
+  border-color: $primary-600;
+
+  &:hover {
+    color: $primary-700;
+    background-color: $primary-50;
+    border-color: $primary-700;
+    transform: translateY(-1px);
+    box-shadow: $shadow-md;
+  }
+
+  &:active {
+    background-color: $primary-100;
+    transform: translateY(0);
+  }
+}
+
+.btn-outline {
+  color: $gray-700;
+  background-color: transparent;
+  border-color: $gray-300;
+
+  &:hover {
+    color: $gray-900;
+    background-color: $gray-50;
+    border-color: $gray-400;
+  }
+
+  &:active {
+    background-color: $gray-100;
+  }
+}
+
+.btn-ghost {
+  color: $gray-600;
+  background-color: transparent;
+  border-color: transparent;
+
+  &:hover {
+    color: $gray-900;
+    background-color: $gray-100;
+  }
+
+  &:active {
+    background-color: $gray-200;
+  }
+}
+
+.btn-success {
+  color: $white;
+  background-color: $success;
+  border-color: $success;
+
+  &:hover {
+    background-color: darken($success, 10%);
+    border-color: darken($success, 10%);
+  }
+}
+
+.btn-warning {
+  color: $white;
+  background-color: $warning;
+  border-color: $warning;
+
+  &:hover {
+    background-color: darken($warning, 10%);
+    border-color: darken($warning, 10%);
+  }
+}
+
+.btn-error {
+  color: $white;
+  background-color: $error;
+  border-color: $error;
+
+  &:hover {
+    background-color: darken($error, 10%);
+    border-color: darken($error, 10%);
+  }
+}
+
+// Button sizes
+.btn-xs {
+  padding: $space-1 $space-3;
+  font-size: $font-size-xs;
+}
+
+.btn-sm {
+  padding: $space-2 $space-4;
+  font-size: $font-size-sm;
+}
+
+.btn-lg {
+  padding: $space-4 $space-8;
+  font-size: $font-size-lg;
+}
+
+.btn-xl {
+  padding: $space-5 $space-10;
+  font-size: $font-size-xl;
+}
+
+// Button width
+.btn-block {
+  display: flex;
+  width: 100%;
+}
+
+// Button groups
+.btn-group {
+  display: inline-flex;
+  vertical-align: middle;
+
+  .btn {
+    position: relative;
+    flex: 1 1 auto;
+
+    &:not(:first-child) {
+      margin-left: -1px;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+
+    &:not(:last-child) {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    &:hover {
+      z-index: 1;
+    }
+
+    &:focus {
+      z-index: 2;
+    }
+  }
+}
+
+# ==========================================
+# _sass/design-system/_cards.scss
+# ==========================================
+// Card component system
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  background-color: $white;
+  background-clip: border-box;
+  border: 1px solid $gray-200;
+  border-radius: $radius-lg;
+  box-shadow: $shadow-sm;
+  transition: $transition-all;
+
+  &:hover {
+    box-shadow: $shadow-md;
+    transform: translateY(-2px);
+  }
+}
+
+.card-header {
+  padding: $space-6;
+  background-color: transparent;
+  border-bottom: 1px solid $gray-200;
+
+  &:first-child {
+    border-radius: calc(#{$radius-lg} - 1px) calc(#{$radius-lg} - 1px) 0 0;
+  }
+}
+
+.card-body {
+  flex: 1 1 auto;
+  padding: $space-6;
+}
+
+.card-footer {
+  padding: $space-6;
+  background-color: $gray-50;
+  border-top: 1px solid $gray-200;
+
+  &:last-child {
+    border-radius: 0 0 calc(#{$radius-lg} - 1px) calc(#{$radius-lg} - 1px);
+  }
+}
+
+.card-img {
+  width: 100%;
+  border-radius: calc(#{$radius-lg} - 1px);
+}
+
+.card-img-top {
+  width: 100%;
+  border-top-left-radius: calc(#{$radius-lg} - 1px);
+  border-top-right-radius: calc(#{$radius-lg} - 1px);
+}
+
+.card-img-bottom {
+  width: 100%;
+  border-bottom-left-radius: calc(#{$radius-lg} - 1px);
+  border-bottom-right-radius: calc(#{$radius-lg} - 1px);
+}
+
+.card-title {
+  margin-bottom: $space-3;
+  font-size: $font-size-lg;
+  font-weight: $font-weight-semibold;
+  color: $gray-900;
+}
+
+.card-subtitle {
+  margin-bottom: $space-2;
+  font-size: $font-size-sm;
+  color: $gray-600;
+}
+
+.card-text {
+  margin-bottom: $space-4;
+  color: $gray-700;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+// Card variants
+.card-elevated {
+  box-shadow: $shadow-lg;
+  border: none;
+
+  &:hover {
+    box-shadow: $shadow-xl;
+  }
+}
+
+.card-bordered {
+  border: 2px solid $gray-200;
+}
+
+.card-primary {
+  border-color: $primary-200;
+  background: linear-gradient(135deg, $primary-50 0%, $white 100%);
+}
+
+# ==========================================
+# _sass/design-system/_forms.scss
+# ==========================================
+// Form component system
+
+.form-group {
+  margin-bottom: $space-6;
+}
+
+.form-label {
+  display: inline-block;
+  margin-bottom: $space-2;
+  font-weight: $font-weight-medium;
+  color: $gray-700;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  padding: $space-3 $space-4;
+  font-size: $font-size-base;
+  font-weight: $font-weight-normal;
+  line-height: $line-height-normal;
+  color: $gray-900;
+  background-color: $white;
+  background-clip: padding-box;
+  border: 1px solid $gray-300;
+  border-radius: $radius-md;
+  transition: $transition-all;
+
+  &:focus {
+    color: $gray-900;
+    background-color: $white;
+    border-color: $primary-500;
+    outline: 0;
+    box-shadow: 0 0 0 3px rgba($primary-500, 0.1);
+  }
+
+  &::placeholder {
+    color: $gray-500;
+    opacity: 1;
+  }
+
+  &:disabled {
+    background-color: $gray-100;
+    opacity: 1;
+  }
+}
+
+.form-select {
+  @extend .form-control;
+  
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+  background-position: right $space-3 center;
+  background-repeat: no-repeat;
+  background-size: 16px 12px;
+  padding-right: $space-10;
+}
+
+.form-check {
+  display: block;
+  min-height: $space-6;
+  padding-left: $space-6;
+  margin-bottom: $space-3;
+}
+
+.form-check-input {
+  width: 1em;
+  height: 1em;
+  margin-top: 0.25em;
+  margin-left: -$space-6;
+  vertical-align: top;
+  background-color: $white;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border: 1px solid $gray-300;
+  appearance: none;
+  color-adjust: exact;
+
+  &[type="checkbox"] {
+    border-radius: $radius-sm;
+  }
+
+  &[type="radio"] {
+    border-radius: 50%;
+  }
+
+  &:active {
+    filter: brightness(90%);
+  }
+
+  &:focus {
+    border-color: $primary-500;
+    outline: 0;
+    box-shadow: 0 0 0 3px rgba($primary-500, 0.1);
+  }
+
+  &:checked {
+    background-color: $primary-600;
+    border-color: $primary-600;
+  }
+
+  &:checked[type="checkbox"] {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='white'%3e%3cpath fill-rule='evenodd' d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z' clip-rule='evenodd'/%3e%3c/svg%3e");
+  }
+
+  &:checked[type="radio"] {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='white'/%3e%3c/svg%3e");
+  }
+}
+
+.form-check-label {
+  color: $gray-700;
+  cursor: pointer;
+}
+
+// Form sizes
+.form-control-sm {
+  padding: $space-2 $space-3;
+  font-size: $font-size-sm;
+}
+
+.form-control-lg {
+  padding: $space-4 $space-5;
+  font-size: $font-size-lg;
+}
+
+// Form validation
+.is-valid {
+  border-color: $success;
+
+  &:focus {
+    border-color: $success;
+    box-shadow: 0 0 0 3px rgba($success, 0.1);
+  }
+}
+
+.is-invalid {
+  border-color: $error;
+
+  &:focus {
+    border-color: $error;
+    box-shadow: 0 0 0 3px rgba($error, 0.1);
+  }
+}
+
+.valid-feedback {
+  display: block;
+  width: 100%;
+  margin-top: $space-1;
+  font-size: $font-size-sm;
+  color: $success;
+}
+
+.invalid-feedback {
+  display: block;
+  width: 100%;
+  margin-top: $space-1;
+  font-size: $font-size-sm;
+  color: $error;
+}
+
+# ==========================================
+# _sass/design-system/_utilities.scss
+# ==========================================
+// Utility classes
+
+// Display
+.d-none { display: none !important; }
+.d-block { display: block !important; }
+.d-inline { display: inline !important; }
+.d-inline-block { display: inline-block !important; }
+.d-flex { display: flex !important; }
+.d-inline-flex { display: inline-flex !important; }
+.d-grid { display: grid !important; }
+
+// Flexbox utilities
+.flex-row { flex-direction: row !important; }
+.flex-column { flex-direction: column !important; }
+.flex-wrap { flex-wrap: wrap !important; }
+.flex-nowrap { flex-wrap: nowrap !important; }
+.justify-start { justify-content: flex-start !important; }
+.justify-end { justify-content: flex-end !important; }
+.justify-center { justify-content: center !important; }
+.justify-between { justify-content: space-between !important; }
+.justify-around { justify-content: space-around !important; }
+.align-start { align-items: flex-start !important; }
+.align-end { align-items: flex-end !important; }
+.align-center { align-items: center !important; }
+.align-stretch { align-items: stretch !important; }
+
+// Grid utilities
+.grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)) !important; }
+.grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+.grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; }
+.grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)) !important; }
+.col-span-1 { grid-column: span 1 / span 1 !important; }
+.col-span-2 { grid-column: span 2 / span 2 !important; }
+.col-span-3 { grid-column: span 3 / span 3 !important; }
+.col-span-4 { grid-column: span 4 / span 4 !important; }
+
+// Spacing utilities
+@each $size, $value in (
+  0: $space-0,
+  1: $space-1,
+  2: $space-2,
+  3: $space-3,
+  4: $space-4,
+  5: $space-5,
+  6: $space-6,
+  8: $space-8,
+  10: $space-10,
+  12: $space-12,
+  16: $space-16,
+  20: $space-20,
+  24: $space-24,
+  32: $space-32
+) {
+  .m-#{$size} { margin: #{$value} !important; }
+  .mt-#{$size} { margin-top: #{$value} !important; }
+  .mr-#{$size} { margin-right: #{$value} !important; }
+  .mb-#{$size} { margin-bottom: #{$value} !important; }
+  .ml-#{$size} { margin-left: #{$value} !important; }
+  .mx-#{$size} { margin-left: #{$value} !important; margin-right: #{$value} !important; }
+  .my-#{$size} { margin-top: #{$value} !important; margin-bottom: #{$value} !important; }
+  
+  .p-#{$size} { padding: #{$value} !important; }
+  .pt-#{$size} { padding-top: #{$value} !important; }
+  .pr-#{$size} { padding-right: #{$value} !important; }
+  .pb-#{$size} { padding-bottom: #{$value} !important; }
+  .pl-#{$size} { padding-left: #{$value} !important; }
+  .px-#{$size} { padding-left: #{$value} !important; padding-right: #{$value} !important; }
+  .py-#{$size} { padding-top: #{$value} !important; padding-bottom: #{$value} !important; }
+}
+
+// Border radius
+.rounded-none { border-radius: $radius-none !important; }
+.rounded-sm { border-radius: $radius-sm !important; }
+.rounded { border-radius: $radius-base !important; }
+.rounded-md { border-radius: $radius-md !important; }
+.rounded-lg { border-radius: $radius-lg !important; }
+.rounded-xl { border-radius: $radius-xl !important; }
+.rounded-2xl { border-radius: $radius-2xl !important; }
+.rounded-3xl { border-radius: $radius-3xl !important; }
+.rounded-full { border-radius: $radius-full !important; }
+
+// Shadows
+.shadow-none { box-shadow: none !important; }
+.shadow-sm { box-shadow: $shadow-sm !important; }
+.shadow { box-shadow: $shadow-base !important; }
+.shadow-md { box-shadow: $shadow-md !important; }
+.shadow-lg { box-shadow: $shadow-lg !important; }
+.shadow-xl { box-shadow: $shadow-xl !important; }
+.shadow-2xl { box-shadow: $shadow-2xl !important; }
+
+// Background colors
+.bg-transparent { background-color: transparent !important; }
+.bg-white { background-color: $white !important; }
+.bg-black { background-color: $black !important; }
+.bg-primary { background-color: $primary-600 !important; }
+.bg-primary-light { background-color: $primary-100 !important; }
+.bg-secondary { background-color: $secondary-600 !important; }
+.bg-gray-50 { background-color: $gray-50 !important; }
+.bg-gray-100 { background-color: $gray-100 !important; }
+.bg-gray-200 { background-color: $gray-200 !important; }
+.bg-success { background-color: $success !important; }
+.bg-warning { background-color: $warning !important; }
+.bg-error { background-color: $error !important; }
+
+// Width and height
+.w-full { width: 100% !important; }
+.w-auto { width: auto !important; }
+.h-full { height: 100% !important; }
+.h-auto { height: auto !important; }
+
+// Position
+.relative { position: relative !important; }
+.absolute { position: absolute !important; }
+.fixed { position: fixed !important; }
+.sticky { position: sticky !important; }
+
+// Z-index
+.z-auto { z-index: auto !important; }
+.z-0 { z-index: 0 !important; }
+.z-10 { z-index: 10 !important; }
+.z-20 { z-index: 20 !important; }
+.z-30 { z-index: 30 !important; }
+.z-40 { z-index: 40 !important; }
+.z-50 { z-index: 50 !important; }
+
+// Responsive utilities
+@media (min-width: $breakpoint-sm) {
+  .sm\:d-block { display: block !important; }
+  .sm\:d-flex { display: flex !important; }
+  .sm\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+  .sm\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; }
+}
+
+@media (min-width: $breakpoint-md) {
+  .md\:d-block { display: block !important; }
+  .md\:d-flex { display: flex !important; }
+  .md\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+  .md\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; }
+  .md\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)) !important; }
+}
+
+@media (min-width: $breakpoint-lg) {
+  .lg\:d-block { display: block !important; }
+  .lg\:d-flex { display: flex !important; }
+  .lg\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; }
+  .lg\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)) !important; }
+}
+
+# ==========================================
+# _sass/components/_navbar.scss
+# ==========================================
+// Navigation component
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: $z-sticky;
+  width: 100%;
+  background-color: $white;
+  border-bottom: 1px solid $gray-200;
+  box-shadow: $shadow-sm;
+  transition: $transition-all;
+}
+
+.navbar-brand {
+  display: inline-flex;
+  align-items: center;
+  font-size: $font-size-xl;
+  font-weight: $font-weight-extrabold;
+  color: $primary-600;
+  text-decoration: none;
+  transition: $transition-colors;
+
+  &:hover {
+    color: $primary-700;
+    text-decoration: none;
+  }
+
+  .brand-logo {
+    height: 2rem;
+    margin-right: $space-2;
+  }
+}
+
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  gap: $space-8;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  @media (max-width: $breakpoint-md) {
+    display: none;
+  }
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  padding: $space-2 0;
+  font-weight: $font-weight-medium;
+  color: $gray-700;
+  text-decoration: none;
+  transition: $transition-colors;
+
+  &:hover {
+    color: $primary-600;
+    text-decoration: none;
+  }
+
+  &.active {
+    color: $primary-600;
+  }
+}
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: $space-4;
+}
+
+.mobile-menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  padding: $space-2;
+  cursor: pointer;
+
+  @media (max-width: $breakpoint-md) {
+    display: block;
+  }
+
+  .hamburger {
+    width: 1.5rem;
+    height: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    span {
+      width: 100%;
+      height: 2px;
+      background-color: $gray-700;
+      transition: $transition-all;
+    }
+  }
+
+  &.active .hamburger span {
+    &:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+    &:nth-child(2) {
+      opacity: 0;
+    }
+    &:nth-child(3) {
+      transform: rotate(-45deg) translate(7px, -6px);
+    }
+  }
+}
+
+// Dropdown menu
+.dropdown {
+  position: relative;
+
+  &:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 12rem;
+  padding: $space-2 0;
+  margin-top: $space-2;
+  background-color: $white;
+  border: 1px solid $gray-200;
+  border-radius: $radius-lg;
+  box-shadow: $shadow-lg;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: $transition-all;
+  z-index: $z-dropdown;
+
+  .dropdown-item {
+    display: block;
+    width: 100%;
+    padding: $space-3 $space-4;
+    color: $gray-700;
+    text-decoration: none;
+    transition: $transition-colors;
+
+    &:hover {
+      color: $primary-600;
+      background-color: $gray-50;
+    }
+  }
+}
+
+# ==========================================
+# _sass/components/_hero.scss
+# ==========================================
+// Hero section component
+
+.hero {
+  position: relative;
+  padding: $space-24 0;
+  background: linear-gradient(135deg, $primary-50 0%, $primary-100 100%);
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="%23e0e7ff" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+    opacity: 0.4;
+    z-index: 0;
+  }
+
+  .container {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.hero-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $space-12;
+  align-items: center;
+
+  @media (min-width: $breakpoint-lg) {
+    grid-template-columns: 1fr 1fr;
+    gap: $space-16;
+  }
+}
+
+.hero-text {
+  text-align: center;
+
+  @media (min-width: $breakpoint-lg) {
+    text-align: left;
+  }
+
+  h1 {
+    margin-bottom: $space-6;
+    background: linear-gradient(135deg, $gray-900 0%, $primary-800 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .hero-description {
+    font-size: $font-size-lg;
+    color: $gray-600;
+    margin-bottom: $space-8;
+    line-height: $line-height-relaxed;
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-direction: column;
+    gap: $space-4;
+
+    @media (min-width: $breakpoint-sm) {
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    @media (min-width: $breakpoint-lg) {
+      justify-content: flex-start;
+    }
+  }
+}
+
+.hero-image {
+  position: relative;
+  text-align: center;
+
+  .hero-img-wrapper {
+    position: relative;
+    display: inline-block;
+    border-radius: $radius-2xl;
+    overflow: hidden;
+    box-shadow: $shadow-2xl;
+    transform: perspective(1000px) rotateY(-15deg) rotateX(5deg);
+    transition: $transition-all;
+
+    &:hover {
+      transform: perspective(1000px) rotateY(-10deg) rotateX(2deg) scale(1.05);
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, rgba($primary-600, 0.1) 0%, rgba($secondary-600, 0.1) 100%);
+      border-radius: $radius-2xl;
+    }
+  }
+
+  .hero-placeholder {
+    width: 400px;
+    height: 300px;
+    background: linear-gradient(135deg, $primary-400 0%, $primary-600 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $white;
+    font-size: $font-size-xl;
+    font-weight: $font-weight-semibold;
+    border-radius: $radius-2xl;
+
+    @media (max-width: $breakpoint-sm) {
+      width: 300px;
+      height: 225px;
+      font-size: $font-size-lg;
+    }
+  }
+}
+
+# ==========================================
+# _sass/components/_footer.scss
+# ==========================================
+// Footer component
+
+.footer {
+  background-color: $gray-900;
+  color: $gray-300;
+  padding: $space-16 0 $space-8;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: $space-8;
+  margin-bottom: $space-12;
+
+  @media (max-width: $breakpoint-md) {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: $space-12;
+  }
+}
+
+.footer-section {
+  h3 {
+    color: $white;
+    font-size: $font-size-lg;
+    font-weight: $font-weight-semibold;
+    margin-bottom: $space-4;
+  }
+
+  p {
+    line-height: $line-height-relaxed;
+    margin-bottom: $space-4;
+  }
+}
+
+.footer-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    margin-bottom: $space-2;
+  }
+
+  a {
+    color: $gray-300;
+    text-decoration: none;
+    transition: $transition-colors;
+
+    &:hover {
+      color: $primary-400;
+      text-decoration: none;
+    }
+  }
+}
+
+.footer-brand {
+  .brand-info {
+    margin-bottom: $space-6;
+
+    h3 {
+      color: $primary-400;
+      font-size: $font-size-xl;
+      font-weight: $font-weight-extrabold;
+      margin-bottom: $space-3;
+    }
+  }
+
+  .social-links {
+    display: flex;
+    gap: $space-4;
+
+    @media (max-width: $breakpoint-md) {
+      justify-content: center;
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.5rem;
+      height: 2.5rem;
+      background-color: $gray-800;
+      color: $gray-300;
+      border-radius: $radius-md;
+      transition: $transition-all;
+
+      &:hover {
+        background-color: $primary-600;
+        color: $white;
+        transform: translateY(-2px);
+      }
+    }
+  }
+}
+
+.footer-bottom {
+  padding-top: $space-8;
+  border-top: 1px solid $gray-800;
+  text-align: center;
+  color: $gray-400;
+  font-size: $font-size-sm;
+
+  .footer-bottom-content {
+    display: flex;
+    flex-direction: column;
+    gap: $space-4;
+
+    @media (min-width: $breakpoint-md) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  .footer-bottom-links {
+    display: flex;
+    gap: $space-6;
+    justify-content: center;
+
+    a {
+      color: $gray-400;
+      text-decoration: none;
+      transition: $transition-colors;
+
+      &:hover {
+        color: $primary-400;
+      }
+    }
+  }
+}
+
+# ==========================================
+# _sass/components/_course-grid.scss
+# ==========================================
+// Course grid and card components
+
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: $space-8;
+  margin-top: $space-8;
+
+  @media (max-width: $breakpoint-sm) {
+    grid-template-columns: 1fr;
+    gap: $space-6;
+  }
+}
+
+.course-card {
+  @extend .card;
+  
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: $shadow-xl;
+
+    .course-image {
+      transform: scale(1.05);
+    }
+  }
+}
+
+.course-image {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(135deg, $primary-400 0%, $primary-600 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $white;
+  font-size: $font-size-lg;
+  font-weight: $font-weight-semibold;
+  overflow: hidden;
+  transition: $transition-transform;
+
+  &

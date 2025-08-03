@@ -1,0 +1,102 @@
+// Card component system
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  background-color: $white;
+  background-clip: border-box;
+  border: 1px solid $gray-200;
+  border-radius: $radius-lg;
+  box-shadow: $shadow-sm;
+  transition: $transition-all;
+
+  &:hover {
+    box-shadow: $shadow-md;
+    transform: translateY(-2px);
+  }
+}
+
+.card-header {
+  padding: $space-6;
+  background-color: transparent;
+  border-bottom: 1px solid $gray-200;
+
+  &:first-child {
+    border-radius: calc(#{$radius-lg} - 1px) calc(#{$radius-lg} - 1px) 0 0;
+  }
+}
+
+.card-body {
+  flex: 1 1 auto;
+  padding: $space-6;
+}
+
+.card-footer {
+  padding: $space-6;
+  background-color: $gray-50;
+  border-top: 1px solid $gray-200;
+
+  &:last-child {
+    border-radius: 0 0 calc(#{$radius-lg} - 1px) calc(#{$radius-lg} - 1px);
+  }
+}
+
+.card-img {
+  width: 100%;
+  border-radius: calc(#{$radius-lg} - 1px);
+}
+
+.card-img-top {
+  width: 100%;
+  border-top-left-radius: calc(#{$radius-lg} - 1px);
+  border-top-right-radius: calc(#{$radius-lg} - 1px);
+}
+
+.card-img-bottom {
+  width: 100%;
+  border-bottom-left-radius: calc(#{$radius-lg} - 1px);
+  border-bottom-right-radius: calc(#{$radius-lg} - 1px);
+}
+
+.card-title {
+  margin-bottom: $space-3;
+  font-size: $font-size-lg;
+  font-weight: $font-weight-semibold;
+  color: $gray-900;
+}
+
+.card-subtitle {
+  margin-bottom: $space-2;
+  font-size: $font-size-sm;
+  color: $gray-600;
+}
+
+.card-text {
+  margin-bottom: $space-4;
+  color: $gray-700;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+// Card variants
+.card-elevated {
+  box-shadow: $shadow-lg;
+  border: none;
+
+  &:hover {
+    box-shadow: $shadow-xl;
+  }
+}
+
+.card-bordered {
+  border: 2px solid $gray-200;
+}
+
+.card-primary {
+  border-color: $primary-200;
+  background: linear-gradient(135deg, $primary-50 0%, $white 100%);
+} 
