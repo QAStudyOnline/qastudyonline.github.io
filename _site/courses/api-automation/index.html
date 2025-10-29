@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete API Test Automation - QA Study Online</title>
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        /* Enhanced Course Page Styles */
+        .course-hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 4rem 0;
+            margin-bottom: 3rem;
+        }
+        .course-hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+        .course-hero .subtitle {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            margin-bottom: 1.5rem;
+        }
+        .course-hero .description {
+            font-size: 1.1rem;
+            opacity: 0.95;
+            max-width: 600px;
+        }
+        .course-meta-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        .meta-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .meta-value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #667eea;
+            margin-bottom: 0.5rem;
+        }
+        .meta-label {
+            color: #6b7280;
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .course-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            text-align: left;
+            overflow-x: visible;
+        }
+        .course-content p {
+            color: #4b5563;
+            line-height: 1.7;
+            margin-bottom: 1rem;
+            padding-left: 0;
+            margin-left: 0;
+            text-indent: 0;
+        }
+        .course-content h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #1f2937;
+            margin: 2rem 0 1rem 0;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid #667eea;
+        }
+        .course-content h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #374151;
+            margin: 1.5rem 0 1rem 0;
+        }
+        .course-content h4 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #4b5563;
+            margin: 1rem 0 0.5rem 0;
+        }
+        .course-content p {
+            color: #4b5563;
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+        .course-content ul, .course-content ol {
+            margin: 1rem 0;
+            padding-left: 1.5rem;
+        }
+        .course-content li {
+            color: #4b5563;
+            line-height: 1.6;
+            margin-bottom: 0.5rem;
+        }
+        .course-content strong {
+            color: #1f2937;
+            font-weight: 600;
+        }
+        .course-content em {
+            color: #6b7280;
+            font-style: italic;
+        }
+        .highlight-box {
+            background: #f0f9ff;
+            border-left: 4px solid #0ea5e9;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .cta-section {
+            background: #f8fafc;
+            padding: 3rem 2rem;
+            text-align: center;
+            margin: 3rem 0;
+            border-radius: 12px;
+        }
+        .cta-button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            display: inline-block;
+            transition: transform 0.2s;
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+        }
+        .back-button {
+            background: #f3f4f6;
+            color: #374151;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.2s;
+            margin-bottom: 2rem;
+        }
+        .back-button:hover {
+            background: #e5e7eb;
+            transform: translateX(-2px);
+        }
+        .markdown-content {
+            width: 100%;
+            overflow-x: visible;
+        }
+        .markdown-content p:first-child {
+            margin-top: 0;
+        }
+        .markdown-content h2:first-child {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Course Hero Section -->
+    <div class="course-hero">
+        <div class="container mx-auto px-4">
+            <a href="/" class="back-button">← Back to Home</a>
+            <h1>Complete API Test Automation</h1>
+            <p class="subtitle">Master REST API testing with Postman, REST Assured, and Python</p>
+            <p class="description">Learn comprehensive API testing and automation using industry-standard tools. Master REST API testing, automation frameworks, CI/CD integration, and advanced testing techniques.</p>
+        </div>
+    </div>
+    
+    <div class="container mx-auto px-4">
+        <!-- Course Meta Info -->
+        <div class="course-meta-grid">
+            <div class="meta-card">
+                <div class="meta-value">18 hours</div>
+                <div class="meta-label">Duration</div>
+            </div>
+            <div class="meta-card">
+                <div class="meta-value">85</div>
+                <div class="meta-label">Lessons</div>
+            </div>
+            <div class="meta-card">
+                <div class="meta-value">Beginner</div>
+                <div class="meta-label">Level</div>
+            </div>
+            <div class="meta-card">
+                <div class="meta-value">$69.99</div>
+                <div class="meta-label">Price</div>
+            </div>
+        </div>
+        
+        <!-- Course Content -->
+        <div class="course-content">
+            <div class="markdown-content">
+                <h4>Beginner-Friendly
+<p>tart with the absolute basics. No prior API knowledge required. We'll teach you HTTP, REST, JSON, and all the fundamentals.
+</p><p>
+<h4>Three Major Tools
+<li>**Postman**: Perfect for exploratory testing and quick automation
+<li>**REST Assured**: Industry-standard Java framework
+<li>**Python**: Flexible and powerful for any testing scenario
+</p><p>
+<h4>Real-World Projects
+<p>uild five complete projects including:
+<li>E-commerce API test suite
+<li>Payment gateway testing framework
+<li>Microservices integration tests
+<li>CI/CD pipeline with automated tests
+</p><p>
+<h3>What Makes This Course Different
+</p><p>
+<p>. **Multiple Languages**: Learn Java, Python, and JavaScript approaches
+<p>. **Complete Frameworks**: Build actual frameworks you can use at work
+<p>. **Best Practices**: Industry patterns used at FAANG companies
+<p>. **CI/CD Ready**: All projects integrate with Jenkins/GitHub Actions
+<p>. **Lifetime Updates**: Course content updated with latest tools and techniques
+</p><p>
+<h3>Career Path
+</p><p>
+<p>fter completing this course, you'll be qualified for:
+<li>API Test Automation Engineer ($80K-$130K)
+<li>SDET (Software Development Engineer in Test) ($90K-$150K)
+<li>Test Architect ($110K-$170K)
+</p><p>
+<h3>Learning Path
+</p><p>
+<p>*Week 1-2**: API Fundamentals + Postman
+<p>*Week 3-4**: REST Assured Framework
+<p>*Week 5-6**: Python API Testing
+<p>*Week 7-8**: Advanced Topics + Projects
+</p><p>
+<h3>Who This Course Is For
+</p><p>
+<li>**Manual Testers** looking to transition to automation
+<li>**Developers** who want to write better API tests
+<li>**QA Engineers** expanding their automation skills
+<li>**Test Leads** designing API testing strategies
+<li>**Students** starting a career in software testing
+</p><p>
+<h3>What You'll Build
+</p><p>
+<p>y the end of this course, you'll have:
+<li>A GitHub portfolio with 5 complete projects
+<li>Multiple test frameworks you can reuse
+<li>Understanding of API testing best practices
+<li>Confidence to automate any REST API
+</p><p>
+<h2>Student Success Stories
+</p><p>
+<p>"Got a $25K raise after completing this course. My manager was impressed with the framework I built using techniques from the course."* - Michael B., API Test Engineer
+</p><p>
+<p>"Interviewed at 8 companies, got 6 offers. Having API automation skills made all the difference."* - Rachel L., SDET
+</p><p>
+<h2>Get Started Today
+</p><p>
+<p>oin over 4,500 students who've mastered API testing. Get immediate access to all lessons, download source code, and start building your portfolio.
+</p><p>
+<h3>Money-Back Guarantee
+<p>f you're not satisfied within 30 days, get a full refund. No questions asked.
+</p><p>
+<h3>What You Get
+<li>18 hours of video content
+<li>85 lessons covering everything
+<li>5 complete real-world projects
+<li>Source code for all examples
+<li>Certificate of completion
+<li>Lifetime access to course updates
+            </div>
+            
+            <!-- Call to Action -->
+            <div class="cta-section">
+                <h2>Ready to Start Learning?</h2>
+                <p>Join thousands of students mastering QA testing</p>
+                <a href="/courses/" class="cta-button">Browse All Courses</a>
+            </div>
+        </div>
+    </div>
+    <script src="/assets/js/main.js"></script>
+</body>
+</html>

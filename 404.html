@@ -1,0 +1,187 @@
+---
+layout: default
+title: "Page Not Found - 404"
+description: "The page you're looking for doesn't exist"
+---
+
+<div class="min-h-screen bg-white flex items-center justify-center px-4">
+  <div class="max-w-2xl mx-auto text-center">
+    <!-- 404 Number -->
+    <div class="mb-8">
+      <h1 class="text-8xl md:text-9xl font-bold text-black mb-4">404</h1>
+    </div>
+
+    <!-- Large Black V Graphic -->
+    <div class="mb-12">
+      <div class="w-64 h-64 mx-auto relative">
+        <svg class="w-full h-full" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M40 40 L100 160 L160 40" stroke="black" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+    </div>
+
+    <!-- Error Message -->
+    <h2 class="text-3xl md:text-4xl font-bold text-black mb-6">
+      Page Not Found
+    </h2>
+    
+    <p class="text-lg text-gray-600 mb-12 max-w-md mx-auto">
+      The page you're looking for doesn't exist or has been moved.
+    </p>
+
+    <!-- Action Buttons -->
+    <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+      <a href="/" class="btn btn-primary">
+        Go Home
+      </a>
+      <a href="/courses/" class="btn btn-outline">
+        Browse Courses
+      </a>
+    </div>
+
+    <!-- Search Box -->
+    <div class="mb-8">
+      <div class="max-w-md mx-auto">
+        <div class="relative">
+          <input 
+            type="text" 
+            id="search-input"
+            placeholder="Search for courses, articles, or topics..."
+            class="w-full px-4 py-3 pl-12 text-gray-700 bg-gray-50 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-black focus:border-black"
+          >
+          <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+            <svg class="h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="mb-8">
+      <h3 class="text-lg font-semibold text-black mb-4">Quick Links</h3>
+      <div class="flex flex-wrap justify-center gap-3">
+        <a href="/about/" class="btn btn-ghost btn-sm">About</a>
+        <a href="/contact/" class="btn btn-ghost btn-sm">Contact</a>
+        <a href="/courses/manual-testing-bootcamp/" class="btn btn-ghost btn-sm">Manual Testing</a>
+        <a href="/courses/automated-testing/" class="btn btn-ghost btn-sm">Automation</a>
+        <a href="/blog/" class="btn btn-ghost btn-sm">Blog</a>
+      </div>
+    </div>
+
+    <!-- Back Button -->
+    <div class="mt-8">
+      <button onclick="history.back()" class="btn btn-ghost">
+        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+        </svg>
+        Go Back
+      </button>
+    </div>
+  </div>
+</div>
+
+<script>
+// Search functionality
+document.getElementById('search-input').addEventListener('keypress', function(e) {
+  if (e.key === 'Enter') {
+    const query = this.value.trim();
+    if (query) {
+      window.location.href = '/courses/';
+    }
+  }
+});
+
+// Simple fade-in animation
+document.addEventListener('DOMContentLoaded', function() {
+  const elements = document.querySelectorAll('h1, h2, p, .btn');
+  elements.forEach((el, index) => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(20px)';
+    setTimeout(() => {
+      el.style.transition = 'all 0.6s ease';
+      el.style.opacity = '1';
+      el.style.transform = 'translateY(0)';
+    }, index * 100);
+  });
+});
+</script>
+
+<style>
+/* Clean, minimal styling */
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Button styles */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: black;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #333;
+  transform: translateY(-1px);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: black;
+  border: 2px solid black;
+}
+
+.btn-outline:hover {
+  background-color: black;
+  color: white;
+  transform: translateY(-1px);
+}
+
+.btn-ghost {
+  background-color: transparent;
+  color: #666;
+  border: 1px solid transparent;
+}
+
+.btn-ghost:hover {
+  background-color: #f3f4f6;
+  color: black;
+}
+
+.btn-sm {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .text-8xl {
+    font-size: 4rem;
+  }
+  
+  .text-9xl {
+    font-size: 5rem;
+  }
+  
+  .w-64 {
+    width: 12rem;
+  }
+  
+  .h-64 {
+    height: 12rem;
+  }
+}
+</style> 

@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Security Testing - QA Study Online</title>
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        /* Enhanced Course Page Styles */
+        .course-hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 4rem 0;
+            margin-bottom: 3rem;
+        }
+        .course-hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+        .course-hero .subtitle {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            margin-bottom: 1.5rem;
+        }
+        .course-hero .description {
+            font-size: 1.1rem;
+            opacity: 0.95;
+            max-width: 600px;
+        }
+        .course-meta-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        .meta-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .meta-value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #667eea;
+            margin-bottom: 0.5rem;
+        }
+        .meta-label {
+            color: #6b7280;
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .course-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            text-align: left;
+            overflow-x: visible;
+        }
+        .course-content p {
+            color: #4b5563;
+            line-height: 1.7;
+            margin-bottom: 1rem;
+            padding-left: 0;
+            margin-left: 0;
+            text-indent: 0;
+        }
+        .course-content h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #1f2937;
+            margin: 2rem 0 1rem 0;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid #667eea;
+        }
+        .course-content h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #374151;
+            margin: 1.5rem 0 1rem 0;
+        }
+        .course-content h4 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #4b5563;
+            margin: 1rem 0 0.5rem 0;
+        }
+        .course-content p {
+            color: #4b5563;
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+        .course-content ul, .course-content ol {
+            margin: 1rem 0;
+            padding-left: 1.5rem;
+        }
+        .course-content li {
+            color: #4b5563;
+            line-height: 1.6;
+            margin-bottom: 0.5rem;
+        }
+        .course-content strong {
+            color: #1f2937;
+            font-weight: 600;
+        }
+        .course-content em {
+            color: #6b7280;
+            font-style: italic;
+        }
+        .highlight-box {
+            background: #f0f9ff;
+            border-left: 4px solid #0ea5e9;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .cta-section {
+            background: #f8fafc;
+            padding: 3rem 2rem;
+            text-align: center;
+            margin: 3rem 0;
+            border-radius: 12px;
+        }
+        .cta-button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            display: inline-block;
+            transition: transform 0.2s;
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+        }
+        .back-button {
+            background: #f3f4f6;
+            color: #374151;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.2s;
+            margin-bottom: 2rem;
+        }
+        .back-button:hover {
+            background: #e5e7eb;
+            transform: translateX(-2px);
+        }
+        .markdown-content {
+            width: 100%;
+            overflow-x: visible;
+        }
+        .markdown-content p:first-child {
+            margin-top: 0;
+        }
+        .markdown-content h2:first-child {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Course Hero Section -->
+    <div class="course-hero">
+        <div class="container mx-auto px-4">
+            <a href="/" class="back-button">← Back to Home</a>
+            <h1>Application Security Testing</h1>
+            <p class="subtitle">Learn to find and prevent security vulnerabilities</p>
+            <p class="description">Master application security testing and vulnerability assessment. Learn OWASP Top 10, penetration testing basics, secure coding practices, and security automation for QA professionals.</p>
+        </div>
+    </div>
+    
+    <div class="container mx-auto px-4">
+        <!-- Course Meta Info -->
+        <div class="course-meta-grid">
+            <div class="meta-card">
+                <div class="meta-value">16 hours</div>
+                <div class="meta-label">Duration</div>
+            </div>
+            <div class="meta-card">
+                <div class="meta-value">75</div>
+                <div class="meta-label">Lessons</div>
+            </div>
+            <div class="meta-card">
+                <div class="meta-value">Intermediate</div>
+                <div class="meta-label">Level</div>
+            </div>
+            <div class="meta-card">
+                <div class="meta-value">$89.99</div>
+                <div class="meta-label">Price</div>
+            </div>
+        </div>
+        
+        <!-- Course Content -->
+        <div class="course-content">
+            <div class="markdown-content">
+                <p>   lessons:
+<p>     - title: "Writing Security Bug Reports"
+<p>       duration: "20:15"
+<p>     - title: "Severity and Risk Assessment"
+<p>       duration: "22:30"
+<p>     - title: "Working with Development Teams"
+<p>       duration: "18:45"
+<p>     - title: "Verifying Security Fixes"
+<p>       duration: "19:50"
+<p>     - title: "Security Testing Metrics"
+<p>       duration: "17:25"
+</p><p>
+<p> - title: "Real-World Security Testing Projects"
+<p>   lessons:
+<p>     - title: "Securing a Web Application"
+<p>       duration: "38:50"
+<p>     - title: "API Security Assessment"
+<p>       duration: "35:20"
+<p>     - title: "E-commerce Security Testing"
+<p>       duration: "42:30"
+<p>     - title: "Mobile App Security Basics"
+<p>       duration: "33:15"
+<p>     - title: "Complete Security Test Plan"
+<p>       duration: "40:45"
+</p><p>
+<p>estimonials:
+<p> - name: "Kevin Zhang"
+<p>   title: "Security Engineer at Cloudflare"
+<p>   rating: "★★★★★"
+<p>   text: "As a QA professional transitioning to security, this course gave me the foundation I needed. The OWASP Top 10 coverage is excellent, and the hands-on labs are realistic."
+</p><p>
+<p> - name: "Rebecca Silva"
+<p>   title: "Senior QA Engineer at PayPal"
+<p>   rating: "★★★★★"
+<p>   text: "Security testing was always intimidating, but this course made it accessible. I now confidently perform security testing on our applications and have found several critical vulnerabilities."
+</p><p>
+<p> - name: "Ahmed Hassan"
+<p>   title: "Application Security Analyst"
+<p>   rating: "★★★★★"
+<p>   text: "The practical approach with real tools and vulnerable applications is what sets this course apart. I use these techniques daily in my security testing work."
+<p>--
+</p><p>
+<h2>Course Overview
+</p><p>
+<p>ecurity breaches cost companies millions of dollars and destroy customer trust. Learn to identify security vulnerabilities before attackers do. This comprehensive course teaches application security testing for QA professionals.
+</p><p>
+<h3>Why Security Testing?
+</p><p>
+<p>*High Demand**: Security testing skills are increasingly required across all QA roles. Companies need QA professionals who can think like attackers.
+</p><p>
+<p>*Better Compensation**: QA engineers with security skills command 20-40% higher salaries than those without.
+</p><p>
+<p>*Critical Impact**: Finding a single critical security vulnerability can save a company millions and protect users' sensitive data.
+</p><p>
+<h3>What Makes This Course Different
+</p><p>
+<h4>Practical, Hands-On Approach
+<li>Test actual vulnerable applications
+<li>Use real security testing tools
+<li>Practice on realistic scenarios
+<li>Build a security testing portfolio
+</p><p>
+<h4>QA-Focused Content
+<p>nlike courses designed for penetration testers, this course is specifically designed for QA professionals:
+<li>No deep networking or system administration knowledge required
+<li>Focus on application-layer vulnerabilities
+<li>Integration with existing QA processes
+<li>Practical for everyday testing work
+</p><p>
+<h4>Industry-Standard Tools
+<p>earn the tools used by professional security testers:
+<li>OWASP ZAP (free)
+<li>Burp Suite Community Edition
+<li>Command-line tools for vulnerability scanning
+<li>CI/CD security integration tools
+</p><p>
+<h3>Career Opportunities
+</p><p>
+<p>dding security skills opens new career paths:
+</p><p>
+<li>**Security QA Engineer**: $85K-$130K
+<li>**Application Security Analyst**: $95K-$145K
+<li>**Security Test Engineer**: $90K-$140K
+<li>**Senior Security QA**: $110K-$165K
+</p><p>
+<h3>Learning Path
+</p><p>
+<h4>Weeks 1-3: Foundations
+<p>earn security fundamentals, OWASP Top 10, and basic concepts.
+</p><p>
+<h4>Weeks 4-6: Manual Testing
+<p>aster manual security testing techniques for common vulnerabilities.
+</p><p>
+<h4>Weeks 7-9: Tools and Automation
+<p>se professional security testing tools and automate security checks.
+</p><p>
+<h4>Weeks 10-12: Advanced Topics
+<p>PI security, secure code review, and building complete security test strategies.
+</p><p>
+<h3>What You'll Build
+</p><p>
+<p>y completing this course, you'll have:
+<li>Portfolio of security test reports
+<li>Automated security test scripts
+<li>Security testing checklist and templates
+<li>Confidence to find real vulnerabilities
+</p><p>
+<h3>Who Should Take This Course
+</p><p>
+<p> **QA Engineers** wanting to add security skills
+<p> **Test Automation Engineers** adding security checks
+<p> **Developers** wanting to understand security testing
+<p> **QA Leads** implementing security testing processes
+<p> **Anyone** interested in application security
+</p><p>
+<h3>Prerequisites
+</p><p>
+<p>ou should have:
+<li>Experience with QA testing or software development
+<li>Understanding of web applications and HTTP
+<li>Basic knowledge of HTML, JavaScript, and databases
+<li>Desire to learn security testing
+</p><p>
+<p>*You DON'T need:**
+<li>Prior security or penetration testing experience
+<li>Advanced networking knowledge
+<li>Certification in security
+</p><p>
+<h3>Course Outcomes
+</p><p>
+<p>fter completing this course, you'll be able to:
+<li>Identify and test for OWASP Top 10 vulnerabilities
+<li>Use industry-standard security testing tools
+<li>Write security-focused test cases
+<li>Report security issues effectively
+<li>Integrate security testing into CI/CD
+<li>Conduct security assessments independently
+</p><p>
+<h2>Student Success Stories
+</p><p>
+<p>"I found three critical vulnerabilities in the first month after taking this course. My manager was so impressed, I got promoted to lead our security testing initiative."* - Sarah M., Senior QA Engineer
+</p><p>
+<p>"This course demystified security testing for me. Now I'm the security champion on my QA team."* - James K., Test Automation Engineer
+</p><p>
+<p>"Transitioned from functional QA to application security analyst role thanks to the skills I learned here."* - Lisa R., Application Security Analyst
+</p><p>
+<h2>What You Get
+</p><p>
+<li>**75 comprehensive lessons** covering all aspects of security testing
+<li>**16 hours of video content** with clear explanations
+<li>**Hands-on labs** with vulnerable applications
+<li>**Security testing templates** and checklists
+<li>**Tool configuration guides** for all tools covered
+<li>**Real vulnerability reports** as examples
+<li>**Certificate of completion**
+<li>**Lifetime access** to all content and updates
+<li>**30-day money-back guarantee**
+</p><p>
+<h2>Ethical and Legal Notice
+</p><p>
+<p>his course teaches security testing for **defensive purposes only**:
+<li>Test only applications you own or have permission to test
+<li>Use knowledge to protect, not to harm
+<li>Follow responsible disclosure practices
+<li>Understand legal implications of security testing
+</p><p>
+<h2>Start Learning Security Testing
+</p><p>
+<p>on't wait for a breach to start thinking about security. Start building your security testing skills today.
+</p><p>
+<h3>Money-Back Guarantee
+<p>ry the course risk-free for 30 days. If you're not satisfied, get a full refund.
+</p><p>
+<h3>Lifetime Access
+<p>ne payment, lifetime access to all course content including future updates.
+</p><p>
+<h3>Community Support
+<p>oin our community of security-minded QA professionals for ongoing learning and support.
+            </div>
+            
+            <!-- Call to Action -->
+            <div class="cta-section">
+                <h2>Ready to Start Learning?</h2>
+                <p>Join thousands of students mastering QA testing</p>
+                <a href="/courses/" class="cta-button">Browse All Courses</a>
+            </div>
+        </div>
+    </div>
+    <script src="/assets/js/main.js"></script>
+</body>
+</html>

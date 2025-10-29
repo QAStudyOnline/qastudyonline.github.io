@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual QA Testing Fundamentals - QA Study Online</title>
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        /* Enhanced Course Page Styles */
+        .course-hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 4rem 0;
+            margin-bottom: 3rem;
+        }
+        .course-hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+        .course-hero .subtitle {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            margin-bottom: 1.5rem;
+        }
+        .course-hero .description {
+            font-size: 1.1rem;
+            opacity: 0.95;
+            max-width: 600px;
+        }
+        .course-meta-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        .meta-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .meta-value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #667eea;
+            margin-bottom: 0.5rem;
+        }
+        .meta-label {
+            color: #6b7280;
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .course-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            text-align: left;
+            overflow-x: visible;
+        }
+        .course-content p {
+            color: #4b5563;
+            line-height: 1.7;
+            margin-bottom: 1rem;
+            padding-left: 0;
+            margin-left: 0;
+            text-indent: 0;
+        }
+        .course-content h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #1f2937;
+            margin: 2rem 0 1rem 0;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid #667eea;
+        }
+        .course-content h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #374151;
+            margin: 1.5rem 0 1rem 0;
+        }
+        .course-content h4 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #4b5563;
+            margin: 1rem 0 0.5rem 0;
+        }
+        .course-content p {
+            color: #4b5563;
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+        .course-content ul, .course-content ol {
+            margin: 1rem 0;
+            padding-left: 1.5rem;
+        }
+        .course-content li {
+            color: #4b5563;
+            line-height: 1.6;
+            margin-bottom: 0.5rem;
+        }
+        .course-content strong {
+            color: #1f2937;
+            font-weight: 600;
+        }
+        .course-content em {
+            color: #6b7280;
+            font-style: italic;
+        }
+        .highlight-box {
+            background: #f0f9ff;
+            border-left: 4px solid #0ea5e9;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .cta-section {
+            background: #f8fafc;
+            padding: 3rem 2rem;
+            text-align: center;
+            margin: 3rem 0;
+            border-radius: 12px;
+        }
+        .cta-button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            display: inline-block;
+            transition: transform 0.2s;
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+        }
+        .back-button {
+            background: #f3f4f6;
+            color: #374151;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.2s;
+            margin-bottom: 2rem;
+        }
+        .back-button:hover {
+            background: #e5e7eb;
+            transform: translateX(-2px);
+        }
+        .markdown-content {
+            width: 100%;
+            overflow-x: visible;
+        }
+        .markdown-content p:first-child {
+            margin-top: 0;
+        }
+        .markdown-content h2:first-child {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Course Hero Section -->
+    <div class="course-hero">
+        <div class="container mx-auto px-4">
+            <a href="/" class="back-button">← Back to Home</a>
+            <h1>Manual QA Testing Fundamentals</h1>
+            <p class="subtitle">Start your QA career with comprehensive manual testing skills</p>
+            <p class="description">Learn professional manual testing from scratch. Master test case design, bug reporting, testing techniques, and quality assurance fundamentals. Perfect for beginners starting their QA career.</p>
+        </div>
+    </div>
+    
+    <div class="container mx-auto px-4">
+        <!-- Course Meta Info -->
+        <div class="course-meta-grid">
+            <div class="meta-card">
+                <div class="meta-value">10 hours</div>
+                <div class="meta-label">Duration</div>
+            </div>
+            <div class="meta-card">
+                <div class="meta-value">62</div>
+                <div class="meta-label">Lessons</div>
+            </div>
+            <div class="meta-card">
+                <div class="meta-value">Beginner</div>
+                <div class="meta-label">Level</div>
+            </div>
+            <div class="meta-card">
+                <div class="meta-value">$49.99</div>
+                <div class="meta-label">Price</div>
+            </div>
+        </div>
+        
+        <!-- Course Content -->
+        <div class="course-content">
+            <div class="markdown-content">
+                </p><p>
+<h2>Course Overview
+</p><p>
+<p>tart your career in software testing with this comprehensive manual QA course. Designed for complete beginners, this course takes you from zero knowledge to job-ready QA professional.
+</p><p>
+<h3>Why Manual Testing?
+</p><p>
+<p>anual testing is the foundation of all software testing. Even in automation-heavy environments, manual testing skills are essential for:
+<li>Exploratory testing and finding edge cases
+<li>Usability and user experience validation
+<li>New feature validation before automation
+<li>Test case design and planning
+</p><p>
+<h3>Perfect for Career Changers
+</p><p>
+<p>his course is specifically designed for people starting a new career in tech:
+<li>No programming required
+<li>No prior testing experience needed
+<li>Step-by-step learning path
+<li>Real interview preparation
+<li>Portfolio building guidance
+</p><p>
+<h3>What You'll Achieve
+</p><p>
+<p>y the end of this course, you'll:
+<li>Understand software testing fundamentals
+<li>Write professional test cases
+<li>Find and report bugs effectively
+<li>Use industry-standard tools like Jira
+<li>Be ready for entry-level QA positions
+<li>Have a portfolio of testing work
+</p><p>
+<h3>Course Structure
+</p><p>
+<h4>Part 1: Foundations (Weeks 1-2)
+<p>earn what testing is, why it matters, and how it fits into software development.
+</p><p>
+<h4>Part 2: Core Skills (Weeks 3-5)
+<p>aster test case writing, bug reporting, and testing techniques.
+</p><p>
+<h4>Part 3: Practical Application (Weeks 6-7)
+<p>est real applications and build your portfolio.
+</p><p>
+<h4>Part 4: Career Preparation (Week 8)
+<p>repare your resume, portfolio, and interview skills.
+</p><p>
+<h3>Career Opportunities
+</p><p>
+<p>ntry-level QA positions typically offer:
+<li>**Junior QA Tester**: $45K-$65K
+<li>**QA Analyst**: $50K-$75K
+<li>**Software Tester**: $55K-$80K
+</p><p>
+<p>ith experience, you can advance to:
+<li>**Senior QA Engineer**: $80K-$120K
+<li>**QA Lead**: $90K-$130K
+<li>**Test Manager**: $100K-$150K
+</p><p>
+<h3>What Makes This Course Different
+</p><p>
+<p>. **Beginner-Focused**: Every concept explained from scratch
+<p>. **Practical Projects**: Test real applications, not just theory
+<p>. **Career Guidance**: Resume, portfolio, and interview prep included
+<p>. **Tool Training**: Hands-on with Jira, TestRail, and other tools
+<p>. **Community Support**: Join our Discord community of 2,000+ students
+</p><p>
+<h3>Student Success Rate
+</p><p>
+<li>85% of students complete the course
+<li>73% land a QA job within 6 months
+<li>Average starting salary: $58,000
+<li>95% satisfaction rating
+</p><p>
+<h3>Who This Course Is For
+</p><p>
+<p> **Career Changers** entering tech from other fields
+<p> **Recent Graduates** looking for their first tech job
+<p> **Current Testers** wanting to formalize their skills
+<p> **Developers** who want to understand testing better
+<p> **Anyone** interested in starting a QA career
+</p><p>
+<h3>Who This Course Is NOT For
+</p><p>
+<p> Experienced QA professionals (try our advanced courses)
+<p> People looking only for automation (check our automation courses)
+<p> Those unwilling to practice and do homework
+</p><p>
+<h2>What You Get
+</p><p>
+<li>**62 video lessons** covering all manual testing fundamentals
+<li>**Downloadable resources**: templates, checklists, examples
+<li>**Practice exercises** after each section
+<li>**Real-world projects** to build your portfolio
+<li>**Certificate of completion** to add to your resume
+<li>**Lifetime access** to all course content and updates
+<li>**30-day money-back guarantee** if you're not satisfied
+</p><p>
+<h2>From Our Students
+</p><p>
+<p>"I had no tech background but always wanted to work in IT. This course gave me the skills and confidence to land my first QA job at a fintech startup."* - Sarah J., QA Analyst
+</p><p>
+<p>"The course structure is perfect for beginners. Each concept builds on the previous one, and the practical examples helped solidify my understanding."* - David M., Junior Tester
+</p><p>
+<p>"Worth every penny. The interview prep alone is worth the course price. I used the mock questions to prepare and nailed my interview."* - Lisa K., Software Tester
+</p><p>
+<h2>Start Your QA Career Today
+</p><p>
+<p>on't wait to start your new career in tech. Join thousands of successful students who've launched their QA careers with this course.
+</p><p>
+<h3>Money-Back Guarantee
+<p>ry the course risk-free for 30 days. If you're not satisfied, get a full refund.
+</p><p>
+<h3>Lifetime Access
+<p>ne payment, lifetime access to all course content including future updates.
+</p><p>
+<h3>Instructor Support
+<p>et your questions answered by Yehor and the teaching team.
+            </div>
+            
+            <!-- Call to Action -->
+            <div class="cta-section">
+                <h2>Ready to Start Learning?</h2>
+                <p>Join thousands of students mastering QA testing</p>
+                <a href="/courses/" class="cta-button">Browse All Courses</a>
+            </div>
+        </div>
+    </div>
+    <script src="/assets/js/main.js"></script>
+</body>
+</html>

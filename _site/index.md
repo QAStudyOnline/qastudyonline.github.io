@@ -1,0 +1,258 @@
+---
+layout: home
+title: "Master QA Testing Skills"
+description: "Learn quality assurance, software testing, and automation from industry experts"
+body_class: "home-page"
+
+hero:
+  title: "Master QA Testing Skills"
+  description: "Learn quality assurance, software testing, and automation from industry experts. Build your career in QA with hands-on projects and real-world experience."
+  primary_cta:
+    text: "Start Learning"
+    url: "/courses/"
+  secondary_cta:
+    text: "View Courses"
+    url: "/courses/"
+  image: "/assets/images/hero-qa-testing.jpg"
+---
+
+<section class="py-20">
+  <div class="text-center mb-16">
+    <h2 class="h2 mb-4">Explore Top QA Skills and Certifications</h2>
+    <p class="text-large text-gray-600">Top companies choose QAStudy.online to build in-demand testing skills.</p>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+    <div class="card">
+      <div class="card-body">
+        <h3 class="h4 text-primary mb-4">Manual Testing</h3>
+        <ul class="space-y-2">
+          <li><a href="/courses/test-case-design/" class="text-gray-600 hover:text-primary">Test Case Design</a></li>
+          <li><a href="/courses/bug-reporting/" class="text-gray-600 hover:text-primary">Bug Reporting</a></li>
+          <li><a href="/courses/test-planning/" class="text-gray-600 hover:text-primary">Test Planning</a></li>
+          <li><a href="/courses/uat/" class="text-gray-600 hover:text-primary">User Acceptance Testing</a></li>
+          <li><a href="/courses/exploratory-testing/" class="text-gray-600 hover:text-primary">Exploratory Testing</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-body">
+        <h3 class="h4 text-primary mb-4">Test Automation</h3>
+        <ul class="space-y-2">
+          <li><a href="/courses/selenium/" class="text-gray-600 hover:text-primary">Selenium WebDriver</a></li>
+          <li><a href="/courses/cypress/" class="text-gray-600 hover:text-primary">Cypress</a></li>
+          <li><a href="/courses/testng-junit/" class="text-gray-600 hover:text-primary">TestNG & JUnit</a></li>
+          <li><a href="/courses/api-testing/" class="text-gray-600 hover:text-primary">API Testing</a></li>
+          <li><a href="/courses/ci-cd/" class="text-gray-600 hover:text-primary">CI/CD Integration</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-body">
+        <h3 class="h4 text-primary mb-4">QA Certifications</h3>
+        <ul class="space-y-2">
+          <li><a href="/certifications/istqb/" class="text-gray-600 hover:text-primary">ISTQB Foundation</a></li>
+          <li><a href="/certifications/agile/" class="text-gray-600 hover:text-primary">Agile Testing</a></li>
+          <li><a href="/certifications/test-management/" class="text-gray-600 hover:text-primary">Test Management</a></li>
+          <li><a href="/certifications/performance/" class="text-gray-600 hover:text-primary">Performance Testing</a></li>
+          <li><a href="/certifications/security/" class="text-gray-600 hover:text-primary">Security Testing</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-body">
+        <h3 class="h4 text-primary mb-4">Career Development</h3>
+        <ul class="space-y-2">
+          <li><a href="/courses/qa-leadership/" class="text-gray-600 hover:text-primary">QA Leadership</a></li>
+          <li><a href="/courses/test-strategy/" class="text-gray-600 hover:text-primary">Test Strategy</a></li>
+          <li><a href="/courses/team-management/" class="text-gray-600 hover:text-primary">Team Management</a></li>
+          <li><a href="/courses/interview-prep/" class="text-gray-600 hover:text-primary">Interview Preparation</a></li>
+          <li><a href="/courses/portfolio/" class="text-gray-600 hover:text-primary">Portfolio Building</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-20 bg-gray-50">
+  <div class="container">
+    <div class="text-center mb-16">
+      <h2 class="h2 mb-4">Featured Courses</h2>
+      <p class="text-large text-gray-600">Start your QA journey with our most popular courses</p>
+    </div>
+
+    <div class="course-grid">
+      <div class="course-card">
+        <div class="course-image">
+          <div class="course-image-content">Manual Testing Fundamentals</div>
+        </div>
+        <div class="course-content">
+          <div class="course-category">Beginner</div>
+          <h3 class="course-title">
+            <a href="/courses/manual-testing-bootcamp/">Complete Manual Testing Bootcamp</a>
+          </h3>
+          <p class="course-description">Learn software testing from scratch with hands-on projects and real-world scenarios.</p>
+          <div class="course-instructor">
+            <div class="instructor-avatar"></div>
+            <span>By QA Expert</span>
+          </div>
+          <div class="course-stats">
+            <div class="stat-item">
+              <svg class="icon" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path>
+              </svg>
+              8 hours
+            </div>
+            <div class="stat-item">
+              <svg class="icon" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"></path>
+              </svg>
+              42 lessons
+            </div>
+          </div>
+        </div>
+        <div class="course-meta">
+          <div class="course-rating">
+            <span class="stars">★★★★★</span>
+            <span>4.8</span>
+            <span class="rating-count">(2,845)</span>
+          </div>
+          <div class="course-price">
+            <span class="current-price">$49.99</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="course-card">
+        <div class="course-image">
+          <div class="course-image-content">Selenium Automation</div>
+        </div>
+        <div class="course-content">
+          <div class="course-category">Intermediate</div>
+          <h3 class="course-title">
+            <a href="/courses/selenium-webdriver/">Selenium WebDriver with Java</a>
+          </h3>
+          <p class="course-description">Master test automation with Selenium WebDriver and build robust test frameworks.</p>
+          <div class="course-instructor">
+            <div class="instructor-avatar"></div>
+            <span>By Automation Expert</span>
+          </div>
+          <div class="course-stats">
+            <div class="stat-item">
+              <svg class="icon" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path>
+              </svg>
+              12 hours
+            </div>
+            <div class="stat-item">
+              <svg class="icon" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"></path>
+              </svg>
+              68 lessons
+            </div>
+          </div>
+        </div>
+        <div class="course-meta">
+          <div class="course-rating">
+            <span class="stars">★★★★★</span>
+            <span>4.9</span>
+            <span class="rating-count">(1,923)</span>
+          </div>
+          <div class="course-price">
+            <span class="current-price">$79.99</span>
+            <span class="original-price">$129.99</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="course-card">
+        <div class="course-image">
+          <div class="course-image-content">API Testing</div>
+        </div>
+        <div class="course-content">
+          <div class="course-category">Intermediate</div>
+          <h3 class="course-title">
+            <a href="/courses/api-testing-postman/">API Testing with Postman & REST Assured</a>
+          </h3>
+          <p class="course-description">Learn to test APIs effectively using popular tools and frameworks.</p>
+          <div class="course-instructor">
+            <div class="instructor-avatar"></div>
+            <span>By API Testing Pro</span>
+          </div>
+          <div class="course-stats">
+            <div class="stat-item">
+              <svg class="icon" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path>
+              </svg>
+              10 hours
+            </div>
+            <div class="stat-item">
+              <svg class="icon" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"></path>
+              </svg>
+              52 lessons
+            </div>
+          </div>
+        </div>
+        <div class="course-meta">
+          <div class="course-rating">
+            <span class="stars">★★★★☆</span>
+            <span>4.7</span>
+            <span class="rating-count">(1,654)</span>
+          </div>
+          <div class="course-price">
+            <span class="current-price">$59.99</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-12">
+      <a href="/courses/" class="btn btn-primary btn-lg">View All Courses</a>
+    </div>
+  </div>
+</section>
+
+<section class="py-20">
+  <div class="container">
+    <div class="text-center mb-16">
+      <h2 class="h2 mb-4">Why Choose QAStudy.online?</h2>
+      <p class="text-large text-gray-600">Join thousands of professionals who've advanced their QA careers with us</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="text-center">
+        <div class="w-16 h-16 bg-primary-100 rounded-full d-flex align-center justify-center mx-auto mb-4">
+          <svg class="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          </svg>
+        </div>
+        <h3 class="h4 mb-3">Industry Expert Instructors</h3>
+        <p class="text-gray-600">Learn from experienced QA professionals who've worked at top tech companies.</p>
+      </div>
+
+      <div class="text-center">
+        <div class="w-16 h-16 bg-primary-100 rounded-full d-flex align-center justify-center mx-auto mb-4">
+          <svg class="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"></path>
+          </svg>
+        </div>
+        <h3 class="h4 mb-3">Hands-on Projects</h3>
+        <p class="text-gray-600">Build real-world testing projects that you can showcase in your portfolio.</p>
+      </div>
+
+      <div class="text-center">
+        <div class="w-16 h-16 bg-primary-100 rounded-full d-flex align-center justify-center mx-auto mb-4">
+          <svg class="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"></path>
+          </svg>
+        </div>
+        <h3 class="h4 mb-3">Career Support</h3>
+        <p class="text-gray-600">Get help with resume reviews, interview preparation, and job placement assistance.</p>
+      </div>
+    </div>
+  </div>
+</section> 

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Performance Testing with JMeter & Docker - QA Study Online</title>
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        /* Enhanced Course Page Styles */
+        .course-hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 4rem 0;
+            margin-bottom: 3rem;
+        }
+        .course-hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+        .course-hero .subtitle {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            margin-bottom: 1.5rem;
+        }
+        .course-hero .description {
+            font-size: 1.1rem;
+            opacity: 0.95;
+            max-width: 600px;
+        }
+        .course-meta-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        .meta-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .meta-value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #667eea;
+            margin-bottom: 0.5rem;
+        }
+        .meta-label {
+            color: #6b7280;
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .course-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            text-align: left;
+            overflow-x: visible;
+        }
+        .course-content p {
+            color: #4b5563;
+            line-height: 1.7;
+            margin-bottom: 1rem;
+            padding-left: 0;
+            margin-left: 0;
+            text-indent: 0;
+        }
+        .course-content h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #1f2937;
+            margin: 2rem 0 1rem 0;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid #667eea;
+        }
+        .course-content h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #374151;
+            margin: 1.5rem 0 1rem 0;
+        }
+        .course-content h4 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #4b5563;
+            margin: 1rem 0 0.5rem 0;
+        }
+        .course-content p {
+            color: #4b5563;
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+        .course-content ul, .course-content ol {
+            margin: 1rem 0;
+            padding-left: 1.5rem;
+        }
+        .course-content li {
+            color: #4b5563;
+            line-height: 1.6;
+            margin-bottom: 0.5rem;
+        }
+        .course-content strong {
+            color: #1f2937;
+            font-weight: 600;
+        }
+        .course-content em {
+            color: #6b7280;
+            font-style: italic;
+        }
+        .highlight-box {
+            background: #f0f9ff;
+            border-left: 4px solid #0ea5e9;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .cta-section {
+            background: #f8fafc;
+            padding: 3rem 2rem;
+            text-align: center;
+            margin: 3rem 0;
+            border-radius: 12px;
+        }
+        .cta-button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            display: inline-block;
+            transition: transform 0.2s;
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+        }
+        .back-button {
+            background: #f3f4f6;
+            color: #374151;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.2s;
+            margin-bottom: 2rem;
+        }
+        .back-button:hover {
+            background: #e5e7eb;
+            transform: translateX(-2px);
+        }
+        .markdown-content {
+            width: 100%;
+            overflow-x: visible;
+        }
+        .markdown-content p:first-child {
+            margin-top: 0;
+        }
+        .markdown-content h2:first-child {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Course Hero Section -->
+    <div class="course-hero">
+        <div class="container mx-auto px-4">
+            <a href="/" class="back-button">← Back to Home</a>
+            <h1>Performance Testing with JMeter & Docker</h1>
+            <p class="subtitle">Master load testing, stress testing, and performance analysis</p>
+            <p class="description">Learn to conduct comprehensive performance testing using Apache JMeter, Docker, InfluxDB, and Grafana. Build scalable test environments and analyze performance metrics like a pro.</p>
+        </div>
+    </div>
+    
+    <div class="container mx-auto px-4">
+        <!-- Course Meta Info -->
+        <div class="course-meta-grid">
+            <div class="meta-card">
+                <div class="meta-value">15 hours</div>
+                <div class="meta-label">Duration</div>
+            </div>
+            <div class="meta-card">
+                <div class="meta-value">72</div>
+                <div class="meta-label">Lessons</div>
+            </div>
+            <div class="meta-card">
+                <div class="meta-value">Intermediate</div>
+                <div class="meta-label">Level</div>
+            </div>
+            <div class="meta-card">
+                <div class="meta-value">$79.99</div>
+                <div class="meta-label">Price</div>
+            </div>
+        </div>
+        
+        <!-- Course Content -->
+        <div class="course-content">
+            <div class="markdown-content">
+                </p><p>
+<p>tart building your performance testing skills with practical, real-world techniques. Download the complete source code from GitHub and follow along with every lesson.
+            </div>
+            
+            <!-- Call to Action -->
+            <div class="cta-section">
+                <h2>Ready to Start Learning?</h2>
+                <p>Join thousands of students mastering QA testing</p>
+                <a href="/courses/" class="cta-button">Browse All Courses</a>
+            </div>
+        </div>
+    </div>
+    <script src="/assets/js/main.js"></script>
+</body>
+</html>

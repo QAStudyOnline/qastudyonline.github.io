@@ -1,0 +1,241 @@
+---
+layout: default
+---
+
+<article class="course-page">
+  <!-- Course Hero -->
+  <section class="course-hero py-16 bg-gray-50">
+    <div class="container">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div class="course-hero-content">
+          {% if page.level %}
+            <span class="badge badge-{{ page.level | downcase }}">{{ page.level }}</span>
+          {% endif %}
+
+          <h1 class="h1 mt-4 mb-4">{{ page.title }}</h1>
+
+          {% if page.subtitle %}
+            <p class="text-xl text-gray-700 mb-6">{{ page.subtitle }}</p>
+          {% endif %}
+
+          {% if page.description %}
+            <p class="text-large text-gray-600 mb-8">{{ page.description }}</p>
+          {% endif %}
+
+          <!-- Course Meta -->
+          <div class="course-meta-info mb-8">
+            <div class="flex flex-wrap gap-6">
+              {% if page.duration %}
+                <div class="meta-item">
+                  <svg class="icon" fill="currentColor" viewBox="0 0 20 20" width="20" height="20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path>
+                  </svg>
+                  <span>{{ page.duration }}</span>
+                </div>
+              {% endif %}
+
+              {% if page.lessons %}
+                <div class="meta-item">
+                  <svg class="icon" fill="currentColor" viewBox="0 0 20 20" width="20" height="20">
+                    <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"></path>
+                  </svg>
+                  <span>{{ page.lessons }} lessons</span>
+                </div>
+              {% endif %}
+
+              {% if page.students %}
+                <div class="meta-item">
+                  <svg class="icon" fill="currentColor" viewBox="0 0 20 20" width="20" height="20">
+                    <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"></path>
+                  </svg>
+                  <span>{{ page.students }} students</span>
+                </div>
+              {% endif %}
+            </div>
+          </div>
+
+          <!-- Call to Actions -->
+          <div class="course-actions">
+            {% if page.youtube_url %}
+              <a href="{{ page.youtube_url }}" class="btn btn-primary btn-lg" target="_blank" rel="noopener">
+                <svg class="icon mr-2" fill="currentColor" viewBox="0 0 20 20" width="20" height="20">
+                  <path d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"></path>
+                </svg>
+                Watch on YouTube
+              </a>
+            {% endif %}
+
+            {% if page.github_url %}
+              <a href="{{ page.github_url }}" class="btn btn-secondary btn-lg" target="_blank" rel="noopener">
+                <svg class="icon mr-2" fill="currentColor" viewBox="0 0 20 20" width="20" height="20">
+                  <path fill-rule="evenodd" d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0020 10.017C20 4.484 15.522 0 10 0z" clip-rule="evenodd"></path>
+                </svg>
+                View on GitHub
+              </a>
+            {% endif %}
+
+            {% if page.udemy_url %}
+              <a href="{{ page.udemy_url }}" class="btn btn-accent btn-lg" target="_blank" rel="noopener">
+                Enroll on Udemy
+              </a>
+            {% endif %}
+          </div>
+        </div>
+
+        <div class="course-hero-media">
+          {% if page.video_id %}
+            <!-- YouTube Video Embed -->
+            <div class="video-container">
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/{{ page.video_id }}"
+                title="{{ page.title }}"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+              </iframe>
+            </div>
+          {% elsif page.image %}
+            <img src="{{ page.image | relative_url }}" alt="{{ page.title }}" class="course-image">
+          {% else %}
+            <div class="course-image-placeholder">
+              {{ page.title }}
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What You'll Learn -->
+  {% if page.features %}
+    <section class="py-16">
+      <div class="container">
+        <h2 class="h2 mb-8">What You'll Learn</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {% for feature in page.features %}
+            <div class="feature-item">
+              <svg class="icon text-primary mr-3" fill="currentColor" viewBox="0 0 20 20" width="20" height="20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+              <span>{{ feature }}</span>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+  {% endif %}
+
+  <!-- Course Content / Curriculum -->
+  {% if page.curriculum %}
+    <section class="py-16 bg-gray-50">
+      <div class="container">
+        <h2 class="h2 mb-8">Course Curriculum</h2>
+        <div class="curriculum-list">
+          {% for module in page.curriculum %}
+            <div class="curriculum-module">
+              <h3 class="h4 mb-4">{{ module.title }}</h3>
+              {% if module.lessons %}
+                <ul class="lesson-list">
+                  {% for lesson in module.lessons %}
+                    <li class="lesson-item">
+                      <div class="lesson-info">
+                        <span class="lesson-title">{{ lesson.title }}</span>
+                        {% if lesson.duration %}
+                          <span class="lesson-duration">{{ lesson.duration }}</span>
+                        {% endif %}
+                      </div>
+                    </li>
+                  {% endfor %}
+                </ul>
+              {% endif %}
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+  {% endif %}
+
+  <!-- Tools Covered -->
+  {% if page.tools %}
+    <section class="py-16">
+      <div class="container">
+        <h2 class="h2 mb-8">Tools & Technologies Covered</h2>
+        <div class="tools-grid">
+          {% for tool in page.tools %}
+            <div class="tool-badge">{{ tool }}</div>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+  {% endif %}
+
+  <!-- Requirements -->
+  {% if page.requirements %}
+    <section class="py-16 bg-gray-50">
+      <div class="container">
+        <h2 class="h2 mb-8">Requirements</h2>
+        <ul class="requirements-list">
+          {% for requirement in page.requirements %}
+            <li>{{ requirement }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    </section>
+  {% endif %}
+
+  <!-- Course Content (Markdown) -->
+  <section class="py-16">
+    <div class="container">
+      <div class="prose max-w-none">
+        {{ content }}
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  {% if page.testimonials %}
+    <section class="py-16 bg-gray-50">
+      <div class="container">
+        <h2 class="h2 mb-12 text-center">What Students Say</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {% for testimonial in page.testimonials %}
+            <div class="testimonial-card">
+              <div class="testimonial-rating mb-4">
+                <span class="stars">{{ testimonial.rating }}</span>
+              </div>
+              <p class="testimonial-text mb-4">"{{ testimonial.text }}"</p>
+              <div class="testimonial-author">
+                <strong>{{ testimonial.name }}</strong>
+                {% if testimonial.title %}
+                  <span class="text-gray-600">{{ testimonial.title }}</span>
+                {% endif %}
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+  {% endif %}
+
+  <!-- Call to Action -->
+  <section class="py-20 bg-primary text-white">
+    <div class="container text-center">
+      <h2 class="h2 mb-4">Ready to Start Learning?</h2>
+      <p class="text-xl mb-8">Join thousands of students mastering {{ page.category | default: "QA Testing" }}</p>
+      <div class="cta-actions">
+        {% if page.youtube_url %}
+          <a href="{{ page.youtube_url }}" class="btn btn-white btn-lg" target="_blank" rel="noopener">
+            Watch on YouTube
+          </a>
+        {% endif %}
+        {% if page.github_url %}
+          <a href="{{ page.github_url }}" class="btn btn-secondary btn-lg" target="_blank" rel="noopener">
+            Download Examples
+          </a>
+        {% endif %}
+      </div>
+    </div>
+  </section>
+</article>

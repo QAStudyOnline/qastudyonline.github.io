@@ -1,0 +1,90 @@
+{% assign current_lang = page.lang | default: site.default_lang %}
+{% assign current_url = page.url | remove: "/" | split: "/" %}
+{% assign lang_path = current_url[0] %}
+
+<div class="language-switcher relative inline-block">
+  <button class="language-toggle flex items-center space-x-2 px-3 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-500" onclick="toggleLanguageMenu()">
+    <span class="flag-icon flag-icon-{{ current_lang }}"></span>
+    <span>{{ site.lang_names[current_lang] }}</span>
+    <svg class="w-4 h-4 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+    </svg>
+  </button>
+  
+  <div id="language-menu" class="language-menu absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 opacity-0 invisible transition-all duration-200 z-50">
+    <div class="py-1">
+      {% for lang in site.languages %}
+        {% if lang != current_lang %}
+          {% assign lang_url = page.url %}
+          {% if lang == site.default_lang %}
+            {% assign lang_url = page.url | remove: "/" | split: "/" | shift | join: "/" %}
+            {% if lang_url != "" %}
+              {% assign lang_url = "/" | append: lang_url %}
+            {% else %}
+              {% assign lang_url = "/" %}
+            {% endif %}
+          {% else %}
+            {% if lang_path == site.default_lang or lang_path == "" %}
+              {% assign lang_url = "/" | append: lang | append: page.url %}
+            {% else %}
+              {% assign lang_url = page.url | replace: lang_path, lang %}
+            {% endif %}
+          {% endif %}
+          
+          <a href="{{ lang_url }}" class="language-option block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900 transition-colors duration-150">
+            <span class="flag-icon flag-icon-{{ lang }} mr-2"></span>
+            {{ site.lang_names[lang] }}
+          </a>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<style>
+.language-switcher {
+  position: relative;
+}
+
+.language-menu {
+  transform: translateY(-10px);
+}
+
+.language-menu.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.flag-icon {
+  width: 16px;
+  height: 12px;
+  display: inline-block;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.flag-icon-en { background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30"><clipPath id="a"><path d="M30 15h30v15zv15H0zH0V0z"/></clipPath><clipPath id="b"><path d="M30 15h30v15zv15H0zH0V0z"/></clipPath><g clip-path="url(%23a)"><path d="M0 0v30h60V0z" fill="%23012169"/><path d="M0 0L60 30m0-30L0 30" stroke="%23fff" stroke-width="6"/><path d="M0 0L60 30m0-30L0 30" clip-path="url(%23b)" stroke="%23C8102E" stroke-width="4"/><path d="M30 0v30M0 15h60" stroke="%23fff" stroke-width="10"/><path d="M30 0v30M0 15h60" stroke="%23C8102E" stroke-width="6"/></g></svg>'); }
+.flag-icon-es { background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 500"><rect width="750" height="500" fill="%23c60b1e"/><rect width="750" height="250" y="125" fill="%23ffc400"/></svg>'); }
+.flag-icon-fr { background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600"><rect width="900" height="600" fill="%23ED2939"/><rect width="600" height="600" fill="%23fff"/><rect width="300" height="600" fill="%23002395"/></svg>'); }
+.flag-icon-de { background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5 3"><rect width="5" height="3" fill="%23000"/><rect width="5" height="2" y="1" fill="%23DD0000"/><rect width="5" height="1" y="2" fill="%23FFCE00"/></svg>'); }
+.flag-icon-uk { background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><rect width="1200" height="800" fill="%23005BBB"/><rect width="1200" height="400" y="200" fill="%23FFD700"/></svg>'); }
+</style>
+
+<script>
+function toggleLanguageMenu() {
+  const menu = document.getElementById('language-menu');
+  menu.classList.toggle('show');
+}
+
+// Close menu when clicking outside
+document.addEventListener('click', function(event) {
+  const switcher = document.querySelector('.language-switcher');
+  const menu = document.getElementById('language-menu');
+  
+  if (!switcher.contains(event.target)) {
+    menu.classList.remove('show');
+  }
+});
+</script> 

@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QA Leadership and Management - QA Study Online</title>
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        /* Enhanced Course Page Styles */
+        .course-hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 4rem 0;
+            margin-bottom: 3rem;
+        }
+        .course-hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+        .course-hero .subtitle {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            margin-bottom: 1.5rem;
+        }
+        .course-hero .description {
+            font-size: 1.1rem;
+            opacity: 0.95;
+            max-width: 600px;
+        }
+        .course-meta-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        .meta-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .meta-value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #667eea;
+            margin-bottom: 0.5rem;
+        }
+        .meta-label {
+            color: #6b7280;
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .course-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            text-align: left;
+            overflow-x: visible;
+        }
+        .course-content p {
+            color: #4b5563;
+            line-height: 1.7;
+            margin-bottom: 1rem;
+            padding-left: 0;
+            margin-left: 0;
+            text-indent: 0;
+        }
+        .course-content h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #1f2937;
+            margin: 2rem 0 1rem 0;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid #667eea;
+        }
+        .course-content h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #374151;
+            margin: 1.5rem 0 1rem 0;
+        }
+        .course-content h4 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #4b5563;
+            margin: 1rem 0 0.5rem 0;
+        }
+        .course-content p {
+            color: #4b5563;
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+        .course-content ul, .course-content ol {
+            margin: 1rem 0;
+            padding-left: 1.5rem;
+        }
+        .course-content li {
+            color: #4b5563;
+            line-height: 1.6;
+            margin-bottom: 0.5rem;
+        }
+        .course-content strong {
+            color: #1f2937;
+            font-weight: 600;
+        }
+        .course-content em {
+            color: #6b7280;
+            font-style: italic;
+        }
+        .highlight-box {
+            background: #f0f9ff;
+            border-left: 4px solid #0ea5e9;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .cta-section {
+            background: #f8fafc;
+            padding: 3rem 2rem;
+            text-align: center;
+            margin: 3rem 0;
+            border-radius: 12px;
+        }
+        .cta-button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            display: inline-block;
+            transition: transform 0.2s;
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+        }
+        .back-button {
+            background: #f3f4f6;
+            color: #374151;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.2s;
+            margin-bottom: 2rem;
+        }
+        .back-button:hover {
+            background: #e5e7eb;
+            transform: translateX(-2px);
+        }
+        .markdown-content {
+            width: 100%;
+            overflow-x: visible;
+        }
+        .markdown-content p:first-child {
+            margin-top: 0;
+        }
+        .markdown-content h2:first-child {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Course Hero Section -->
+    <div class="course-hero">
+        <div class="container mx-auto px-4">
+            <a href="/" class="back-button">← Back to Home</a>
+            <h1>QA Leadership and Management</h1>
+            <p class="subtitle">Advance your career from QA Engineer to QA Manager</p>
+            <p class="description">Learn to lead QA teams, manage testing processes, and drive quality strategy. Master team leadership, process improvement, stakeholder management, and strategic planning for experienced QA professionals.</p>
+        </div>
+    </div>
+    
+    <div class="container mx-auto px-4">
+        <!-- Course Meta Info -->
+        <div class="course-meta-grid">
+            <div class="meta-card">
+                <div class="meta-value">14 hours</div>
+                <div class="meta-label">Duration</div>
+            </div>
+            <div class="meta-card">
+                <div class="meta-value">68</div>
+                <div class="meta-label">Lessons</div>
+            </div>
+            <div class="meta-card">
+                <div class="meta-value">Advanced</div>
+                <div class="meta-label">Level</div>
+            </div>
+            <div class="meta-card">
+                <div class="meta-value">$89.99</div>
+                <div class="meta-label">Price</div>
+            </div>
+        </div>
+        
+        <!-- Course Content -->
+        <div class="course-content">
+            <div class="markdown-content">
+                </p><p>
+<h2>Course Overview
+</p><p>
+<p>Making the leap from QA Engineer to QA Manager requires more than technical skills. This comprehensive course teaches you the leadership, management, and strategic skills needed to excel as a QA leader.
+</p><p>
+<h3>Why Take This Course?
+</p><p>
+<p>The transition from individual contributor to manager is one of the most challenging career moves. Many talented engineers struggle because management requires a completely different skill set.
+</p><p>
+<p>*This course bridges that gap.**
+</p><p>
+<h3>What You'll Master
+</p><p>
+<h4>Leadership Skills
+<li>Build and motivate high-performing teams
+<li>Provide effective feedback and coaching
+<li>Navigate difficult conversations
+<li>Drive quality culture across the organization
+</p><p>
+<h4>Strategic Thinking
+<li>Develop comprehensive test strategies
+<li>Balance short-term needs with long-term vision
+<li>Align QA goals with business objectives
+<li>Make data-driven decisions
+</p><p>
+<h4>People Management
+<li>Hire and onboard QA talent
+<li>Conduct meaningful one-on-ones
+<li>Manage performance and career development
+<li>Handle underperformance and conflicts
+</p><p>
+<h4>Stakeholder Management
+<li>Communicate effectively with executives
+<li>Collaborate with product and engineering
+<li>Manage expectations and deadlines
+<li>Build credibility and influence
+</p><p>
+<h3>Career Impact
+</p><p>
+<h4>Salary Growth
+<li>QA Manager: $100K-$150K
+<li>Senior QA Manager: $130K-$180K
+<li>QA Director: $150K-$220K
+<li>VP of Quality: $180K-$300K
+</p><p>
+<h4>Career Progression
+<p>his course prepares you for:
+<li>QA Team Lead → QA Manager
+<li>QA Manager → Senior QA Manager
+<li>Senior Manager → Director of QA
+<li>Director → VP of Engineering/Quality
+</p><p>
+<h3>Course Structure
+</p><p>
+<h4>Module 1: Foundation (Weeks 1-2)
+<p>nderstand the management mindset and prepare for your first leadership role.
+</p><p>
+<h4>Module 2: People Skills (Weeks 3-5)
+<p>aster team building, hiring, performance management, and coaching.
+</p><p>
+<h4>Module 3: Strategy (Weeks 6-8)
+<p>earn to think strategically about test strategy, process improvement, and quality roadmaps.
+</p><p>
+<h4>Module 4: Advanced Leadership (Weeks 9-10)
+<p>rive organizational change, manage budgets, and influence quality culture.
+</p><p>
+<h3>What Makes This Course Unique
+</p><p>
+<p>. **Real Experience**: Based on 10+ years of QA leadership
+<p>. **Practical Scenarios**: Actual situations you'll face as a manager
+<p>. **No Fluff**: Actionable advice, not generic management theory
+<p>. **Templates Included**: Performance review templates, 1:1 agendas, hiring scorecards
+<p>. **Ongoing Updates**: Course evolves with modern QA practices
+</p><p>
+<h3>Student Results
+</p><p>
+<li>**78%** received promotions within 12 months
+<li>**$35K** average salary increase after course completion
+<li>**92%** feel more confident in their management abilities
+<li>**4.9/5** average course rating from 2,340+ students
+</p><p>
+<h3>Who Should Take This Course
+</p><p>
+<p> **Senior QA Engineers** preparing for management roles
+<p> **New QA Managers** in their first year
+<p> **QA Leads** wanting to formalize leadership skills
+<p> **QA Managers** looking to advance to Director level
+<p> **Anyone** interested in QA leadership career path
+</p><p>
+<h3>Who This Course Is NOT For
+</p><p>
+<p> Junior QA engineers (get 3+ years experience first)
+<p> Individual contributors not interested in management
+<p> People looking for technical QA training
+</p><p>
+<h2>What Students Say
+</p><p>
+<p>"I was promoted to QA Manager three months after taking this course. The frameworks and templates gave me confidence to lead effectively from day one."* - Michael T., QA Manager
+</p><p>
+<p>"The stakeholder management section transformed how I communicate with executives. I finally understand how to speak their language."* - Sarah K., Senior QA Manager
+</p><p>
+<p>"Best investment in my career. The course paid for itself with my first raise as a manager."* - David L., QA Director
+</p><p>
+<h2>Course Content Details
+</p><p>
+<h3>Part 1: Management Fundamentals
+<p>earn the essential mindset shift from doing to leading. Understand what makes great QA managers different.
+</p><p>
+<h3>Part 2: Building Your Team
+<p>aster the art of hiring, onboarding, and developing QA talent. Create a team that delivers excellence.
+</p><p>
+<h3>Part 3: Strategic Leadership
+<p>hink beyond daily tasks. Learn to create test strategies, manage risks, and drive long-term quality improvements.
+</p><p>
+<h3>Part 4: Organizational Impact
+<p>xtend your influence beyond your team. Drive quality culture, manage stakeholders, and lead organizational change.
+</p><p>
+<h2>Bonus Materials
+</p><p>
+<li>📋 **Performance Review Templates**
+<li>📊 **Quality Metrics Dashboard Examples**
+<li>📝 **One-on-One Meeting Agenda Templates**
+<li>🎯 **Hiring Scorecard and Interview Questions**
+<li>📈 **Test Strategy Document Templates**
+<li>💼 **90-Day New Manager Plan**
+</p><p>
+<h2>Money-Back Guarantee
+</p><p>
+<p>ry the course risk-free for 30 days. If it doesn't meet your expectations, get a full refund—no questions asked.
+</p><p>
+<h2>Start Your Leadership Journey
+</p><p>
+<p>on't wait for the perfect moment. Start building the skills you need to become a successful QA leader today.
+</p><p>
+<h3>Lifetime Access
+<p>ne payment gives you lifetime access to all content including future updates and new modules.
+</p><p>
+<h3>Certificate of Completion
+<p>dd to your LinkedIn profile and resume to showcase your leadership training.
+</p><p>
+<h3>Community Access
+<p>oin our exclusive community of QA leaders for ongoing support, networking, and collaboration.
+            </div>
+            
+            <!-- Call to Action -->
+            <div class="cta-section">
+                <h2>Ready to Start Learning?</h2>
+                <p>Join thousands of students mastering QA testing</p>
+                <a href="/courses/" class="cta-button">Browse All Courses</a>
+            </div>
+        </div>
+    </div>
+    <script src="/assets/js/main.js"></script>
+</body>
+</html>

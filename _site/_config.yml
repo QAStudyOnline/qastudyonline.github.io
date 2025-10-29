@@ -1,0 +1,121 @@
+title: "QAStudy.online"
+description: "Master QA Testing Skills - Learn quality assurance, software testing, and automation from industry experts"
+baseurl: ""
+url: "https://qastudy.online"
+email: "info@qastudy.online"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Collections
+collections:
+  courses:
+    output: true
+    permalink: /:collection/:name/
+  instructors:
+    output: true
+    permalink: /:collection/:name/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "QAStudy Team"
+  - scope:
+      path: ""
+      type: "courses"
+    values:
+      layout: "course"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+
+# Site settings
+brand:
+  name: "QAStudy.online"
+  tagline: "Master QA Testing Skills"
+  logo: "/assets/images/logo.svg"
+
+# Navigation
+navigation:
+  - name: "Courses"
+    url: "/courses/"
+    dropdown:
+      - name: "Manual Testing"
+        url: "/courses/manual-testing/"
+      - name: "Test Automation"
+        url: "/courses/automation/"
+      - name: "API Testing"
+        url: "/courses/api-testing/"
+  - name: "QA Testing"
+    url: "/qa-testing/"
+  - name: "Automation"
+    url: "/automation/"
+  - name: "Certifications"
+    url: "/certifications/"
+  - name: "About"
+    url: "/about/"
+
+# Footer
+footer:
+  sections:
+    - title: "Learn"
+      links:
+        - name: "Manual Testing"
+          url: "/courses/manual-testing/"
+        - name: "Test Automation"
+          url: "/courses/automation/"
+        - name: "API Testing"
+          url: "/courses/api-testing/"
+        - name: "Performance Testing"
+          url: "/courses/performance/"
+    - title: "Certifications"
+      links:
+        - name: "ISTQB Foundation"
+          url: "/certifications/istqb/"
+        - name: "Agile Testing"
+          url: "/certifications/agile/"
+        - name: "Test Management"
+          url: "/certifications/management/"
+        - name: "Automation Certification"
+          url: "/certifications/automation/"
+    - title: "Support"
+      links:
+        - name: "Help Center"
+          url: "/help/"
+        - name: "Contact Us"
+          url: "/contact/"
+        - name: "Privacy Policy"
+          url: "/privacy/"
+        - name: "Terms of Service"
+          url: "/terms/"
+
+# Social
+social:
+  twitter: "qastudyonline"
+  linkedin: "qastudy-online"
+  youtube: "qastudyonline"
+  github: "qastudy-online"
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - README.md
+  - LICENSE
+  - "*.log" 

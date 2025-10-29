@@ -1,0 +1,31 @@
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1>{{ page.hero.title | default: "Master QA Testing Skills" }}</h1>
+        <p class="hero-description">
+          {{ page.hero.description | default: "Learn quality assurance, software testing, and automation from industry experts. Build your career in QA with hands-on projects and real-world experience." }}
+        </p>
+        <div class="hero-actions">
+          <a href="{{ page.hero.primary_cta.url | default: '/courses/' | relative_url }}" class="btn btn-primary btn-lg">
+            {{ page.hero.primary_cta.text | default: "Start Learning" }}
+          </a>
+          <a href="{{ page.hero.secondary_cta.url | default: '/about/' | relative_url }}" class="btn btn-secondary btn-lg">
+            {{ page.hero.secondary_cta.text | default: "Learn More" }}
+          </a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <div class="hero-img-wrapper">
+          {% if page.hero.image %}
+            <img src="{{ page.hero.image | relative_url }}" alt="{{ page.hero.title }}">
+          {% else %}
+            <div class="hero-placeholder">
+              QA Testing Hero
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section> 

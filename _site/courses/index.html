@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QA Courses - QA Study Online</title>
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        .course-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+        .course-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        .course-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1.5rem;
+        }
+        .course-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .course-subtitle {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+        .course-body {
+            padding: 1.5rem;
+        }
+        .course-meta {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.875rem;
+            color: #6b7280;
+        }
+        .course-description {
+            color: #4b5563;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+        .course-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 1.5rem;
+            background: #f9fafb;
+            border-top: 1px solid #e5e7eb;
+        }
+        .course-price {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #059669;
+        }
+        .course-btn {
+            background: #667eea;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background 0.2s;
+        }
+        .course-btn:hover {
+            background: #5a67d8;
+        }
+        .courses-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        @media (max-width: 1024px) {
+            .courses-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 768px) {
+            .courses-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        .page-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        .page-title {
+            font-size: 3rem;
+            font-weight: 800;
+            color: #1f2937;
+            margin-bottom: 1rem;
+        }
+        .page-subtitle {
+            font-size: 1.25rem;
+            color: #6b7280;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mx-auto px-4 py-8">
+        <nav class="mb-8">
+            <a href="/" class="text-purple-600 hover:text-purple-800">← Back to Home</a>
+        </nav>
+        
+        <div class="page-header">
+            <h1 class="page-title">QA Courses</h1>
+            <p class="page-subtitle">Master the art of quality assurance with our comprehensive course collection</p>
+        </div>
+        
+        <div class="courses-grid">
+            <div class="course-card">
+                <div class="course-header">
+                    <h2 class="course-title">QA Leadership and Management</h2>
+                    <p class="course-subtitle">Advance your career from QA Engineer to QA Manager</p>
+                </div>
+                <div class="course-body">
+                    <div class="course-meta">
+                        <div class="meta-item">
+                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path>
+                            </svg>
+                            14 hours
+                        </div>
+                        <div class="meta-item">
+                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"></path>
+                            </svg>
+                            68 lessons
+                        </div>
+                        <div class="meta-item">
+                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11.707 4.707a1 1 0 00-1.414-1.414L10 9.586 8.707 8.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            Advanced
+                        </div>
+                    </div>
+                    <p class="course-description">Learn to lead QA teams, manage testing processes, and drive quality strategy. Master team leadership, process improvement, stakeholder management, and strategic planning for experienced QA professionals.</p>
+                </div>
+                <div class="course-footer">
+                    <div class="course-price">$89.99</div>
+                    <a href="/courses/career-qa-manager/" class="course-btn">View Course</a>
+                </div>
+            </div>
+            <div class="course-card">
+                <div class="course-header">
+                    <h2 class="course-title">AI Agent Testing and Validation</h2>
+                    <p class="course-subtitle">Learn to test AI agents, LLMs, and autonomous systems</p>
+                </div>
+                <div class="course-body">
+                    <div class="course-meta">
+                        <div class="meta-item">
+                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path>
+                            </svg>
+                            12 hours
+                        </div>
+                        <div class="meta-item">
+                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"></path>
+                            </svg>
+                            58 lessons
+                        </div>
+                        <div class="meta-item">
+                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11.707 4.707a1 1 0 00-1.414-1.414L10 9.586 8.707 8.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            Advanced
+                        </div>
+                    </div>
+                    <p class="course-description">Master the cutting-edge field of AI agent testing. Learn to validate AI agents, test LLM applications, and ensure reliability in autonomous systems using modern testing frameworks and techniques.</p>
+                </div>
+                <div class="course-footer">
+                    <div class="course-price">$99.99</div>
+                    <a href="/courses/ai-agent-testing/" class="course-btn">View Course</a>
+                </div>
+            </div>
+            <div class="course-card">
+                <div class="course-header">
+                    <h2 class="course-title">Performance Testing with JMeter & Docker</h2>
+                    <p class="course-subtitle">Master load testing, stress testing, and performance analysis</p>
+                </div>
+                <div class="course-body">
+                    <div class="course-meta">
+                        <div class="meta-item">
+                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path>
+                            </svg>
+                            15 hours
+                        </div>
+                        <div class="meta-item">
+                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"></path>
+                            </svg>
+                            72 lessons
+                        </div>
+                        <div class="meta-item">
+                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11.707 4.707a1 1 0 00-1.414-1.414L10 9.586 8.707 8.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            Intermediate
+                        </div>
+                    </div>
+                    <p class="course-description">Learn to conduct comprehensive performance testing using Apache JMeter, Docker, InfluxDB, and Grafana. Build scalable test environments and analyze performance metrics like a pro.</p>
+                </div>
+                <div class="course-footer">
+                    <div class="course-price">$79.99</div>
+                    <a href="/courses/performance-testing/" class="course-btn">View Course</a>
+                </div>
+            </div>
+            <div class="course-card">
+                <div class="course-header">
+                    <h2 class="course-title">Complete API Test Automation</h2>
+                    <p class="course-subtitle">Master REST API testing with Postman, REST Assured, and Python</p>
+                </div>
+                <div class="course-body">
+                    <div class="course-meta">
+                        <div class="meta-item">
+                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path>
+                            </svg>
+                            18 hours
+                        </div>
+                        <div class="meta-item">
+                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"></path>
+                            </svg>
+                            85 lessons
+                        </div>
+                        <div class="meta-item">
+                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11.707 4.707a1 1 0 00-1.414-1.414L10 9.586 8.707 8.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            Beginner
+                        </div>
+                    </div>
+                    <p class="course-description">Learn comprehensive API testing and automation using industry-standard tools. Master REST API testing, automation frameworks, CI/CD integration, and advanced testing techniques.</p>
+                </div>
+                <div class="course-footer">
+                    <div class="course-price">$69.99</div>
+                    <a href="/courses/api-automation/" class="course-btn">View Course</a>
+                </div>
+            </div>
+            <div class="course-card">
+                <div class="course-header">
+                    <h2 class="course-title">automated testing</h2>
+                    <p class="course-subtitle"></p>
+                </div>
+                <div class="course-body">
+                    <div class="course-meta">
+                        <div class="meta-item">
+                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path>
+                            </svg>
+                            8 weeks
+                        </div>
+                        <div class="meta-item">
+                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"></path>
+                            </svg>
+                            20 lessons
+                        </div>
+                        <div class="meta-item">
+                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11.707 4.707a1 1 0 00-1.414-1.414L10 9.586 8.707 8.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            Beginner
+                        </div>
+                    </div>
+                    <p class="course-description">Course description goes here</p>
+                </div>
+                <div class="course-footer">
+                    <div class="course-price">$99</div>
+                    <a href="/courses/automated-testing/" class="course-btn">View Course</a>
+                </div>
+            </div>
+            <div class="course-card">
+                <div class="course-header">
+                    <h2 class="course-title">Complete Manual Testing Bootcamp</h2>
+                    <p class="course-subtitle"></p>
+                </div>
+                <div class="course-body">
+                    <div class="course-meta">
+                        <div class="meta-item">
+                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path>
+                            </svg>
+                            8 hours
+                        </div>
+                        <div class="meta-item">
+                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"></path>
+                            </svg>
+                            42 lessons
+                        </div>
+                        <div class="meta-item">
+                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11.707 4.707a1 1 0 00-1.414-1.414L10 9.586 8.707 8.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            Beginner
+                        </div>
+                    </div>
+                    <p class="course-description">Learn software testing from scratch with hands-on projects and real-world scenarios. Perfect for beginners looking to start a career in QA.</p>
+                </div>
+                <div class="course-footer">
+                    <div class="course-price">$49.99</div>
+                    <a href="/courses/manual-testing-bootcamp/" class="course-btn">View Course</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/assets/js/main.js"></script>
+</body>
+</html>
