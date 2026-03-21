@@ -1,0 +1,26 @@
+.DS_Store
+node_modules
+dist
+build
+coverage
+.env
+*.log
+.idea
+
+
+# Ignore all files in the .claude directory
+.claude/*
+.claude
+.claude_cache
+.claude_logs
+.claude_sessions
+.claude_temp
+.claude_tokens
+.claude_traces
+.claude_uploads
+.claude_workspaces
+.claude_plugins
+.claude_extensions
+.claude_backups
+CLOUDE.md
+
