@@ -1,0 +1,19 @@
+<div class="language-switcher">
+  {{ range .Site.Languages }}
+    {{ $targetLang := .Lang }}
+    {{ $targetURL := "/" }}
+    {{ if eq $targetLang $.Language.Lang }}
+      {{ $targetURL = $.RelPermalink }}
+    {{ else }}
+      {{ range $.Translations }}
+        {{ if eq .Language.Lang $targetLang }}
+          {{ $targetURL = .RelPermalink }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+    <a href="{{ $targetURL }}" hreflang="{{ $targetLang }}"
+       class="{{ if eq $targetLang $.Language.Lang }}active{{ end }}">
+      {{ .LanguageName }}
+    </a>
+  {{ end }}
+</div>

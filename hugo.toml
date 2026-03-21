@@ -1,0 +1,60 @@
+baseURL = "https://qastudy.online/"
+title   = "QAStudy.online"
+defaultContentLanguage = "uk"
+defaultContentLanguageInSubdir = false
+
+[languages]
+  [languages.uk]
+    languageName = "Українська"
+    languageCode = "uk"
+    weight       = 1
+    title        = "QAStudy.online"
+    contentDir   = "content/uk"
+    [languages.uk.params]
+      description = "Опануйте навички QA тестування від експертів галузі"
+
+  [languages.en]
+    languageName = "English"
+    languageCode = "en"
+    weight       = 2
+    title        = "QAStudy.online"
+    contentDir   = "content/en"
+    [languages.en.params]
+      description = "Master QA Testing Skills from industry experts"
+
+[params]
+  email      = "info@qastudy.online"
+  twitter    = "qastudyonline"
+  linkedin   = "qastudy-online"
+  youtube    = "qastudyonline"
+  github     = "qastudy-online"
+  brand_name = "QAStudy.online"
+
+[taxonomies]
+  level    = "levels"
+  category = "categories"
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+# ── Ukrainian menus ──────────────────────────────────────────────
+[[languages.uk.menus.main]]
+  name   = "Курси"
+  url    = "/courses/"
+  weight = 10
+
+[[languages.uk.menus.main]]
+  name   = "Про нас"
+  url    = "/about/"
+  weight = 20
+
+# ── English menus ────────────────────────────────────────────────
+[[languages.en.menus.main]]
+  name   = "Courses"
+  url    = "/en/courses/"
+  weight = 10
+
+[[languages.en.menus.main]]
+  name   = "About"
+  url    = "/en/about/"
+  weight = 20

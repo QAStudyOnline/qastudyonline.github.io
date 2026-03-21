@@ -1,0 +1,59 @@
+{{ define "main" }}
+<style>
+  .error-page {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 4rem 1rem;
+  }
+  .error-code {
+    font-size: 8rem;
+    font-weight: 900;
+    color: #7c3aed;
+    line-height: 1;
+    margin-bottom: 1rem;
+  }
+  .error-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 1rem;
+  }
+  .error-description {
+    color: #6b7280;
+    margin-bottom: 2rem;
+    max-width: 30rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .error-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+</style>
+<div class="error-page">
+  <div>
+    <div class="error-code">404</div>
+    <h1 class="error-title">{{ if eq .Language.Lang "uk" }}Сторінку не знайдено{{ else }}Page Not Found{{ end }}</h1>
+    <p class="error-description">
+      {{ if eq .Language.Lang "uk" }}
+        Вибачте, сторінку, яку ви шукаєте, не існує або була переміщена.
+      {{ else }}
+        Sorry, the page you're looking for doesn't exist or has been moved.
+      {{ end }}
+    </p>
+    <div class="error-actions">
+      <a href="{{ "/" | relLangURL }}" class="btn btn-primary btn-lg">
+        {{ if eq .Language.Lang "uk" }}На головну{{ else }}Go Home{{ end }}
+      </a>
+      <a href="{{ "/courses/" | relLangURL }}" class="btn btn-secondary btn-lg">
+        {{ if eq .Language.Lang "uk" }}Переглянути курси{{ else }}Browse Courses{{ end }}
+      </a>
+    </div>
+  </div>
+</div>
+{{ end }}

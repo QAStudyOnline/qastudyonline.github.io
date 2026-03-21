@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Master QA Testing Skills on QAStudy.online</title>
+    <link>http://localhost:62373/en/</link>
+    <description>Recent content in Master QA Testing Skills on QAStudy.online</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <atom:link href="http://localhost:62373/en/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About Us</title>
+      <link>http://localhost:62373/en/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:62373/en/about/</guid>
+      <description>&lt;h2 id=&#34;our-mission&#34;&gt;Our Mission&lt;/h2&gt;&#xA;&lt;p&gt;QAStudy.online is an educational platform built for those who want to build a successful career in software quality assurance. We believe that quality testing is the foundation of reliable and secure software products.&lt;/p&gt;&#xA;&lt;h2 id=&#34;what-we-offer&#34;&gt;What We Offer&lt;/h2&gt;&#xA;&lt;p&gt;Our courses cover the full spectrum of QA testing — from manual testing for beginners to advanced automation and security testing. Each course is designed by practicing professionals with real-world experience at top technology companies.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>AI Agent Testing and Validation</title>
+      <link>http://localhost:62373/en/courses/ai-agent-testing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:62373/en/courses/ai-agent-testing/</guid>
+      <description>&lt;h2 id=&#34;course-overview&#34;&gt;Course Overview&lt;/h2&gt;&#xA;&lt;p&gt;AI agents and LLM applications are revolutionizing software, but traditional testing approaches don&amp;rsquo;t work for non-deterministic, autonomous systems. This course teaches you the specialized skills needed to test AI agents effectively.&lt;/p&gt;&#xA;&lt;h3 id=&#34;why-ai-agent-testing&#34;&gt;Why AI Agent Testing?&lt;/h3&gt;&#xA;&lt;p&gt;As AI agents become more prevalent in production systems, the need for specialized testing expertise is exploding. Companies are struggling to validate AI behaviors, ensure safety, and maintain quality. This course prepares you for this emerging, high-demand field.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Application Security Testing</title>
+      <link>http://localhost:62373/en/courses/security-testing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:62373/en/courses/security-testing/</guid>
+      <description>&lt;h2 id=&#34;course-overview&#34;&gt;Course Overview&lt;/h2&gt;&#xA;&lt;p&gt;Security breaches cost companies millions of dollars and destroy customer trust. Learn to identify security vulnerabilities before attackers do. This comprehensive course teaches application security testing for QA professionals.&lt;/p&gt;&#xA;&lt;h3 id=&#34;why-security-testing&#34;&gt;Why Security Testing?&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;High Demand&lt;/strong&gt;: Security testing skills are increasingly required across all QA roles. Companies need QA professionals who can think like attackers.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Better Compensation&lt;/strong&gt;: QA engineers with security skills command 20-40% higher salaries than those without.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Critical Impact&lt;/strong&gt;: Finding a single critical security vulnerability can save a company millions and protect users&amp;rsquo; sensitive data.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>automated testing</title>
+      <link>http://localhost:62373/en/courses/automated-testing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:62373/en/courses/automated-testing/</guid>
+      <description>&lt;h1 id=&#34;automated-testing&#34;&gt;automated testing&lt;/h1&gt;&#xA;&lt;p&gt;Course content goes here&amp;hellip;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Complete API Test Automation</title>
+      <link>http://localhost:62373/en/courses/api-automation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:62373/en/courses/api-automation/</guid>
+      <description>&lt;h2 id=&#34;course-overview&#34;&gt;Course Overview&lt;/h2&gt;&#xA;&lt;p&gt;APIs are the backbone of modern applications, and API testing is one of the most in-demand skills in QA. This comprehensive course takes you from API testing fundamentals to building production-ready automation frameworks.&lt;/p&gt;&#xA;&lt;h3 id=&#34;why-api-testing&#34;&gt;Why API Testing?&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;High Demand&lt;/strong&gt;: API testing skills are required in 85% of QA job postings&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Better Pay&lt;/strong&gt;: API automation engineers earn 30-50% more than manual testers&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Efficiency&lt;/strong&gt;: API tests are 10x faster than UI tests&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Reliability&lt;/strong&gt;: Test the core functionality without UI flakiness&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;course-highlights&#34;&gt;Course Highlights&lt;/h3&gt;&#xA;&lt;h4 id=&#34;beginner-friendly&#34;&gt;Beginner-Friendly&lt;/h4&gt;&#xA;&lt;p&gt;Start with the absolute basics. No prior API knowledge required. We&amp;rsquo;ll teach you HTTP, REST, JSON, and all the fundamentals.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Complete Manual Testing Bootcamp</title>
+      <link>http://localhost:62373/en/courses/manual-testing-bootcamp/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:62373/en/courses/manual-testing-bootcamp/</guid>
+      <description>&lt;h2 id=&#34;course-overview&#34;&gt;Course Overview&lt;/h2&gt;&#xA;&lt;p&gt;Welcome to the Complete Manual Testing Bootcamp! This comprehensive course is designed for absolute beginners who want to start a career in software testing and quality assurance.&lt;/p&gt;&#xA;&lt;h3 id=&#34;what-youll-learn&#34;&gt;What You&amp;rsquo;ll Learn&lt;/h3&gt;&#xA;&lt;p&gt;In this course, you&amp;rsquo;ll master the fundamentals of manual testing through a combination of theory and hands-on practice. We&amp;rsquo;ll cover everything from basic testing concepts to advanced techniques used in the industry.&lt;/p&gt;&#xA;&lt;h3 id=&#34;course-highlights&#34;&gt;Course Highlights&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Comprehensive Curriculum&lt;/strong&gt;: 42 lessons covering all aspects of manual testing&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Real-World Projects&lt;/strong&gt;: Practice with actual applications and scenarios&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Industry Best Practices&lt;/strong&gt;: Learn techniques used by top QA professionals&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Certificate of Completion&lt;/strong&gt;: Boost your resume with our recognized certification&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Lifetime Access&lt;/strong&gt;: Keep learning at your own pace&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;who-this-course-is-for&#34;&gt;Who This Course Is For&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Complete beginners to software testing&lt;/li&gt;&#xA;&lt;li&gt;Career changers looking to enter QA&lt;/li&gt;&#xA;&lt;li&gt;Developers who want to improve their testing skills&lt;/li&gt;&#xA;&lt;li&gt;Students studying computer science or related fields&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h3&gt;&#xA;&lt;p&gt;No prior experience in software testing is required. You just need:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Manual QA Testing Fundamentals</title>
+      <link>http://localhost:62373/en/courses/manual-qa/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:62373/en/courses/manual-qa/</guid>
+      <description>&lt;h2 id=&#34;course-overview&#34;&gt;Course Overview&lt;/h2&gt;&#xA;&lt;p&gt;Start your career in software testing with this comprehensive manual QA course. Designed for complete beginners, this course takes you from zero knowledge to job-ready QA professional.&lt;/p&gt;&#xA;&lt;h3 id=&#34;why-manual-testing&#34;&gt;Why Manual Testing?&lt;/h3&gt;&#xA;&lt;p&gt;Manual testing is the foundation of all software testing. Even in automation-heavy environments, manual testing skills are essential for:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Exploratory testing and finding edge cases&lt;/li&gt;&#xA;&lt;li&gt;Usability and user experience validation&lt;/li&gt;&#xA;&lt;li&gt;New feature validation before automation&lt;/li&gt;&#xA;&lt;li&gt;Test case design and planning&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;perfect-for-career-changers&#34;&gt;Perfect for Career Changers&lt;/h3&gt;&#xA;&lt;p&gt;This course is specifically designed for people starting a new career in tech:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Performance Testing with JMeter &amp; Docker</title>
+      <link>http://localhost:62373/en/courses/performance-testing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:62373/en/courses/performance-testing/</guid>
+      <description>&lt;h2 id=&#34;course-overview&#34;&gt;Course Overview&lt;/h2&gt;&#xA;&lt;p&gt;Performance testing is critical for ensuring your applications can handle real-world traffic. In this comprehensive course, you&amp;rsquo;ll learn to use Apache JMeter with Docker, InfluxDB, and Grafana to conduct professional-grade performance testing.&lt;/p&gt;&#xA;&lt;h3 id=&#34;why-this-course&#34;&gt;Why This Course?&lt;/h3&gt;&#xA;&lt;p&gt;Unlike other JMeter courses that teach basic scripting, this course focuses on building a complete, scalable performance testing infrastructure using modern DevOps practices. You&amp;rsquo;ll learn to containerize your tests with Docker, store results in InfluxDB, and create stunning real-time dashboards with Grafana.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>QA Leadership and Management</title>
+      <link>http://localhost:62373/en/courses/career-qa-manager/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:62373/en/courses/career-qa-manager/</guid>
+      <description>&lt;h2 id=&#34;course-overview&#34;&gt;Course Overview&lt;/h2&gt;&#xA;&lt;p&gt;Making the leap from QA Engineer to QA Manager requires more than technical skills. This comprehensive course teaches you the leadership, management, and strategic skills needed to excel as a QA leader.&lt;/p&gt;&#xA;&lt;h3 id=&#34;why-take-this-course&#34;&gt;Why Take This Course?&lt;/h3&gt;&#xA;&lt;p&gt;The transition from individual contributor to manager is one of the most challenging career moves. Many talented engineers struggle because management requires a completely different skill set.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;This course bridges that gap.&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

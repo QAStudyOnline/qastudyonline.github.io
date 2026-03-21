@@ -1,0 +1,268 @@
+// Import design system
+@import 'design-system/variables';
+@import 'design-system/base';
+@import 'design-system/typography';
+@import 'design-system/buttons';
+@import 'design-system/cards';
+@import 'design-system/forms';
+@import 'design-system/utilities';
+
+// Import components
+@import 'components/navbar';
+@import 'components/hero';
+@import 'components/footer';
+@import 'components/course-grid';
+
+// Course page styles
+.course-page {
+  .badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+
+    &.badge-beginner,
+    &.badge-початківець { background-color: $primary-100; color: $primary-700; }
+    &.badge-intermediate,
+    &.badge-середній { background-color: #fef3c7; color: #92400e; }
+    &.badge-advanced,
+    &.badge-просунутий { background-color: #fee2e2; color: #991b1b; }
+  }
+
+  .course-hero { padding: 4rem 0; background-color: $gray-50; }
+
+  .course-meta-info .meta-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: $gray-600;
+    font-size: 0.875rem;
+    .icon { width: 1.25rem; height: 1.25rem; color: $primary-600; }
+  }
+
+  .feature-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    background-color: $gray-50;
+    .icon { flex-shrink: 0; color: $primary-600; margin-top: 0.1rem; }
+  }
+
+  .curriculum-list { display: flex; flex-direction: column; gap: 1rem; }
+
+  .curriculum-module {
+    border: 1px solid $gray-200;
+    border-radius: 0.5rem;
+    overflow: hidden;
+
+    summary {
+      padding: 1rem 1.5rem;
+      background-color: $gray-50;
+      font-weight: 600;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      &::-webkit-details-marker { display: none; }
+      &::after { content: '+'; font-size: 1.25rem; color: $primary-600; }
+    }
+
+    &[open] summary::after { content: '−'; }
+  }
+
+  .lesson-list { list-style: none; margin: 0; padding: 0; }
+
+  .lesson-item {
+    padding: 0.75rem 1.5rem;
+    border-top: 1px solid $gray-100;
+    .lesson-info { display: flex; justify-content: space-between; align-items: center; }
+    .lesson-title { color: $gray-700; font-size: 0.875rem; }
+    .lesson-duration { color: $gray-500; font-size: 0.75rem; }
+  }
+
+  .tools-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .tool-badge {
+    padding: 0.5rem 1rem;
+    background-color: $primary-50;
+    color: $primary-700;
+    border: 1px solid $primary-200;
+    border-radius: 0.375rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+
+  .requirements-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    li {
+      padding-left: 1.5rem;
+      position: relative;
+      color: $gray-700;
+      &::before { content: '✓'; position: absolute; left: 0; color: $primary-600; font-weight: 700; }
+    }
+  }
+
+  .testimonial-card {
+    background: $white;
+    border: 1px solid $gray-200;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    box-shadow: $shadow-sm;
+    .stars { color: $warning; }
+    .testimonial-text { color: $gray-700; font-style: italic; line-height: 1.6; }
+    .testimonial-author { display: flex; flex-direction: column; gap: 0.25rem; }
+  }
+
+  .course-actions { display: flex; flex-wrap: wrap; gap: 1rem; }
+
+  .video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 0.75rem;
+    iframe {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+    }
+  }
+
+  .course-image-placeholder {
+    width: 100%;
+    height: 320px;
+    background: linear-gradient(135deg, $primary-400 0%, $primary-600 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $white;
+    font-size: 1.25rem;
+    font-weight: 600;
+    border-radius: 0.75rem;
+  }
+}
+
+// Courses list page
+.courses-list-page {
+  padding: 4rem 0;
+
+  .page-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+}
+
+// Language switcher
+.language-switcher {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+
+  a {
+    padding: 0.25rem 0.625rem;
+    border-radius: 0.375rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: $gray-600;
+    text-decoration: none;
+    border: 1px solid $gray-200;
+    transition: all 0.15s ease;
+
+    &:hover {
+      color: $primary-600;
+      border-color: $primary-300;
+      background-color: $primary-50;
+    }
+
+    &.active {
+      color: $primary-700;
+      background-color: $primary-100;
+      border-color: $primary-300;
+    }
+  }
+}
+
+// Grid layout helpers
+.grid {
+  display: grid;
+
+  &.gap-4 { gap: 1rem; }
+  &.gap-6 { gap: 1.5rem; }
+  &.gap-8 { gap: 2rem; }
+  &.gap-12 { gap: 3rem; }
+}
+
+.grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+
+@media (min-width: 768px) {
+  .md\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .md\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+@media (min-width: 1024px) {
+  .lg\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .lg\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .lg\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+
+// Prose
+.prose {
+  max-width: 65ch;
+  color: $gray-700;
+  line-height: 1.75;
+
+  h2, h3, h4 { color: $gray-900; margin-top: 2rem; }
+  ul, ol { padding-left: 1.5rem; }
+  li { margin-bottom: 0.5rem; }
+  code { background: $gray-100; padding: 0.125rem 0.375rem; border-radius: 0.25rem; font-size: 0.9em; }
+  pre { background: $gray-900; color: $white; padding: 1rem; border-radius: 0.5rem; overflow-x: auto; }
+
+  &.max-w-none { max-width: none; }
+}
+
+// Space utilities
+.space-y-2 > * + * { margin-top: 0.5rem; }
+.space-y-4 > * + * { margin-top: 1rem; }
+
+// Flex utilities
+.flex { display: flex; }
+.flex-wrap { flex-wrap: wrap; }
+.items-center { align-items: center; }
+.justify-center { justify-content: center; }
+.gap-4 { gap: 1rem; }
+.gap-6 { gap: 1.5rem; }
+.gap-8 { gap: 2rem; }
+
+// Width
+.w-8 { width: 2rem; }
+.w-16 { width: 4rem; }
+.h-8 { height: 2rem; }
+.h-16 { height: 4rem; }
+.mr-2 { margin-right: 0.5rem; }
+.mx-auto { margin-left: auto; margin-right: auto; }
+.mb-4 { margin-bottom: 1rem; }
+.mb-3 { margin-bottom: 0.75rem; }
+.text-xl { font-size: 1.25rem; }
+
+// BG color
+.bg-primary-100 { background-color: $primary-100; }
+.bg-primary { background-color: $primary-600; }
+.text-white { color: $white; }
+.text-primary { color: $primary-600; }
+.text-gray-600 { color: $gray-600; }
+.hover\:text-primary:hover { color: $primary-600; }
