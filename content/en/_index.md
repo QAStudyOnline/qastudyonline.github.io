@@ -1,73 +1,73 @@
 ---
-title: "Master QA Testing Skills"
-description: "Learn quality assurance, software testing, and automation from industry experts"
+title: "Testing AI-Agentic Systems — the Agentic QA course"
+description: "Learn to test AI agents, RAG systems, and agentic pipelines — from your first eval to production CI/CD"
 
 hero:
-  title: "Master QA Testing Skills"
-  description: "Learn quality assurance, software testing, and automation from industry experts. Build your career in QA with hands-on projects and real-world experience."
+  title: "Master Testing of AI-Agentic Systems"
+  description: "The Agentic QA course: learn to test AI agents, RAG systems, and agentic pipelines — from your first eval to a production-ready CI/CD. 21 lessons for QA, SDET, and Tech Lead engineers."
   primary_cta:
-    text: "Start Learning"
-    url: "/en/courses/"
+    text: "Apply now"
+    url: "/en/courses/agentic-qa/"
   secondary_cta:
-    text: "View Courses"
-    url: "/en/courses/"
+    text: "View the course"
+    url: "/en/courses/agentic-qa/"
 ---
 
 <section class="py-20">
   <div class="text-center mb-16">
-    <h2 class="h2 mb-4">Explore Top QA Skills and Certifications</h2>
-    <p class="text-large text-gray-600">Top companies choose QAStudy.online to build in-demand testing skills.</p>
+    <h2 class="h2 mb-4">What you'll master in Agentic QA</h2>
+    <p class="text-large text-gray-600">Hands-on AI testing skills — from fundamentals to a production-ready pipeline.</p>
   </div>
 
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
     <div class="card">
       <div class="card-body">
-        <h3 class="h4 text-primary mb-4">Manual Testing</h3>
+        <h3 class="h4 text-primary mb-4">LLM Testing</h3>
         <ul class="space-y-2">
-          <li><a href="/en/courses/manual-qa/" class="text-gray-600 hover:text-primary">Manual QA Fundamentals</a></li>
-          <li><a href="/en/courses/manual-testing-bootcamp/" class="text-gray-600 hover:text-primary">Manual Testing Bootcamp</a></li>
-          <li><a href="#" class="text-gray-600 hover:text-primary">Test Case Design</a></li>
-          <li><a href="#" class="text-gray-600 hover:text-primary">Bug Reporting</a></li>
-          <li><a href="#" class="text-gray-600 hover:text-primary">Exploratory Testing</a></li>
+          <li><a href="/en/courses/agentic-qa/" class="text-gray-600 hover:text-primary">Prompt & context engineering</a></li>
+          <li><a href="/en/courses/agentic-qa/" class="text-gray-600 hover:text-primary">AI testing metrics</a></li>
+          <li><a href="/en/courses/agentic-qa/" class="text-gray-600 hover:text-primary">RAG system testing</a></li>
+          <li><a href="/en/courses/agentic-qa/" class="text-gray-600 hover:text-primary">Multi-step dialogs</a></li>
+          <li><a href="/en/courses/agentic-qa/" class="text-gray-600 hover:text-primary">Local models: Ollama</a></li>
         </ul>
       </div>
     </div>
 
     <div class="card">
       <div class="card-body">
-        <h3 class="h4 text-primary mb-4">Test Automation</h3>
+        <h3 class="h4 text-primary mb-4">Agentic Testing</h3>
         <ul class="space-y-2">
-          <li><a href="/en/courses/automated-testing/" class="text-gray-600 hover:text-primary">Automated Testing</a></li>
-          <li><a href="/en/courses/api-automation/" class="text-gray-600 hover:text-primary">API Automation</a></li>
-          <li><a href="#" class="text-gray-600 hover:text-primary">Selenium WebDriver</a></li>
-          <li><a href="#" class="text-gray-600 hover:text-primary">Cypress</a></li>
-          <li><a href="#" class="text-gray-600 hover:text-primary">CI/CD Integration</a></li>
+          <li><a href="/en/courses/agentic-qa/" class="text-gray-600 hover:text-primary">LLM as a Judge</a></li>
+          <li><a href="/en/courses/agentic-qa/" class="text-gray-600 hover:text-primary">Tool call testing & MCP</a></li>
+          <li><a href="/en/courses/agentic-qa/" class="text-gray-600 hover:text-primary">Observability & cost testing</a></li>
+          <li><a href="/en/courses/agentic-qa/" class="text-gray-600 hover:text-primary">AI-assisted test generation</a></li>
+          <li><a href="/en/courses/agentic-qa/" class="text-gray-600 hover:text-primary">AI-assisted code review</a></li>
         </ul>
       </div>
     </div>
 
     <div class="card">
       <div class="card-body">
-        <h3 class="h4 text-primary mb-4">QA Certifications</h3>
+        <h3 class="h4 text-primary mb-4">Security & Red Teaming</h3>
         <ul class="space-y-2">
-          <li><a href="#" class="text-gray-600 hover:text-primary">ISTQB Foundation</a></li>
-          <li><a href="#" class="text-gray-600 hover:text-primary">Agile Testing</a></li>
-          <li><a href="#" class="text-gray-600 hover:text-primary">Test Management</a></li>
-          <li><a href="#" class="text-gray-600 hover:text-primary">Performance Testing</a></li>
-          <li><a href="#" class="text-gray-600 hover:text-primary">Security Testing</a></li>
+          <li><a href="/en/courses/agentic-qa/" class="text-gray-600 hover:text-primary">OWASP LLM Top 10</a></li>
+          <li><a href="/en/courses/agentic-qa/" class="text-gray-600 hover:text-primary">Prompt Injection</a></li>
+          <li><a href="/en/courses/agentic-qa/" class="text-gray-600 hover:text-primary">Red Teaming sessions</a></li>
+          <li><a href="/en/courses/agentic-qa/" class="text-gray-600 hover:text-primary">Risk mapping</a></li>
+          <li><a href="/en/courses/agentic-qa/" class="text-gray-600 hover:text-primary">Test strategy</a></li>
         </ul>
       </div>
     </div>
 
     <div class="card">
       <div class="card-body">
-        <h3 class="h4 text-primary mb-4">Career Development</h3>
+        <h3 class="h4 text-primary mb-4">Eval & CI/CD</h3>
         <ul class="space-y-2">
-          <li><a href="/en/courses/career-qa-manager/" class="text-gray-600 hover:text-primary">QA Leadership</a></li>
-          <li><a href="#" class="text-gray-600 hover:text-primary">Test Strategy</a></li>
-          <li><a href="#" class="text-gray-600 hover:text-primary">Team Management</a></li>
-          <li><a href="#" class="text-gray-600 hover:text-primary">Interview Preparation</a></li>
-          <li><a href="#" class="text-gray-600 hover:text-primary">Portfolio Building</a></li>
+          <li><a href="/en/courses/agentic-qa/" class="text-gray-600 hover:text-primary">Eval suites with DeepEval</a></li>
+          <li><a href="/en/courses/agentic-qa/" class="text-gray-600 hover:text-primary">Promptfoo</a></li>
+          <li><a href="/en/courses/agentic-qa/" class="text-gray-600 hover:text-primary">Quality Gates in CI/CD</a></li>
+          <li><a href="/en/courses/agentic-qa/" class="text-gray-600 hover:text-primary">Agentic CI/CD</a></li>
+          <li><a href="/en/courses/agentic-qa/" class="text-gray-600 hover:text-primary">GitHub Actions pipeline</a></li>
         </ul>
       </div>
     </div>
@@ -77,106 +77,38 @@ hero:
 <section class="py-20 bg-gray-50">
   <div class="container">
     <div class="text-center mb-16">
-      <h2 class="h2 mb-4">Featured Courses</h2>
-      <p class="text-large text-gray-600">Start your QA journey with our most popular courses</p>
+      <h2 class="h2 mb-4">The Agentic QA course</h2>
+      <p class="text-large text-gray-600">A focused, hands-on program on testing AI-agentic systems.</p>
     </div>
 
     <div class="course-grid">
       <div class="course-card">
         <div class="course-image">
-          <div class="course-image-content">Manual Testing Fundamentals</div>
+          <div class="course-image-content">Agentic QA</div>
         </div>
         <div class="course-content">
-          <div class="course-category">Beginner</div>
+          <div class="course-category">Junior–Middle</div>
           <h3 class="course-title">
-            <a href="/en/courses/manual-testing-bootcamp/">Complete Manual Testing Bootcamp</a>
+            <a href="/en/courses/agentic-qa/">Testing AI-Agentic Systems</a>
           </h3>
-          <p class="course-description">Learn software testing from scratch with hands-on projects and real-world scenarios.</p>
+          <p class="course-description">Learn to test AI agents, RAG systems, and agentic pipelines — from your first eval to production CI/CD.</p>
           <div class="course-instructor">
             <div class="instructor-avatar"></div>
-            <span>By Sarah Johnson</span>
+            <span>Yehor Maksymchuk</span>
           </div>
           <div class="course-stats">
-            <div class="stat-item">8 hours</div>
-            <div class="stat-item">42 lessons</div>
+            <div class="stat-item">11–14 weeks</div>
+            <div class="stat-item">21 lessons</div>
           </div>
         </div>
         <div class="course-meta">
-          <div class="course-rating">
-            <span class="stars">★★★★★</span>
-            <span>4.8</span>
-            <span class="rating-count">(2,845)</span>
-          </div>
-          <div class="course-price">
-            <span class="current-price">$49.99</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="course-card">
-        <div class="course-image">
-          <div class="course-image-content">API Test Automation</div>
-        </div>
-        <div class="course-content">
-          <div class="course-category">Advanced</div>
-          <h3 class="course-title">
-            <a href="/en/courses/api-automation/">Complete API Test Automation</a>
-          </h3>
-          <p class="course-description">Master REST API testing with Postman, REST Assured, and Python.</p>
-          <div class="course-instructor">
-            <div class="instructor-avatar"></div>
-            <span>By Alex Chen</span>
-          </div>
-          <div class="course-stats">
-            <div class="stat-item">18 hours</div>
-            <div class="stat-item">85 lessons</div>
-          </div>
-        </div>
-        <div class="course-meta">
-          <div class="course-rating">
-            <span class="stars">★★★★★</span>
-            <span>4.9</span>
-          </div>
-          <div class="course-price">
-            <span class="current-price">$89.99</span>
-            <span class="original-price">$149.99</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="course-card">
-        <div class="course-image">
-          <div class="course-image-content">Security Testing</div>
-        </div>
-        <div class="course-content">
-          <div class="course-category">Intermediate</div>
-          <h3 class="course-title">
-            <a href="/en/courses/security-testing/">Web Application Security Testing</a>
-          </h3>
-          <p class="course-description">Learn security testing techniques and OWASP Top 10 vulnerabilities.</p>
-          <div class="course-instructor">
-            <div class="instructor-avatar"></div>
-            <span>By Mark Davidson</span>
-          </div>
-          <div class="course-stats">
-            <div class="stat-item">16 hours</div>
-            <div class="stat-item">75 lessons</div>
-          </div>
-        </div>
-        <div class="course-meta">
-          <div class="course-rating">
-            <span class="stars">★★★★★</span>
-            <span>4.8</span>
-          </div>
-          <div class="course-price">
-            <span class="current-price">$79.99</span>
-          </div>
+          <a href="/en/courses/agentic-qa/" class="btn btn-primary">Learn more</a>
         </div>
       </div>
     </div>
 
     <div class="text-center mt-12">
-      <a href="/en/courses/" class="btn btn-primary btn-lg">View All Courses</a>
+      <a href="/en/courses/agentic-qa/" class="btn btn-primary btn-lg">Apply now</a>
     </div>
   </div>
 </section>
@@ -185,21 +117,21 @@ hero:
   <div class="container">
     <div class="text-center mb-16">
       <h2 class="h2 mb-4">Why Choose QAStudy.online?</h2>
-      <p class="text-large text-gray-600">Join thousands of professionals who've advanced their QA careers with us</p>
+      <p class="text-large text-gray-600">Practice on real AI systems and a production-ready result for your portfolio</p>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
       <div class="text-center">
-        <h3 class="h4 mb-3">Industry Expert Instructors</h3>
-        <p class="text-gray-600">Learn from experienced QA professionals who've worked at top tech companies.</p>
+        <h3 class="h4 mb-3">A modern stack</h3>
+        <p class="text-gray-600">DeepEval, Promptfoo, RAGAS, LLM-as-a-Judge, MCP — the tools teams actually use in production.</p>
       </div>
       <div class="text-center">
-        <h3 class="h4 mb-3">Hands-on Projects</h3>
-        <p class="text-gray-600">Build real-world testing projects that you can showcase in your portfolio.</p>
+        <h3 class="h4 mb-3">A final project</h3>
+        <p class="text-gray-600">Build your own AI app with a full testing cycle and a live CI/CD pipeline for your portfolio.</p>
       </div>
       <div class="text-center">
-        <h3 class="h4 mb-3">Career Support</h3>
-        <p class="text-gray-600">Get help with resume reviews, interview preparation, and job placement assistance.</p>
+        <h3 class="h4 mb-3">Production focus</h3>
+        <p class="text-gray-600">Quality gates, red teaming against the OWASP LLM Top 10, and agentic workflows — so production incidents don't scare you.</p>
       </div>
     </div>
   </div>

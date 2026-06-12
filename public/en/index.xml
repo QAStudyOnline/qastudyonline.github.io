@@ -1,39 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Master QA Testing Skills on QAStudy.online</title>
-    <link>http://localhost:1313/en/</link>
-    <description>Recent content in Master QA Testing Skills on QAStudy.online</description>
+    <title>Testing AI-Agentic Systems — the Agentic QA course on QAStudy.online</title>
+    <link>http://localhost:1314/en/</link>
+    <description>Recent content in Testing AI-Agentic Systems — the Agentic QA course on QAStudy.online</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <atom:link href="http://localhost:1313/en/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 11 Jun 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1314/en/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Agentic QA</title>
+      <link>http://localhost:1314/en/courses/agentic-qa/</link>
+      <pubDate>Thu, 11 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1314/en/courses/agentic-qa/</guid>
+      <description></description>
+    </item>
     <item>
       <title>About Us</title>
-      <link>http://localhost:1313/en/about/</link>
+      <link>http://localhost:1314/en/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/en/about/</guid>
+      <guid>http://localhost:1314/en/about/</guid>
       <description>&lt;h2 id=&#34;our-mission&#34;&gt;Our Mission&lt;/h2&gt;&#xA;&lt;p&gt;QAStudy.online is an educational platform built for those who want to build a successful career in software quality assurance. We believe that quality testing is the foundation of reliable and secure software products.&lt;/p&gt;&#xA;&lt;h2 id=&#34;what-we-offer&#34;&gt;What We Offer&lt;/h2&gt;&#xA;&lt;p&gt;Our courses cover the full spectrum of QA testing — from manual testing for beginners to advanced automation and security testing. Each course is designed by practicing professionals with real-world experience at top technology companies.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>AI Agent Testing and Validation</title>
-      <link>http://localhost:1313/en/courses/ai-agent-testing/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/en/courses/ai-agent-testing/</guid>
-      <description>&lt;h2 id=&#34;course-overview&#34;&gt;Course Overview&lt;/h2&gt;&#xA;&lt;p&gt;AI agents and LLM applications are revolutionizing software, but traditional testing approaches don&amp;rsquo;t work for non-deterministic, autonomous systems. This course teaches you the specialized skills needed to test AI agents effectively.&lt;/p&gt;&#xA;&lt;h3 id=&#34;why-ai-agent-testing&#34;&gt;Why AI Agent Testing?&lt;/h3&gt;&#xA;&lt;p&gt;As AI agents become more prevalent in production systems, the need for specialized testing expertise is exploding. Companies are struggling to validate AI behaviors, ensure safety, and maintain quality. This course prepares you for this emerging, high-demand field.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Performance Testing with JMeter &amp; Docker</title>
-      <link>http://localhost:1313/en/courses/performance-testing/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/en/courses/performance-testing/</guid>
-      <description>&lt;h2 id=&#34;course-overview&#34;&gt;Course Overview&lt;/h2&gt;&#xA;&lt;p&gt;Performance testing is critical for ensuring your applications can handle real-world traffic. In this comprehensive course, you&amp;rsquo;ll learn to use Apache JMeter with Docker, InfluxDB, and Grafana to conduct professional-grade performance testing.&lt;/p&gt;&#xA;&lt;h3 id=&#34;why-this-course&#34;&gt;Why This Course?&lt;/h3&gt;&#xA;&lt;p&gt;Unlike other JMeter courses that teach basic scripting, this course focuses on building a complete, scalable performance testing infrastructure using modern DevOps practices. You&amp;rsquo;ll learn to containerize your tests with Docker, store results in InfluxDB, and create stunning real-time dashboards with Grafana.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>QA Leadership and Management</title>
-      <link>http://localhost:1313/en/courses/career-qa-manager/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/en/courses/career-qa-manager/</guid>
-      <description>&lt;h2 id=&#34;course-overview&#34;&gt;Course Overview&lt;/h2&gt;&#xA;&lt;p&gt;Making the leap from QA Engineer to QA Manager requires more than technical skills. This comprehensive course teaches you the leadership, management, and strategic skills needed to excel as a QA leader.&lt;/p&gt;&#xA;&lt;h3 id=&#34;why-take-this-course&#34;&gt;Why Take This Course?&lt;/h3&gt;&#xA;&lt;p&gt;The transition from individual contributor to manager is one of the most challenging career moves. Many talented engineers struggle because management requires a completely different skill set.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;This course bridges that gap.&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

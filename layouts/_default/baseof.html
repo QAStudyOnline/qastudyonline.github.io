@@ -29,6 +29,8 @@
     gtag('config', '{{ . }}');
   </script>
   {{ end }}
+
+  {{ block "head" . }}{{ end }}
 </head>
 <body{{ with .Params.body_class }} class="{{ . }}"{{ end }}>
 

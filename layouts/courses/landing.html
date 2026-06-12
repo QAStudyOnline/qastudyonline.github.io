@@ -1,0 +1,121 @@
+{{ define "head" }}
+  <meta property="og:title" content="{{ .Title }} | {{ .Site.Title }}">
+  <meta property="og:description" content="{{ .Description }}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ .Permalink }}">
+  <link rel="canonical" href="{{ .Permalink }}">
+{{ end }}
+
+{{ define "main" }}
+<article class="agentic-landing">
+
+  <!-- Hero -->
+  <section class="al-hero">
+    <div class="container">
+      {{ with .Params.eyebrow }}<span class="al-eyebrow">{{ . }}</span>{{ end }}
+      <h1 class="al-title">{{ .Title }}</h1>
+      {{ with .Params.subtitle }}<p class="al-subtitle">{{ . }}</p>{{ end }}
+      <a href="{{ .Params.registration_url }}" class="btn-cta" target="_blank" rel="noopener noreferrer">{{ .Params.cta_label | default "Подати заявку →" }}</a>
+      {{ with .Params.meta_pills }}
+      <div class="al-pills">
+        {{ range . }}<span class="meta-pill">{{ . }}</span>{{ end }}
+      </div>
+      {{ end }}
+    </div>
+  </section>
+
+  <!-- For whom -->
+  {{ with .Params.audience }}
+  <section class="al-section">
+    <div class="container">
+      <h2 class="al-h2">{{ .heading }}</h2>
+      <div class="card-grid">
+        {{ range .cards }}
+        <div class="al-card">
+          <h3 class="al-card-role">{{ .role }}</h3>
+          <p class="al-card-jtbd">{{ .jtbd }}</p>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+  {{ end }}
+
+  <!-- What you'll learn -->
+  {{ with .Params.competencies }}
+  <section class="al-section al-section-alt">
+    <div class="container">
+      <h2 class="al-h2">{{ .heading }}</h2>
+      <div class="card-grid">
+        {{ range .items }}
+        <div class="al-comp">
+          <h3 class="al-comp-label">{{ .label }}</h3>
+          <p>{{ .text }}</p>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+  {{ end }}
+
+  <!-- Curriculum -->
+  {{ with .Params.curriculum }}
+  <section class="al-section">
+    <div class="container">
+      <h2 class="al-h2">{{ .heading }}</h2>
+      <div class="al-curriculum">
+        {{ range .blocks }}
+        <details class="curriculum-block"{{ if .open }} open{{ end }}>
+          <summary>
+            <span class="block-title">{{ .title }}</span>
+            <span class="block-meta">{{ .meta }}</span>
+          </summary>
+          <ul>
+            {{ range .lessons }}<li>{{ . }}</li>{{ end }}
+          </ul>
+        </details>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+  {{ end }}
+
+  <!-- Final project -->
+  {{ with .Params.final_project }}
+  <section class="al-section al-section-alt">
+    <div class="container">
+      <h2 class="al-h2">{{ .heading }}</h2>
+      {{ with .intro }}<p class="al-fp-intro">{{ . }}</p>{{ end }}
+      <ul class="al-checklist">
+        {{ range .items }}<li>{{ . }}</li>{{ end }}
+      </ul>
+    </div>
+  </section>
+  {{ end }}
+
+  <!-- Optional markdown content -->
+  {{ with .Content }}
+  <section class="al-section">
+    <div class="container">
+      <div class="prose mx-auto">{{ . }}</div>
+    </div>
+  </section>
+  {{ end }}
+
+  <!-- Bottom CTA -->
+  {{ with .Params.bottom_cta }}
+  <section class="al-cta-bottom">
+    <div class="container">
+      {{ with .text }}<p class="al-cta-text">{{ . }}</p>{{ end }}
+      <a href="{{ $.Params.registration_url }}" class="btn-cta" target="_blank" rel="noopener noreferrer">{{ $.Params.cta_label | default "Подати заявку →" }}</a>
+      {{ with $.Params.curriculum_doc_url }}
+      <p class="al-doc-link">
+        <a href="{{ . }}" target="_blank" rel="noopener noreferrer">{{ $.Params.doc_label | default "Програма курсу повністю" }}</a>
+      </p>
+      {{ end }}
+    </div>
+  </section>
+  {{ end }}
+
+</article>
+{{ end }}

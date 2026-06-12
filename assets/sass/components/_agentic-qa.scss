@@ -1,0 +1,197 @@
+// Agentic QA course landing page
+.agentic-landing {
+
+  // CTA button — high contrast, visible on any background
+  .btn-cta {
+    display: inline-block;
+    padding: 14px 32px;
+    font-size: 1rem;
+    font-weight: $font-weight-semibold;
+    text-decoration: none;
+    border-radius: $radius-md;
+    background-color: $primary-600;
+    color: $white;
+    transition: opacity 0.15s ease;
+    &:hover { opacity: 0.88; }
+  }
+
+  // Hero
+  .al-hero {
+    padding: 5rem 0;
+    text-align: center;
+    background: linear-gradient(135deg, $primary-50 0%, $white 100%);
+  }
+  .al-eyebrow {
+    display: inline-block;
+    margin-bottom: 1rem;
+    font-size: $font-size-sm;
+    font-weight: $font-weight-semibold;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: $primary-600;
+  }
+  .al-title {
+    margin-bottom: 1rem;
+    font-size: $font-size-5xl;
+    font-weight: $font-weight-extrabold;
+    color: $gray-900;
+    line-height: $line-height-tight;
+  }
+  .al-subtitle {
+    max-width: 660px;
+    margin: 0 auto 2rem;
+    font-size: $font-size-xl;
+    color: $gray-600;
+  }
+  .al-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+    margin-top: 1.75rem;
+  }
+  .meta-pill {
+    display: inline-block;
+    padding: 4px 14px;
+    border-radius: $radius-full;
+    font-size: $font-size-sm;
+    border: 1px solid $gray-300;
+    color: $gray-600;
+  }
+
+  // Sections
+  .al-section { padding: 4rem 0; }
+  .al-section-alt { background-color: $gray-50; }
+  .al-h2 {
+    margin-bottom: 2.5rem;
+    font-size: $font-size-4xl;
+    font-weight: $font-weight-bold;
+    text-align: center;
+    color: $gray-900;
+  }
+
+  // Responsive grid for audience + competency cards
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .al-card,
+  .al-comp {
+    padding: 1.5rem;
+    background: $white;
+    border: 1px solid $gray-200;
+    border-radius: $radius-xl;
+    box-shadow: $shadow-sm;
+  }
+  .al-card-role,
+  .al-comp-label {
+    margin-bottom: 0.5rem;
+    font-size: $font-size-lg;
+    color: $primary-700;
+  }
+  .al-card-jtbd { color: $gray-600; font-style: italic; }
+  .al-comp p { color: $gray-600; }
+
+  // Curriculum accordion
+  .al-curriculum {
+    max-width: 820px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  .curriculum-block {
+    background: $white;
+    border: 1px solid $gray-200;
+    border-radius: $radius-lg;
+    overflow: hidden;
+
+    summary {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem 1.25rem;
+      cursor: pointer;
+      list-style: none;
+      font-weight: $font-weight-semibold;
+      color: $gray-900;
+      &::-webkit-details-marker { display: none; }
+      &::after { content: '+'; font-size: 1.25rem; color: $primary-600; }
+    }
+    &[open] summary::after { content: '\2212'; }
+
+    .block-meta {
+      font-weight: $font-weight-normal;
+      font-size: $font-size-xs;
+      color: $gray-500;
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    ul { list-style: none; margin: 0; padding: 0 1.25rem 0.75rem; }
+    li {
+      padding: 0.6rem 0;
+      border-top: 1px solid $gray-100;
+      color: $gray-700;
+      font-size: $font-size-sm;
+    }
+  }
+
+  // Final project checklist
+  .al-fp-intro {
+    max-width: 720px;
+    margin: 0 auto 2rem;
+    text-align: center;
+    color: $gray-600;
+  }
+  .al-checklist {
+    max-width: 720px;
+    margin: 0 auto;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+
+    li {
+      position: relative;
+      padding: 0.85rem 1rem 0.85rem 2.75rem;
+      background: $white;
+      border: 1px solid $gray-200;
+      border-radius: $radius-lg;
+      color: $gray-700;
+      &::before {
+        content: '\2713';
+        position: absolute;
+        left: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+        color: $primary-600;
+        font-weight: $font-weight-bold;
+      }
+    }
+  }
+
+  // Bottom CTA
+  .al-cta-bottom {
+    padding: 5rem 0;
+    text-align: center;
+    background: linear-gradient(135deg, $primary-600 0%, $primary-800 100%);
+    color: $white;
+
+    .al-cta-text { margin-bottom: 1.5rem; font-size: $font-size-xl; }
+    .btn-cta { background-color: $white; color: $primary-700; }
+    .al-doc-link {
+      margin-top: 1.5rem;
+      a { color: rgba(255, 255, 255, 0.9); text-decoration: underline; }
+    }
+  }
+
+  @media (max-width: $breakpoint-sm) {
+    .al-title { font-size: $font-size-4xl; }
+    .al-hero { padding: 3.5rem 0; }
+  }
+}
