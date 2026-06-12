@@ -1,0 +1,277 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e4]:
+      - link "QAStudy.online" [ref=e5] [cursor=pointer]:
+        - /url: /
+      - list [ref=e6]:
+        - listitem [ref=e7]:
+          - link "Курси" [ref=e8] [cursor=pointer]:
+            - /url: /courses/
+        - listitem [ref=e9]:
+          - link "Про нас" [ref=e10] [cursor=pointer]:
+            - /url: /about/
+      - generic [ref=e11]:
+        - generic [ref=e12]:
+          - link "Українська" [ref=e13] [cursor=pointer]:
+            - /url: /
+          - link "English" [ref=e14] [cursor=pointer]:
+            - /url: /en/
+        - link "Увійти" [ref=e15] [cursor=pointer]:
+          - /url: /login/
+        - link "Почати" [ref=e16] [cursor=pointer]:
+          - /url: /courses/
+  - main [ref=e17]:
+    - generic [ref=e20]:
+      - generic [ref=e21]:
+        - heading "Опануйте Навички QA Тестування" [level=1] [ref=e22]
+        - paragraph [ref=e23]: Вивчайте забезпечення якості, тестування програмного забезпечення та автоматизацію від провідних експертів галузі. Побудуйте кар'єру в QA з практичними проєктами та реальним досвідом.
+        - generic [ref=e24]:
+          - link "Почати Навчання" [ref=e25] [cursor=pointer]:
+            - /url: /courses/
+          - link "Переглянути Курси" [ref=e26] [cursor=pointer]:
+            - /url: /courses/
+      - generic [ref=e29]: QA Testing
+    - generic [ref=e30]:
+      - generic [ref=e31]:
+        - generic [ref=e32]:
+          - heading "Досліджуйте Топ Навички QA та Сертифікації" [level=2] [ref=e33]
+          - paragraph [ref=e34]: Провідні компанії обирають QAStudy.online для розвитку затребуваних навичок тестування.
+        - generic [ref=e35]:
+          - generic [ref=e37]:
+            - heading "Ручне тестування" [level=3] [ref=e38]
+            - list [ref=e39]:
+              - listitem [ref=e40]:
+                - link "Основи ручного тестування" [ref=e41] [cursor=pointer]:
+                  - /url: /courses/manual-qa/
+              - listitem [ref=e42]:
+                - link "Буткемп з ручного тестування" [ref=e43] [cursor=pointer]:
+                  - /url: /courses/manual-testing-bootcamp/
+              - listitem [ref=e44]:
+                - link "Дизайн тест-кейсів" [ref=e45] [cursor=pointer]:
+                  - /url: "#"
+              - listitem [ref=e46]:
+                - link "Звітування про баги" [ref=e47] [cursor=pointer]:
+                  - /url: "#"
+              - listitem [ref=e48]:
+                - link "Дослідницьке тестування" [ref=e49] [cursor=pointer]:
+                  - /url: "#"
+          - generic [ref=e51]:
+            - heading "Автоматизація тестів" [level=3] [ref=e52]
+            - list [ref=e53]:
+              - listitem [ref=e54]:
+                - link "Автоматизоване тестування" [ref=e55] [cursor=pointer]:
+                  - /url: /courses/automated-testing/
+              - listitem [ref=e56]:
+                - link "Автоматизація API" [ref=e57] [cursor=pointer]:
+                  - /url: /courses/api-automation/
+              - listitem [ref=e58]:
+                - link "Selenium WebDriver" [ref=e59] [cursor=pointer]:
+                  - /url: "#"
+              - listitem [ref=e60]:
+                - link "Cypress" [ref=e61] [cursor=pointer]:
+                  - /url: "#"
+              - listitem [ref=e62]:
+                - link "Інтеграція CI/CD" [ref=e63] [cursor=pointer]:
+                  - /url: "#"
+          - generic [ref=e65]:
+            - heading "QA Сертифікації" [level=3] [ref=e66]
+            - list [ref=e67]:
+              - listitem [ref=e68]:
+                - link "ISTQB Foundation" [ref=e69] [cursor=pointer]:
+                  - /url: "#"
+              - listitem [ref=e70]:
+                - link "Agile тестування" [ref=e71] [cursor=pointer]:
+                  - /url: "#"
+              - listitem [ref=e72]:
+                - link "Управління тестуванням" [ref=e73] [cursor=pointer]:
+                  - /url: "#"
+              - listitem [ref=e74]:
+                - link "Тестування продуктивності" [ref=e75] [cursor=pointer]:
+                  - /url: "#"
+              - listitem [ref=e76]:
+                - link "Тестування безпеки" [ref=e77] [cursor=pointer]:
+                  - /url: "#"
+          - generic [ref=e79]:
+            - heading "Розвиток кар'єри" [level=3] [ref=e80]
+            - list [ref=e81]:
+              - listitem [ref=e82]:
+                - link "QA Лідерство та менеджмент" [ref=e83] [cursor=pointer]:
+                  - /url: /courses/career-qa-manager/
+              - listitem [ref=e84]:
+                - link "Стратегія тестування" [ref=e85] [cursor=pointer]:
+                  - /url: "#"
+              - listitem [ref=e86]:
+                - link "Управління командою" [ref=e87] [cursor=pointer]:
+                  - /url: "#"
+              - listitem [ref=e88]:
+                - link "Підготовка до співбесіди" [ref=e89] [cursor=pointer]:
+                  - /url: "#"
+              - listitem [ref=e90]:
+                - link "Побудова портфоліо" [ref=e91] [cursor=pointer]:
+                  - /url: "#"
+      - generic [ref=e93]:
+        - generic [ref=e94]:
+          - heading "Рекомендовані Курси" [level=2] [ref=e95]
+          - paragraph [ref=e96]: Розпочніть свій шлях у QA з нашими найпопулярнішими курсами
+        - generic [ref=e97]:
+          - generic [ref=e98]:
+            - generic [ref=e100]: Основи ручного тестування
+            - generic [ref=e101]:
+              - generic [ref=e102]: Початківець
+              - heading "Повний Буткемп з Ручного Тестування" [level=3] [ref=e103]:
+                - link "Повний Буткемп з Ручного Тестування" [ref=e104] [cursor=pointer]:
+                  - /url: /courses/manual-testing-bootcamp/
+              - paragraph [ref=e105]: Вивчіть тестування програмного забезпечення з нуля на реальних проєктах та сценаріях.
+              - generic [ref=e108]: Сара Джонсон
+              - generic [ref=e109]:
+                - generic [ref=e110]:
+                  - img [ref=e111]
+                  - text: 8 годин
+                - generic [ref=e113]:
+                  - img [ref=e114]
+                  - text: 42 уроки
+            - generic [ref=e116]:
+              - generic [ref=e117]:
+                - generic [ref=e118]: ★★★★★
+                - generic [ref=e119]: "4.8"
+                - generic [ref=e120]: (2,845)
+              - generic [ref=e122]: $49.99
+          - generic [ref=e123]:
+            - generic [ref=e125]: Автоматизація API тестів
+            - generic [ref=e126]:
+              - generic [ref=e127]: Просунутий
+              - heading "Повна Автоматизація API Тестів" [level=3] [ref=e128]:
+                - link "Повна Автоматизація API Тестів" [ref=e129] [cursor=pointer]:
+                  - /url: /courses/api-automation/
+              - paragraph [ref=e130]: Опануйте тестування REST API за допомогою Postman, REST Assured та Python.
+              - generic [ref=e133]: Алекс Чен
+              - generic [ref=e134]:
+                - generic [ref=e135]:
+                  - img [ref=e136]
+                  - text: 18 годин
+                - generic [ref=e138]:
+                  - img [ref=e139]
+                  - text: 85 уроків
+            - generic [ref=e141]:
+              - generic [ref=e142]:
+                - generic [ref=e143]: ★★★★★
+                - generic [ref=e144]: "4.9"
+                - generic [ref=e145]: (1,234)
+              - generic [ref=e146]:
+                - generic [ref=e147]: $89.99
+                - generic [ref=e148]: $149.99
+          - generic [ref=e149]:
+            - generic [ref=e151]: Тестування безпеки
+            - generic [ref=e152]:
+              - generic [ref=e153]: Середній
+              - heading "Тестування безпеки веб-застосунків" [level=3] [ref=e154]:
+                - link "Тестування безпеки веб-застосунків" [ref=e155] [cursor=pointer]:
+                  - /url: /courses/security-testing/
+              - paragraph [ref=e156]: Вивчіть методи тестування безпеки та OWASP Top 10 вразливостей.
+              - generic [ref=e159]: Марк Девідсон
+              - generic [ref=e160]:
+                - generic [ref=e161]:
+                  - img [ref=e162]
+                  - text: 16 годин
+                - generic [ref=e164]:
+                  - img [ref=e165]
+                  - text: 75 уроків
+            - generic [ref=e167]:
+              - generic [ref=e168]:
+                - generic [ref=e169]: ★★★★★
+                - generic [ref=e170]: "4.8"
+                - generic [ref=e171]: (987)
+              - generic [ref=e173]: $79.99
+        - link "Переглянути Всі Курси" [ref=e175] [cursor=pointer]:
+          - /url: /courses/
+      - generic [ref=e177]:
+        - generic [ref=e178]:
+          - heading "Чому обирають QAStudy.online?" [level=2] [ref=e179]
+          - paragraph [ref=e180]: Приєднуйтесь до тисяч професіоналів, які просунули свою QA кар'єру з нами
+        - generic [ref=e181]:
+          - generic [ref=e182]:
+            - img [ref=e184]
+            - heading "Інструктори-експерти галузі" [level=3] [ref=e186]
+            - paragraph [ref=e187]: Навчайтесь у досвідчених QA-спеціалістів, які працювали в топових технологічних компаніях.
+          - generic [ref=e188]:
+            - img [ref=e190]
+            - heading "Практичні проєкти" [level=3] [ref=e192]
+            - paragraph [ref=e193]: Створюйте реальні проєкти тестування, які можна додати до свого портфоліо.
+          - generic [ref=e194]:
+            - img [ref=e196]
+            - heading "Підтримка кар'єри" [level=3] [ref=e198]
+            - paragraph [ref=e199]: Отримайте допомогу з резюме, підготовкою до співбесіди та сприянням у працевлаштуванні.
+  - contentinfo [ref=e200]:
+    - generic [ref=e201]:
+      - generic [ref=e202]:
+        - generic [ref=e203]:
+          - generic [ref=e204]:
+            - heading "QAStudy.online" [level=3] [ref=e205]
+            - paragraph [ref=e206]: Опануйте навички QA тестування від експертів галузі
+          - generic [ref=e207]:
+            - link "Twitter" [ref=e208] [cursor=pointer]:
+              - /url: https://twitter.com/qastudyonline
+              - img [ref=e209]
+            - link "LinkedIn" [ref=e211] [cursor=pointer]:
+              - /url: https://linkedin.com/company/qastudy-online
+              - img [ref=e212]
+            - link "YouTube" [ref=e214] [cursor=pointer]:
+              - /url: https://youtube.com/qastudyonline
+              - img [ref=e215]
+            - link "GitHub" [ref=e217] [cursor=pointer]:
+              - /url: https://github.com/qastudy-online
+              - img [ref=e218]
+        - generic [ref=e220]:
+          - heading "Навчання" [level=3] [ref=e221]
+          - list [ref=e222]:
+            - listitem [ref=e223]:
+              - link "Ручне тестування" [ref=e224] [cursor=pointer]:
+                - /url: /courses/manual-qa/
+            - listitem [ref=e225]:
+              - link "Автоматизація тестів" [ref=e226] [cursor=pointer]:
+                - /url: /courses/automated-testing/
+            - listitem [ref=e227]:
+              - link "Тестування API" [ref=e228] [cursor=pointer]:
+                - /url: /courses/api-automation/
+            - listitem [ref=e229]:
+              - link "Тестування продуктивності" [ref=e230] [cursor=pointer]:
+                - /url: /courses/performance-testing/
+        - generic [ref=e231]:
+          - heading "Сертифікації" [level=3] [ref=e232]
+          - list [ref=e233]:
+            - listitem [ref=e234]:
+              - link "ISTQB Foundation" [ref=e235] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e236]:
+              - link "Agile тестування" [ref=e237] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e238]:
+              - link "Управління тестуванням" [ref=e239] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e240]:
+              - link "Сертифікат з автоматизації" [ref=e241] [cursor=pointer]:
+                - /url: "#"
+        - generic [ref=e242]:
+          - heading "Підтримка" [level=3] [ref=e243]
+          - list [ref=e244]:
+            - listitem [ref=e245]:
+              - link "Довідковий центр" [ref=e246] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e247]:
+              - link "Контакти" [ref=e248] [cursor=pointer]:
+                - /url: /about/
+            - listitem [ref=e249]:
+              - link "Політика конфіденційності" [ref=e250] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e251]:
+              - link "Умови використання" [ref=e252] [cursor=pointer]:
+                - /url: "#"
+      - generic [ref=e254]:
+        - paragraph [ref=e255]: © 2026 QAStudy.online. Всі права захищені.
+        - generic [ref=e256]:
+          - link "Політика конфіденційності" [ref=e257] [cursor=pointer]:
+            - /url: "#"
+          - link "Умови використання" [ref=e258] [cursor=pointer]:
+            - /url: "#"
+          - link "Файли cookie" [ref=e259] [cursor=pointer]:
+            - /url: "#"

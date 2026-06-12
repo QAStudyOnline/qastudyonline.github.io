@@ -13,8 +13,9 @@ Our courses cover the full spectrum of QA testing — from manual testing for be
 
 ## Contact
 
-- **Email:** info@qastudy.online
-- **Twitter:** [@qastudyonline](https://twitter.com/qastudyonline)
-- **LinkedIn:** [QAStudy Online](https://linkedin.com/company/qastudy-online)
-- **YouTube:** [QAStudy Online](https://youtube.com/qastudyonline)
-- **GitHub:** [qastudy-online](https://github.com/qastudy-online)
+- **Email:** qafirststeps@gmail.com
+- **Telegram:** [@qastudy.online](https://t.me/qastudy)
+- **LinkedIn:** [Yehor Maskymchuk](linkedin.com/in/yegor-maksymchuk-271039240)
+- **YouTube UA:** [QAStudy Online](https://www.youtube.com/@qastudy.online)
+- **YouTube EN:** [AIDevTestOps](https://www.youtube.com/@AIDevTestOps)
+- **GitHub:** [qastudy-online](https://github.com/QAStudyOnline)

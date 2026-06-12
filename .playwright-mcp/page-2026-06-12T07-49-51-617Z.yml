@@ -1,0 +1,163 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e4]:
+      - link "QAStudy.online" [ref=e5] [cursor=pointer]:
+        - /url: /
+      - list [ref=e6]:
+        - listitem [ref=e7]:
+          - link "Курси" [ref=e8] [cursor=pointer]:
+            - /url: /courses/
+        - listitem [ref=e9]:
+          - link "Про нас" [ref=e10] [cursor=pointer]:
+            - /url: /about/
+      - generic [ref=e11]:
+        - generic [ref=e12]:
+          - link "Українська" [ref=e13] [cursor=pointer]:
+            - /url: /courses/
+          - link "English" [ref=e14] [cursor=pointer]:
+            - /url: /en/courses/
+        - link "Увійти" [ref=e15] [cursor=pointer]:
+          - /url: /login/
+        - link "Почати" [ref=e16] [cursor=pointer]:
+          - /url: /courses/
+  - main [ref=e17]:
+    - generic [ref=e19]:
+      - heading "Курси QA Тестування" [level=1] [ref=e21]
+      - generic [ref=e22]:
+        - generic [ref=e23]:
+          - generic [ref=e25]: "QA Лідерство та управління: Шлях до QA менеджера та QA Architect"
+          - generic [ref=e26]:
+            - generic [ref=e27]: Просунутий
+            - 'heading "QA Лідерство та управління: Шлях до QA менеджера та QA Architect" [level=3] [ref=e28]':
+              - 'link "QA Лідерство та управління: Шлях до QA менеджера та QA Architect" [ref=e29] [cursor=pointer]':
+                - /url: /courses/career-qa-manager/
+            - paragraph [ref=e30]: Переходьте від тестувальника до QA менеджера з навичками лідерства та стратегічного мислення
+            - generic [ref=e33]: Дженніфер Лі
+            - generic [ref=e34]:
+              - generic [ref=e35]:
+                - img [ref=e36]
+                - text: 14 годин
+              - generic [ref=e38]:
+                - img [ref=e39]
+                - text: 68 уроків
+          - generic [ref=e41]:
+            - generic [ref=e42]:
+              - generic [ref=e43]: ★★★★★
+              - generic [ref=e44]: "4.9"
+            - generic [ref=e46]: $94.99
+        - generic [ref=e47]:
+          - generic [ref=e49]: Тестування AI агентів та LLM систем
+          - generic [ref=e50]:
+            - generic [ref=e51]: Просунутий
+            - heading "Тестування AI агентів та LLM систем" [level=3] [ref=e52]:
+              - link "Тестування AI агентів та LLM систем" [ref=e53] [cursor=pointer]:
+                - /url: /courses/ai-agent-testing/
+            - paragraph [ref=e54]: Опануйте тестування систем штучного інтелекту, великих мовних моделей та мультиагентних додатків
+            - generic [ref=e57]: Егор Максимчук QA Architect | Performance Analist | DevOps
+            - generic [ref=e58]:
+              - generic [ref=e59]:
+                - img [ref=e60]
+                - text: 12 годин
+              - generic [ref=e62]:
+                - img [ref=e63]
+                - text: 58 уроків
+          - generic [ref=e65]:
+            - generic [ref=e66]:
+              - generic [ref=e67]: ★★★★★
+              - generic [ref=e68]: "4.9"
+            - generic [ref=e70]: $30000 грн
+        - generic [ref=e71]:
+          - generic [ref=e73]: Тестування продуктивності з JMeter та Docker
+          - generic [ref=e74]:
+            - generic [ref=e75]: Середній
+            - heading "Тестування продуктивності з JMeter та Docker" [level=3] [ref=e76]:
+              - link "Тестування продуктивності з JMeter та Docker" [ref=e77] [cursor=pointer]:
+                - /url: /courses/performance-testing/
+            - paragraph [ref=e78]: Опануйте тестування навантаження за допомогою JMeter, Docker, InfluxDB та Grafana
+            - generic [ref=e81]: Роберт Кім
+            - generic [ref=e82]:
+              - generic [ref=e83]:
+                - img [ref=e84]
+                - text: 15 годин
+              - generic [ref=e86]:
+                - img [ref=e87]
+                - text: 72 уроків
+          - generic [ref=e89]:
+            - generic [ref=e90]:
+              - generic [ref=e91]: ★★★★★
+              - generic [ref=e92]: "4.7"
+            - generic [ref=e94]: $74.99
+  - contentinfo [ref=e95]:
+    - generic [ref=e96]:
+      - generic [ref=e97]:
+        - generic [ref=e98]:
+          - generic [ref=e99]:
+            - heading "QAStudy.online" [level=3] [ref=e100]
+            - paragraph [ref=e101]: Опануйте навички QA тестування від експертів галузі
+          - generic [ref=e102]:
+            - link "Twitter" [ref=e103] [cursor=pointer]:
+              - /url: https://twitter.com/qastudyonline
+              - img [ref=e104]
+            - link "LinkedIn" [ref=e106] [cursor=pointer]:
+              - /url: https://linkedin.com/company/qastudy-online
+              - img [ref=e107]
+            - link "YouTube" [ref=e109] [cursor=pointer]:
+              - /url: https://youtube.com/qastudyonline
+              - img [ref=e110]
+            - link "GitHub" [ref=e112] [cursor=pointer]:
+              - /url: https://github.com/qastudy-online
+              - img [ref=e113]
+        - generic [ref=e115]:
+          - heading "Навчання" [level=3] [ref=e116]
+          - list [ref=e117]:
+            - listitem [ref=e118]:
+              - link "Ручне тестування" [ref=e119] [cursor=pointer]:
+                - /url: /courses/manual-qa/
+            - listitem [ref=e120]:
+              - link "Автоматизація тестів" [ref=e121] [cursor=pointer]:
+                - /url: /courses/automated-testing/
+            - listitem [ref=e122]:
+              - link "Тестування API" [ref=e123] [cursor=pointer]:
+                - /url: /courses/api-automation/
+            - listitem [ref=e124]:
+              - link "Тестування продуктивності" [ref=e125] [cursor=pointer]:
+                - /url: /courses/performance-testing/
+        - generic [ref=e126]:
+          - heading "Сертифікації" [level=3] [ref=e127]
+          - list [ref=e128]:
+            - listitem [ref=e129]:
+              - link "ISTQB Foundation" [ref=e130] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e131]:
+              - link "Agile тестування" [ref=e132] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e133]:
+              - link "Управління тестуванням" [ref=e134] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e135]:
+              - link "Сертифікат з автоматизації" [ref=e136] [cursor=pointer]:
+                - /url: "#"
+        - generic [ref=e137]:
+          - heading "Підтримка" [level=3] [ref=e138]
+          - list [ref=e139]:
+            - listitem [ref=e140]:
+              - link "Довідковий центр" [ref=e141] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e142]:
+              - link "Контакти" [ref=e143] [cursor=pointer]:
+                - /url: /about/
+            - listitem [ref=e144]:
+              - link "Політика конфіденційності" [ref=e145] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e146]:
+              - link "Умови використання" [ref=e147] [cursor=pointer]:
+                - /url: "#"
+      - generic [ref=e149]:
+        - paragraph [ref=e150]: © 2026 QAStudy.online. Всі права захищені.
+        - generic [ref=e151]:
+          - link "Політика конфіденційності" [ref=e152] [cursor=pointer]:
+            - /url: "#"
+          - link "Умови використання" [ref=e153] [cursor=pointer]:
+            - /url: "#"
+          - link "Файли cookie" [ref=e154] [cursor=pointer]:
+            - /url: "#"

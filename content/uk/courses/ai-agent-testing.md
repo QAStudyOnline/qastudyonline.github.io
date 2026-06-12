@@ -1,10 +1,9 @@
 ---
 title: "Тестування AI агентів та LLM систем"
 description: "Опануйте тестування систем штучного інтелекту, великих мовних моделей та мультиагентних додатків"
-price: 109.99
-instructor: "Доктор Пратік Шах"
+price: 30000 грн
+instructor: "Егор Максимчук QA Architect | Performance Analist | DevOps"
 rating: 4.9
-students: 312
 duration: "12 годин"
 lessons: 58
 level: "Просунутий"
@@ -20,6 +19,10 @@ tools:
   - "LangChain"
   - "OpenAI API"
   - "Pytest"
+  - "promptfoo"
+  - "Ollama"
+  - "lemonade-server.ai"
+  - "Spring AI"
   - "Promptfoo"
   - "LangSmith"
   - "Hugging Face"

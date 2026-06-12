@@ -1,0 +1,18 @@
+{
+  "mcpServers": {
+    "Playwright": {
+      "command": "npx",
+      "args": ["-y", "@playwright/mcp@latest"],
+      "env": {}
+    },
+    "Context7": {
+      "type": "http",
+      "url": "https://mcp.context7.com/mcp"
+    },
+    "Mobile MCP": {
+      "command": "npx",
+      "args": ["-y", "@mobilenext/mobile-mcp@latest"],
+      "env": {}
+    }
+  }
+}

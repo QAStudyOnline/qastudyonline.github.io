@@ -2,72 +2,37 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Опануйте Навички QA Тестування on QAStudy.online</title>
-    <link>http://localhost:62373/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content in Опануйте Навички QA Тестування on QAStudy.online</description>
     <generator>Hugo</generator>
     <language>uk</language>
-    <atom:link href="http://localhost:62373/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>QA Лідерство та управління: Шлях до QA менеджера</title>
-      <link>http://localhost:62373/courses/career-qa-manager/</link>
+      <title>QA Лідерство та управління: Шлях до QA менеджера та QA Architect</title>
+      <link>http://localhost:1313/courses/career-qa-manager/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:62373/courses/career-qa-manager/</guid>
+      <guid>http://localhost:1313/courses/career-qa-manager/</guid>
       <description>&lt;h2 id=&#34;опис-курсу&#34;&gt;Опис курсу&lt;/h2&gt;&#xA;&lt;p&gt;Перехід від технічного спеціаліста до менеджера — один з найбільших кроків у кар&amp;rsquo;єрі. Цей курс проведе вас через всі аспекти QA лідерства: від технічних стратегій до управління людьми.&lt;/p&gt;&#xA;&lt;h3 id=&#34;результати-студентів&#34;&gt;Результати студентів&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;78%&lt;/strong&gt; наших студентів отримали підвищення протягом 6 місяців&lt;/li&gt;&#xA;&lt;li&gt;Середнє підвищення зарплати — &lt;strong&gt;$35,000&lt;/strong&gt; на рік&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;90%&lt;/strong&gt; рекомендують курс своїм колегам&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;бонусні-матеріали&#34;&gt;Бонусні матеріали&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Шаблони для звітів про якість&lt;/li&gt;&#xA;&lt;li&gt;Чеклисти для проведення перевірок&lt;/li&gt;&#xA;&lt;li&gt;Зразки стратегій тестування&lt;/li&gt;&#xA;&lt;li&gt;Доступ до спільноти QA лідерів&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
     <item>
-      <title>Автоматизоване тестування</title>
-      <link>http://localhost:62373/courses/automated-testing/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:62373/courses/automated-testing/</guid>
-      <description>&lt;h2 id=&#34;автоматизоване-тестування&#34;&gt;Автоматизоване тестування&lt;/h2&gt;&#xA;&lt;p&gt;Цей курс надає комплексну основу для автоматизованого тестування програмного забезпечення. Ви навчитесь обирати правильні інструменти, писати надійні тести та інтегрувати автоматизацію у процес розробки.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Основи ручного QA тестування</title>
-      <link>http://localhost:62373/courses/manual-qa/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:62373/courses/manual-qa/</guid>
-      <description>&lt;h2 id=&#34;опис-курсу&#34;&gt;Опис курсу&lt;/h2&gt;&#xA;&lt;p&gt;Ручне тестування — це основа всього QA процесу. Навіть в епоху автоматизації, ручне тестування залишається незамінним для перевірки UX, дослідницького тестування та scenarios, які важко автоматизувати.&lt;/p&gt;&#xA;&lt;h3 id=&#34;результати-наших-студентів&#34;&gt;Результати наших студентів&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;85%&lt;/strong&gt; студентів завершують курс&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;73%&lt;/strong&gt; знаходять роботу в QA протягом 6 місяців&lt;/li&gt;&#xA;&lt;li&gt;Середній час пошуку першої роботи: &lt;strong&gt;3.5 місяці&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;хто-цей-курс-для-вас&#34;&gt;Хто цей курс для вас&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Люди, які хочуть змінити кар&amp;rsquo;єру на IT&lt;/li&gt;&#xA;&lt;li&gt;Студенти технічних спеціальностей&lt;/li&gt;&#xA;&lt;li&gt;Розробники, які хочуть покращити навички тестування&lt;/li&gt;&#xA;&lt;li&gt;Менеджери продуктів та бізнес-аналітики&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
-    </item>
-    <item>
-      <title>Повна Автоматизація API Тестів</title>
-      <link>http://localhost:62373/courses/api-automation/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:62373/courses/api-automation/</guid>
-      <description>&lt;h2 id=&#34;опис-курсу&#34;&gt;Опис курсу&lt;/h2&gt;&#xA;&lt;p&gt;Цей поглиблений курс навчить вас тестувати REST API за допомогою сучасних інструментів та фреймворків. Ви навчитесь не просто перевіряти API вручну, а й створювати автоматизовані тестові набори, які можна інтегрувати у CI/CD пайплайни.&lt;/p&gt;&#xA;&lt;h3 id=&#34;можливості-карєри&#34;&gt;Можливості кар&amp;rsquo;єри&lt;/h3&gt;&#xA;&lt;p&gt;Спеціалісти з API автоматизації затребувані в усіх технологічних компаніях. Після завершення курсу ви зможете:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Претендувати на позиції QA Automation Engineer&lt;/li&gt;&#xA;&lt;li&gt;Підвищити свою зарплату на 30-50%&lt;/li&gt;&#xA;&lt;li&gt;Працювати з провідними компаніями та стартапами&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
-    </item>
-    <item>
-      <title>Повний Буткемп з Ручного Тестування</title>
-      <link>http://localhost:62373/courses/manual-testing-bootcamp/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:62373/courses/manual-testing-bootcamp/</guid>
-      <description>&lt;h2 id=&#34;огляд-курсу&#34;&gt;Огляд курсу&lt;/h2&gt;&#xA;&lt;p&gt;Цей повний буткемп з ручного тестування розроблено спеціально для початківців, які хочуть розпочати кар&amp;rsquo;єру в QA або розширити свої навички тестування. Незалежно від вашого технічного досвіду, цей курс надасть вам міцну основу для роботи в якості QA-спеціаліста.&lt;/p&gt;&#xA;&lt;h3 id=&#34;що-вас-чекає&#34;&gt;Що вас чекає&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Більше &lt;strong&gt;42 відеоуроків&lt;/strong&gt; з практичними демонстраціями&lt;/li&gt;&#xA;&lt;li&gt;Реальні &lt;strong&gt;проєкти тестування&lt;/strong&gt; для вашого портфоліо&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Шаблони тест-кейсів та баг-репортів&lt;/strong&gt;, якими ви будете користуватися в роботі&lt;/li&gt;&#xA;&lt;li&gt;Доступ до &lt;strong&gt;спільноти студентів&lt;/strong&gt; для обговорення та підтримки&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Сертифікат&lt;/strong&gt; після завершення курсу&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;хто-цей-курс-для-вас&#34;&gt;Хто цей курс для вас&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Новачки, які хочуть розпочати кар&amp;rsquo;єру в QA&lt;/li&gt;&#xA;&lt;li&gt;Розробники, які хочуть покращити навички тестування&lt;/li&gt;&#xA;&lt;li&gt;Менеджери продуктів, які хочуть зрозуміти процес QA&lt;/li&gt;&#xA;&lt;li&gt;Всі, хто хоче змінити кар&amp;rsquo;єру на IT&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
-    </item>
-    <item>
       <title>Про нас</title>
-      <link>http://localhost:62373/about/</link>
+      <link>http://localhost:1313/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:62373/about/</guid>
+      <guid>http://localhost:1313/about/</guid>
       <description>&lt;h2 id=&#34;наша-місія&#34;&gt;Наша місія&lt;/h2&gt;&#xA;&lt;p&gt;QAStudy.online — це освітня платформа, створена для тих, хто хоче побудувати успішну кар&amp;rsquo;єру в галузі забезпечення якості програмного забезпечення. Ми віримо, що якісне тестування — це основа надійних і безпечних програмних продуктів.&lt;/p&gt;&#xA;&lt;h2 id=&#34;що-ми-пропонуємо&#34;&gt;Що ми пропонуємо&lt;/h2&gt;&#xA;&lt;p&gt;Наші курси охоплюють весь спектр QA тестування — від ручного тестування для початківців до просунутої автоматизації та тестування безпеки. Кожен курс розроблений практикуючими фахівцями з реальним досвідом роботи в топових технологічних компаніях.&lt;/p&gt;&#xA;&lt;h3 id=&#34;наші-напрямки&#34;&gt;Наші напрямки:&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Ручне тестування&lt;/strong&gt; — основи QA, дизайн тест-кейсів, баг-репортинг&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Автоматизація тестів&lt;/strong&gt; — Selenium, Cypress, Playwright, REST Assured&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;API тестування&lt;/strong&gt; — Postman, REST Assured, Python requests&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Тестування безпеки&lt;/strong&gt; — OWASP Top 10, пентестинг&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Тестування продуктивності&lt;/strong&gt; — JMeter, Grafana, Docker&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;QA Лідерство&lt;/strong&gt; — управління командою, стратегія тестування, кар&amp;rsquo;єрний ріст&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;AI тестування&lt;/strong&gt; — тестування LLM, prompt engineering, AI safety&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;чому-обирають-нас&#34;&gt;Чому обирають нас&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;Практичний підхід&lt;/strong&gt; — всі курси містять реальні проєкти та практичні завдання, які допоможуть вам побудувати сильне портфоліо.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Тестування AI агентів та LLM систем</title>
-      <link>http://localhost:62373/courses/ai-agent-testing/</link>
+      <link>http://localhost:1313/courses/ai-agent-testing/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:62373/courses/ai-agent-testing/</guid>
+      <guid>http://localhost:1313/courses/ai-agent-testing/</guid>
       <description>&lt;h2 id=&#34;опис-курсу&#34;&gt;Опис курсу&lt;/h2&gt;&#xA;&lt;p&gt;Штучний інтелект трансформує розробку програмного забезпечення, і тестування AI систем стає критично важливою навичкою. Цей курс — один з перших у світі, що комплексно охоплює тестування LLM та AI агентів.&lt;/p&gt;&#xA;&lt;h3 id=&#34;чому-ai-тестування-зараз&#34;&gt;Чому AI тестування зараз?&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Ринок AI застосунків зростає на 40% щороку&lt;/li&gt;&#xA;&lt;li&gt;Компанії шукають спеціалістів з тестування AI&lt;/li&gt;&#xA;&lt;li&gt;Зарплати AI QA спеціалістів: від &lt;strong&gt;$120,000 до $180,000&lt;/strong&gt; на рік&lt;/li&gt;&#xA;&lt;li&gt;Величезний попит та мала пропозиція на ринку праці&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
     <item>
-      <title>Тестування безпеки веб-застосунків</title>
-      <link>http://localhost:62373/courses/security-testing/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:62373/courses/security-testing/</guid>
-      <description>&lt;h2 id=&#34;опис-курсу&#34;&gt;Опис курсу&lt;/h2&gt;&#xA;&lt;p&gt;Тестування безпеки стає дедалі важливішим в сучасній розробці програмного забезпечення. Цей курс навчить вас думати як зловмисник та знаходити вразливості до того, як їх знайдуть хакери.&lt;/p&gt;&#xA;&lt;h3 id=&#34;карєрні-можливості&#34;&gt;Кар&amp;rsquo;єрні можливості&lt;/h3&gt;&#xA;&lt;p&gt;Security Testing спеціалісти та Penetration Testers одні з найбільш затребуваних та високооплачуваних фахівців у галузі IT безпеки. Середня зарплата Security Tester в Україні — від 2000$ на місяць.&lt;/p&gt;</description>
-    </item>
-    <item>
       <title>Тестування продуктивності з JMeter та Docker</title>
-      <link>http://localhost:62373/courses/performance-testing/</link>
+      <link>http://localhost:1313/courses/performance-testing/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:62373/courses/performance-testing/</guid>
+      <guid>http://localhost:1313/courses/performance-testing/</guid>
       <description>&lt;h2 id=&#34;опис-курсу&#34;&gt;Опис курсу&lt;/h2&gt;&#xA;&lt;p&gt;Тестування продуктивності — критична частина розробки сучасних веб-застосунків. Цей курс навчить вас не тільки проводити тести навантаження, але й налаштовувати повну інфраструктуру моніторингу для аналізу результатів у реальному часі.&lt;/p&gt;</description>
     </item>
   </channel>

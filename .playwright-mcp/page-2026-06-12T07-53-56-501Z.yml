@@ -1,0 +1,236 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e4]:
+      - link "QAStudy.online" [ref=e5] [cursor=pointer]:
+        - /url: /
+      - list [ref=e6]:
+        - listitem [ref=e7]:
+          - link "Курси" [ref=e8] [cursor=pointer]:
+            - /url: /courses/
+        - listitem [ref=e9]:
+          - link "Про нас" [ref=e10] [cursor=pointer]:
+            - /url: /about/
+      - generic [ref=e11]:
+        - generic [ref=e12]:
+          - link "Українська" [ref=e13] [cursor=pointer]:
+            - /url: /courses/ai-agent-testing/
+          - link "English" [ref=e14] [cursor=pointer]:
+            - /url: /en/courses/ai-agent-testing/
+        - link "Увійти" [ref=e15] [cursor=pointer]:
+          - /url: /login/
+        - link "Почати" [ref=e16] [cursor=pointer]:
+          - /url: /courses/
+  - main [ref=e17]:
+    - article [ref=e18]:
+      - generic [ref=e21]:
+        - generic [ref=e22]:
+          - generic [ref=e23]: Просунутий
+          - heading "Тестування AI агентів та LLM систем" [level=1] [ref=e24]
+          - paragraph [ref=e25]: Опануйте тестування систем штучного інтелекту, великих мовних моделей та мультиагентних додатків
+          - generic [ref=e27]:
+            - generic [ref=e28]:
+              - img [ref=e29]
+              - generic [ref=e31]: 12 годин
+            - generic [ref=e32]:
+              - img [ref=e33]
+              - generic [ref=e35]: 58 уроків
+            - generic [ref=e36]:
+              - generic [ref=e37]: ★
+              - generic [ref=e38]: "4.9"
+          - generic [ref=e39]:
+            - link "Дивитися на YouTube" [ref=e40] [cursor=pointer]:
+              - /url: https://youtube.com/qastudyonline
+            - link "Переглянути на GitHub" [ref=e41] [cursor=pointer]:
+              - /url: https://github.com/qastudy-online/ai-agent-testing
+            - link "Записатися на Udemy" [ref=e42] [cursor=pointer]:
+              - /url: https://www.udemy.com/course/ai-agent-testing/
+        - iframe [ref=e45]:
+          - generic [active] [ref=f1e1]:
+            - generic "YouTube Video Player" [ref=f1e3]
+            - generic [ref=f1e5]:
+              - generic:
+                - generic:
+                  - button "Play video" [ref=f1e10] [cursor=pointer]
+                  - button "Hide player controls" [ref=f1e12] [cursor=pointer]
+      - generic [ref=e47]:
+        - heading "Що ви вивчите" [level=2] [ref=e48]
+        - generic [ref=e49]:
+          - generic [ref=e50]:
+            - img [ref=e51]
+            - generic [ref=e53]: Розуміти унікальні виклики тестування AI систем
+          - generic [ref=e54]:
+            - img [ref=e55]
+            - generic [ref=e57]: Тестувати великі мовні моделі (GPT, Claude, Llama)
+          - generic [ref=e58]:
+            - img [ref=e59]
+            - generic [ref=e61]: Розробляти тести для систем на основі LangChain
+          - generic [ref=e62]:
+            - img [ref=e63]
+            - generic [ref=e65]: Оцінювати безпеку та надійність AI
+          - generic [ref=e66]:
+            - img [ref=e67]
+            - generic [ref=e69]: Впроваджувати тестування відхилень та prompt injection
+          - generic [ref=e70]:
+            - img [ref=e71]
+            - generic [ref=e73]: Тестувати мультиагентні системи
+          - generic [ref=e74]:
+            - img [ref=e75]
+            - generic [ref=e77]: Моніторити AI в продакшн
+          - generic [ref=e78]:
+            - img [ref=e79]
+            - generic [ref=e81]: Будувати фреймворки оцінки AI
+      - generic [ref=e83]:
+        - heading "Програма курсу" [level=2] [ref=e84]
+        - generic [ref=e85]:
+          - group [ref=e86]:
+            - generic "Вступ до тестування AI +" [ref=e87] [cursor=pointer]
+          - group [ref=e88]:
+            - generic "Тестування LLM +" [ref=e89] [cursor=pointer]
+          - group [ref=e90]:
+            - generic "LangChain та агентне тестування +" [ref=e91] [cursor=pointer]
+          - group [ref=e92]:
+            - generic "AI безпека та безпечність +" [ref=e93] [cursor=pointer]
+          - group [ref=e94]:
+            - generic "Метрики та оцінка +" [ref=e95] [cursor=pointer]
+          - group [ref=e96]:
+            - generic "Мультиагентні системи +" [ref=e97] [cursor=pointer]
+          - group [ref=e98]:
+            - generic "Моніторинг у продакшн +" [ref=e99] [cursor=pointer]
+          - group [ref=e100]:
+            - generic "Реальні проєкти +" [ref=e101] [cursor=pointer]
+      - generic [ref=e103]:
+        - heading "Інструменти та технології" [level=2] [ref=e104]
+        - generic [ref=e105]:
+          - generic [ref=e106]: LangChain
+          - generic [ref=e107]: OpenAI API
+          - generic [ref=e108]: Pytest
+          - generic [ref=e109]: promptfoo
+          - generic [ref=e110]: Ollama
+          - generic [ref=e111]: lemonade-server.ai
+          - generic [ref=e112]: Spring AI
+          - generic [ref=e113]: Promptfoo
+          - generic [ref=e114]: LangSmith
+          - generic [ref=e115]: Hugging Face
+          - generic [ref=e116]: Weights & Biases
+          - generic [ref=e117]: Giskard
+      - generic [ref=e119]:
+        - heading "Вимоги" [level=2] [ref=e120]
+        - list [ref=e121]:
+          - listitem [ref=e122]: ✓ Знання Python (рівень Intermediate)
+          - listitem [ref=e123]: ✓ Базове розуміння машинного навчання
+          - listitem [ref=e124]: ✓ Досвід роботи з API
+      - generic [ref=e127]:
+        - heading "Опис курсу" [level=2] [ref=e128]
+        - paragraph [ref=e129]: Штучний інтелект трансформує розробку програмного забезпечення, і тестування AI систем стає критично важливою навичкою. Цей курс — один з перших у світі, що комплексно охоплює тестування LLM та AI агентів.
+        - heading "Чому AI тестування зараз?" [level=3] [ref=e130]
+        - list [ref=e131]:
+          - listitem [ref=e132]: Ринок AI застосунків зростає на 40% щороку
+          - listitem [ref=e133]: Компанії шукають спеціалістів з тестування AI
+          - listitem [ref=e134]:
+            - text: "Зарплати AI QA спеціалістів: від"
+            - strong [ref=e135]: $120,000 до $180,000
+            - text: на рік
+          - listitem [ref=e136]: Величезний попит та мала пропозиція на ринку праці
+      - generic [ref=e138]:
+        - heading "Відгуки студентів" [level=2] [ref=e139]
+        - generic [ref=e140]:
+          - generic [ref=e141]:
+            - generic [ref=e142]: ★★★★★
+            - paragraph [ref=e143]: "\"Унікальний курс, якого дуже не вистачало. Тестування AI — це зовсім нова галузь, і цей курс дає чудову основу.\""
+            - generic [ref=e144]:
+              - strong [ref=e145]: Олег Ф.
+              - generic [ref=e146]: AI Engineer
+          - generic [ref=e147]:
+            - generic [ref=e148]: ★★★★★
+            - paragraph [ref=e149]: "\"Нарешті курс, який пояснює як правильно тестувати LLM системи. Рекомендую всім, хто працює з AI.\""
+            - generic [ref=e150]:
+              - strong [ref=e151]: Катерина М.
+              - generic [ref=e152]: ML Engineer
+          - generic [ref=e153]:
+            - generic [ref=e154]: ★★★★★
+            - paragraph [ref=e155]: "\"Цей курс відкрив мені новий напрямок кар'єри. AI тестування — це майбутнє нашої галузі.\""
+            - generic [ref=e156]:
+              - strong [ref=e157]: Артем Н.
+              - generic [ref=e158]: QA Automation Engineer
+      - generic [ref=e160]:
+        - heading "Готові почати навчання?" [level=2] [ref=e161]
+        - paragraph [ref=e162]: Приєднуйтесь до тисяч студентів
+        - generic [ref=e163]:
+          - link "Дивитися на YouTube" [ref=e164] [cursor=pointer]:
+            - /url: https://youtube.com/qastudyonline
+          - link "Переглянути на GitHub" [ref=e165] [cursor=pointer]:
+            - /url: https://github.com/qastudy-online/ai-agent-testing
+  - contentinfo [ref=e166]:
+    - generic [ref=e167]:
+      - generic [ref=e168]:
+        - generic [ref=e169]:
+          - generic [ref=e170]:
+            - heading "QAStudy.online" [level=3] [ref=e171]
+            - paragraph [ref=e172]: Опануйте навички QA тестування від експертів галузі
+          - generic [ref=e173]:
+            - link "Twitter" [ref=e174] [cursor=pointer]:
+              - /url: https://twitter.com/qastudyonline
+              - img [ref=e175]
+            - link "LinkedIn" [ref=e177] [cursor=pointer]:
+              - /url: https://linkedin.com/company/qastudy-online
+              - img [ref=e178]
+            - link "YouTube" [ref=e180] [cursor=pointer]:
+              - /url: https://youtube.com/qastudyonline
+              - img [ref=e181]
+            - link "GitHub" [ref=e183] [cursor=pointer]:
+              - /url: https://github.com/qastudy-online
+              - img [ref=e184]
+        - generic [ref=e186]:
+          - heading "Навчання" [level=3] [ref=e187]
+          - list [ref=e188]:
+            - listitem [ref=e189]:
+              - link "Ручне тестування" [ref=e190] [cursor=pointer]:
+                - /url: /courses/manual-qa/
+            - listitem [ref=e191]:
+              - link "Автоматизація тестів" [ref=e192] [cursor=pointer]:
+                - /url: /courses/automated-testing/
+            - listitem [ref=e193]:
+              - link "Тестування API" [ref=e194] [cursor=pointer]:
+                - /url: /courses/api-automation/
+            - listitem [ref=e195]:
+              - link "Тестування продуктивності" [ref=e196] [cursor=pointer]:
+                - /url: /courses/performance-testing/
+        - generic [ref=e197]:
+          - heading "Сертифікації" [level=3] [ref=e198]
+          - list [ref=e199]:
+            - listitem [ref=e200]:
+              - link "ISTQB Foundation" [ref=e201] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e202]:
+              - link "Agile тестування" [ref=e203] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e204]:
+              - link "Управління тестуванням" [ref=e205] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e206]:
+              - link "Сертифікат з автоматизації" [ref=e207] [cursor=pointer]:
+                - /url: "#"
+        - generic [ref=e208]:
+          - heading "Підтримка" [level=3] [ref=e209]
+          - list [ref=e210]:
+            - listitem [ref=e211]:
+              - link "Довідковий центр" [ref=e212] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e213]:
+              - link "Контакти" [ref=e214] [cursor=pointer]:
+                - /url: /about/
+            - listitem [ref=e215]:
+              - link "Політика конфіденційності" [ref=e216] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e217]:
+              - link "Умови використання" [ref=e218] [cursor=pointer]:
+                - /url: "#"
+      - generic [ref=e220]:
+        - paragraph [ref=e221]: © 2026 QAStudy.online. Всі права захищені.
+        - generic [ref=e222]:
+          - link "Політика конфіденційності" [ref=e223] [cursor=pointer]:
+            - /url: "#"
+          - link "Умови використання" [ref=e224] [cursor=pointer]:
+            - /url: "#"
+          - link "Файли cookie" [ref=e225] [cursor=pointer]:
+            - /url: "#"

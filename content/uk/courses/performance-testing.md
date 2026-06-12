@@ -18,6 +18,9 @@ tools:
   - "Gatling"
   - "k6"
   - "Prometheus"
+  - "Kubernetes"
+  - "AWS ECS"
+  - "Azure Container Instance"
 
 features:
   - "Розробляти комплексні стратегії тестування навантаження"

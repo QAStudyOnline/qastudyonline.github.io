@@ -18,7 +18,6 @@ hero:
     <h2 class="h2 mb-4">Досліджуйте Топ Навички QA та Сертифікації</h2>
     <p class="text-large text-gray-600">Провідні компанії обирають QAStudy.online для розвитку затребуваних навичок тестування.</p>
   </div>
-
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
     <div class="card">
       <div class="card-body">
@@ -32,7 +31,6 @@ hero:
         </ul>
       </div>
     </div>
-
     <div class="card">
       <div class="card-body">
         <h3 class="h4 text-primary mb-4">Автоматизація тестів</h3>
@@ -45,7 +43,6 @@ hero:
         </ul>
       </div>
     </div>
-
     <div class="card">
       <div class="card-body">
         <h3 class="h4 text-primary mb-4">QA Сертифікації</h3>
@@ -58,7 +55,6 @@ hero:
         </ul>
       </div>
     </div>
-
     <div class="card">
       <div class="card-body">
         <h3 class="h4 text-primary mb-4">Розвиток кар'єри</h3>
@@ -80,7 +76,6 @@ hero:
       <h2 class="h2 mb-4">Рекомендовані Курси</h2>
       <p class="text-large text-gray-600">Розпочніть свій шлях у QA з нашими найпопулярнішими курсами</p>
     </div>
-
     <div class="course-grid">
       <div class="course-card">
         <div class="course-image">
@@ -122,7 +117,6 @@ hero:
           </div>
         </div>
       </div>
-
       <div class="course-card">
         <div class="course-image">
           <div class="course-image-content">Автоматизація API тестів</div>
@@ -164,7 +158,6 @@ hero:
           </div>
         </div>
       </div>
-
       <div class="course-card">
         <div class="course-image">
           <div class="course-image-content">Тестування безпеки</div>
@@ -206,7 +199,6 @@ hero:
         </div>
       </div>
     </div>
-
     <div class="text-center mt-12">
       <a href="/courses/" class="btn btn-primary btn-lg">Переглянути Всі Курси</a>
     </div>
@@ -219,7 +211,6 @@ hero:
       <h2 class="h2 mb-4">Чому обирають QAStudy.online?</h2>
       <p class="text-large text-gray-600">Приєднуйтесь до тисяч професіоналів, які просунули свою QA кар'єру з нами</p>
     </div>
-
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
       <div class="text-center">
         <div class="w-16 h-16 bg-primary-100 rounded-full d-flex align-center justify-center mx-auto mb-4">
@@ -230,7 +221,6 @@ hero:
         <h3 class="h4 mb-3">Інструктори-експерти галузі</h3>
         <p class="text-gray-600">Навчайтесь у досвідчених QA-спеціалістів, які працювали в топових технологічних компаніях.</p>
       </div>
-
       <div class="text-center">
         <div class="w-16 h-16 bg-primary-100 rounded-full d-flex align-center justify-center mx-auto mb-4">
           <svg class="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20">
@@ -240,7 +230,6 @@ hero:
         <h3 class="h4 mb-3">Практичні проєкти</h3>
         <p class="text-gray-600">Створюйте реальні проєкти тестування, які можна додати до свого портфоліо.</p>
       </div>
-
       <div class="text-center">
         <div class="w-16 h-16 bg-primary-100 rounded-full d-flex align-center justify-center mx-auto mb-4">
           <svg class="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20">

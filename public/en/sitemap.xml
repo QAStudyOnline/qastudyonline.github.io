@@ -2,160 +2,100 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:62373/en/about/</loc>
+    <loc>http://localhost:1313/en/about/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="uk"
-                href="http://localhost:62373/about/"
+                href="http://localhost:1313/about/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:62373/en/about/"
+                href="http://localhost:1313/en/about/"
                 />
   </url><url>
-    <loc>http://localhost:62373/en/courses/ai-agent-testing/</loc>
+    <loc>http://localhost:1313/en/courses/ai-agent-testing/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="uk"
-                href="http://localhost:62373/courses/ai-agent-testing/"
+                href="http://localhost:1313/courses/ai-agent-testing/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:62373/en/courses/ai-agent-testing/"
+                href="http://localhost:1313/en/courses/ai-agent-testing/"
                 />
   </url><url>
-    <loc>http://localhost:62373/en/courses/security-testing/</loc>
+    <loc>http://localhost:1313/en/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="uk"
-                href="http://localhost:62373/courses/security-testing/"
+                href="http://localhost:1313/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:62373/en/courses/security-testing/"
+                href="http://localhost:1313/en/categories/"
                 />
   </url><url>
-    <loc>http://localhost:62373/en/courses/automated-testing/</loc>
+    <loc>http://localhost:1313/en/levels/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="uk"
-                href="http://localhost:62373/courses/automated-testing/"
+                href="http://localhost:1313/levels/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:62373/en/courses/automated-testing/"
+                href="http://localhost:1313/en/levels/"
                 />
   </url><url>
-    <loc>http://localhost:62373/en/categories/</loc>
+    <loc>http://localhost:1313/en/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="uk"
-                href="http://localhost:62373/categories/"
+                href="http://localhost:1313/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:62373/en/categories/"
+                href="http://localhost:1313/en/"
                 />
   </url><url>
-    <loc>http://localhost:62373/en/courses/api-automation/</loc>
+    <loc>http://localhost:1313/en/courses/performance-testing/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="uk"
-                href="http://localhost:62373/courses/api-automation/"
+                href="http://localhost:1313/courses/performance-testing/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:62373/en/courses/api-automation/"
+                href="http://localhost:1313/en/courses/performance-testing/"
                 />
   </url><url>
-    <loc>http://localhost:62373/en/courses/manual-testing-bootcamp/</loc>
+    <loc>http://localhost:1313/en/courses/career-qa-manager/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="uk"
-                href="http://localhost:62373/courses/manual-testing-bootcamp/"
+                href="http://localhost:1313/courses/career-qa-manager/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:62373/en/courses/manual-testing-bootcamp/"
+                href="http://localhost:1313/en/courses/career-qa-manager/"
                 />
   </url><url>
-    <loc>http://localhost:62373/en/levels/</loc>
+    <loc>http://localhost:1313/en/courses/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="uk"
-                href="http://localhost:62373/levels/"
+                href="http://localhost:1313/courses/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:62373/en/levels/"
-                />
-  </url><url>
-    <loc>http://localhost:62373/en/courses/manual-qa/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="uk"
-                href="http://localhost:62373/courses/manual-qa/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:62373/en/courses/manual-qa/"
-                />
-  </url><url>
-    <loc>http://localhost:62373/en/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="uk"
-                href="http://localhost:62373/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:62373/en/"
-                />
-  </url><url>
-    <loc>http://localhost:62373/en/courses/performance-testing/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="uk"
-                href="http://localhost:62373/courses/performance-testing/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:62373/en/courses/performance-testing/"
-                />
-  </url><url>
-    <loc>http://localhost:62373/en/courses/career-qa-manager/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="uk"
-                href="http://localhost:62373/courses/career-qa-manager/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:62373/en/courses/career-qa-manager/"
-                />
-  </url><url>
-    <loc>http://localhost:62373/en/courses/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="uk"
-                href="http://localhost:62373/courses/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:62373/en/courses/"
+                href="http://localhost:1313/en/courses/"
                 />
   </url>
 </urlset>
