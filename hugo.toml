@@ -24,10 +24,10 @@ defaultContentLanguageInSubdir = false
 
 [params]
   email      = "info@qastudy.online"
-  twitter    = "qastudyonline"
-  linkedin   = "qastudy-online"
-  youtube    = "qastudyonline"
-  github     = "qastudy-online"
+  telegram   = "https://t.me/qastudy"
+  linkedin   = "https://www.linkedin.com/in/yehor-maksymchuk-271039240/"
+  youtube    = "https://www.youtube.com/@qastudy.online"
+  github     = "https://github.com/QAStudyOnline"
   brand_name = "QAStudy.online"
 
 [taxonomies]
