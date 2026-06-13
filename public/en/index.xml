@@ -22,5 +22,12 @@
       <guid>http://localhost:1314/en/about/</guid>
       <description>&lt;h2 id=&#34;our-mission&#34;&gt;Our Mission&lt;/h2&gt;&#xA;&lt;p&gt;QAStudy.online is an educational platform built for those who want to build a successful career in software quality assurance. We believe that quality testing is the foundation of reliable and secure software products.&lt;/p&gt;&#xA;&lt;h2 id=&#34;what-we-offer&#34;&gt;What We Offer&lt;/h2&gt;&#xA;&lt;p&gt;Our courses cover the full spectrum of QA testing — from manual testing for beginners to advanced automation and security testing. Each course is designed by practicing professionals with real-world experience at top technology companies.&lt;/p&gt;</description>
     </item>
+    <item>
+      <title>Agentic QA Course Program</title>
+      <link>http://localhost:1314/en/agentic-qa-program/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1314/en/agentic-qa-program/</guid>
+      <description>&lt;h2 id=&#34;course-overview&#34;&gt;Course Overview&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Target audience:&lt;/strong&gt; Junior and Middle AI / Dev / Test / Ops engineers&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Total lessons:&lt;/strong&gt; 21&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Estimated duration:&lt;/strong&gt; 11–14 weeks&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;block-1-foundations&#34;&gt;Block 1. Foundations&lt;/h2&gt;&#xA;&lt;p&gt;&lt;em&gt;(Lessons 1–2 — basic level, no technical prerequisites)&lt;/em&gt;&lt;/p&gt;&#xA;&lt;h3 id=&#34;lesson-1-ai-systems-as-a-test-object-why-everything-is-different&#34;&gt;Lesson 1. AI systems as a test object: why everything is different&lt;/h3&gt;&#xA;&lt;p&gt;Understanding how LLM testing differs from traditional deterministic software. Covers the system types encountered in projects: chatbots, RAG systems, agents, and pipelines. Explores failure modes through a practical taxonomy rather than ML theory. Examines how the classical testing pyramid transforms for AI applications, with evaluation testing emerging as a new layer between integration and E2E testing.&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>

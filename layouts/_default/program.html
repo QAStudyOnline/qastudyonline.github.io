@@ -1,0 +1,42 @@
+{{ define "head" }}
+  <meta property="og:title" content="{{ .Title }} | {{ .Site.Title }}">
+  <meta property="og:description" content="{{ .Description }}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ .Permalink }}">
+  <link rel="canonical" href="{{ .Permalink }}">
+{{ end }}
+
+{{ define "main" }}
+<article class="program-page">
+
+  <header class="program-header">
+    <div class="container">
+      {{ with .Params.course_url }}
+      <a class="program-back" href="{{ . | relLangURL }}">{{ $.Params.back_label | default "← до курсу" }}</a>
+      {{ end }}
+      <h1 class="program-title">{{ .Title }}</h1>
+      {{ with .Description }}<p class="program-subtitle">{{ . }}</p>{{ end }}
+      {{ with .Params.registration_url }}
+      <a href="{{ . }}" class="btn-cta" target="_blank" rel="noopener noreferrer">{{ $.Params.cta_label | default "Подати заявку →" }}</a>
+      {{ end }}
+    </div>
+  </header>
+
+  <section class="program-body">
+    <div class="container">
+      <div class="prose max-w-none">
+        {{ .Content }}
+      </div>
+    </div>
+  </section>
+
+  {{ with .Params.registration_url }}
+  <section class="program-cta-bottom">
+    <div class="container">
+      <a href="{{ . }}" class="btn-cta" target="_blank" rel="noopener noreferrer">{{ $.Params.cta_label | default "Подати заявку →" }}</a>
+    </div>
+  </section>
+  {{ end }}
+
+</article>
+{{ end }}

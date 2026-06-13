@@ -76,5 +76,17 @@
                 hreflang="uk"
                 href="http://localhost:1314/about/"
                 />
+  </url><url>
+    <loc>http://localhost:1314/agentic-qa-program/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1314/en/agentic-qa-program/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="uk"
+                href="http://localhost:1314/agentic-qa-program/"
+                />
   </url>
 </urlset>

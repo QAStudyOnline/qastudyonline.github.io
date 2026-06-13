@@ -14,7 +14,7 @@ lessons: 21
 
 # Links
 registration_url: "https://forms.gle/Lz1ZfjUBWzrK8sQn7"
-curriculum_doc_url: "https://docs.google.com/document/d/17_3F0DyPfGhgrVn42Wt3PKq4H_epvvG9pG_7hZP6FqM/edit"
+program_url: "/agentic-qa-program/"
 doc_label: "Full course curriculum"
 
 # Hero

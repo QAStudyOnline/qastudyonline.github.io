@@ -1,0 +1,430 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e4]:
+      - link "QAStudy.online" [ref=e5] [cursor=pointer]:
+        - /url: /en/
+      - list [ref=e6]:
+        - listitem [ref=e7]:
+          - link "Courses" [ref=e8] [cursor=pointer]:
+            - /url: /en/courses/
+        - listitem [ref=e9]:
+          - link "About" [ref=e10] [cursor=pointer]:
+            - /url: /en/about/
+      - generic [ref=e11]:
+        - generic [ref=e12]:
+          - link "Українська" [ref=e13] [cursor=pointer]:
+            - /url: /agentic-qa-program/
+          - link "English" [ref=e14] [cursor=pointer]:
+            - /url: /en/agentic-qa-program/
+        - link "Get Started" [ref=e15] [cursor=pointer]:
+          - /url: /en/courses/
+  - main [ref=e16]:
+    - article [ref=e17]:
+      - generic [ref=e19]:
+        - link "← back to course" [ref=e20] [cursor=pointer]:
+          - /url: /en/courses/agentic-qa/
+        - heading "Agentic QA Course Program" [level=1] [ref=e21]
+        - paragraph [ref=e22]: "The full Agentic QA course program: 21 lessons, 6 blocks, a final project, and the target-audience profile."
+        - link "Apply now →" [ref=e23] [cursor=pointer]:
+          - /url: https://forms.gle/Lz1ZfjUBWzrK8sQn7
+      - generic [ref=e26]:
+        - heading "Course Overview" [level=2] [ref=e27]
+        - list [ref=e28]:
+          - listitem [ref=e29]:
+            - strong [ref=e30]: "Target audience:"
+            - text: Junior and Middle AI / Dev / Test / Ops engineers
+          - listitem [ref=e31]:
+            - strong [ref=e32]: "Total lessons:"
+            - text: "21"
+          - listitem [ref=e33]:
+            - strong [ref=e34]: "Estimated duration:"
+            - text: 11–14 weeks
+        - separator [ref=e35]
+        - heading "Block 1. Foundations" [level=2] [ref=e36]
+        - paragraph [ref=e37]:
+          - emphasis [ref=e38]: (Lessons 1–2 — basic level, no technical prerequisites)
+        - 'heading "Lesson 1. AI systems as a test object: why everything is different" [level=3] [ref=e39]'
+        - paragraph [ref=e40]: "Understanding how LLM testing differs from traditional deterministic software. Covers the system types encountered in projects: chatbots, RAG systems, agents, and pipelines. Explores failure modes through a practical taxonomy rather than ML theory. Examines how the classical testing pyramid transforms for AI applications, with evaluation testing emerging as a new layer between integration and E2E testing."
+        - paragraph [ref=e41]:
+          - strong [ref=e42]: "In-class practice:"
+          - text: Students receive a demo chatbot and 10 varied prompts, tasked with classifying failures according to the taxonomy and documenting them as a “structured bug report for an LLM system.”
+        - paragraph [ref=e43]:
+          - strong [ref=e44]: "Homework:"
+          - text: "Locate 5 genuine failures in any public AI product and document them with categorization: failure type → input → actual output → expected output → severity."
+        - paragraph [ref=e45]:
+          - strong [ref=e46]: "Outcome:"
+          - text: Students understand AI-system testing specifics, can document failures in a structured format, and recognize how traditional testing pyramids evolve in AI contexts.
+        - separator [ref=e47]
+        - heading "Lesson 2. The architecture of agentic systems through a QA lens" [level=3] [ref=e48]
+        - paragraph [ref=e49]: "Focuses on failure points rather than agent construction. Examines components: the LLM core, system prompt, tools, memory, orchestration, context window. Explains what occurs during tool calls and identifies risk layers. Demonstrates converting architectural diagrams into test strategies."
+        - paragraph [ref=e50]:
+          - strong [ref=e51]: "In-class practice:"
+          - text: Students receive a real agentic-system schema (a RAG agent with dual tool calls) and create a risk map, identifying risk types and at least one test idea per component.
+        - paragraph [ref=e52]:
+          - strong [ref=e53]: "Homework:"
+          - text: "Draw an architecture diagram of an AI system from the student’s project or invention. Provide at least 2 test ideas per component. Submit: diagram + risk table."
+        - paragraph [ref=e54]:
+          - strong [ref=e55]: "Outcome:"
+          - text: Students decompose agentic systems into components and build risk maps as the foundation for a test strategy.
+        - separator [ref=e56]
+        - heading "Block 2. LLM Testing" [level=2] [ref=e57]
+        - paragraph [ref=e58]:
+          - emphasis [ref=e59]: (Lessons 3–9 — intermediate level, basic Python or TypeScript required)
+        - heading "Lesson 3. Prompt and context engineering for QA" [level=3] [ref=e60]
+        - paragraph [ref=e61]: "Why QA engineers must understand prompt engineering — not for writing prompts, but for testing them. Anatomy of a system prompt: instructions, persona, constraints, examples, output format. Prompt types: zero-shot, few-shot, chain-of-thought, ReAct, self-consistency — each fails differently. Engineering techniques: role prompting, step-by-step decomposition, output-format specification, negative prompting. The context window as a resource and how its size affects agent behavior. Context injection and the impact of external data on model responses."
+        - paragraph [ref=e62]:
+          - strong [ref=e63]: "In-class practice:"
+          - text: Students receive prompts of various types for one task. They run each against prepared input data, compare results, and identify where each technique breaks down uniquely.
+        - paragraph [ref=e64]:
+          - strong [ref=e65]: "Homework:"
+          - text: "Audit a real or invented system prompt: find 3+ problem areas (ambiguities, conflicts, instruction gaps). Rebuild it using at least two prompt techniques. Submit: original + annotated audit + improved version with explanations."
+        - paragraph [ref=e66]:
+          - strong [ref=e67]: "Outcome:"
+          - text: Students understand prompt types and techniques, recognize their impact on model behavior, and can conduct a structured system-prompt QA audit.
+        - separator [ref=e68]
+        - heading "Lesson 4. Metrics in AI testing" [level=3] [ref=e69]
+        - paragraph [ref=e70]: "Why pass/fail fails for LLM systems. Reviews key metrics: faithfulness, answer relevancy, context recall, hallucination rate, groundedness. Distinguishes quantitative versus qualitative metrics and when to use each. Metric selection tailored to system type: chatbots, RAG, agents, pipelines. Baseline metrics and what constitutes a “good” result. How metrics shift with model, prompt, or data changes."
+        - paragraph [ref=e71]:
+          - strong [ref=e72]: "In-class practice:"
+          - text: Students interpret eval-run results with multiple metrics, identify system weaknesses, and formulate specific hypotheses about metric performance.
+        - paragraph [ref=e73]:
+          - strong [ref=e74]: "Homework:"
+          - text: "Select an AI system and create a table: relevant metrics → justification → threshold values for an acceptable result. Submit: metrics table + rationale."
+        - paragraph [ref=e75]:
+          - strong [ref=e76]: "Outcome:"
+          - text: Students can select appropriate metrics for different AI systems and understand what they measure and their limitations.
+        - separator [ref=e77]
+        - 'heading "Lesson 5. Prompt testing: from manual checks to automation" [level=3] [ref=e78]'
+        - paragraph [ref=e79]: "Why manual prompt verification doesn’t scale. Golden-dataset construction: sources, size, case balance. DeepEval and Promptfoo selection criteria. Writing assertions for non-deterministic responses. Prompt versioning as an engineering practice — why a prompt change constitutes a release. Regression testing for comparing version A versus B on identical datasets."
+        - paragraph [ref=e80]:
+          - strong [ref=e81]: "In-class practice:"
+          - text: Students run a prepared eval-suite with 5 tests in DeepEval, analyze which tests fluctuate, and refine assertions to prevent false positives.
+        - paragraph [ref=e82]:
+          - strong [ref=e83]: "Homework:"
+          - text: "Take a real or invented prompt. Write a golden dataset with 10 input/expected-output examples. Create and run an eval-suite. Submit: code + results + a brief analysis of findings."
+        - paragraph [ref=e84]:
+          - strong [ref=e85]: "Outcome:"
+          - text: Students build golden datasets and run eval-suites through DeepEval or Promptfoo instead of manual checking.
+        - separator [ref=e86]
+        - 'heading "Lesson 6. RAG testing: hallucination, faithfulness, relevancy" [level=3] [ref=e87]'
+        - paragraph [ref=e88]: "Where RAG-pipeline problems emerge: retrieval, augmentation, generation. RAGAS metrics: faithfulness, answer relevancy, context recall. An introduction to the LLM-as-judge pattern — when and how to use it. Distinguishing hallucination from incomplete context. A real production hallucination case study."
+        - paragraph [ref=e89]:
+          - strong [ref=e90]: "In-class practice:"
+          - text: Students deploy a demo RAG system and run a RAGAS evaluation on prepared questions, analyzing low faithfulness scores and instances of fabrication.
+        - paragraph [ref=e91]:
+          - strong [ref=e92]: "Homework:"
+          - text: "Build a minimal RAG eval: any documentation → demo RAG → 10 questions with known answers → RAGAS. Submit: metrics + a conclusion on weaknesses + one concrete improvement recommendation."
+        - paragraph [ref=e93]:
+          - strong [ref=e94]: "Outcome:"
+          - text: Students understand RAG-specific testing and can measure answer quality through RAGAS metrics.
+        - separator [ref=e95]
+        - heading "Lesson 7. Testing multi-step dialogs and context management" [level=3] [ref=e96]
+        - paragraph [ref=e97]: "Where agents lose context and why. Context-failure patterns: contradictions between steps, forgotten important data, degradation over a long dialogue. Programmatic multi-step scenario simulation. Context-window limits as a source of bugs."
+        - paragraph [ref=e98]:
+          - strong [ref=e99]: "In-class practice:"
+          - text: Students run a support agent through an 8-step scenario, finding at least 2 places where context is lost or contradictions appear, and write test cases for the discovered issues.
+        - paragraph [ref=e100]:
+          - strong [ref=e101]: "Homework:"
+          - text: "Write a full test plan for a multi-step scenario: 3 happy paths, 3 edge cases with context failures, 2 adversarial scenarios. For each: input → expected result → pass/fail criteria."
+        - paragraph [ref=e102]:
+          - strong [ref=e103]: "Outcome:"
+          - text: Students design multi-step dialogue test scenarios and locate context failures at various stages.
+        - separator [ref=e104]
+        - heading "Lesson 8. Testing different models and GitHub Models" [level=3] [ref=e105]
+        - paragraph [ref=e106]: "Models aren’t constants. Identical systems behave differently across GPT-4o, Claude Sonnet, Gemini, Llama. What changes: temperature sensitivity, instruction following, output consistency, hallucination rates. GitHub Models for comparative testing: fast access to multiple providers without separate API keys. Model benchmarking strategy and automation. When and why to switch models in production."
+        - paragraph [ref=e107]:
+          - strong [ref=e108]: "In-class practice:"
+          - text: Students run an identical eval-suite on two different models via GitHub Models, compare results, identify significant behavioral differences, and recommend which model suits the use case.
+        - paragraph [ref=e109]:
+          - strong [ref=e110]: "Homework:"
+          - text: "Build a model-comparison report: run a golden dataset on 3+ models, documenting metrics, cost, and latency. Submit: comparison table + a justified recommendation."
+        - paragraph [ref=e111]:
+          - strong [ref=e112]: "Outcome:"
+          - text: Students compare model behavior across eval-suites and make evidence-based model-selection recommendations.
+        - separator [ref=e113]
+        - 'heading "Lesson 9. Local models for testing: Ollama and Lemonade AI Runtime" [level=3] [ref=e114]'
+        - paragraph [ref=e115]: "Why LLM-as-a-Judge costs become problematic at CI/CD scale: “$0.003 per judge-call × 500 tests × 10 PRs/day = a real budget.” Local models solve this: zero per-call cost, full privacy, no rate limits or network dependencies. Ollama overview: supported models (Llama 3, Mistral, Phi-3, Gemma 2, Qwen). Lemonade AI Runtime as an alternative emphasizing Windows and NPU acceleration. Local-model selection: RAM size, judgment quality, and speed trade-offs. Where local models suffice for judges versus requiring the cloud."
+        - paragraph [ref=e116]:
+          - strong [ref=e117]: "Judge selection strategy:"
+        - list [ref=e118]:
+          - listitem [ref=e119]: Local development → Ollama + Phi-3 Mini (3.8B) — runs on a laptop, 2–5 sec response
+          - listitem [ref=e120]: CI on GitHub Actions → Ollama + Llama 3.1 8B in Docker — free, no secrets needed
+          - listitem [ref=e121]: Pre-release gate → Claude Haiku or GPT-4o Mini — higher judgment quality
+          - listitem [ref=e122]: Regression tests (500+) → local model — cloud costs unacceptable
+        - paragraph [ref=e123]:
+          - strong [ref=e124]: "In-class practice:"
+          - text: The instructor demonstrates a live Ollama deployment and Lemonade runtime setup, connects to DeepEval via a custom model wrapper, runs an eval-suite first with a cloud model as judge, then local, and compares results and costs.
+        - paragraph [ref=e125]:
+          - strong [ref=e126]: "Homework:"
+          - text: "Deploy Ollama locally and integrate it as a judge into an eval-suite. Run tests with three configurations: cloud model, large Ollama model (7B+), small Ollama model (3B or less). Submit: an accuracy/latency/cost table + a conclusion on the optimal configuration per pipeline stage."
+        - paragraph [ref=e127]:
+          - strong [ref=e128]: "Outcome:"
+          - text: Students deploy local models via Ollama or Lemonade, integrate them as judges in DeepEval, and make informed decisions on local versus cloud judge deployment.
+        - separator [ref=e129]
+        - heading "Block 3. Agentic Testing" [level=2] [ref=e130]
+        - paragraph [ref=e131]:
+          - emphasis [ref=e132]: (Lessons 10–14 — intermediate level, API experience and basic automation required)
+        - 'heading "Lesson 10. LLM as a Judge: implementation and pitfalls" [level=3] [ref=e133]'
+        - paragraph [ref=e134]: "LLM-as-a-Judge is now standard in AI evaluation. Covers architecture: prompt selection, model choice, response format. When judges are reliable and when they mislead: positional bias, verbosity bias, self-preference. Judge calibration: human validation, inter-rater agreement, prompt tuning. Implementation via DeepEval and RAGAS. When an LLM-judge replaces humans versus complements them. Cost and latency considerations for CI."
+        - paragraph [ref=e135]:
+          - strong [ref=e136]: "In-class practice:"
+          - text: Students write custom judge-prompts for demo-agent responses, compare against ground truth, identify judge errors, and refine prompts to reduce false evaluations.
+        - paragraph [ref=e137]:
+          - strong [ref=e138]: "Homework:"
+          - text: "Implement LLM-as-a-Judge for your own system: write a judge-prompt, run it on 10 examples, manually validate all 10, calculate judge accuracy. Submit: prompt + results + an analysis of judge failures."
+        - paragraph [ref=e139]:
+          - strong [ref=e140]: "Outcome:"
+          - text: Students implement and tune the LLM-as-a-Judge pattern and understand its limitations.
+        - separator [ref=e141]
+        - 'heading "Lesson 11. Security testing: Prompt Injection and Red Teaming" [level=3] [ref=e142]'
+        - paragraph [ref=e143]: "OWASP LLM Top 10 as a practical checklist. Direct prompt injection: instruction overwriting. Indirect injection: attacks via external content (documents, pages, tool results). Jailbreaking methods and defenses. Data exfiltration through agents. How system prompts and context engineering shape the attack surface. Red-team session methodology: structure, documentation, prioritization."
+        - paragraph [ref=e144]:
+          - strong [ref=e145]: "In-class practice:"
+          - text: "Students receive a demo agent with intentional vulnerabilities. Goal: find at least 2 vulnerabilities of different types from the OWASP LLM Top 10 within 30 minutes, documented in security-report format."
+        - paragraph [ref=e146]:
+          - strong [ref=e147]: "Homework:"
+          - text: "Conduct an independent red-team session on a public AI product or demo. Document 3+ vulnerabilities: vulnerability → attack vector → severity → mitigation recommendation."
+        - paragraph [ref=e148]:
+          - strong [ref=e149]: "Outcome:"
+          - text: Students conduct basic red-team sessions per the OWASP LLM Top 10 and document findings in security-report format.
+        - separator [ref=e150]
+        - heading "Lesson 12. Tool call testing and MCP" [level=3] [ref=e151]
+        - paragraph [ref=e152]: "Tool-call testing essentials: correct tool, correct parameters, correct order. Playwright MCP as both a testing object and a testing tool. Programmatic tool-call interception and verification. Common bugs: superfluous calls, missed calls, incorrect parameters."
+        - paragraph [ref=e153]:
+          - strong [ref=e154]: "In-class practice:"
+          - text: Students run a prepared agent with Playwright MCP, observe tool calls in the trace, locate one incorrect call in a prepared scenario, and write an assertion to catch it automatically.
+        - paragraph [ref=e155]:
+          - strong [ref=e156]: "Homework:"
+          - text: "Write automated tool-call behavior tests — at least 5 test cases: correct call, call with wrong parameters, missed call, superfluous call, incorrect order. Submit: code + execution results."
+        - paragraph [ref=e157]:
+          - strong [ref=e158]: "Outcome:"
+          - text: Students understand tool-call testing specifics and write automated checks for agent behavior during tool interaction.
+        - separator [ref=e159]
+        - heading "Lesson 13. Observability and cost testing" [level=3] [ref=e160]
+        - paragraph [ref=e161]: "Why QA needs agent tracing. LangSmith and Phoenix/Arize: what they show and how to read them. What to find in traces: latency anomalies, token loops, unexpected tool calls, quality degradation. Cost testing: identifying expensive scenarios. Production-monitoring metrics."
+        - paragraph [ref=e162]:
+          - strong [ref=e163]: "In-class practice:"
+          - text: "Students connect LangSmith to a demo agent and run a scenario with an intentional token loop. Task: locate the anomaly in the trace, identify the misstep, calculate the cost of the failed versus normal scenario."
+        - paragraph [ref=e164]:
+          - strong [ref=e165]: "Homework:"
+          - text: "Configure observability for a demo agent. Run 5 scenarios comparing latency, tokens, cost, tool-call count. Identify the most expensive scenario. Submit: trace screenshots + a comparison table + an optimization recommendation."
+        - paragraph [ref=e166]:
+          - strong [ref=e167]: "Outcome:"
+          - text: Students configure agent-system tracing and locate behavioral and cost anomalies through observability tools.
+        - separator [ref=e168]
+        - heading "Lesson 14. AI-assisted Test Case Generation and Code Review" [level=3] [ref=e169]
+        - paragraph [ref=e170]: "Using AI for test-case generation — and validating quality. Patterns: generation from requirements, generation from code, edge-case generation from golden datasets. GitHub Copilot and Claude as test-design assistants. AI-assisted code review for test code: prompting models to find weak assertions and incomplete tests. Risks of over-trusting AI-generated tests: false coverage, implicit assumptions. Validating generated-test quality."
+        - paragraph [ref=e171]:
+          - strong [ref=e172]: "In-class practice:"
+          - text: "Students ask AI to generate test cases for agent functionality. Task: critically evaluate the results — find tests that appear correct but check nothing, and rewrite them."
+        - paragraph [ref=e173]:
+          - strong [ref=e174]: "Homework:"
+          - text: "Generate test cases for a chosen component using an AI agent integrated in the pipeline, then perform a manual review. Submit: a GitHub repository with the original tests + review comments. Execution as part of a local agentic workflow."
+        - paragraph [ref=e175]:
+          - strong [ref=e176]: "Outcome:"
+          - text: Students use AI as a test-generation tool and critically assess result quality. They configure agentic workflows in CI/CD environments.
+        - separator [ref=e177]
+        - heading "Block 4. Automation and frameworks" [level=2] [ref=e178]
+        - paragraph [ref=e179]:
+          - emphasis [ref=e180]: (Lessons 15–16 — advanced level, experience writing automated tests required)
+        - heading "Lesson 15. Building a framework for automated AI testing" [level=3] [ref=e181]
+        - paragraph [ref=e182]: "What distinguishes AI test frameworks from standard automation frameworks. Key components: dataset management, eval runner, assertion engine, result storage, reporting. Designing frameworks that support unit-level eval and E2E agent testing. Patterns: LLM response fixtures, golden-dataset factories, model wrappers. Test versioning alongside prompt versioning. Framework portability across providers (OpenAI, Anthropic, local models)."
+        - paragraph [ref=e183]:
+          - strong [ref=e184]: "In-class practice:"
+          - text: "Students receive a basic framework skeleton and complete the missing components: dataset loader, assertion wrapper, HTML report generation."
+        - paragraph [ref=e185]:
+          - strong [ref=e186]: "Homework:"
+          - text: "Design and implement a minimal AI test framework for a chosen system. Minimum requirements: dataset loading, eval execution, result storage, basic reporting. Submit: repository + README + execution example."
+        - paragraph [ref=e187]:
+          - strong [ref=e188]: "Outcome:"
+          - text: Students build structured AI-testing frameworks rather than isolated scripts, understanding the critical components.
+        - separator [ref=e189]
+        - 'heading "Lesson 16. Eval pipeline in CI/CD: Quality Gates with DeepEval and LLM-as-a-Judge" [level=3] [ref=e190]'
+        - paragraph [ref=e191]: "Why eval belongs in release pipelines — standard unit-test gates are insufficient for AI systems. Quality-gate architecture: what to check, frequency, deployment blockers. GitHub Actions + DeepEval: step-by-step configuration from scratch. LLM-as-a-Judge as an automated gate without human intervention. Benchmark thresholds: setting metric baselines and when to review them. Simulating a prompt-change regression to verify gate effectiveness. Flaky eval causes and solutions: seed, retry logic, threshold bands. Reporting eval results in pull requests: annotations, summary comments, Slack notifications."
+        - paragraph [ref=e192]:
+          - strong [ref=e193]: "In-class practice:"
+          - text: "Students clone a prepared repository with a basic GitHub Actions configuration. Task: add two gates — one DeepEval metric-based, one LLM-judge-based. Simulate a prompt change that breaks both gates."
+        - paragraph [ref=e194]:
+          - strong [ref=e195]: "Homework:"
+          - text: "Mature an eval-suite into a CI/CD pipeline with at least two quality gates — one rule-based (DeepEval metric), one model-based (LLM judge). Submit: repository + a green-run screenshot + a blocked-run screenshot (simulated regression) + a threshold-logic explanation."
+        - paragraph [ref=e196]:
+          - strong [ref=e197]: "Outcome:"
+          - text: Students embed eval-based and judge-based quality gates in CI/CD pipelines with automatic deployment blocking on quality degradation.
+        - separator [ref=e198]
+        - heading "Block 5. System level and Agentic Workflows" [level=2] [ref=e199]
+        - paragraph [ref=e200]:
+          - emphasis [ref=e201]: (Lessons 17–19 — advanced level, CI/CD experience and DevOps basics required)
+        - 'heading "Lesson 17. Agentic CI/CD: AI agents as part of the development pipeline" [level=3] [ref=e202]'
+        - paragraph [ref=e203]: "Agentic workflows differ from eval gates: agents act, not just verify. Usage patterns: automated code review through GitHub Copilot or Claude Code in PRs, automatic test generation or updates on code changes, automatic documentation updates on prompt or specification changes. Implementation via GitHub Actions + MCP: giving agents repository access while controlling capabilities. Claude Code and GitHub Copilot as pipeline agents: where each excels. Validating agent work quality: validation gates following agent actions. Agentic CI/CD risks: infinite loops, technical debt from low-quality generation, excessive permissions."
+        - paragraph [ref=e204]:
+          - strong [ref=e205]: "In-class practice:"
+          - text: "Students configure a GitHub Actions workflow where an agent (Claude Code or Copilot) automatically code-reviews test files on PR opening and leaves comments. Task: evaluate review quality on a prepared PR with intentional problems and assess the agent’s detection."
+        - paragraph [ref=e206]:
+          - strong [ref=e207]: "Homework:"
+          - text: "Implement an agentic workflow for one option: automatic code review of tests in a PR, or auto-test generation on a specification change. Submit: repository + demo execution + an analysis of the agent’s result quality + a list of omissions/errors."
+        - paragraph [ref=e208]:
+          - strong [ref=e209]: "Outcome:"
+          - text: Students understand where agentic CI/CD delivers ROI and where it creates risks, implementing basic versions with quality validation.
+        - separator [ref=e210]
+        - heading "Lesson 18. Documentation and Test Generation as part of an agentic workflow" [level=3] [ref=e211]
+        - paragraph [ref=e212]: "How agentic workflows keep documentation and tests current. Pattern: an AI agent reads the PR diff → generates or updates test cases → proposes documentation changes. GitHub Actions + MCP implementation. Validating auto-generated documentation quality. Where agents help versus create debt. Real product-team implementation examples."
+        - paragraph [ref=e213]:
+          - strong [ref=e214]: "In-class practice:"
+          - text: "Students configure a simple GitHub Actions workflow: on prompt-file changes, the agent automatically generates updated test cases and opens a PR with them."
+        - paragraph [ref=e215]:
+          - strong [ref=e216]: "Homework:"
+          - text: "Implement an agentic workflow for one option: automatic documentation update on a prompt change, or auto-test generation on a specification change. Submit: repository + demo execution + a result-quality analysis + a list of agent errors."
+        - paragraph [ref=e217]:
+          - strong [ref=e218]: "Outcome:"
+          - text: Students understand where agentic workflows deliver QA ROI and implement basic versions.
+        - separator [ref=e219]
+        - heading "Block 6. Final project" [level=2] [ref=e220]
+        - paragraph [ref=e221]:
+          - emphasis [ref=e222]: (Lessons 19–21 — synthesis of the whole course)
+        - 'heading "Lesson 19. Final-project prep: consultations and peer review" [level=3] [ref=e223]'
+        - paragraph [ref=e224]: "Students present their current project status. Peer review: repository exchange and structured feedback via a checklist. The instructor discusses common mistakes and answers questions."
+        - heading "Lessons 20–21. Final-project defense" [level=3] [ref=e225]
+        - paragraph [ref=e226]: "Each student: a 10-minute live pipeline demo + 5 minutes of Q&A. Question focus: “Why that threshold in the quality gate,” “Where does your judge fail,” “What would you change with another week,” “What decision did the assistant make and do you agree.”"
+        - separator [ref=e227]
+        - 'heading "Final project: AI-Powered Application — the full cycle" [level=2] [ref=e228]'
+        - paragraph [ref=e229]: "Students independently develop an AI application, cover it with tests, configure a complete CI/CD pipeline, and document the quality strategy. Goal: demonstrate the independent construction of a production process around an AI system — from the initial commit through automatic release — not just tool proficiency."
+        - heading "What to develop" [level=3] [ref=e230]
+        - paragraph [ref=e231]:
+          - strong [ref=e232]: 1. AI application (with a code assistant’s help)
+        - paragraph [ref=e233]: "Students build a minimal but real AI application — a chatbot, RAG agent, tool-equipped agent, or pipeline — using GitHub Copilot, Claude Code, or an equivalent. Requirements: multiple components and non-trivial logic. Scope: 300–800 lines of core logic. Document the student’s decisions versus the assistant’s decisions and the assistant’s errors."
+        - paragraph [ref=e234]:
+          - strong [ref=e235]: 2. Test strategy
+        - paragraph [ref=e236]: "A structured document: system description and risks, testing-level selection (unit / integration / eval / E2E / security), priority justification, the approach per level, tool selection and rationale, release go/no-go criteria. Length: 2–4 pages."
+        - paragraph [ref=e237]:
+          - strong [ref=e238]: 3. Risk-based test coverage matrix
+        - paragraph [ref=e239]: "A components list, risk assessment per component (impact × likelihood), test-case coverage mapping, gaps — where coverage is absent and why that’s acceptable or problematic. Format: an annotated table."
+        - paragraph [ref=e240]:
+          - strong [ref=e241]: 4. Tests — all levels
+        - table [ref=e242]:
+          - rowgroup [ref=e243]:
+            - row "Level Minimum Tools" [ref=e244]:
+              - columnheader "Level" [ref=e245]
+              - columnheader "Minimum" [ref=e246]
+              - columnheader "Tools" [ref=e247]
+          - rowgroup [ref=e248]:
+            - row "Unit / component eval 10 test cases DeepEval or Promptfoo" [ref=e249]:
+              - cell "Unit / component eval" [ref=e250]
+              - cell "10 test cases" [ref=e251]
+              - cell "DeepEval or Promptfoo" [ref=e252]
+            - row "RAG or dialog testing metrics on 10 examples RAGAS or DeepEval" [ref=e253]:
+              - cell "RAG or dialog testing" [ref=e254]
+              - cell "metrics on 10 examples" [ref=e255]
+              - cell "RAGAS or DeepEval" [ref=e256]
+            - row "LLM-as-a-Judge a one-category judge custom implementation" [ref=e257]:
+              - cell "LLM-as-a-Judge" [ref=e258]
+              - cell "a one-category judge" [ref=e259]
+              - cell "custom implementation" [ref=e260]
+            - row "Security 3 attack vectors manual red team" [ref=e261]:
+              - cell "Security" [ref=e262]
+              - cell "3 attack vectors" [ref=e263]
+              - cell "manual red team" [ref=e264]
+            - row "E2E 2 complete scenarios Playwright or pytest" [ref=e265]:
+              - cell "E2E" [ref=e266]
+              - cell "2 complete scenarios" [ref=e267]
+              - cell "Playwright or pytest" [ref=e268]
+        - paragraph [ref=e269]:
+          - strong [ref=e270]: 5. System test framework with LLM-as-a-Judge
+        - paragraph [ref=e271]: "A separate repository module: dataset loader, eval runner, judge integration, result storage, HTML/Markdown reporting. The framework enables a full system eval via a single command, with metrics and judge-score reports. Designed for reapplication to different systems (dataset and config changes only)."
+        - paragraph [ref=e272]:
+          - strong [ref=e273]: 6. CI/CD pipeline on GitHub Actions
+        - paragraph [ref=e274]: "A complete pipeline on PR and main-branch push:"
+        - list [ref=e275]:
+          - listitem [ref=e276]: Eval-suite with quality gates (DeepEval + judge) — blocks merge on failure
+          - listitem [ref=e277]: AI code-review agent (Claude Code or Copilot) — comments in the PR
+          - listitem [ref=e278]: Security checks
+          - listitem [ref=e279]: "Automatic release on main push: build → test → deploy (GitHub Pages, Railway, Fly.io, or similar) → smoke test post-deployment"
+        - paragraph [ref=e280]:
+          - strong [ref=e281]: 7. Documentation
+        - paragraph [ref=e282]: "A README with execution instructions. An architecture description. Documentation of AI-assistant usage in development and testing — honestly: what helped, what hindered, what required manual rework."
+        - separator [ref=e283]
+        - heading "Target audience" [level=2] [ref=e284]
+        - paragraph [ref=e285]:
+          - strong [ref=e286]: "Segment 1: QA Engineer Middle+ (the primary segment)"
+        - paragraph [ref=e287]: "Profile: 2–5 years of testing experience, already uses AI tools for test generation, doesn’t understand how to test AI systems themselves. Works in a product company or feels pressure from an AI-stack transition. JTBD: “Our product moved to LLMs. I don’t understand how to test it properly — and I fear becoming irrelevant. I want concrete tools and approaches to confidently discuss AI-system quality with the team next week.”"
+        - paragraph [ref=e288]:
+          - strong [ref=e289]: "Segment 2: Automation QA / SDET Middle+ (the technical segment)"
+        - paragraph [ref=e290]: "Profile: Writes automated tests, Python or JS at a script-writing level, understands CI/CD. Wants to automate AI-system testing like traditional software. JTBD: “I automate traditional QA well. Now teams build agents and ask me to ‘somehow test this.’ I want a specific technical stack — frameworks, tools, approaches — to do this right.”"
+        - paragraph [ref=e291]:
+          - strong [ref=e292]: "Segment 3: Tech Lead / QA Lead (the strategic segment)"
+        - paragraph [ref=e293]: "Profile: Responsible for overall product quality. The team already builds or plans LLM features. Understands the big picture but lacks a structured AI QA framework. JTBD: “We’re launching AI features but I don’t understand quality assurance. I fear production incidents and don’t know what to ask to verify the testing. I want structure and confidence.”"
+      - link "Apply now →" [ref=e296] [cursor=pointer]:
+        - /url: https://forms.gle/Lz1ZfjUBWzrK8sQn7
+  - contentinfo [ref=e297]:
+    - generic [ref=e298]:
+      - generic [ref=e299]:
+        - generic [ref=e300]:
+          - generic [ref=e301]:
+            - heading "QAStudy.online" [level=3] [ref=e302]
+            - paragraph [ref=e303]: Master QA Testing Skills from industry experts
+          - generic [ref=e304]:
+            - link "Twitter" [ref=e305] [cursor=pointer]:
+              - /url: https://twitter.com/qastudyonline
+              - img [ref=e306]
+            - link "LinkedIn" [ref=e308] [cursor=pointer]:
+              - /url: https://linkedin.com/company/qastudy-online
+              - img [ref=e309]
+            - link "YouTube" [ref=e311] [cursor=pointer]:
+              - /url: https://youtube.com/qastudyonline
+              - img [ref=e312]
+            - link "GitHub" [ref=e314] [cursor=pointer]:
+              - /url: https://github.com/qastudy-online
+              - img [ref=e315]
+        - generic [ref=e317]:
+          - heading "Learn" [level=3] [ref=e318]
+          - list [ref=e319]:
+            - listitem [ref=e320]:
+              - link "Agentic QA course" [ref=e321] [cursor=pointer]:
+                - /url: /en/courses/agentic-qa/
+            - listitem [ref=e322]:
+              - link "All courses" [ref=e323] [cursor=pointer]:
+                - /url: /en/courses/
+            - listitem [ref=e324]:
+              - link "Curriculum" [ref=e325] [cursor=pointer]:
+                - /url: /en/courses/agentic-qa/
+            - listitem [ref=e326]:
+              - link "Final project" [ref=e327] [cursor=pointer]:
+                - /url: /en/courses/agentic-qa/
+        - generic [ref=e328]:
+          - heading "Certifications" [level=3] [ref=e329]
+          - list [ref=e330]:
+            - listitem [ref=e331]:
+              - link "ISTQB Foundation" [ref=e332] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e333]:
+              - link "Agile Testing" [ref=e334] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e335]:
+              - link "Test Management" [ref=e336] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e337]:
+              - link "Automation Certification" [ref=e338] [cursor=pointer]:
+                - /url: "#"
+        - generic [ref=e339]:
+          - heading "Support" [level=3] [ref=e340]
+          - list [ref=e341]:
+            - listitem [ref=e342]:
+              - link "Help Center" [ref=e343] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e344]:
+              - link "Contact Us" [ref=e345] [cursor=pointer]:
+                - /url: /en/about/
+            - listitem [ref=e346]:
+              - link "Privacy Policy" [ref=e347] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e348]:
+              - link "Terms of Service" [ref=e349] [cursor=pointer]:
+                - /url: "#"
+      - generic [ref=e351]:
+        - paragraph [ref=e352]: © 2026 QAStudy.online. All rights reserved.
+        - generic [ref=e353]:
+          - link "Privacy Policy" [ref=e354] [cursor=pointer]:
+            - /url: "#"
+          - link "Terms of Service" [ref=e355] [cursor=pointer]:
+            - /url: "#"
+          - link "Cookie Policy" [ref=e356] [cursor=pointer]:
+            - /url: "#"

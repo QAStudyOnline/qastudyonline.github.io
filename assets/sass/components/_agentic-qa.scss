@@ -195,3 +195,77 @@
     .al-hero { padding: 3.5rem 0; }
   }
 }
+
+// Agentic QA full program page
+.program-page {
+
+  // CTA button (shared with landing)
+  .btn-cta {
+    display: inline-block;
+    padding: 14px 32px;
+    font-size: 1rem;
+    font-weight: $font-weight-semibold;
+    text-decoration: none;
+    border-radius: $radius-md;
+    background-color: $primary-600;
+    color: $white;
+    transition: opacity 0.15s ease;
+    &:hover { opacity: 0.88; }
+  }
+
+  .program-header {
+    padding: 3.5rem 0 2.5rem;
+    background: linear-gradient(135deg, $primary-50 0%, $white 100%);
+  }
+  .program-back {
+    display: inline-block;
+    margin-bottom: 1rem;
+    font-size: $font-size-sm;
+    font-weight: $font-weight-medium;
+    color: $primary-600;
+    text-decoration: none;
+    &:hover { text-decoration: underline; }
+  }
+  .program-title {
+    margin-bottom: 0.75rem;
+    font-size: $font-size-4xl;
+    font-weight: $font-weight-extrabold;
+    color: $gray-900;
+    line-height: $line-height-tight;
+  }
+  .program-subtitle {
+    max-width: 720px;
+    margin-bottom: 1.75rem;
+    font-size: $font-size-lg;
+    color: $gray-600;
+  }
+
+  .program-body { padding: 3rem 0; }
+
+  // Tighten the long prose for readability
+  .prose {
+    h2 {
+      margin-top: 2.5rem;
+      font-size: $font-size-2xl;
+    }
+    h3 { font-size: $font-size-xl; }
+    hr {
+      margin: 2.5rem 0;
+      border: 0;
+      border-top: 1px solid $gray-200;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      font-size: $font-size-sm;
+      th, td { padding: 0.6rem 0.85rem; border: 1px solid $gray-200; text-align: left; }
+      th { background-color: $gray-50; font-weight: $font-weight-semibold; }
+    }
+  }
+
+  .program-cta-bottom {
+    padding: 3rem 0 4rem;
+    text-align: center;
+  }
+}

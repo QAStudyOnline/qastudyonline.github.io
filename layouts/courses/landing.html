@@ -108,9 +108,9 @@
     <div class="container">
       {{ with .text }}<p class="al-cta-text">{{ . }}</p>{{ end }}
       <a href="{{ $.Params.registration_url }}" class="btn-cta" target="_blank" rel="noopener noreferrer">{{ $.Params.cta_label | default "Подати заявку →" }}</a>
-      {{ with $.Params.curriculum_doc_url }}
+      {{ with $.Params.program_url }}
       <p class="al-doc-link">
-        <a href="{{ . }}" target="_blank" rel="noopener noreferrer">{{ $.Params.doc_label | default "Програма курсу повністю" }}</a>
+        <a href="{{ . | relLangURL }}">{{ $.Params.doc_label | default "Програма курсу повністю" }}</a>
       </p>
       {{ end }}
     </div>
