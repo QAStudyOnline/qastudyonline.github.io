@@ -65,6 +65,8 @@
                 href="http://localhost:1314/levels/"
                 />
   </url><url>
+    <loc>http://localhost:1314/oferta/</loc>
+  </url><url>
     <loc>http://localhost:1314/about/</loc>
     <xhtml:link
                 rel="alternate"

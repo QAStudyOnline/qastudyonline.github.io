@@ -1,0 +1,20 @@
+{{ define "head" }}
+  <meta property="og:title" content="{{ .Title }} | {{ .Site.Title }}">
+  <meta property="og:description" content="{{ .Description }}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ .Permalink }}">
+  <link rel="canonical" href="{{ .Permalink }}">
+{{ end }}
+
+{{ define "main" }}
+<article class="legal-page">
+  <div class="container">
+    <header class="legal-header">
+      <h1 class="legal-title">{{ .Title }}</h1>
+    </header>
+    <div class="prose">
+      {{ .Content }}
+    </div>
+  </div>
+</article>
+{{ end }}
