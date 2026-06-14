@@ -175,6 +175,99 @@
     }
   }
 
+  // Pricing
+  .pricing-card {
+    max-width: 480px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 2.5rem 2rem;
+    background: $white;
+    border: 1px solid $gray-200;
+    border-radius: $radius-xl;
+    box-shadow: $shadow-sm;
+  }
+  .pricing-amount {
+    display: block;
+    font-size: $font-size-5xl;
+    font-weight: $font-weight-extrabold;
+    line-height: $line-height-none;
+    color: $gray-900;
+  }
+  .pricing-label {
+    display: block;
+    margin-top: 0.25rem;
+    font-size: $font-size-sm;
+    color: $gray-500;
+  }
+  .pricing-breakdown { margin-top: 1rem; }
+  .pricing-per-session {
+    margin: 0;
+    font-size: $font-size-lg;
+    font-weight: $font-weight-semibold;
+    color: $primary-700;
+  }
+  .pricing-meta {
+    margin: 0.25rem 0 0;
+    font-size: $font-size-sm;
+    color: $gray-500;
+  }
+  .pricing-divider {
+    border: none;
+    border-top: 1px solid $gray-200;
+    margin: 1.75rem 0;
+  }
+  .pricing-includes-label {
+    margin-bottom: 0.75rem;
+    font-weight: $font-weight-semibold;
+    text-align: left;
+    color: $gray-900;
+  }
+  .pricing-includes ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+  }
+  .pricing-includes li {
+    position: relative;
+    padding-left: 1.75rem;
+    margin-bottom: 0.5rem;
+    line-height: $line-height-normal;
+    color: $gray-700;
+    &::before {
+      content: '\2713';
+      position: absolute;
+      left: 0;
+      font-weight: $font-weight-bold;
+      color: $primary-600;
+    }
+  }
+  // Group size — distinct visual weight (tinted panel), not another bullet
+  .pricing-group-size {
+    padding: 1.25rem;
+    background: $primary-50;
+    border-radius: $radius-lg;
+    text-align: left;
+  }
+  .pricing-group-headline {
+    margin: 0 0 0.4rem;
+    font-size: $font-size-lg;
+    font-weight: $font-weight-bold;
+    color: $primary-800;
+  }
+  .pricing-group-text {
+    margin: 0;
+    font-size: $font-size-sm;
+    line-height: $line-height-normal;
+    color: $gray-600;
+  }
+  .al-pricing .btn-cta { margin-top: 1.75rem; }
+
+  @media (max-width: $breakpoint-sm) {
+    .pricing-card { padding: 2rem 1.25rem; }
+    .pricing-amount { font-size: $font-size-4xl; }
+  }
+
   // Bottom CTA
   .al-cta-bottom {
     padding: 5rem 0;
