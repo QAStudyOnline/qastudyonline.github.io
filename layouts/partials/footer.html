@@ -66,10 +66,7 @@
       <div class="footer-section">
         <h3>{{ i18n "footer_support" }}</h3>
         <ul class="footer-links">
-          <li><a href="#">{{ i18n "footer_help" }}</a></li>
           <li><a href="{{ "/about/" | relLangURL }}">{{ i18n "footer_contact" }}</a></li>
-          <li><a href="#">{{ i18n "footer_privacy_policy" }}</a></li>
-          <li><a href="/oferta/">{{ i18n "footer_terms_service" }}</a></li>
           <li><a href="/oferta/">{{ i18n "footer_oferta" }}</a></li>
         </ul>
       </div>
@@ -81,8 +78,6 @@
         <p>&copy; {{ now.Year }} {{ .Site.Params.brand_name }}. {{ i18n "footer_rights" }}.</p>
         <div class="footer-bottom-links">
           <a href="/oferta/">{{ i18n "footer_oferta" }}</a>
-          <a href="#">{{ i18n "footer_privacy" }}</a>
-          <a href="/oferta/">{{ i18n "footer_terms" }}</a>
           <a href="#">{{ i18n "footer_cookies" }}</a>
         </div>
       </div>

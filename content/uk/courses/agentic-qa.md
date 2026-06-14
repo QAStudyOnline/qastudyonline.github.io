@@ -6,7 +6,7 @@ draft: false
 layout: "landing"
 
 # Картка в списку курсів
-level: "Junior–Middle"
+level: "Middle-Lead"
 category: "AI тестування"
 instructor: "Єгор Максимчук"
 duration: "11–14 тижнів"
@@ -24,7 +24,7 @@ cta_label: "Подати заявку →"
 meta_pills:
   - "21 заняття"
   - "11–14 тижнів"
-  - "Junior–Middle"
+  - "Middle-Lead"
 
 audience:
   heading: "Для кого цей курс"
@@ -69,12 +69,12 @@ curriculum:
         - "Заняття 5. Тестування промптів: від ручних перевірок до автоматизації"
         - "Заняття 6. Тестування RAG: hallucination, faithfulness, relevancy"
         - "Заняття 7. Тестування багатокрокових діалогів і context management"
-        - "Заняття 8. Тестування різних моделей і GitHub Models"
+        - "Заняття 8. Тестування різних моделей й приклади у GitHub Models"
         - "Заняття 9. Локальні моделі для тестування: Ollama і Lemonade AI Runtime"
     - title: "Блок 3. Agentic Testing"
       meta: "заняття 10–14 · середній рівень"
       lessons:
-        - "Заняття 10. LLM as a Judge: імплементація і підводні камені"
+        - "Заняття 10. LLM as a Judge: імплементація і підводні камені (Deep-Eval + Spring AI Test)"
         - "Заняття 11. Security testing: Prompt Injection і Red Teaming"
         - "Заняття 12. Tool call testing і MCP"
         - "Заняття 13. Observability і cost testing"
