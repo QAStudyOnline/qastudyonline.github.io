@@ -82,7 +82,7 @@ hero:
           <div class="course-image-content">Agentic QA</div>
         </div>
         <div class="course-content">
-          <div class="course-category">Junior–Middle</div>
+          <div class="course-category">Middle-Lead</div>
           <h3 class="course-title">
             <a href="/courses/agentic-qa/">Тестування AI-агентних систем</a>
           </h3>
