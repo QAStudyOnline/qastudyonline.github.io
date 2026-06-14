@@ -13,15 +13,6 @@ defaultContentLanguageInSubdir = false
     [languages.uk.params]
       description = "Опануйте навички QA тестування від експертів галузі"
 
-  [languages.en]
-    languageName = "English"
-    languageCode = "en"
-    weight       = 2
-    title        = "QAStudy.online"
-    contentDir   = "content/en"
-    [languages.en.params]
-      description = "Master QA Testing Skills from industry experts"
-
 [params]
   email      = "info@qastudy.online"
   telegram   = "https://t.me/qastudy"
@@ -46,15 +37,4 @@ defaultContentLanguageInSubdir = false
 [[languages.uk.menus.main]]
   name   = "Про нас"
   url    = "/about/"
-  weight = 20
-
-# ── English menus ────────────────────────────────────────────────
-[[languages.en.menus.main]]
-  name   = "Courses"
-  url    = "/en/courses/"
-  weight = 10
-
-[[languages.en.menus.main]]
-  name   = "About"
-  url    = "/en/about/"
   weight = 20

@@ -38,20 +38,16 @@
 <div class="error-page">
   <div>
     <div class="error-code">404</div>
-    <h1 class="error-title">{{ if eq .Language.Lang "uk" }}Сторінку не знайдено{{ else }}Page Not Found{{ end }}</h1>
+    <h1 class="error-title">Сторінку не знайдено</h1>
     <p class="error-description">
-      {{ if eq .Language.Lang "uk" }}
-        Вибачте, сторінку, яку ви шукаєте, не існує або була переміщена.
-      {{ else }}
-        Sorry, the page you're looking for doesn't exist or has been moved.
-      {{ end }}
+      Вибачте, сторінку, яку ви шукаєте, не існує або була переміщена.
     </p>
     <div class="error-actions">
       <a href="{{ "/" | relLangURL }}" class="btn btn-primary btn-lg">
-        {{ if eq .Language.Lang "uk" }}На головну{{ else }}Go Home{{ end }}
+        На головну
       </a>
       <a href="{{ "/courses/" | relLangURL }}" class="btn btn-secondary btn-lg">
-        {{ if eq .Language.Lang "uk" }}Переглянути курси{{ else }}Browse Courses{{ end }}
+        Переглянути курси
       </a>
     </div>
   </div>
