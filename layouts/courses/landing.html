@@ -93,8 +93,8 @@
   </section>
   {{ end }}
 
-  <!-- Pricing -->
-  {{ with .Params.pricing }}
+  <!-- Pricing (card layout) -->
+  {{ with .Params.pricing }}{{ if .amount }}
   <section class="al-section al-pricing">
     <div class="container">
       <h2 class="al-h2">{{ .heading }}</h2>
@@ -131,7 +131,7 @@
       </div>
     </div>
   </section>
-  {{ end }}
+  {{ end }}{{ end }}
 
   <!-- Optional markdown content -->
   {{ with .Content }}
@@ -141,6 +141,23 @@
     </div>
   </section>
   {{ end }}
+
+  <!-- Pricing (text layout) -->
+  {{ with .Params.pricing }}{{ if .price_note }}
+  <section class="al-section">
+    <div class="container">
+      <h2 class="al-h2">{{ .heading }}</h2>
+      {{ with .price_note }}<p class="al-price-note">{{ . }}</p>{{ end }}
+      {{ with .caption }}<p class="al-price-caption">{{ . }}</p>{{ end }}
+      {{ with .career }}<p class="al-career">{{ . }}</p>{{ end }}
+      {{ with .source }}
+      <p class="source-note">
+        Джерело: <a href="{{ .url }}" target="_blank" rel="noopener">{{ .text }}</a>
+      </p>
+      {{ end }}
+    </div>
+  </section>
+  {{ end }}{{ end }}
 
   <!-- Bottom CTA -->
   {{ with .Params.bottom_cta }}

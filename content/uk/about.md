@@ -13,13 +13,12 @@ QAStudy.online — це освітня платформа, створена дл
 
 ### Наші напрямки:
 
-- **Ручне тестування** — основи QA, дизайн тест-кейсів, баг-репортинг
-- **Автоматизація тестів** — Selenium, Cypress, Playwright 
-- **API тестування** — Postman, REST Assured, Python requests, Playwright
-- **Тестування безпеки** — OWASP Top 10, пентестинг
+- **AI тестування** — тестування LLM, prompt engineering, AI safety
 - **Тестування продуктивності** — JMeter, k6, Grafana, Docker, Kubernetes
 - **QA Лідерство** — управління командою, стратегія тестування, кар'єрний ріст
-- **AI тестування** — тестування LLM, prompt engineering, AI safety
+- **Тестування безпеки** — OWASP Top 10, пентестинг
+- **Ручне тестування** — основи QA, дизайн тест-кейсів, баг-репортинг
+- **Автоматизація тестів** — Selenium, Cypress, Playwright, Python requests, Postman, SoapUI 
 
 ## Чому обирають нас
 
