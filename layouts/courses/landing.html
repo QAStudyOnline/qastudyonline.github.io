@@ -93,6 +93,46 @@
   </section>
   {{ end }}
 
+  <!-- Pricing (card layout) -->
+  {{ with .Params.pricing }}{{ if .amount }}
+  <section class="al-section al-pricing">
+    <div class="container">
+      <h2 class="al-h2">{{ .heading }}</h2>
+      <div class="pricing-card">
+
+        <div class="pricing-price">
+          <span class="pricing-amount">{{ .amount }}</span>
+          <span class="pricing-label">{{ .amount_label }}</span>
+        </div>
+
+        <div class="pricing-breakdown">
+          <p class="pricing-per-session">{{ .per_session }}</p>
+          <p class="pricing-meta">{{ .meta }}</p>
+        </div>
+
+        <hr class="pricing-divider">
+
+        <div class="pricing-includes">
+          <p class="pricing-includes-label">{{ .includes_label }}</p>
+          <ul>
+            {{ range .includes }}<li>{{ . }}</li>{{ end }}
+          </ul>
+        </div>
+
+        <hr class="pricing-divider">
+
+        <div class="pricing-group-size">
+          <p class="pricing-group-headline">{{ .group_headline }}</p>
+          <p class="pricing-group-text">{{ .group_text }}</p>
+        </div>
+
+        <a href="{{ $.Params.registration_url }}" class="btn-cta" target="_blank" rel="noopener noreferrer">{{ $.Params.cta_label | default "Подати заявку →" }}</a>
+
+      </div>
+    </div>
+  </section>
+  {{ end }}{{ end }}
+
   <!-- Optional markdown content -->
   {{ with .Content }}
   <section class="al-section">
@@ -102,8 +142,8 @@
   </section>
   {{ end }}
 
-  <!-- Pricing -->
-  {{ with .Params.pricing }}
+  <!-- Pricing (text layout) -->
+  {{ with .Params.pricing }}{{ if .price_note }}
   <section class="al-section">
     <div class="container">
       <h2 class="al-h2">{{ .heading }}</h2>
@@ -117,7 +157,7 @@
       {{ end }}
     </div>
   </section>
-  {{ end }}
+  {{ end }}{{ end }}
 
   <!-- Bottom CTA -->
   {{ with .Params.bottom_cta }}
