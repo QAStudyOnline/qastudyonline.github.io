@@ -102,6 +102,23 @@
   </section>
   {{ end }}
 
+  <!-- Pricing -->
+  {{ with .Params.pricing }}
+  <section class="al-section">
+    <div class="container">
+      <h2 class="al-h2">{{ .heading }}</h2>
+      {{ with .price_note }}<p class="al-price-note">{{ . }}</p>{{ end }}
+      {{ with .caption }}<p class="al-price-caption">{{ . }}</p>{{ end }}
+      {{ with .career }}<p class="al-career">{{ . }}</p>{{ end }}
+      {{ with .source }}
+      <p class="source-note">
+        Джерело: <a href="{{ .url }}" target="_blank" rel="noopener">{{ .text }}</a>
+      </p>
+      {{ end }}
+    </div>
+  </section>
+  {{ end }}
+
   <!-- Bottom CTA -->
   {{ with .Params.bottom_cta }}
   <section class="al-cta-bottom">

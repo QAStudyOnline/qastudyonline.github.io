@@ -175,6 +175,37 @@
     }
   }
 
+  // Pricing
+  .al-price-note {
+    max-width: 720px;
+    margin: 0 auto 2rem;
+    text-align: center;
+    font-size: $font-size-xl;
+    font-weight: $font-weight-semibold;
+    color: $primary-700;
+  }
+  .al-price-caption {
+    max-width: 720px;
+    margin: 1.25rem auto 0;
+    text-align: center;
+    font-size: $font-size-sm;
+    color: $gray-600;
+  }
+  .al-career {
+    max-width: 720px;
+    margin: 2rem auto 0;
+    color: $gray-700;
+    line-height: $line-height-relaxed;
+  }
+  .source-note {
+    max-width: 720px;
+    margin: 0.75rem auto 0;
+    text-align: center;
+    font-size: $font-size-sm;
+    color: $gray-500;
+    a { color: inherit; text-decoration: underline; }
+  }
+
   // Bottom CTA
   .al-cta-bottom {
     padding: 5rem 0;
@@ -261,6 +292,13 @@
       font-size: $font-size-sm;
       th, td { padding: 0.6rem 0.85rem; border: 1px solid $gray-200; text-align: left; }
       th { background-color: $gray-50; font-weight: $font-weight-semibold; }
+    }
+    blockquote {
+      border-left: 3px solid $primary-600;
+      padding-left: 1rem;
+      margin: 1.5rem 0;
+      color: $gray-600;
+      font-style: italic;
     }
   }
 
