@@ -24,7 +24,6 @@ cta_label: "Подати заявку →"
 meta_pills:
   - "35 занять"
   - "~33 тижні"
-  - "ISTQB CTAL-TM · ISO 29119 · DORA · CT-AI"
 
 audience:
   heading: "Для кого цей курс"
