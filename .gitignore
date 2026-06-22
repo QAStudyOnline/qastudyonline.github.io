@@ -17,7 +17,7 @@ coverage
 
 
 # Ignore all files in the .claude directory
-.claude/*
+.claude/plans
 .claude
 .claude_cache
 .claude_logs
@@ -30,7 +30,6 @@ coverage
 .claude_plugins
 .claude_extensions
 .claude_backups
-CLOUDE.md
 CONTENT_GUIDE.md
 jekyll-design-system.txt
 
