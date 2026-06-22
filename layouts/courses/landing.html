@@ -29,6 +29,7 @@
   <section class="al-section">
     <div class="container">
       <h2 class="al-h2">{{ .heading }}</h2>
+      {{ with .intro }}<p class="al-audience-intro">{{ . }}</p>{{ end }}
       <div class="card-grid">
         {{ range .cards }}
         <div class="al-card">
@@ -89,6 +90,27 @@
       <ul class="al-checklist">
         {{ range .items }}<li>{{ . }}</li>{{ end }}
       </ul>
+    </div>
+  </section>
+  {{ end }}
+
+  <!-- Instructor -->
+  {{ with .Params.instructor_section }}
+  <section class="al-section">
+    <div class="container">
+      <h2 class="al-h2">{{ .heading }}</h2>
+      <div class="al-instructor">
+        <div class="al-instructor-info">
+          <p class="al-instructor-name">{{ .name }}</p>
+          {{ with .role }}<p class="al-instructor-role">{{ . }}</p>{{ end }}
+          {{ with .bio }}<p class="al-instructor-bio">{{ . }}</p>{{ end }}
+          {{ with .credentials }}
+          <ul class="al-instructor-creds">
+            {{ range . }}<li>{{ . }}</li>{{ end }}
+          </ul>
+          {{ end }}
+        </div>
+      </div>
     </div>
   </section>
   {{ end }}
@@ -158,6 +180,23 @@
     </div>
   </section>
   {{ end }}{{ end }}
+
+  <!-- FAQ -->
+  {{ with .Params.faq }}
+  <section class="al-section al-section-alt">
+    <div class="container">
+      <h2 class="al-h2">{{ .heading }}</h2>
+      <div class="al-faq">
+        {{ range .items }}
+        <details class="faq-item">
+          <summary class="faq-question">{{ .q }}</summary>
+          <p class="faq-answer">{{ .a }}</p>
+        </details>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+  {{ end }}
 
   <!-- Bottom CTA -->
   {{ with .Params.bottom_cta }}

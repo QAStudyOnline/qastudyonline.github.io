@@ -140,6 +140,106 @@
     }
   }
 
+  // Audience intro
+  .al-audience-intro {
+    max-width: 720px;
+    margin: 0 auto 2.5rem;
+    text-align: center;
+    font-size: $font-size-lg;
+    color: $gray-600;
+    font-style: italic;
+  }
+
+  // Instructor section
+  .al-instructor {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  .al-instructor-name {
+    font-size: $font-size-xl;
+    font-weight: $font-weight-semibold;
+    color: $gray-900;
+    margin-bottom: 0.25rem;
+  }
+  .al-instructor-role {
+    font-size: $font-size-sm;
+    color: $primary-600;
+    font-weight: $font-weight-medium;
+    margin-bottom: 1.25rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  .al-instructor-bio {
+    color: $gray-700;
+    line-height: $line-height-relaxed;
+    margin-bottom: 1.5rem;
+  }
+  .al-instructor-creds {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    li {
+      position: relative;
+      padding-left: 1.5rem;
+      color: $gray-600;
+      font-size: $font-size-sm;
+      &::before {
+        content: '→';
+        position: absolute;
+        left: 0;
+        color: $primary-600;
+        font-weight: $font-weight-bold;
+      }
+    }
+  }
+
+  // FAQ accordion
+  .al-faq {
+    max-width: 720px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  .faq-item {
+    background: $white;
+    border: 1px solid $gray-200;
+    border-radius: $radius-lg;
+    overflow: hidden;
+    &[open] .faq-question { color: $primary-700; }
+  }
+  .faq-question {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.25rem;
+    cursor: pointer;
+    font-weight: $font-weight-medium;
+    color: $gray-800;
+    list-style: none;
+    gap: 1rem;
+    &::after {
+      content: '+';
+      flex-shrink: 0;
+      font-size: 1.25rem;
+      color: $primary-600;
+      transition: transform 0.2s;
+    }
+    details[open] & {
+      border-bottom: 1px solid $gray-100;
+      &::after { content: '−'; }
+    }
+    &::-webkit-details-marker { display: none; }
+  }
+  .faq-answer {
+    padding: 1rem 1.25rem;
+    color: $gray-600;
+    line-height: $line-height-relaxed;
+    margin: 0;
+  }
+
   // Final project checklist
   .al-fp-intro {
     max-width: 720px;
