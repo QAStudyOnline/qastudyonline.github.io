@@ -13,7 +13,7 @@ duration: "~33 тижні"
 lessons: 35
 
 # Посилання
-registration_url: "#"
+registration_url: "https://forms.gle/PcUc2AhwqZQPfg9y7"
 program_url: "/scale-quality-program/"
 doc_label: "Повна програма курсу"
 
