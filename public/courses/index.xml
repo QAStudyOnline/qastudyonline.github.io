@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Курси QA Тестування on QAStudy.online</title>
+    <link>http://localhost:1313/courses/</link>
+    <description>Recent content in Курси QA Тестування on QAStudy.online</description>
+    <generator>Hugo</generator>
+    <language>uk</language>
+    <lastBuildDate>Mon, 22 Jun 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/courses/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Scale Quality</title>
+      <link>http://localhost:1313/courses/scale-quality/</link>
+      <pubDate>Mon, 22 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/courses/scale-quality/</guid>
+      <description>&lt;h2 id=&#34;чому-курс-окупається&#34;&gt;Чому курс окупається&lt;/h2&gt;&#xA;&lt;p&gt;Head of QA та QA Architect — серед найвище оплачуваних ролей у тестуванні. За даними Glassdoor (2026):&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Великобританія:&lt;/strong&gt; £83 554/рік (~£6 960/міс), топ-10% — до £122 253&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Німеччина:&lt;/strong&gt; €97 001/рік (~€8 080/міс)&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;США:&lt;/strong&gt; $189 075/рік (~$15 750/міс)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Але гроші — це наслідок. Справжня зміна — це коли тебе починають запрошувати на рішення, а не просто виконання. Коли твій голос впливає на архітектуру, бюджет і напрямок команди.&lt;/p&gt;&#xA;&lt;p&gt;Курс готує саме до цього переходу — і окупається за один–два місяці після зміни ролі.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Performance Testing з k6</title>
+      <link>http://localhost:1313/courses/k6-performance-testing/</link>
+      <pubDate>Mon, 15 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/courses/k6-performance-testing/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Agentic QA</title>
+      <link>http://localhost:1313/courses/agentic-qa/</link>
+      <pubDate>Thu, 11 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/courses/agentic-qa/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

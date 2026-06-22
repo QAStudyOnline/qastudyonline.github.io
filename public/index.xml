@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Тестування AI-агентних систем — курс Agentic QA on QAStudy.online</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content in Тестування AI-агентних систем — курс Agentic QA on QAStudy.online</description>
+    <generator>Hugo</generator>
+    <language>uk</language>
+    <lastBuildDate>Mon, 22 Jun 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Scale Quality</title>
+      <link>http://localhost:1313/courses/scale-quality/</link>
+      <pubDate>Mon, 22 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/courses/scale-quality/</guid>
+      <description>&lt;h2 id=&#34;чому-курс-окупається&#34;&gt;Чому курс окупається&lt;/h2&gt;&#xA;&lt;p&gt;Head of QA та QA Architect — серед найвище оплачуваних ролей у тестуванні. За даними Glassdoor (2026):&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Великобританія:&lt;/strong&gt; £83 554/рік (~£6 960/міс), топ-10% — до £122 253&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Німеччина:&lt;/strong&gt; €97 001/рік (~€8 080/міс)&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;США:&lt;/strong&gt; $189 075/рік (~$15 750/міс)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Але гроші — це наслідок. Справжня зміна — це коли тебе починають запрошувати на рішення, а не просто виконання. Коли твій голос впливає на архітектуру, бюджет і напрямок команди.&lt;/p&gt;&#xA;&lt;p&gt;Курс готує саме до цього переходу — і окупається за один–два місяці після зміни ролі.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Performance Testing з k6</title>
+      <link>http://localhost:1313/courses/k6-performance-testing/</link>
+      <pubDate>Mon, 15 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/courses/k6-performance-testing/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Agentic QA</title>
+      <link>http://localhost:1313/courses/agentic-qa/</link>
+      <pubDate>Thu, 11 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/courses/agentic-qa/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Договір публічної оферти</title>
+      <link>http://localhost:1313/oferta/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/oferta/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;ДОГОВІР ПУБЛІЧНОЇ ОФЕРТИ&lt;/strong&gt;&#xA;про надання інформаційно-консультаційних послуг&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;Редакція від 21 березня 2026 року&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;Цей Договір публічної оферти про надання інформаційно-консультаційних послуг (надалі — «Договір») є офіційною публічною пропозицією, яка регулює договірні відносини між Фізичною особою-підприємцем Максимчук Єгор Іванович (надалі — «Виконавець»), з будь-якою фізичною особою, яка має повну дієздатність (надалі — «Замовник»), на нижчевикладених умовах.&lt;/p&gt;&#xA;&lt;h2 id=&#34;1-загальні-положення&#34;&gt;1. Загальні положення&lt;/h2&gt;&#xA;&lt;p&gt;1.1. Цей Договір є публічним Договором, що регулюється ст. 633, 634, 641, 642 Цивільного кодексу України. Розміщення тексту даного Договору в мережі Інтернет за адресою &lt;a href=&#34;https://qastudy.online/oferta&#34;&gt;https://qastudy.online/oferta&lt;/a&gt; є публічною пропозицією укладення Договору на умовах, які в ньому викладені. Умови Договору встановлюються Виконавцем.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Повна програма курсу: Performance Testing з k6</title>
+      <link>http://localhost:1313/k6-performance-testing-program/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/k6-performance-testing-program/</guid>
+      <description>&lt;h2 id=&#34;загальна-інформація&#34;&gt;Загальна інформація&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Рівень:&lt;/strong&gt; Middle–Senior&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Аудиторія:&lt;/strong&gt; DevOps-інженери, розробники, QA-інженери&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Формат:&lt;/strong&gt; теорія + практика на занятті + домашнє завдання на кожну тему&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Загальна кількість занять:&lt;/strong&gt; 15&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;зміст&#34;&gt;Зміст&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;http://localhost:1313/k6-performance-testing-program/#%d0%b4%d0%bb%d1%8f-%d0%ba%d0%be%d0%b3%d0%be-%d1%86%d0%b5%d0%b9-%d0%ba%d1%83%d1%80%d1%81&#34;&gt;Для кого цей курс&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;http://localhost:1313/k6-performance-testing-program/#%d0%b1%d0%bb%d0%be%d0%ba-1-%d0%be%d1%81%d0%bd%d0%be%d0%b2%d0%b8-%d0%bf%d1%80%d0%be%d1%86%d0%b5%d1%81%d1%83-%d0%bf%d0%b5%d1%80%d1%84%d0%be%d1%80%d0%bc%d0%b5%d0%bd%d1%81-%d1%82%d0%b5%d1%81%d1%82%d1%83%d0%b2%d0%b0%d0%bd%d0%bd%d1%8f&#34;&gt;Блок 1. Основи процесу перформенс тестування&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;http://localhost:1313/k6-performance-testing-program/#%d0%b1%d0%bb%d0%be%d0%ba-2-k6--%d0%bd%d0%b0%d0%bf%d0%b8%d1%81%d0%b0%d0%bd%d0%bd%d1%8f-%d1%82%d0%b5%d1%81%d1%82%d1%96%d0%b2-%d0%b4%d0%b0%d1%88%d0%b1%d0%be%d1%80%d0%b4%d0%b8-%d1%82%d0%b0-ai-%d0%b3%d0%b5%d0%bd%d0%b5%d1%80%d0%b0%d1%86%d1%96%d1%8f&#34;&gt;Блок 2. k6 — написання тестів, дашборди та AI-генерація&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;http://localhost:1313/k6-performance-testing-program/#%d0%b1%d0%bb%d0%be%d0%ba-3-observability-%d1%82%d0%b0-%d0%bc%d0%b5%d1%82%d1%80%d0%b8%d0%ba%d0%b8-influxdb-prometheus-grafana&#34;&gt;Блок 3. Observability та метрики: InfluxDB, Prometheus, Grafana&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;http://localhost:1313/k6-performance-testing-program/#%d0%b1%d0%bb%d0%be%d0%ba-4-%d0%bf%d1%80%d0%be%d1%81%d1%83%d0%bd%d1%83%d1%82%d0%b5-%d0%bf%d0%b5%d1%80%d1%84%d0%be%d1%80%d0%bc%d0%b5%d0%bd%d1%81-%d1%82%d0%b5%d1%81%d1%82%d1%83%d0%b2%d0%b0%d0%bd%d0%bd%d1%8f-%d1%82%d0%b0-devops-%d1%96%d0%bd%d1%82%d0%b5%d0%b3%d1%80%d0%b0%d1%86%d1%96%d1%8f&#34;&gt;Блок 4. Просунуте перформенс тестування та DevOps-інтеграція&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;http://localhost:1313/k6-performance-testing-program/#%d1%84%d1%96%d0%bd%d0%b0%d0%bb%d1%8c%d0%bd%d0%b8%d0%b9-%d0%bf%d1%80%d0%be%d1%94%d0%ba%d1%82&#34;&gt;Фінальний проєкт&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;для-кого-цей-курс&#34;&gt;Для кого цей курс&lt;/h2&gt;&#xA;&lt;h3 id=&#34;сегмент-1--qa-інженери-middlesenior&#34;&gt;Сегмент 1 — QA-інженери (middle/senior)&lt;/h3&gt;&#xA;&lt;p&gt;Профіль: мають досвід функціонального та/або API-тестування, можуть писати скрипти на JS/TS, але перформенс тестування роблять вручну, поверхово або взагалі не роблять.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Повна програма курсу: Scale Quality — Test Management &amp; QA Architecture</title>
+      <link>http://localhost:1313/scale-quality-program/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/scale-quality-program/</guid>
+      <description>&lt;h2 id=&#34;загальна-інформація&#34;&gt;Загальна інформація&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Рівень:&lt;/strong&gt; Senior QA → Lead / Test Manager / QA Architect&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Формат:&lt;/strong&gt; живі заняття 2–3 год + домашнє завдання + фідбек + Capstone-захист&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Тривалість:&lt;/strong&gt; ~33 тижні (Блоки 0–7)&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Кількість занять:&lt;/strong&gt; 1 вступний модуль + 35 занять (Блоки 1–7) + Capstone-захист (Заняття 28)&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Наскрізний проєкт:&lt;/strong&gt; «Project X» — реальна або обрана студентом система (microservices + GenAI-фіча); всі домашні завдання формують єдиний Capstone Test Strategy пакет&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;Наскрізний ланцюг:&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Архітектурна свідомість → Ризик-стратегія → Вимірюване покращення → AI-SDLC адаптація → Організаційне врядування → Стратегічний вплив&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Про нас</title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/about/</guid>
+      <description>&lt;h2 id=&#34;наша-місія&#34;&gt;Наша місія&lt;/h2&gt;&#xA;&lt;p&gt;QAStudy.online — це освітня платформа, створена для тих, хто хоче побудувати успішну кар&amp;rsquo;єру в галузі забезпечення якості програмного забезпечення. Ми віримо, що якісне тестування — це основа надійних і безпечних програмних продуктів.&lt;/p&gt;&#xA;&lt;h2 id=&#34;що-ми-пропонуємо&#34;&gt;Що ми пропонуємо&lt;/h2&gt;&#xA;&lt;p&gt;Наші курси охоплюють весь спектр QA тестування — від ручного тестування для початківців до просунутої автоматизації та тестування безпеки. Кожен курс розроблений практикуючими фахівцями з реальним досвідом роботи в топових технологічних компаніях.&lt;/p&gt;&#xA;&lt;h3 id=&#34;наші-напрямки&#34;&gt;Наші напрямки:&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;AI тестування&lt;/strong&gt; — тестування LLM, prompt engineering, AI safety&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Тестування продуктивності&lt;/strong&gt; — JMeter, k6, Grafana, Docker, Kubernetes&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;QA Лідерство&lt;/strong&gt; — управління командою, стратегія тестування, кар&amp;rsquo;єрний ріст&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Тестування безпеки&lt;/strong&gt; — OWASP Top 10, пентестинг&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Ручне тестування&lt;/strong&gt; — основи QA, дизайн тест-кейсів, баг-репортинг&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Автоматизація тестів&lt;/strong&gt; — Selenium, Cypress, Playwright, Python requests, Postman, SoapUI&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;чому-обирають-нас&#34;&gt;Чому обирають нас&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;Практичний підхід&lt;/strong&gt; — всі курси містять реальні проєкти та практичні завдання, які допоможуть вам побудувати сильне портфоліо.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Програма курсу Agentic QA</title>
+      <link>http://localhost:1313/agentic-qa-program/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/agentic-qa-program/</guid>
+      <description>&lt;h2 id=&#34;огляд-курсу&#34;&gt;Огляд курсу&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Цільова аудиторія:&lt;/strong&gt; Junior і Middle AI / Dev / Test / Ops інженери&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Загальна кількість занять:&lt;/strong&gt; 21&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Орієнтовна тривалість:&lt;/strong&gt; 11–14 тижнів&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;блок-1-фундамент&#34;&gt;Блок 1. Фундамент&lt;/h2&gt;&#xA;&lt;p&gt;&lt;em&gt;(Заняття 1–2 — базовий рівень, без технічних передумов)&lt;/em&gt;&lt;/p&gt;&#xA;&lt;h3 id=&#34;заняття-1-ai-системи-як-обєкт-тестування-чому-все-інакше&#34;&gt;Заняття 1. AI-системи як об&amp;rsquo;єкт тестування: чому все інакше&lt;/h3&gt;&#xA;&lt;p&gt;Розуміння того, чим тестування LLM відрізняється від традиційного детермінованого ПЗ. Огляд типів систем, які трапляються в проєктах: чат-боти, RAG-системи, агенти і пайплайни. Дослідження режимів відмов через практичну таксономію, а не теорію ML. Як класична піраміда тестування трансформується для AI-застосунків, де eval-тестування стає новим шаром між інтеграційним і E2E.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

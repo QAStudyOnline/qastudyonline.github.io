@@ -6,18 +6,20 @@ coverage
 .env
 *.log
 .idea
+.idea/
 
 # Hugo generated output (rebuilt by CI)
-/public/
+./public/
 /resources/_gen/
 .hugo_build.lock
 
 # Playwright MCP dev artifacts
-.playwright-mcp/
-
+./.playwright-mcp/
+./.idea/
 
 # Ignore all files in the .claude directory
 .claude/plans
+.claude/settings.local.json
 .claude_cache
 .claude_logs
 .claude_sessions
@@ -29,7 +31,7 @@ coverage
 .claude_plugins
 .claude_extensions
 .claude_backups
-CONTENT_GUIDE.md
+./CONTENT_GUIDE.md
 jekyll-design-system.txt
 
 .playwright-mcp/*
