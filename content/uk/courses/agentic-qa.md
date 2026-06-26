@@ -20,7 +20,7 @@ doc_label: "Програма курсу повністю"
 
 # Hero
 eyebrow: "Курс"
-subtitle: "Навчись тестувати AI-агентів, RAG-системи і agentic pipelines — від першого eval до production CI/CD."
+subtitle: "Навчись тестувати AI-агентів, RAG-системи і agentic pipelines — від першого eval до production CI/CD. Та впроваджувати AI-агентів для автоматизації вашої роботи й SDLC."
 cta_label: "Подати заявку →"
 meta_pills:
   - "21 заняття"
