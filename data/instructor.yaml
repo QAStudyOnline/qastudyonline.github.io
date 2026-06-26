@@ -1,0 +1,29 @@
+heading: "Викладач"
+name: "Єгор Максимчук"
+role: "QA Architect · AI Testing · Performance Engineering · 14+ років в IT"
+photo: "/img/instructor-yehor.jpg"
+photo_alt: "Єгор Максимчук — QA Architect"
+bio:
+  - "Єгор Максимчук — QA Architect із 14+ роками досвіду в EPAM, SoftServe та міжнародних продуктових компаніях. Експерт із AI Testing, AI Agent Development та Performance Engineering. Автор внутрішнього курсу EPAM AI-Infused Application Testing, AI Advocate / AI Champion. Розробляє AI-агентів для SDLC, впроваджує AI у команди та будує QA-архітектуру для сучасних AI-продуктів. На курсах QAStudy Online навчає лише тим підходам та інструментам, які використовує у реальних комерційних проєктах щодня."
+chips:
+  - "EPAM QA Architect"
+  - "14+ років в IT"
+  - "Azure Cloud"
+  - "GitHub Copilot Certified"
+  - "k6 / JMeter / Gatling"
+  - "Grafana / InfluxDB / Prometheus"
+  - "DeepEval / LLM / RAG"
+badges:
+  - { src: "/img/badges/ai-ready.png",              alt: "EPAM AI Maturity — AI Ready" }
+  - { src: "/img/badges/ai-practitioner.png",       alt: "EPAM AI Maturity — AI Practitioner" }
+  - { src: "/img/badges/ai-champion.png",           alt: "EPAM AI Maturity — AI Champion" }
+  - { src: "/img/badges/ai-advocate.png",           alt: "AI Advocate" }
+  - { src: "/img/badges/ai-architect-graduate.png", alt: "AI Architect Graduate" }
+testimonial:
+  heading: "Відзнака EPAM Value Creator Impact 2025"
+  image: "/img/testimonials/value-creator-impact-2025.png"
+  image_alt: 'EPAM Value Creator Impact 2025 — feedback from Balazs Fejes: "Yehor, thank you for your remarkable efforts in driving AI adoption and advancing performance testing practices. Your innovative solutions and knowledge-sharing initiatives have elevated project outcomes, strengthened collaboration and set new benchmarks for excellence. Your dedication has made a lasting impact on both the team and our clients. Fantastic work! Keep inspiring!"'
+links:
+  - { label: "LinkedIn", url: "https://www.linkedin.com/in/yehor-maksymchuk-271039240/" }
+  - { label: "GitHub",   url: "https://github.com/YegorMaksymchuk" }
+  - { label: "YouTube",  url: "https://www.youtube.com/@AIDevTestOps" }

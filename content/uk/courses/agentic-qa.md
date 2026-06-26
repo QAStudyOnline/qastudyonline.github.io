@@ -11,6 +11,7 @@ category: "AI тестування"
 instructor: "Єгор Максимчук"
 duration: "11–14 тижнів"
 lessons: 21
+show_instructor: true
 
 # Посилання
 registration_url: "https://forms.gle/Lz1ZfjUBWzrK8sQn7"
@@ -19,7 +20,7 @@ doc_label: "Програма курсу повністю"
 
 # Hero
 eyebrow: "Курс"
-subtitle: "Навчись тестувати AI-агентів, RAG-системи і agentic pipelines — від першого eval до production CI/CD."
+subtitle: "Навчись тестувати AI-агентів, RAG-системи і agentic pipelines — від першого eval до production CI/CD. Та впроваджувати AI-агентів для автоматизації вашої роботи й SDLC."
 cta_label: "Подати заявку →"
 meta_pills:
   - "21 заняття"

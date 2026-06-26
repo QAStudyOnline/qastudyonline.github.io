@@ -11,6 +11,7 @@ category: "Performance тестування"
 instructor: "Єгор Максимчук"
 duration: "15 тижнів"
 lessons: 15
+show_instructor: true
 
 # Посилання
 registration_url: "https://forms.gle/e8LFL62Qd7WwQNwX8"
