@@ -223,6 +223,47 @@
     }
   }
 
+  // Credential badge images
+  .al-instructor-badges {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+  }
+  .al-badge {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+    border-radius: $radius-full;
+    transition: transform 0.15s ease;
+    &:hover { transform: scale(1.08); }
+  }
+
+  // Leadership testimonial — original recognition screenshot
+  .al-instructor-testimonial {
+    max-width: 680px;
+    margin: 2.5rem auto 0;
+    text-align: center;
+  }
+  .al-testimonial-heading {
+    margin-bottom: 1rem;
+    font-size: $font-size-sm;
+    font-weight: $font-weight-semibold;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: $primary-600;
+  }
+  .al-testimonial-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    border: 1px solid $gray-200;
+    border-radius: $radius-xl;
+    box-shadow: $shadow-lg;
+  }
+
   @media (max-width: $breakpoint-sm) {
     .al-instructor {
       flex-direction: column;
@@ -231,7 +272,8 @@
       padding: 1.5rem;
     }
     .al-instructor-chips,
-    .al-instructor-links { justify-content: center; }
+    .al-instructor-links,
+    .al-instructor-badges { justify-content: center; }
   }
 
   // FAQ accordion

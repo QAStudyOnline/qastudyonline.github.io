@@ -94,15 +94,15 @@
   </section>
   {{ end }}
 
-  <!-- Instructor -->
-  {{ with .Params.instructor_section }}
-  <section class="al-section al-section-alt">
+  <!-- Instructor (shared, from data/instructor.yaml) -->
+  {{ if .Params.show_instructor }}{{ with hugo.Data.instructor }}
+  <section class="al-section al-section-alt" id="instructor">
     <div class="container">
       <h2 class="al-h2">{{ .heading | default "Викладач" }}</h2>
       <div class="al-instructor">
         {{ with .photo }}
         <img class="al-instructor-photo" src="{{ . | relURL }}"
-             alt="{{ $.Params.instructor_section.photo_alt | default $.Params.instructor_section.name }}"
+             alt="{{ hugo.Data.instructor.photo_alt | default hugo.Data.instructor.name }}"
              width="200" height="200" loading="lazy">
         {{ end }}
         <div class="al-instructor-info">
@@ -118,6 +118,11 @@
             {{ range . }}<li class="al-chip">{{ . }}</li>{{ end }}
           </ul>
           {{ end }}
+          {{ with .badges }}
+          <div class="al-instructor-badges" aria-label="Сертифікати та бейджі">
+            {{ range . }}<img class="al-badge" src="{{ .src | relURL }}" alt="{{ .alt }}" width="64" height="64" loading="lazy">{{ end }}
+          </div>
+          {{ end }}
           {{ with .links }}
           <div class="al-instructor-links">
             {{ range . }}
@@ -127,9 +132,16 @@
           {{ end }}
         </div>
       </div>
+
+      {{ with .testimonial }}
+      <figure class="al-instructor-testimonial">
+        {{ with .heading }}<figcaption class="al-testimonial-heading">{{ . }}</figcaption>{{ end }}
+        <img class="al-testimonial-image" src="{{ .image | relURL }}" alt="{{ .image_alt }}" loading="lazy">
+      </figure>
+      {{ end }}
     </div>
   </section>
-  {{ end }}
+  {{ end }}{{ end }}
 
   <!-- Pricing (card layout) -->
   {{ with .Params.pricing }}{{ if .amount }}

@@ -11,6 +11,7 @@ category: "Performance тестування"
 instructor: "Єгор Максимчук"
 duration: "15 тижнів"
 lessons: 15
+show_instructor: true
 
 # Посилання
 registration_url: "https://forms.gle/e8LFL62Qd7WwQNwX8"
@@ -106,26 +107,6 @@ pricing:
   source:
     text: "DOU, зарплатний звіт QA, зима 2026"
     url: "https://dou.ua/lenta/articles/salary-report-qa-winter-2026/"
-
-instructor_section:
-  heading: "Викладач"
-  name: "Yehor Maksymchuk"
-  role: "QA & Performance Architect, 14+ років в IT"
-  photo: "/img/instructor-yehor.jpg"
-  photo_alt: "Yehor Maksymchuk — QA & Performance Architect"
-  bio:
-    - "Веде перформенс-напрям як практик, а не теоретик. Зараз — Performance Test Engineer / QA-Performance & Automation Architect у US fintech (платіжний провайдер): будує перформенс-фреймворки, observability-стек (k6, JMeter, Gatling, Grafana, InfluxDB, Prometheus, sitespeed.io) і вбудовує навантажувальне тестування в CI/CD."
-    - "За 14+ років пройшов шлях від QA-інженера до архітектора якості в EPAM, SoftServe та Zoolatech; координував QA в проєктах до 22 скрам-команд одночасно. Те, що ти вивчиш на курсі — це його щоденний робочий стек, а не навчальні приклади."
-  chips:
-    - "EPAM QA Architect"
-    - "14+ років в IT"
-    - "Azure AZ-900"
-    - "k6 / JMeter / Gatling"
-    - "Grafana / InfluxDB / Prometheus"
-  links:
-    - { label: "LinkedIn", url: "https://www.linkedin.com/in/yehor-maksymchuk-271039240/" }
-    - { label: "GitHub", url: "https://github.com/YegorMaksymchuk" }
-    - { label: "YouTube", url: "https://www.youtube.com/@AIDevTestOps" }
 
 bottom_cta:
   text: "15 занять, практика на кожному занятті, фінальний проєкт з реальним стеком для перформенс тестування."
