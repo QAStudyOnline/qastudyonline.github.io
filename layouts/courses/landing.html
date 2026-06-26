@@ -96,18 +96,34 @@
 
   <!-- Instructor -->
   {{ with .Params.instructor_section }}
-  <section class="al-section">
+  <section class="al-section al-section-alt">
     <div class="container">
-      <h2 class="al-h2">{{ .heading }}</h2>
+      <h2 class="al-h2">{{ .heading | default "Викладач" }}</h2>
       <div class="al-instructor">
+        {{ with .photo }}
+        <img class="al-instructor-photo" src="{{ . | relURL }}"
+             alt="{{ $.Params.instructor_section.photo_alt | default $.Params.instructor_section.name }}"
+             width="200" height="200" loading="lazy">
+        {{ end }}
         <div class="al-instructor-info">
           <p class="al-instructor-name">{{ .name }}</p>
           {{ with .role }}<p class="al-instructor-role">{{ . }}</p>{{ end }}
-          {{ with .bio }}<p class="al-instructor-bio">{{ . }}</p>{{ end }}
-          {{ with .credentials }}
-          <ul class="al-instructor-creds">
-            {{ range . }}<li>{{ . }}</li>{{ end }}
+          {{ with .bio }}
+          <div class="al-instructor-bio">
+            {{ range . }}<p>{{ . }}</p>{{ end }}
+          </div>
+          {{ end }}
+          {{ with .chips }}
+          <ul class="al-instructor-chips" aria-label="Регалії викладача">
+            {{ range . }}<li class="al-chip">{{ . }}</li>{{ end }}
           </ul>
+          {{ end }}
+          {{ with .links }}
+          <div class="al-instructor-links">
+            {{ range . }}
+            <a href="{{ .url }}" target="_blank" rel="noopener noreferrer">{{ .label }}</a>
+            {{ end }}
+          </div>
           {{ end }}
         </div>
       </div>

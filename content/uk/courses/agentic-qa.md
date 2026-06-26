@@ -123,6 +123,27 @@ pricing:
   group_headline: "Група 8–12 людей"
   group_text: "Малі групи — персональний фідбек на кожне домашнє завдання, а не формальна перевірка «пройшов / не пройшов»."
 
+instructor_section:
+  heading: "Викладач"
+  name: "Yehor Maksymchuk"
+  role: "QA Architect & AI Agent Development / Testing, 14+ років в IT"
+  photo: "/img/instructor-yehor.jpg"
+  photo_alt: "Yehor Maksymchuk — QA Architect & AI Agent Development / Testing"
+  bio:
+    - "Будує і тестує AI-агентні системи в реальних проєктах — і навчає цьому інженерів усередині EPAM. Автор внутрішнього курсу EPAM «AI-Infused Application Testing», має бейджі AI Advocate / AI Champion / AI Ready. Зараз розробляє AI-агентів для прискорення SDLC і веде AI-адопшн команд (GitHub Copilot, Cursor, Claude Code)."
+    - "Стек, який ти пройдеш на курсі — DeepEval, prompt & context engineering, prompt validation, тестування LLM/RAG — це інструменти, з якими він працює щодня. А 14+ років у QA-архітектурі означають, що тестування AI тут стоїть на справжній інженерній дисципліні, а не на хайпі."
+  chips:
+    - "EPAM QA Architect"
+    - "AI Advocate / Champion / Ready"
+    - "Автор курсу EPAM «AI-Infused Application Testing»"
+    - "GitHub Copilot Certified"
+    - "DeepEval / LLM / RAG"
+    - "14+ років в IT"
+  links:
+    - { label: "LinkedIn", url: "https://www.linkedin.com/in/yehor-maksymchuk-271039240/" }
+    - { label: "GitHub", url: "https://github.com/YegorMaksymchuk" }
+    - { label: "YouTube", url: "https://www.youtube.com/@AIDevTestOps" }
+
 bottom_cta:
   text: "Залишити контакт — розкажу деталі про старт, формат і вартість."
 ---
