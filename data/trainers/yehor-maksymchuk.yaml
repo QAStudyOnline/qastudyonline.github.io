@@ -1,0 +1,105 @@
+slug: yehor-maksymchuk
+name: "Yehor Maksymchuk"
+role: "QA & Performance Architect · AI Agent Development & Testing"
+tagline: "14+ років в IT"
+location: "Будапешт, Угорщина"
+photo: "/img/instructor-yehor.jpg"
+photo_alt: "Yehor Maksymchuk — QA & Performance Architect"
+
+# Short positioning line under the name (hero)
+intro: >
+  Будую якість там, де її найважче втримати — у платіжних системах,
+  healthcare-продуктах і AI-агентних застосунках. Зараз — архітектор
+  перформенс- і автоматизаційної якості в US fintech та QA Architect в EPAM,
+  ментор і автор курсів QA + AI.
+
+# "Коротко про мене"
+about:
+  - >
+    В IT з 2010 року. Пройшов шлях від ручного тестувальника в державному
+    проєкті до QA-архітектора, який відповідає за стратегію й архітектуру
+    якості в продуктах із мільйонами користувачів.
+  - >
+    За цей час побудував не один фреймворк і процес з нуля — і бачив, що
+    ламається під навантаженням і в реальному продакшені, а не в підручнику.
+
+# "Чим займаюся зараз"
+now: >
+  Performance & Automation Architect у US fintech (платіжний провайдер):
+  будую перформенс-фреймворки, observability-стек (k6, Grafana, InfluxDB,
+  Prometheus, sitespeed.io), вбудовую навантажувальне тестування в CI/CD
+  і розробляю AI-агентів для прискорення SDLC.
+
+# "У цифрах"
+stats:
+  - { value: "14+", label: "років в IT" }
+  - { value: "22", label: "скрам-команди під QA-координацією" }
+  - { value: "6", label: "доменів: fintech, healthcare, retail та інші" }
+  - { value: "EPAM", label: "QA Architect · AI Maturity" }
+
+# Career / companies
+companies: ["EPAM", "SoftServe", "Zoolatech", "Playtech"]
+domains: ["fintech / платежі", "US healthcare", "retail", "manufacturing", "betting", "держсектор"]
+
+# ── Verifiable certifications ──────────────────────
+certifications:
+  - name: "Microsoft Certified: Azure Fundamentals (AZ-900)"
+    issuer: "Microsoft"
+    image: ""
+    verify_url: "https://learn.microsoft.com/en-us/users/yehormaksymchuk-4144/credentials/e8af311b9ce05d20"
+  - name: "GitHub Copilot"
+    issuer: "Microsoft / GitHub"
+    image: ""
+    verify_url: "https://learn.microsoft.com/en-us/users/yehormaksymchuk-4144/credentials/ea60e9a026b89efd"
+  - name: "ICAgile Certified Professional — Agile Project & Delivery Management (ICP-APM)"
+    issuer: "ICAgile"
+    image: "/img/badges/icagile-icp-apm.png"
+    verify_url: ""
+
+# ── Internal recognition & awards (EPAM AI Maturity) ─
+recognition_badges:
+  - { name: "AI Champion",     issuer: "EPAM AI Maturity", image: "/img/badges/ai-champion.png" }
+  - { name: "AI Practitioner", issuer: "EPAM AI Maturity", image: "/img/badges/ai-practitioner.png" }
+  - { name: "AI Ready",        issuer: "EPAM AI Maturity", image: "/img/badges/ai-ready.png" }
+  - { name: "AI Advocate",     issuer: "EPAM AI Maturity", image: "/img/badges/ai-advocate.png" }
+  - { name: "AI Architect Graduate", issuer: "EPAM", image: "/img/badges/ai-architect-graduate.png" }
+  - { name: "Hack the Future of AI Agent Testing — Winner", issuer: "EPAM", image: "/img/badges/hackathon-ai-agent-testing-winner.png" }
+  - { name: "Value Creator Impact 2025", issuer: "EPAM", image: "/img/badges/value-creator-2025.png" }
+
+# ── Named recognition (optional — see permission note) ─
+testimonial:
+  quote: >
+    Yehor, thank you for your remarkable efforts in driving AI adoption and
+    advancing performance testing practices. Your innovative solutions and
+    knowledge-sharing initiatives have elevated project outcomes, strengthened
+    collaboration and set new benchmarks for excellence.
+  author: "Balazs Fejes"
+  author_title: "President & Chief AI Officer, EPAM"
+  context: "Value Creator Impact 2025"
+
+# Authored / taught courses (slugs map to /courses/<slug>/)
+courses: ["agentic-qa", "k6-performance-testing", "scale-quality"]
+
+# "Чому я веду ці курси"
+why: >
+  Я бачив десятки сильних інженерів, які вперлися в стелю не тому, що погано
+  тестують, а тому, що ніхто не показав їм системний, інженерний рівень професії.
+  Я викладаю рівно те, що роблю щодня на бойових проєктах. Групи маленькі —
+  кожен отримує персональний фідбек на код і рішення.
+
+# Tech stack (grouped)
+stack:
+  - { group: "Performance", items: ["k6", "JMeter", "Gatling", "sitespeed.io"] }
+  - { group: "Observability", items: ["Grafana", "InfluxDB", "Prometheus", "Kibana"] }
+  - { group: "AI / LLM", items: ["DeepEval", "LangChain", "OpenAI API", "Claude", "prompt & context engineering"] }
+  - { group: "Automation", items: ["Playwright", "Selenium", "Selenide", "Appium", "Cypress"] }
+  - { group: "Languages", items: ["Python", "JS/TS", "Java"] }
+  - { group: "Infra / CI", items: ["Docker", "Kubernetes", "AWS", "Azure", "Terraform", "GitHub Actions", "GitLab CI", "Jenkins"] }
+
+education: "M.Sc. Device Engineering — НТУУ «КПІ ім. Ігоря Сікорського»"
+
+links:
+  - { label: "LinkedIn", url: "https://www.linkedin.com/in/yehor-maksymchuk-271039240/" }
+  - { label: "GitHub",   url: "https://github.com/YegorMaksymchuk" }
+  - { label: "YouTube",  url: "https://www.youtube.com/@AIDevTestOps" }
+  - { label: "Telegram", url: "https://t.me/qastudy" }

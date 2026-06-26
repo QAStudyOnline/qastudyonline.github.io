@@ -1,0 +1,29 @@
+{{ define "head" }}
+  <meta property="og:title" content="{{ .Title }} | {{ .Site.Title }}">
+  <meta property="og:description" content="{{ .Description }}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ .Permalink }}">
+  <link rel="canonical" href="{{ .Permalink }}">
+{{ end }}
+
+{{ define "main" }}
+<section class="team-index">
+  <div class="container">
+    <h1 class="team-index__title">{{ .Title }}</h1>
+    {{ with .Description }}<p class="team-index__lede">{{ . }}</p>{{ end }}
+
+    <div class="team-grid">
+      {{ range $slug, $t := hugo.Data.trainers }}
+      <a class="trainer-card" href="{{ printf "/team/%s/" $t.slug | relLangURL }}">
+        <img class="trainer-card__photo" src="{{ $t.photo | relURL }}"
+             alt="{{ $t.photo_alt | default $t.name }}" width="120" height="120" loading="lazy">
+        <h2 class="trainer-card__name">{{ $t.name }}</h2>
+        <p class="trainer-card__role">{{ $t.role }}</p>
+        {{ with $t.tagline }}<p class="trainer-card__tagline">{{ . }}</p>{{ end }}
+        <span class="trainer-card__more">Переглянути профіль →</span>
+      </a>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}

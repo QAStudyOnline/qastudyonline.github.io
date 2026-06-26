@@ -35,6 +35,11 @@ defaultContentLanguageInSubdir = false
   weight = 10
 
 [[languages.uk.menus.main]]
+  name   = "Автори й тренери"
+  url    = "/team/"
+  weight = 15
+
+[[languages.uk.menus.main]]
   name   = "Про нас"
   url    = "/about/"
   weight = 20

@@ -1,0 +1,214 @@
+{{ define "head" }}
+  {{ $t := index hugo.Data.trainers (.Params.trainer_data | default .File.ContentBaseName) }}
+  <meta property="og:title" content="{{ .Title }} | {{ .Site.Title }}">
+  <meta property="og:description" content="{{ .Description }}">
+  <meta property="og:type" content="profile">
+  <meta property="og:url" content="{{ .Permalink }}">
+  {{ with .Params.og_image }}<meta property="og:image" content="{{ . | absURL }}">{{ end }}
+  <link rel="canonical" href="{{ .Permalink }}">
+  {{ with $t }}
+  {{ $sameAs := slice }}
+  {{ range .links }}{{ $sameAs = $sameAs | append .url }}{{ end }}
+  {{ $ld := dict
+      "@context" "https://schema.org"
+      "@type" "Person"
+      "name" .name
+      "jobTitle" .role
+      "url" $.Permalink
+      "worksFor" (dict "@type" "Organization" "name" "EPAM")
+      "sameAs" $sameAs
+  }}
+  {{ with .photo }}{{ $ld = merge $ld (dict "image" (. | absURL)) }}{{ end }}
+  {{ with .education }}{{ $ld = merge $ld (dict "alumniOf" .) }}{{ end }}
+  <script type="application/ld+json">{{ $ld | jsonify | safeJS }}</script>
+  {{ end }}
+{{ end }}
+
+{{ define "main" }}
+{{ $t := index hugo.Data.trainers (.Params.trainer_data | default .File.ContentBaseName) }}
+{{ with $t }}
+<article class="trainer-page">
+
+  <!-- Hero -->
+  <header class="tp-hero">
+    <div class="container tp-hero__inner">
+      {{ with .photo }}
+      <img class="tp-hero__photo" src="{{ . | relURL }}"
+           alt="{{ $t.photo_alt | default $t.name }}" width="200" height="200">
+      {{ end }}
+      <div class="tp-hero__info">
+        <h1 class="tp-hero__name">{{ .name }}</h1>
+        {{ with .role }}<p class="tp-hero__role">{{ . }}</p>{{ end }}
+        <p class="tp-hero__meta">
+          {{ with .tagline }}<span>{{ . }}</span>{{ end }}
+          {{ with .location }}<span>· {{ . }}</span>{{ end }}
+        </p>
+        {{ with .intro }}<p class="tp-hero__intro">{{ . }}</p>{{ end }}
+        <div class="tp-hero__actions">
+          <a class="btn-cta" href="#courses">Подивитись курси →</a>
+          {{ with .links }}
+          <div class="tp-links">
+            {{ range . }}<a href="{{ .url }}" target="_blank" rel="noopener noreferrer">{{ .label }}</a>{{ end }}
+          </div>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- About -->
+  {{ if or .about .now }}
+  <section class="tp-section">
+    <div class="container tp-narrow">
+      <h2 class="tp-h2">Коротко про мене</h2>
+      {{ with .about }}{{ range . }}<p class="tp-text">{{ . }}</p>{{ end }}{{ end }}
+      {{ with .now }}
+      <p class="tp-now"><strong>Чим займаюся зараз:</strong> {{ . }}</p>
+      {{ end }}
+    </div>
+  </section>
+  {{ end }}
+
+  <!-- Stats -->
+  {{ if or .stats .companies .domains }}
+  <section class="tp-section tp-section--alt">
+    <div class="container">
+      <h2 class="tp-h2">У цифрах</h2>
+      {{ with .stats }}
+      <div class="tp-stats">
+        {{ range . }}
+        <div class="tp-stat">
+          <span class="tp-stat__value">{{ .value }}</span>
+          <span class="tp-stat__label">{{ .label }}</span>
+        </div>
+        {{ end }}
+      </div>
+      {{ end }}
+      {{ with .companies }}
+      <div class="tp-chiprow">
+        <span class="tp-chiprow__label">Компанії:</span>
+        {{ range . }}<span class="chip">{{ . }}</span>{{ end }}
+      </div>
+      {{ end }}
+      {{ with .domains }}
+      <div class="tp-chiprow">
+        <span class="tp-chiprow__label">Домени:</span>
+        {{ range . }}<span class="chip">{{ . }}</span>{{ end }}
+      </div>
+      {{ end }}
+    </div>
+  </section>
+  {{ end }}
+
+  <!-- Credentials -->
+  {{ if or .certifications .recognition_badges }}
+  <section class="tp-section" id="credentials">
+    <div class="container">
+      {{ with .certifications }}
+      <h2 class="tp-h2">Сертифікації</h2>
+      <ul class="badge-grid">
+        {{ range . }}
+        {{ $b := . }}
+        <li class="badge{{ if not $b.image }} badge--text{{ end }}">
+          {{ if $b.verify_url }}<a class="badge__link" href="{{ $b.verify_url }}" target="_blank" rel="noopener noreferrer" title="Перевірити сертифікат">{{ end }}
+            {{ with $b.image }}<img class="badge__img" src="{{ . | relURL }}" alt="{{ $b.name }}" width="96" height="96" loading="lazy">{{ end }}
+            <span class="badge__name">{{ $b.name }}</span>
+            {{ with $b.issuer }}<span class="badge__issuer">{{ . }}</span>{{ end }}
+            {{ if $b.verify_url }}<span class="badge__verify">Перевірити →</span>{{ end }}
+          {{ if $b.verify_url }}</a>{{ end }}
+        </li>
+        {{ end }}
+      </ul>
+      {{ end }}
+
+      {{ with .recognition_badges }}
+      <h2 class="tp-h2 tp-h2--sub">Визнання та нагороди</h2>
+      <ul class="badge-grid badge-grid--recognition">
+        {{ range . }}
+        {{ $b := . }}
+        <li class="badge{{ if not $b.image }} badge--text{{ end }}">
+          {{ with $b.image }}<img class="badge__img" src="{{ . | relURL }}" alt="{{ $b.name }}" width="80" height="80" loading="lazy">{{ end }}
+          <span class="badge__name">{{ $b.name }}</span>
+          {{ with $b.issuer }}<span class="badge__issuer">{{ . }}</span>{{ end }}
+        </li>
+        {{ end }}
+      </ul>
+      {{ end }}
+    </div>
+  </section>
+  {{ end }}
+
+  <!-- Testimonial -->
+  {{ with .testimonial }}
+  <section class="tp-section tp-section--alt">
+    <div class="container tp-narrow">
+      <blockquote class="tp-recognition">
+        <p class="tp-recognition__quote">{{ .quote }}</p>
+        <footer class="tp-recognition__by">
+          <strong>{{ .author }}</strong>{{ with .author_title }} — {{ . }}{{ end }}
+          {{ with .context }}<span class="tp-recognition__context">{{ . }}</span>{{ end }}
+        </footer>
+      </blockquote>
+    </div>
+  </section>
+  {{ end }}
+
+  <!-- Courses -->
+  {{ with .courses }}
+  <section class="tp-section" id="courses">
+    <div class="container">
+      <h2 class="tp-h2">Курси автора</h2>
+      <div class="tp-courses">
+        {{ range . }}
+        {{ $course := site.GetPage (printf "/courses/%s" .) }}
+        {{ with $course }}
+        <a class="tp-course-card" href="{{ .RelPermalink }}">
+          <h3 class="tp-course-card__title">{{ .Title }}</h3>
+          {{ with .Params.level }}<span class="tp-course-card__level">{{ . }}</span>{{ end }}
+          {{ with .Params.subtitle }}<p class="tp-course-card__desc">{{ . }}</p>{{ end }}
+          <span class="tp-course-card__more">Детальніше →</span>
+        </a>
+        {{ end }}
+        {{ end }}
+      </div>
+    </div>
+  </section>
+  {{ end }}
+
+  <!-- Stack -->
+  {{ if or .stack .education }}
+  <section class="tp-section tp-section--alt">
+    <div class="container">
+      <h2 class="tp-h2">Технічний стек</h2>
+      {{ with .stack }}
+      <div class="tp-stack">
+        {{ range . }}
+        <div class="tp-stack__group">
+          <span class="tp-stack__label">{{ .group }}</span>
+          <div class="tp-stack__items">
+            {{ range .items }}<span class="chip">{{ . }}</span>{{ end }}
+          </div>
+        </div>
+        {{ end }}
+      </div>
+      {{ end }}
+      {{ with .education }}<p class="tp-education"><strong>Освіта:</strong> {{ . }}</p>{{ end }}
+    </div>
+  </section>
+  {{ end }}
+
+  <!-- Closing CTA -->
+  <section class="tp-cta">
+    <div class="container">
+      {{ with .why }}<p class="tp-cta__text">{{ . }}</p>{{ end }}
+      {{ with .links }}
+      <div class="tp-links tp-links--cta">
+        {{ range . }}<a href="{{ .url }}" target="_blank" rel="noopener noreferrer">{{ .label }}</a>{{ end }}
+      </div>
+      {{ end }}
+    </div>
+  </section>
+
+</article>
+{{ end }}
+{{ end }}
