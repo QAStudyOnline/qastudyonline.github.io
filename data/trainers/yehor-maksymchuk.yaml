@@ -10,7 +10,7 @@ photo_alt: "Yehor Maksymchuk — QA & Performance Architect"
 intro: >
   Будую якість там, де її найважче втримати — у платіжних системах,
   healthcare-продуктах і AI-агентних застосунках. Зараз — архітектор
-  перформенс- і автоматизаційної якості в US fintech та QA Architect в EPAM,
+  перформенс- і автоматизаційної якості в US fintech та QA Architect,
   ментор і автор курсів QA + AI.
 
 # "Коротко про мене"
@@ -35,47 +35,47 @@ stats:
   - { value: "14+", label: "років в IT" }
   - { value: "22", label: "скрам-команди під QA-координацією" }
   - { value: "6", label: "доменів: fintech, healthcare, retail та інші" }
-  - { value: "EPAM", label: "QA Architect · AI Maturity" }
 
 # Career / companies
-companies: ["EPAM", "SoftServe", "Zoolatech", "Playtech"]
+companies: ["SoftServe", "Zoolatech", "Playtech"]
 domains: ["fintech / платежі", "US healthcare", "retail", "manufacturing", "betting", "держсектор"]
 
 # ── Verifiable certifications ──────────────────────
 certifications:
   - name: "Microsoft Certified: Azure Fundamentals (AZ-900)"
     issuer: "Microsoft"
-    image: ""
+    image: "https://learn.microsoft.com/media/learn/certification/badges/microsoft-certified-fundamentals-badge.svg"
     verify_url: "https://learn.microsoft.com/en-us/users/yehormaksymchuk-4144/credentials/e8af311b9ce05d20"
+  
   - name: "GitHub Copilot"
     issuer: "Microsoft / GitHub"
-    image: ""
+    image: "https://learn.microsoft.com/en-us/media/learn/certification/badges/github-copilot.svg"
     verify_url: "https://learn.microsoft.com/en-us/users/yehormaksymchuk-4144/credentials/ea60e9a026b89efd"
+  
   - name: "ICAgile Certified Professional — Agile Project & Delivery Management (ICP-APM)"
     issuer: "ICAgile"
-    image: "/img/badges/icagile-icp-apm.png"
-    verify_url: ""
+    image: "https://www.icagile.com/media/badges/png/ICP-APM.png"
+    verify_url: "https://www.icagile.com/credentials/0e71a98f-3209-40e5-a1b0-a335e3261c89"
 
-# ── Internal recognition & awards (EPAM AI Maturity) ─
-recognition_badges:
-  - { name: "AI Champion",     issuer: "EPAM AI Maturity", image: "/img/badges/ai-champion.png" }
-  - { name: "AI Practitioner", issuer: "EPAM AI Maturity", image: "/img/badges/ai-practitioner.png" }
-  - { name: "AI Ready",        issuer: "EPAM AI Maturity", image: "/img/badges/ai-ready.png" }
-  - { name: "AI Advocate",     issuer: "EPAM AI Maturity", image: "/img/badges/ai-advocate.png" }
-  - { name: "AI Architect Graduate", issuer: "EPAM", image: "/img/badges/ai-architect-graduate.png" }
-  - { name: "Hack the Future of AI Agent Testing — Winner", issuer: "EPAM", image: "/img/badges/hackathon-ai-agent-testing-winner.png" }
-  - { name: "Value Creator Impact 2025", issuer: "EPAM", image: "/img/badges/value-creator-2025.png" }
+  - name: "Сertificate Architect - Foundations"
+    issuer: "Anthropic"
+    image: "https://images.credly.com/size/340x340/images/f2040db3-3904-4240-8966-e87b1510bea0/blob"
+    verify_url: "https://www.credly.com/badges/ea9e67ea-5fa5-40dd-9328-fed8e58b42a9"
 
-# ── Named recognition (optional — see permission note) ─
-testimonial:
-  quote: >
-    Yehor, thank you for your remarkable efforts in driving AI adoption and
-    advancing performance testing practices. Your innovative solutions and
-    knowledge-sharing initiatives have elevated project outcomes, strengthened
-    collaboration and set new benchmarks for excellence.
-  author: "Balazs Fejes"
-  author_title: "President & Chief AI Officer, EPAM"
-  context: "Value Creator Impact 2025"
+  - name: "Сertificate Architect - Professional"
+    issuer: "Anthropic"
+    image: "https://images.credly.com/size/340x340/images/7583afbc-4aab-4c7d-8af4-d9af72786ab3/blob"
+    verify_url: "https://www.credly.com/badges/235b58ee-6ee0-4109-9ac5-a0fbede3240e"
+
+  - name: "Сertificate Associate - Foundations"
+    issuer: "Anthropic"
+    image: "https://images.credly.com/size/340x340/images/a6387cbd-5ac1-4894-833a-da2cbc28587e/blob"
+    verify_url: "https://www.credly.com/badges/cf033a31-3223-45e4-aa6e-5f149365b4e4"
+
+  - name: "Сertificate Developer - Foundations"
+    issuer: "Anthropic"
+    image: "https://images.credly.com/size/340x340/images/f101c6ac-8a2d-4220-b381-70e3e6c364e3/blob"
+    verify_url: "https://www.credly.com/badges/9448be8e-589f-46f1-85bf-aecf42280123"
 
 # Authored / taught courses (slugs map to /courses/<slug>/)
 courses: ["agentic-qa", "k6-performance-testing", "scale-quality"]
