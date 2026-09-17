@@ -4,25 +4,52 @@ role: "QA Architect · AI Testing · Performance Engineering · 14+ років �
 photo: "/img/instructor-yehor.jpg"
 photo_alt: "Єгор Максимчук — QA Architect"
 bio:
-  - "Єгор Максимчук — QA Architect із 14+ роками досвіду в EPAM, SoftServe та міжнародних продуктових компаніях. Експерт із AI Testing, AI Agent Development та Performance Engineering. Автор внутрішнього курсу EPAM AI-Infused Application Testing, AI Advocate / AI Champion. Розробляє AI-агентів для SDLC, впроваджує AI у команди та будує QA-архітектуру для сучасних AI-продуктів. На курсах QAStudy Online навчає лише тим підходам та інструментам, які використовує у реальних комерційних проєктах щодня."
+  - "Єгор Максимчук — QA Architect із 14+ роками досвіду в SoftServe та міжнародних продуктових компаніях. Експерт із AI Testing, AI Agent Development та Performance Engineering. Автор внутрішнього курсу EPAM AI-Infused Application Testing, AI Advocate / AI Champion. Розробляє AI-агентів для SDLC, впроваджує AI у команди та будує QA-архітектуру для сучасних AI-продуктів. На курсах QAStudy Online навчає лише тим підходам та інструментам, які використовує у реальних комерційних проєктах щодня."
 chips:
-  - "EPAM QA Architect"
+  - "QA Architect"
   - "14+ років в IT"
   - "Azure Cloud"
   - "GitHub Copilot Certified"
   - "k6 / JMeter / Gatling"
   - "Grafana / InfluxDB / Prometheus"
   - "DeepEval / LLM / RAG"
-badges:
-  - { src: "/img/badges/ai-ready.png",              alt: "EPAM AI Maturity — AI Ready" }
-  - { src: "/img/badges/ai-practitioner.png",       alt: "EPAM AI Maturity — AI Practitioner" }
-  - { src: "/img/badges/ai-champion.png",           alt: "EPAM AI Maturity — AI Champion" }
-  - { src: "/img/badges/ai-advocate.png",           alt: "AI Advocate" }
-  - { src: "/img/badges/ai-architect-graduate.png", alt: "AI Architect Graduate" }
-testimonial:
-  heading: "Відзнака EPAM Value Creator Impact 2025"
-  image: "/img/testimonials/value-creator-impact-2025.png"
-  image_alt: 'EPAM Value Creator Impact 2025 — feedback from Balazs Fejes: "Yehor, thank you for your remarkable efforts in driving AI adoption and advancing performance testing practices. Your innovative solutions and knowledge-sharing initiatives have elevated project outcomes, strengthened collaboration and set new benchmarks for excellence. Your dedication has made a lasting impact on both the team and our clients. Fantastic work! Keep inspiring!"'
+
+certifications:
+  - name: "Microsoft Certified: Azure Fundamentals (AZ-900)"
+    issuer: "Microsoft"
+    image: "https://learn.microsoft.com/media/learn/certification/badges/microsoft-certified-fundamentals-badge.svg"
+    verify_url: "https://learn.microsoft.com/en-us/users/yehormaksymchuk-4144/credentials/e8af311b9ce05d20"
+  
+  - name: "GitHub Copilot"
+    issuer: "Microsoft / GitHub"
+    image: "https://learn.microsoft.com/en-us/media/learn/certification/badges/github-copilot.svg"
+    verify_url: "https://learn.microsoft.com/en-us/users/yehormaksymchuk-4144/credentials/ea60e9a026b89efd"
+  
+  - name: "ICAgile Certified Professional — Agile Project & Delivery Management (ICP-APM)"
+    issuer: "ICAgile"
+    image: "https://www.icagile.com/media/badges/png/ICP-APM.png"
+    verify_url: "https://www.icagile.com/credentials/0e71a98f-3209-40e5-a1b0-a335e3261c89"
+
+  - name: "Сertificate Architect - Foundations"
+    issuer: "Anthropic"
+    image: "https://images.credly.com/size/340x340/images/f2040db3-3904-4240-8966-e87b1510bea0/blob"
+    verify_url: "https://www.credly.com/badges/ea9e67ea-5fa5-40dd-9328-fed8e58b42a9"
+
+  - name: "Сertificate Architect - Professional"
+    issuer: "Anthropic"
+    image: "https://images.credly.com/size/340x340/images/7583afbc-4aab-4c7d-8af4-d9af72786ab3/blob"
+    verify_url: "https://www.credly.com/badges/235b58ee-6ee0-4109-9ac5-a0fbede3240e"
+
+  - name: "Сertificate Associate - Foundations"
+    issuer: "Anthropic"
+    image: "https://images.credly.com/size/340x340/images/a6387cbd-5ac1-4894-833a-da2cbc28587e/blob"
+    verify_url: "https://www.credly.com/badges/cf033a31-3223-45e4-aa6e-5f149365b4e4"
+
+  - name: "Сertificate Developer - Foundations"
+    issuer: "Anthropic"
+    image: "https://images.credly.com/size/340x340/images/f101c6ac-8a2d-4220-b381-70e3e6c364e3/blob"
+    verify_url: "https://www.credly.com/badges/9448be8e-589f-46f1-85bf-aecf42280123"
+    
 links:
   - { label: "LinkedIn", url: "https://www.linkedin.com/in/yehor-maksymchuk-271039240/" }
   - { label: "GitHub",   url: "https://github.com/YegorMaksymchuk" }
