@@ -18,12 +18,12 @@ certifications:
   - name: "Microsoft Certified: Azure Fundamentals (AZ-900)"
     issuer: "Microsoft"
     image: "https://learn.microsoft.com/media/learn/certification/badges/microsoft-certified-fundamentals-badge.svg"
-    verify_url: "https://learn.microsoft.com/en-us/users/yehormaksymchuk-4144/credentials/e8af311b9ce05d20"
+    verify_url: "https://learn.microsoft.com/en-us/users/yehormaksymchuk-4144/credentials/ea60e9a026b89efd"
   
   - name: "GitHub Copilot"
     issuer: "Microsoft / GitHub"
     image: "https://learn.microsoft.com/en-us/media/learn/certification/badges/github-copilot.svg"
-    verify_url: "https://learn.microsoft.com/en-us/users/yehormaksymchuk-4144/credentials/ea60e9a026b89efd"
+    verify_url: "https://learn.microsoft.com/en-us/users/yehormaksymchuk-4144/credentials/e8af311b9ce05d20"
   
   - name: "ICAgile Certified Professional — Agile Project & Delivery Management (ICP-APM)"
     issuer: "ICAgile"
