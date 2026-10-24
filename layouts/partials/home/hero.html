@@ -1,0 +1,30 @@
+{{- with .Params.hero }}
+<section class="hero section-dark" id="hero">
+  <span class="deco deco-1" aria-hidden="true"></span>
+  <span class="deco deco-2" aria-hidden="true"></span>
+  <div class="container hero-grid">
+    <div class="hero-content glass reveal">
+      <span class="stamp" aria-label="{{ .stamp_aria }}">{{ .stamp | safeHTML }}</span>
+      <ol class="level-path" aria-label="{{ i18n "levels_we_teach_aria" }}">{{ range .level_path }}<li>{{ . }}</li>{{ end }}</ol>
+      <h1 class="hero-title">{{ .title | safeHTML }}</h1>
+      <p class="lead">{{ .lead }}</p>
+      <ul class="pills">
+        {{- range .pills }}{{ $label := .label }}{{ with site.GetPage (printf "/courses/%s" .course) }}
+        <li><a href="#{{ .Params.card.anchor }}" data-event="hero_pill_click">{{ $label }}</a></li>
+        {{- end }}{{ end }}
+      </ul>
+      <div class="hero-actions">
+        <a class="btn btn-primary btn-lg" href="#programs" data-event="hero_direction_click">{{ .cta }} <span class="arrow" aria-hidden="true">→</span></a>
+        <a class="link-underline link-light" href="{{ "/about/" | relURL }}">{{ .about_link }}</a>
+      </div>
+      <ul class="proof-line">
+        {{- range .proof }}<li>{{ . }}</li>{{ end }}
+      </ul>
+    </div>
+    <a class="scroll-cue" href="#programs" data-event="hero_direction_click">
+      <span class="scroll-cue-text">{{ .scroll_cue }}</span>
+      <span class="scroll-cue-arrow" aria-hidden="true">{{ partial "ui/icon.html" (dict "name" "arrow-down") }}</span>
+    </a>
+  </div>
+</section>
+{{- end }}

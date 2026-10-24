@@ -1,0 +1,24 @@
+/* ---------- Exit-intent popup ---------- */
+.exit-pop { position: fixed; inset: 0; z-index: 350; display: flex; align-items: center; justify-content: center; padding: 20px; opacity: 0; transition: opacity 260ms var(--ease); }
+.exit-pop.is-in { opacity: 1; }
+.exit-backdrop { position: absolute; inset: 0; background: rgba(4,3,16,.78); }
+.exit-card { position: relative; width: unquote("min(520px, 100%)"); padding: 40px 40px 32px; background: rgba(12,10,40,.94); transform: translateY(16px) scale(.98); transition: transform 320ms var(--ease); }
+.exit-pop.is-in .exit-card { transform: none; }
+.exit-close { position: absolute; top: 8px; right: 10px; width: 40px; height: 40px; font-size: 26px; color: var(--text-secondary-dark); }
+.exit-close:hover { color: #fff; }
+.exit-kicker { font-size: 12px; letter-spacing: .16em; text-transform: uppercase; color: var(--accent-soft); margin-bottom: 14px; }
+.exit-title { font-size: clamp(24px, 3vw, 32px); line-height: 1.12; font-weight: 600; letter-spacing: -.02em; color: #fff; margin-bottom: 14px; }
+.exit-title span { color: var(--accent-soft); }
+.exit-text { font-size: 16px; line-height: 1.55; color: var(--text-secondary-dark); margin-bottom: 22px; }
+.exit-cta { margin: 10px 0; }
+.exit-form { display: grid; gap: 10px; }
+.exit-form input { min-height: 48px; padding: 10px 16px; border-radius: 999px; border: 1px solid var(--glass-border); background: rgba(255,255,255,.04); color: #fff; }
+.exit-form input:focus { outline: none; border-color: var(--accent-soft); }
+.exit-form .btn { margin: 8px 0 0; width: 100%; }
+.exit-msg { font-size: 13px; color: #FF8A8A; min-height: 1em; }
+.exit-msg.ok { color: #7CFFB2; font-size: 16px; }
+.exit-note { margin-top: 16px; font-size: 13px; color: var(--text-secondary-dark); }
+@media (max-width: 767px) { .exit-pop { align-items: flex-end; padding: 0; } .exit-card { width: 100%; border-radius: 24px 24px 0 0; padding: 32px 20px 24px; } }
+
+.badges img { width: 60px; height: 60px; }
+@media (max-width: 767px) { .badges img { width: 46px; height: 46px; } }

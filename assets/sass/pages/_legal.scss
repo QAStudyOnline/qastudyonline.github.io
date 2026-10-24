@@ -1,0 +1,23 @@
+/* ---------- Legal pages ---------- */
+.legal-hero { padding-bottom: 32px !important; }
+.legal-sub { margin-top: 16px; max-width: 640px; }
+.legal-edition { margin-top: 14px; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: var(--text-secondary-dark); }
+.legal-body-section { padding-top: 24px !important; }
+.legal-grid { display: grid; grid-template-columns: 280px 1fr; gap: 24px; align-items: start; }
+.legal-toc { position: sticky; top: calc(var(--header-h) + 24px); padding: 22px 22px 18px; }
+.legal-toc ol { display: grid; gap: 8px; counter-reset: toc; }
+.legal-toc li { counter-increment: toc; }
+.legal-toc a { display: block; font-size: 13.5px; line-height: 1.4; color: var(--text-secondary-dark); }
+.legal-toc a:hover { color: #fff; }
+.legal-body { padding: 40px 48px; font-size: 16px; line-height: 1.65; color: var(--text-secondary-dark); }
+.legal-body h2 { font-size: 22px; font-weight: 600; letter-spacing: -.015em; color: #fff; margin: 36px 0 14px; padding-top: 24px; border-top: 1px solid var(--border-dark); }
+.legal-body h2:first-child { margin-top: 0; padding-top: 0; border-top: 0; }
+.legal-body h3 { font-size: 17px; font-weight: 600; color: #fff; margin: 22px 0 10px; }
+.legal-body p { margin: 0 0 12px; }
+.legal-body ul, .legal-body ol { margin: 0 0 14px 20px; list-style: disc; display: grid; gap: 6px; }
+.legal-body ol { list-style: decimal; }
+.legal-body strong { color: #fff; font-weight: 600; }
+.legal-body table { width: 100%; border-collapse: collapse; margin: 12px 0 18px; font-size: 15px; }
+.legal-body td, .legal-body th { padding: 10px 12px; border: 1px solid var(--border-dark); text-align: left; vertical-align: top; }
+@media (max-width: 1023px) { .legal-grid { grid-template-columns: 1fr; } .legal-toc { position: static; } .legal-body { padding: 28px 22px; } }
+

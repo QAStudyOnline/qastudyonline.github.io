@@ -1,0 +1,20 @@
+{{- with .Params.personas }}
+<section class="section section-dark" id="for-whom">
+  <div class="container">
+    <header class="section-head reveal">
+      <p class="eyebrow eyebrow-dark">{{ partial "course/num.html" $ }}. {{ i18n "course_for_whom" }}</p>
+      <h2 class="h2">{{ i18n (printf "num_f_%d" (len .)) }} {{ i18n "course_personas_title" | safeHTML }} <span class="accent">{{ $.Title }}</span></h2>
+    </header>
+    <div class="personas reveal">
+      {{- range . }}
+      <article class="persona glass">
+        <p class="persona-role">{{ .role }}</p>
+        <blockquote class="situation situation-dark">{{ .quote }}</blockquote>
+        <p class="mini-label mini-label-dark">{{ i18n "course_will_learn" }}</p>
+        <p class="body body-dark">{{ .outcome }}</p>
+      </article>
+      {{- end }}
+    </div>
+  </div>
+</section>
+{{- end }}

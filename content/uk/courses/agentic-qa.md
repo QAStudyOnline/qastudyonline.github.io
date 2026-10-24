@@ -1,128 +1,295 @@
 ---
-title: "Agentic QA"
-description: "Практичний курс з тестування AI-агентних систем для QA, SDET і Tech Lead інженерів. 21 заняття від основ до production-ready CI/CD pipeline."
-date: 2026-06-11
-draft: false
-layout: "landing"
-
-# Картка в списку курсів
-level: "Middle-Lead"
-category: "AI тестування"
-instructor: "Єгор Максимчук"
-duration: "11–14 тижнів"
-lessons: 21
-
-# Посилання
-registration_url: "https://forms.gle/Lz1ZfjUBWzrK8sQn7"
-program_url: "/agentic-qa-program/"
-doc_label: "Програма курсу повністю"
-
-# Hero
-eyebrow: "Курс"
-subtitle: "Навчись тестувати AI-агентів, RAG-системи і agentic pipelines — від першого eval до production CI/CD."
-cta_label: "Подати заявку →"
-meta_pills:
-  - "21 заняття"
-  - "11–14 тижнів"
-  - "Middle-Lead"
-
-audience:
-  heading: "Для кого цей курс"
-  cards:
-    - role: "QA Engineer Middle+"
-      jtbd: "Проєкт перейшов на LLM — не знаю як тестувати по-нормальному"
-    - role: "Automation QA / SDET"
-      jtbd: "Хочу конкретний технічний стек для тестування AI, а не «якось протестувати»"
-    - role: "Tech Lead / QA Lead"
-      jtbd: "Боюся production-інцидентів і не знаю що запитати у команди"
-
-competencies:
-  heading: "Чого ти навчишся"
+aliases:
+- /agentic-qa-program/
+card:
+  anchor: program-agentic-qa
+  create:
+  - AI Test Strategy
+  - Eval Suite
+  - AI Test Framework
+  event: program_agentic_click
+  master:
+  - Evals та LLM-as-a-Judge
+  - Тестування RAG і AI-агентів
+  - Red teaming за OWASP LLM Top 10
+  - Quality gates у CI/CD
+  meta:
+  - label: Рівень
+    value: Middle–Lead
+  - label: Занять
+    value: '21'
+  - label: Тривалість
+    value: 11–14 тижнів
+  quote: «У продукті з’явився AI, і я не знаю, як гарантувати його якість»
+cohort:
+  date: 10 листопада 2026
+  date_iso: '2026-11-10'
+  details:
+  - 21 заняття
+  - 11–14 тижнів
+  - група до 12 осіб
+  - онлайн
+  note: Розклад занять узгоджуємо з групою перед стартом.
+  seats_taken: 5
+  seats_total: 12
+description: 'Agentic QA: 6 модулів, 21 заняття. Навчіться тестувати LLM, RAG і AI-агентів — від risk strategy та evals до quality gates у CI/CD. Малі групи, персональний review, production-ready проєкт у GitHub.'
+direction: AI Quality
+enrollment:
+  label: Набір відкрито · старт 10.11.2026
+  state: open
+faq:
+- a: 'Так, на рівні читання і написання простого коду: Python або JavaScript. Ви будете писати evals, assertions і збирати framework — але з підтримкою Claude Code чи Copilot і з review від викладача.'
+  q: Чи потрібно вміти програмувати?
+- a: Подивитеся запис і здасте домашнє завдання у своєму темпі. Review отримаєте так само, як і решта групи.
+  q: Що буде, якщо я пропущу заняття?
+- a: Одне заняття плюс домашнє завдання. Орієнтуйтеся на 4–6 годин на тиждень разом із практикою.
+  q: Скільки часу потрібно щотижня?
+- a: Знадобиться доступ до однієї з cloud-моделей для практики. Окремий модуль присвячений локальним моделям — навчимо зменшувати залежність від дорогих запитів.
+  q: Чи потрібен доступ до платних AI-моделей?
+- a: Так. Надамо рахунок і документи для оплати юридичною особою — напишіть про це у заявці.
+  q: Чи може за навчання заплатити компанія?
+- a: Ми зв’яжемося протягом робочого дня, коротко обговоримо ваш рівень і задачі та підтвердимо місце в групі.
+  q: Що буде після заявки?
+form:
+  subject: QAStudy.online — заявка на Agentic QA
+format:
+- desc: 8–12 інженерів. Викладач бачить код і рішення кожного.
+  title: Онлайн, у малій групі
+- desc: Домашнє завдання після кожної зустрічі — і воно стає частиною вашого фінального проєкту.
+  title: Практика на кожному занятті
+- desc: 'Кожне домашнє завдання отримує розбір від викладача: чому працює, де зламається, як зробити краще.'
+  title: Персональний review
+- desc: Пропустили зустріч — подивитеся запис і здасте завдання у своєму темпі.
+  title: Записи занять
+instructor_line: Автор внутрішнього курсу EPAM «AI-Infused Application Testing». Розробляє AI-агентів для SDLC і будує QA-архітектуру для AI-продуктів у US fintech.
+lessons_total: 21
+level_path:
+- Middle
+- Senior
+- Lead
+meta:
+- label: Занять
+  value: '21'
+- label: Тривалість
+  value: 11–14 тижнів
+- label: Рівень
+  value: Middle–Lead
+- label: Група
+  value: 8–12 осіб
+modules:
+- artifacts:
+  - Risk Map
+  - Coverage Matrix
+  - AI Test Strategy
+  color: blue
+  lessons:
+  - desc: Розберетеся, чому звичайного pass/fail недостатньо для LLM та AI-агентів. Навчитеся бачити основні типи помилок і розуміти, що саме потрібно перевіряти.
+    'n': '1'
+    title: Що змінюється для QA, коли в продукті зʼявляється AI
+  - desc: Навчитеся розкладати AI-систему на компоненти й ризики, визначати пріоритети та будувати coverage під реальний продукт.
+    'n': '2'
+    title: Як побудувати test strategy для AI-продукту
+  lessons_count: 2 заняття
+  milestone: Ви вмієте розібрати AI-систему як QA
+  num: 1
+  output: Risk Map + Coverage Matrix + AI Test Strategy
+  title: Як тестувати AI-продукт системно
+- artifacts:
+  - Golden Dataset
+  - LLM Eval Suite
+  - RAG Evaluation
+  - Model Benchmark
+  color: green
+  lessons:
+  - desc: Навчитеся перевіряти, як зміни prompt та context впливають на результат, і знаходити проблеми до production.
+    'n': '3'
+    title: Як тестувати prompts і context
+  - desc: Розберетеся, що робити, коли немає одного правильного expected result, і які метрики потрібні саме вашому сценарію.
+    'n': '4'
+    title: Як оцінювати якість AI-відповідей
+  - desc: Створите повторювані eval-перевірки та навчитеся знаходити regression після зміни prompt або model.
+    'n': '5'
+    title: Як автоматизувати перевірку AI-відповідей
+  - desc: 'Навчитеся визначати, де саме виникла проблема: у retrieval, context чи фінальній генерації відповіді.'
+    'n': '6'
+    title: Як тестувати RAG
+  - desc: Знаходитимете втрату контексту, суперечності та деградацію поведінки в multi-step сценаріях.
+    'n': '7'
+    title: Як тестувати довгі діалоги
+  - desc: Зможете порівнювати моделі за якістю, стабільністю, latency та cost і аргументовано обирати варіант для продукту.
+    'n': '8'
+    title: Як порівнювати різні моделі
+  - desc: Дізнаєтеся, коли локальні моделі підходять для QA-задач і як зменшити залежність від дорогих cloud-запитів.
+    'n': '9'
+    title: Як використовувати локальні моделі для evals
+  lessons_count: 7 занять
+  milestone: Ви вмієте вимірювати якість LLM і RAG
+  num: 2
+  output: Golden Dataset + LLM Eval Suite + RAG Evaluation + Model Benchmark
+  title: Як вимірювати якість LLM і RAG
+- artifacts:
+  - Agent Test Suite
+  - Security Report
+  - Observability Setup
+  color: orange
+  lessons:
+  - desc: Навчитеся автоматично оцінювати AI-відповіді за допомогою іншої моделі та розуміти межі надійності такого підходу.
+    'n': '10'
+    title: Як використовувати LLM-as-a-Judge
+  - desc: Проведете базовий red teaming і навчитеся знаходити prompt injection, витік даних та інші security-ризики.
+    'n': '11'
+    title: Як перевіряти AI на небезпечні сценарії
+  - desc: Перевірятимете, який tool вибрав агент, з якими параметрами і чи правильно він побудував послідовність дій.
+    'n': '12'
+    title: Як тестувати tool calls
+  - desc: Виявлятимете зайві кроки, loops, дорогі запити, latency-проблеми та неправильні tool calls.
+    'n': '13'
+    title: Як аналізувати поведінку агента через traces
+  - desc: Розберете практичні сценарії для test generation, edge-case discovery та code review і навчитеся перевіряти якість того, що згенерував AI.
+    'n': '14'
+    title: 'Як контролювати якість AI-генерацій: tests, edge cases, review'
+  lessons_count: 5 занять
+  milestone: Ви вмієте знаходити помилки AI-агентів
+  num: 3
+  output: Agent Test Suite + Security Report + Observability Setup
+  title: Як тестувати AI-агентів
+- artifacts:
+  - Reusable AI Test Framework
+  - CI/CD Quality Gates
+  color: red
+  lessons:
+  - desc: Обʼєднаєте datasets, evals, assertions, reports та роботу з різними моделями в одну підтримувану систему.
+    'n': '15'
+    title: Як зібрати власний AI test framework
+  - desc: Запускатимете evals у pipeline, задаватимете thresholds і блокуватимете зміни, якщо якість AI-функціональності погіршилась.
+    'n': '16'
+    title: Як додати AI quality checks у CI/CD
+  lessons_count: 2 заняття
+  milestone: Ви вмієте автоматизувати AI-тестування
+  num: 4
+  output: Reusable AI Test Framework + CI/CD Quality Gates
+  title: Як автоматизувати AI-тестування
+- artifacts:
+  - Code Review
+  - Test Generation
+  - Documentation
+  color: blue
+  lessons:
+  - desc: Побудуєте workflow, у якому AI-агент допомагає аналізувати код, review PR та запускати додаткові QA-перевірки.
+    'n': '17'
+    title: Agentic CI/CD
+  - desc: Навчитеся використовувати AI для генерації й оновлення тестів і документації через контрольований review-процес.
+    'n': '18'
+    title: Автоматичне оновлення тестів і документації
+  lessons_count: 2 заняття
+  milestone: Ви вмієте вбудувати AI-агентів у QA workflow
+  num: 5
+  output: Agentic QA Workflow для Code Review, Test Generation і Documentation
+  title: Як використовувати AI-агентів у QA workflow
+- artifacts:
+  - Production-ready Project у GitHub
+  color: violet
+  lessons:
+  - desc: Отримаєте review архітектури, test strategy, coverage, evals, framework та CI/CD перед фінальним захистом.
+    'n': '19'
+    title: Project Review
+  - desc: 'Покажете повний pipeline у роботі та обґрунтуєте свої engineering decisions: coverage, thresholds, quality gates і залишкові ризики.'
+    'n': 20–21
+    title: Захист проєкту
+  lessons_count: 3 заняття
+  milestone: Ви можете показати це роботодавцю
+  num: 6
+  output: Production-ready Agentic QA Project у GitHub
+  title: Фінальний Agentic QA Project
+personas:
+- outcome: Побудуєте test strategy для AI-функціональності та навчитеся вимірювати якість там, де немає одного правильного результату.
+  quote: «Проєкт перейшов на LLM, і я не знаю, як тестувати це по-нормальному»
+  role: QA Engineer, Middle+
+- outcome: 'Зберете власний AI test framework: datasets, evals, LLM-as-a-Judge, assertions, звіти — і вбудуєте його в CI/CD.'
+  quote: «Хочу конкретний технічний стек для тестування AI, а не „якось протестувати“»
+  role: Automation QA / SDET
+- outcome: Отримаєте risk map, coverage matrix і quality gates — інструменти, щоб керувати якістю AI-продукту, а не сподіватися на неї.
+  quote: «Боюся production-інцидентів з AI і не знаю, що запитати у команди»
+  role: Tech Lead / QA Lead
+price:
+  amount: 40 000 грн
+  company:
+    text: Багато учасників навчаються за рахунок роботодавця. Надамо рахунок, договір і закриваючі документи — просто вкажіть це у заявці.
+    title: Оплата від компанії
+  currency: UAH
+  included:
+  - 'Усі матеріали курсу: презентації, код прикладів, лекційні нотатки'
+  - Персональний feedback на кожне домашнє завдання
+  - Review фінального проєкту з викладачем
+  - Доступ до записів занять
+  - Власний production-ready проєкт у GitHub
+  note: 'Повна вартість програми: 21 заняття, 11–14 тижнів. Матеріали, записи та review вже всередині.'
+  value: 40000
+program_intro: 'Курс побудований навколо реальних задач QA в AI-продуктах: від risk strategy та evals до автоматизованих quality gates у CI/CD.'
+project:
+  intro: Ви самостійно будуєте AI-застосунок і повний цикл його тестування. Усе — у вашому GitHub, готове показати на інтерв’ю або принести у свою команду.
   items:
-    - label: "Risk mapping"
-      text: "Декомпозувати агентну систему і будувати risk map як основу тест-стратегії."
-    - label: "Eval automation"
-      text: "Писати eval-suite з DeepEval або Promptfoo замість ручних перевірок."
-    - label: "RAG & dialog testing"
-      text: "Вимірювати якість RAG через RAGAS і знаходити context failure."
-    - label: "LLM-as-a-Judge"
-      text: "Реалізувати і калібрувати judge-оцінку, підключити до CI."
-    - label: "Security & red teaming"
-      text: "Проводити red team сесію за OWASP LLM Top 10."
-    - label: "CI/CD quality gates"
-      text: "Вбудувати eval gates і agentic workflows у GitHub Actions pipeline."
-
-curriculum:
-  heading: "Програма курсу"
-  blocks:
-    - title: "Блок 1. Фундамент"
-      meta: "заняття 1–2 · базовий рівень"
-      open: true
-      lessons:
-        - "Заняття 1. AI-системи як об'єкт тестування: чому все інакше"
-        - "Заняття 2. Архітектура агентних систем очима QA"
-    - title: "Блок 2. Тестування LLM"
-      meta: "заняття 3–9 · середній рівень"
-      lessons:
-        - "Заняття 3. Промпт та контекст інжиніринг для QA"
-        - "Заняття 4. Метрики в тестуванні ШІ"
-        - "Заняття 5. Тестування промптів: від ручних перевірок до автоматизації"
-        - "Заняття 6. Тестування RAG: hallucination, faithfulness, relevancy"
-        - "Заняття 7. Тестування багатокрокових діалогів і context management"
-        - "Заняття 8. Тестування різних моделей й приклади у GitHub Models"
-        - "Заняття 9. Локальні моделі для тестування: Ollama і Lemonade AI Runtime"
-    - title: "Блок 3. Agentic Testing"
-      meta: "заняття 10–14 · середній рівень"
-      lessons:
-        - "Заняття 10. LLM as a Judge: імплементація і підводні камені (Deep-Eval + Spring AI Test)"
-        - "Заняття 11. Security testing: Prompt Injection і Red Teaming"
-        - "Заняття 12. Tool call testing і MCP"
-        - "Заняття 13. Observability і cost testing"
-        - "Заняття 14. AI-assisted Test Case Generation і Code Review"
-    - title: "Блок 4. Автоматизація і фреймворки"
-      meta: "заняття 15–16 · просунутий"
-      lessons:
-        - "Заняття 15. Побудова фреймворку для автоматизованого тестування ШІ"
-        - "Заняття 16. Eval pipeline у CI/CD: Quality Gates з DeepEval і LLM-as-a-Judge"
-    - title: "Блок 5. Системний рівень і Agentic CI/CD"
-      meta: "заняття 17–18 · просунутий"
-      lessons:
-        - "Заняття 17. Agentic CI/CD: AI-агенти як частина пайплайну розробки"
-        - "Заняття 18. Documentation і Test Generation як частина agentic workflow"
-    - title: "Блок 6. Фінальний проєкт"
-      meta: "заняття 19–21 · синтез"
-      lessons:
-        - "Заняття 19. Підготовка фінального проєкту: консультації і peer review"
-        - "Заняття 20–21. Захист: демо живого CI/CD pipeline + запитання від групи"
-
-final_project:
-  heading: "Фінальний проєкт: AI-Powered Application — повний цикл"
-  intro: "Студент самостійно будує AI-додаток і здає:"
+  - desc: AI-застосунок, 300–800 рядків, з Claude Code або Copilot
+    name: ai-application/
+  - desc: Тест-стратегія на 2–4 сторінки з go/no-go критеріями
+    name: TEST_STRATEGY.md
+  - desc: Risk-based coverage matrix
+    name: coverage-matrix.xlsx
+  - desc: LLM та RAG evals на golden dataset
+    name: evals/llm/ · evals/rag/
+  - desc: Agent tests, tool-call checks, red teaming
+    name: tests/agent/ · tests/security/
+  - desc: AI test framework з LLM-as-a-Judge і звітом
+    name: framework/
+  - desc: 'CI/CD pipeline: quality gates + AI code review + реліз'
+    name: .github/workflows/
+  - desc: Agentic QA workflow для review, test generation, документації
+    name: agentic-workflow/
+  - desc: 'Документація і чесний опис: де AI допоміг, а де заважав'
+    name: README.md
+  title: Production-ready Agentic QA Project
+promise: 'Навчіться тестувати системи без одного правильного expected result: LLM, RAG та AI-агенти — від risk strategy до quality gates у production CI/CD.'
+registration_url: https://forms.gle/Lz1ZfjUBWzrK8sQn7
+related:
+- k6-performance-testing
+- scale-quality
+seo_title: Agentic QA — курс з тестування LLM, RAG та AI-агентів | QAStudy.online
+skills:
+- Будувати test strategy для AI-продуктів
+- Тестувати системи без одного expected result
+- Автоматизувати LLM та RAG evals
+- Тестувати AI-агентів і tool calls
+- Знаходити AI security-ризики
+- Збирати власний AI test framework
+- Вбудовувати quality gates у CI/CD
+- Використовувати AI-агентів у QA workflow
+stack:
+- group: Evals
   items:
-    - "AI-додаток (300–800 рядків, з допомогою Claude Code або Copilot)"
-    - "Тест-стратегія (2–4 сторінки, go/no-go критерії)"
-    - "Risk-based test coverage matrix"
-    - "Тести на всіх рівнях: eval · RAG · LLM-judge · security · E2E"
-    - "AI test framework з LLM-as-a-Judge і звітом"
-    - "CI/CD pipeline: quality gates + AI code review + автоматичний реліз"
-    - "Документація: README + опис де AI-асистент допоміг і де заважав"
-
-pricing:
-  heading: "Вартість"
-  amount: "40 000 грн"
-  amount_label: "за весь курс"
-  per_session: "≈ 1 900 грн / заняття"
-  meta: "21 заняття · 11–14 тижнів"
-  includes_label: "Що входить:"
-  includes:
-    - "Всі матеріали курсу: презентації, код прикладів, лекційні нотатки"
-    - "Фідбек на кожне домашнє завдання"
-    - "Ревʼю фінального проєкту з лектором"
-    - "Доступ до записів занять"
-    - "Виконаний власний проект: AI-agent з CI/CD та Тест Стратегією і Agentic workflow на базі Claude Code або GitHub Copilot"
-  group_headline: "Група 8–12 людей"
-  group_text: "Малі групи — персональний фідбек на кожне домашнє завдання, а не формальна перевірка «пройшов / не пройшов»."
-
-bottom_cta:
-  text: "Залишити контакт — розкажу деталі про старт, формат і вартість."
+  - DeepEval
+  - Promptfoo
+  - RAGAS
+  - LLM-as-a-Judge
+- group: Агенти та інструменти
+  items:
+  - MCP
+  - Tool calls
+  - Traces
+- group: Моделі
+  items:
+  - Ollama
+  - Cloud LLM
+  - Model Benchmark
+- group: Security
+  items:
+  - OWASP LLM Top 10
+  - Red teaming
+- group: CI/CD та AI-асистенти
+  items:
+  - GitHub Actions
+  - Claude Code
+  - GitHub Copilot
+title: Agentic QA
+transition: Middle+ QA → AI Quality Engineer
+weight: 1
 ---

@@ -1,0 +1,66 @@
+/* ---------- Editorial 3-column grid with SUBGRID row alignment ---------- */
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); column-gap: 0; }
+.grid-3 > * { display: grid; grid-template-rows: subgrid; row-gap: 0; padding: 0 40px; border-left: 1px solid var(--border-light); align-content: start; }
+.grid-3 > *:first-child { padding-left: 0; border-left: 0; }
+.grid-3 > *:last-child { padding-right: 0; }
+.section-dark .grid-3 > * { border-color: var(--border-dark); }
+.program-list > * { grid-row: span 7; }
+
+.col-meta { display: flex; align-items: center; gap: 16px; margin-bottom: 32px; }
+.col-num { font-size: 22px; font-weight: 500; color: var(--text-secondary); letter-spacing: -0.01em; }
+.col-num-dark { color: var(--text-secondary-dark); }
+.col-meta::after { content: ""; flex: 1; height: 1px; background: var(--border-light); order: 2; }
+.section-dark .col-meta::after { background: var(--border-dark); }
+.col-meta .col-tag { order: 3; }
+.col-tag { font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 500; color: var(--text-secondary); }
+.col-tag-accent { color: var(--accent-soft); }
+
+.skill-list li { position: relative; padding-left: 22px; font-size: 16px; line-height: 1.5; color: var(--text-primary); }
+.skill-list li + li { margin-top: 8px; }
+.skill-list li::before { content: ""; position: absolute; left: 0; top: .72em; width: 10px; height: 1px; background: var(--accent); }
+.skill-list-dark li { color: var(--text-on-dark); }
+.skill-list-dark li::before { background: var(--accent-soft); }
+
+/* Directions */
+.situation { margin-bottom: 24px; padding: 14px 18px; border-left: 2px solid var(--accent); background: var(--surface-light); font-size: 16px; line-height: 1.45; font-style: italic; color: var(--text-primary); }
+.direction .h3 { margin-bottom: 16px; }
+.direction .body { margin-bottom: 24px; }
+.direction .skill-list { margin-bottom: 28px; }
+.transition { margin-bottom: 20px; padding-top: 20px; border-top: 1px solid var(--border-light); font-size: 15px; color: var(--text-secondary); align-self: end; }
+.direction .link-underline { justify-self: start; }
+
+/* Programs (merged block) */
+.situation-dark { background: rgba(255,255,255,.04); color: var(--text-on-dark); border-left-color: var(--accent-soft); }
+.program-head { margin-bottom: 20px; }
+.program .body { margin-bottom: 26px; }
+.program .sys-group { margin-bottom: 24px; }
+.program .sys-role { margin-bottom: 28px; align-self: end; }
+
+.program-status { display: inline-flex; align-items: center; gap: 10px; margin-bottom: 14px; font-size: 13px; letter-spacing: .04em; color: var(--text-secondary-dark); }
+.status-dot { width: 8px; height: 8px; border-radius: 50%; background: #3DDC97; box-shadow: 0 0 0 3px rgba(61,220,151,.18); }
+.program-title { margin-bottom: 12px; font-size: clamp(28px, 2.4vw, 36px); }
+.program-transition { font-size: 15px; color: var(--text-secondary-dark); }
+.program .body { margin-bottom: 28px; }
+.program-outputs { margin-bottom: 28px; }
+.program-outputs ul li { position: relative; padding-left: 36px; font-size: 16px; line-height: 1.6; color: var(--text-on-dark); }
+.program-outputs ul li::before { content: ""; position: absolute; left: 0; top: .8em; width: 18px; height: 1px; background: var(--text-secondary-dark); }
+.program-meta { display: flex; padding-top: 20px; border-top: 1px solid var(--border-dark); margin-bottom: 28px; align-self: end; }
+.program-meta div { padding-right: 20px; margin-right: 20px; border-right: 1px solid var(--border-dark); }
+.program-meta div:last-child { border-right: 0; margin-right: 0; padding-right: 0; }
+.program-meta dt { font-size: 13px; color: var(--text-secondary-dark); margin-bottom: 4px; }
+.program-meta dd { font-size: 17px; font-weight: 500; white-space: nowrap; }
+.program-cta { align-self: end; }
+.programs-note { margin-top: 56px; padding-top: 28px; border-top: 1px solid var(--border-dark); font-size: 17px; color: var(--text-secondary-dark); max-width: 900px; }
+.programs-note a { color: var(--accent-soft); border-bottom: 1px solid rgba(111,163,255,.5); }
+.programs-note a:hover { color: #fff; border-color: #fff; }
+
+/* Systems (05) */
+.system .h3 { margin-bottom: 14px; }
+.system .body { margin-bottom: 32px; }
+.sys-group { padding-top: 22px; border-top: 1px solid var(--border-dark); margin-bottom: 26px; }
+.sys-group .mini-label { margin-bottom: 14px; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chips li { font-size: 13px; line-height: 1; padding: 9px 12px; border: 1px solid var(--border-dark); color: var(--text-on-dark); white-space: nowrap; }
+.sys-role { margin-bottom: 0; align-self: end; padding-top: 22px; }
+.sys-role-name { font-size: 22px; font-weight: 600; color: #fff; letter-spacing: -0.01em; }
+

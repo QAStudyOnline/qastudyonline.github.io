@@ -1,0 +1,23 @@
+/* ---------- Buttons & links ---------- */
+.arrow { display: inline-block; margin-left: .45em; transition: transform var(--t-fast) var(--ease); }
+a:hover .arrow, button:hover .arrow { transform: translateX(4px); }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 48px; padding: 0 26px; border-radius: var(--radius); font-size: 16px; font-weight: 600; line-height: 1; white-space: nowrap; transition: background var(--t-fast) var(--ease), color var(--t-fast) var(--ease), border-color var(--t-fast) var(--ease); }
+.btn-primary { background: var(--accent); color: #fff; }
+.btn-primary:hover { background: var(--accent-hover); }
+.btn-primary:disabled { opacity: .6; cursor: default; }
+.btn-outline { border: 1px solid var(--accent-soft); color: var(--accent-soft); min-height: 44px; padding: 0 18px; font-size: 15px; }
+.btn-outline:hover { border-color: #fff; color: #fff; }
+.btn-lg { min-height: 56px; padding: 0 32px; font-size: 17px; }
+.btn-xl { min-height: 76px; padding: 0 40px; font-size: 22px; width: 100%; justify-content: space-between; }
+.btn-xl .ico { width: 28px; height: 28px; }
+.ico { width: 20px; height: 20px; flex: none; }
+.link-underline { display: inline-block; padding-bottom: 6px; border-bottom: 1px solid var(--accent); font-size: 17px; font-weight: 600; color: var(--accent); transition: border-color var(--t-fast), color var(--t-fast); }
+.link-underline:hover { color: var(--accent-hover); border-color: var(--accent-hover); }
+.section-dark .link-underline { color: var(--accent-soft); border-color: rgba(111,163,255,.6); }
+.section-dark .link-underline:hover { color: #fff; border-color: #fff; }
+.link-light { color: var(--text-on-dark); border-color: rgba(244,247,251,.5); font-weight: 500; }
+.link-light:hover { color: #fff; border-color: #fff; }
+.link-accent { color: var(--accent) !important; border-color: var(--accent) !important; }
+.inline-link { color: var(--accent-soft); border-bottom: 1px solid rgba(111,163,255,.5); }
+.inline-link:hover { color: #fff; border-color: #fff; }
+

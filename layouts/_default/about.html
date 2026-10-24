@@ -1,0 +1,89 @@
+{{ define "main" }}
+<section class="hero section-dark about-hero" id="hero">
+  <span class="deco deco-1" aria-hidden="true"></span>
+  <span class="deco deco-2" aria-hidden="true"></span>
+  <div class="container course-hero-grid">
+    <div class="course-hero-content glass reveal about-card">
+      <p class="eyebrow eyebrow-dark">{{ i18n "about_kicker" }}</p>
+      <h1 class="h2 about-title">{{ .Params.hero_title | safeHTML }}</h1>
+      <p class="lead lead-dark about-lead">{{ .Params.lead }}</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary btn-lg" href="{{ "/#programs" | relURL }}">{{ i18n "cta_choose_program" }} <span class="arrow" aria-hidden="true">→</span></a>
+        <a class="link-underline link-light" href="{{ "/team/yehor-maksymchuk/" | relURL }}">{{ i18n "about_instructor" }}</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-dark" id="mission">
+  <div class="container about-grid">
+    <header class="section-head reveal">
+      <p class="eyebrow eyebrow-dark">{{ .Params.mission.kicker }}</p>
+      <h2 class="h2">{{ .Params.mission.title | safeHTML }}</h2>
+    </header>
+    <div class="about-body reveal">
+      {{- range .Params.mission.text }}<p class="lead lead-dark about-p">{{ . }}</p>{{ end }}
+    </div>
+  </div>
+</section>
+
+<section class="section section-dark" id="directions">
+  <div class="container">
+    <header class="section-head reveal">
+      <p class="eyebrow eyebrow-dark">{{ .Params.directions.kicker }}</p>
+      <h2 class="h2">{{ .Params.directions.title | safeHTML }}</h2>
+    </header>
+    <div class="related-grid related-grid-3 reveal">
+      {{- range .Params.directions.items }}{{ $text := .text }}{{ $role := .role }}{{ with site.GetPage (printf "/courses/%s" .course) }}
+      <a class="related-card glass" href="{{ .RelPermalink }}">
+        <span class="related-head"><span class="col-tag col-tag-accent">{{ .Params.direction }}</span><span class="related-level">{{ $role }}</span></span>
+        <span class="related-title">{{ .Title }}</span>
+        <span class="related-desc">{{ $text }}</span>
+        <span class="link-underline">{{ i18n "view_program" }} <span class="arrow" aria-hidden="true">→</span></span>
+      </a>
+      {{- end }}{{ end }}
+    </div>
+  </div>
+</section>
+
+<section class="section section-dark" id="why">
+  <div class="container">
+    <header class="section-head reveal">
+      <p class="eyebrow eyebrow-dark">{{ .Params.why.kicker }}</p>
+      <h2 class="h2">{{ .Params.why.title | safeHTML }}</h2>
+    </header>
+    <ol class="principles principles-4 reveal">
+      {{- range $i, $w := .Params.why.items }}
+      <li class="principle"><span class="principle-num">{{ printf "%02d" (add $i 1) }}</span><h3 class="h4">{{ $w.title }}</h3><p class="body body-dark">{{ $w.text }}</p></li>
+      {{- end }}
+    </ol>
+  </div>
+</section>
+
+<section class="section section-dark" id="mentoring">
+  <div class="container about-grid">
+    <header class="section-head reveal">
+      <p class="eyebrow eyebrow-dark">{{ .Params.mentoring.kicker }}</p>
+      <h2 class="h2">{{ .Params.mentoring.title | safeHTML }}</h2>
+    </header>
+    <div class="about-body reveal">
+      <p class="lead lead-dark about-p">{{ .Params.mentoring.text }}</p>
+      <a class="btn btn-ghost-dark" href="{{ site.Params.social.telegram }}" target="_blank" rel="noopener" data-event="telegram_click">{{ i18n "about_mentoring_cta" }}</a>
+    </div>
+  </div>
+</section>
+
+<section class="section section-dark" id="contacts">
+  <div class="container about-grid">
+    <header class="section-head reveal">
+      <p class="eyebrow eyebrow-dark">{{ .Params.contacts.kicker }}</p>
+      <h2 class="h2">{{ i18n "about_contacts_title" | safeHTML }}</h2>
+    </header>
+    <ul class="contacts glass reveal">
+      {{- range .Params.contacts.items }}
+      <li><span class="contact-label">{{ .label }}</span><a href="{{ .url }}"{{ if not (hasPrefix .url "mailto:") }} target="_blank" rel="noopener"{{ end }}>{{ .value }}</a></li>
+      {{- end }}
+    </ul>
+  </div>
+</section>
+{{ end }}

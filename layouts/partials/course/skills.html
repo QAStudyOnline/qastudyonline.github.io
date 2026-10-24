@@ -1,0 +1,15 @@
+{{- with .Params.skills }}
+<section class="section section-dark" id="skills">
+  <div class="container">
+    <header class="section-head reveal">
+      <p class="eyebrow eyebrow-dark">{{ partial "course/num.html" $ }}. {{ i18n "course_result" }}</p>
+      <h2 class="h2">{{ i18n (printf "num_%d" (len .)) }} {{ i18n "course_skills_title" | safeHTML }}</h2>
+    </header>
+    <ol class="skill-tiles reveal">
+      {{- range $i, $s := . }}
+      <li class="skill-tile glass"><span class="skill-idx">{{ printf "%02d" (add $i 1) }}</span><span class="skill-text">{{ $s }}</span></li>
+      {{- end }}
+    </ol>
+  </div>
+</section>
+{{- end }}

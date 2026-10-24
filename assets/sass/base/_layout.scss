@@ -1,0 +1,6 @@
+/* ---------- Layout ---------- */
+.container { width: 100%; max-width: calc(var(--container) + var(--gutter) * 2); margin: 0 auto; padding: 0 var(--gutter); }
+.section { padding: var(--section-y) 0; }
+.section-dark { background: var(--bg-dark); color: var(--text-on-dark); }
+.section-light { background: var(--bg-light); color: var(--text-primary); }
+

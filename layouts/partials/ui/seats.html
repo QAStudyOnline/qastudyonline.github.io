@@ -1,0 +1,13 @@
+{{- /* Seat row in course hero. Context: course page. Rendered only when enrollment is open and seat counts are known. */ -}}
+{{- $c := .Params.cohort -}}
+{{- if and $c (eq .Params.enrollment.state "open") $c.seats_total (isset $c "seats_taken") }}
+{{- $total := int $c.seats_total -}}
+{{- $taken := int $c.seats_taken -}}
+<div class="seats" role="group" aria-label="{{ i18n "seats_aria" }}">
+  <div class="seats-row">
+    {{- range seq $total }}<span class="seat{{ if le . $taken }} seat-taken{{ end }}" aria-hidden="true">{{ partial "ui/icon.html" (dict "name" "seat") }}</span>{{ end -}}
+    {{ partial "ui/cta.html" (dict "page" . "place" "seats" "class" "seat seat-add" "label" "+" "aria" (i18n "seats_join_aria")) }}
+  </div>
+  <p class="seats-text"><strong>{{ $taken }} із {{ $total }}</strong> {{ i18n "seats_text" }} {{ sub $total $taken }}</p>
+</div>
+{{- end }}

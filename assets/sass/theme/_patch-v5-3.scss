@@ -1,0 +1,26 @@
+/* ---------- v5.3 ---------- */
+/* FAQ help row under the questions */
+.faq-help { grid-column: 1 / -1; max-width: none; margin-top: 8px; padding: 28px 32px; border-top: 0; display: flex; align-items: center; justify-content: space-between; gap: 32px; }
+.faq-help .body { margin: 6px 0 0; }
+.faq-help .btn { flex: none; margin: 10px; }
+.faq-grid { row-gap: 32px; }
+
+/* Learning: staggered scroll-in of each step */
+.steps .step { opacity: 0; transform: translateY(36px); transition: opacity 600ms var(--ease), transform 700ms var(--ease); transition-delay: calc(var(--i, 0) * 160ms); }
+.steps.is-visible .step { opacity: 1; transform: none; }
+.steps .step .h3::after { opacity: 0; transform: translateX(-8px); transition: opacity 400ms var(--ease), transform 400ms var(--ease); transition-delay: calc(var(--i, 0) * 160ms + 500ms); }
+.steps.is-visible .step .h3::after { opacity: 1; transform: none; }
+.steps .step-num { opacity: 0; transition: opacity 500ms var(--ease); transition-delay: calc(var(--i, 0) * 160ms + 200ms); }
+.steps.is-visible .step-num { opacity: 1; }
+.learn-facts li { opacity: 0; transform: translateY(20px); transition: opacity 600ms var(--ease), transform 600ms var(--ease); }
+.learn-facts li:nth-child(2) { transition-delay: 120ms; }
+.learn-facts li:nth-child(3) { transition-delay: 240ms; }
+.learn-facts.is-visible li { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  .steps .step, .steps .step-num, .steps .step .h3::after, .learn-facts li { opacity: 1; transform: none; transition: none; }
+}
+@media (max-width: 767px) {
+  .faq-help { flex-direction: column; align-items: stretch; padding: 22px 18px; }
+  .faq-help .btn { margin: 8px 0 0; }
+}
+

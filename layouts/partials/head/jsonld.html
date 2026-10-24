@@ -1,0 +1,28 @@
+{{- /* Schema.org: Organization (home), Course (course pages), Person (instructor). */ -}}
+{{- $d := false -}}
+{{- if .IsHome -}}
+  {{- $same := slice site.Params.social.youtube site.Params.social.telegram site.Params.social.linkedin site.Params.social.github -}}
+  {{- $founder := site.GetPage "/team/yehor-maksymchuk" -}}
+  {{- $d = dict "@context" "https://schema.org" "@type" "Organization" "name" site.Title "url" site.BaseURL
+        "logo" (absURL "favicon.svg")
+        "founder" (dict "@type" "Person" "name" "Yehor Maksymchuk" "url" $founder.Permalink)
+        "sameAs" $same -}}
+{{- else if and (eq .Section "courses") .IsPage -}}
+  {{- $d = dict "@context" "https://schema.org" "@type" "Course" "name" .Title "description" .Description
+        "provider" (dict "@type" "Organization" "name" site.Title "url" site.BaseURL) "inLanguage" "uk" -}}
+  {{- with .Params.price }}{{ if .value }}
+    {{- $d = merge $d (dict "offers" (dict "@type" "Offer" "price" (string .value) "priceCurrency" (.currency | default "UAH") "url" $.Permalink)) -}}
+  {{- end }}{{ end -}}
+  {{- with .Params.cohort }}
+    {{- $d = merge $d (dict "hasCourseInstance" (dict "@type" "CourseInstance" "courseMode" "online" "startDate" .date_iso "instructor" (dict "@type" "Person" "name" "Yehor Maksymchuk"))) -}}
+  {{- end -}}
+{{- else if and (eq .Section "team") .IsPage -}}
+  {{- $same := slice -}}
+  {{- range .Params.social }}{{ $same = $same | append .url }}{{ end -}}
+  {{- $d = dict "@context" "https://schema.org" "@type" "Person" "name" .Params.name_latin "alternateName" .Params.name
+        "jobTitle" "QA & Performance Architect" "worksFor" (dict "@type" "Organization" "name" site.Title)
+        "url" .Permalink "sameAs" $same -}}
+{{- end -}}
+{{- with $d }}
+<script type="application/ld+json">{{ . | jsonify (dict "indent" "  ") | safeJS }}</script>
+{{- end }}

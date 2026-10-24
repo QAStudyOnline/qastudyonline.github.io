@@ -1,0 +1,36 @@
+{{- with .Params.learning }}
+<section class="section section-dark learning" id="learning">
+  <div class="container">
+    <header class="section-head reveal">
+      <p class="eyebrow eyebrow-dark">{{ .eyebrow }}</p>
+      <h2 class="h2">{{ .title | safeHTML }}</h2>
+    </header>
+
+    <ol class="steps reveal">
+      {{- range $i, $s := .steps }}
+      {{- $num := printf "%02d" (add $i 1) }}
+      <li class="step" style="--i:{{ $i }}" tabindex="0" aria-label="{{ i18n "step_label" }} {{ $num }}. {{ i18n "step_aria" }}">
+        <div class="step-inner"><div class="step-card">
+          <div class="step-face step-front">
+            <span class="step-num">{{ $num }}</span>
+            <h3 class="h3">{{ $s.title }}</h3>
+            <p class="body body-dark">{{ $s.summary }}</p>
+            <span class="step-hint" aria-hidden="true">{{ i18n "step_more" }}</span>
+          </div>
+          <div class="step-face step-back">
+            <span class="step-num">{{ $num }}</span>
+            <p class="step-detail">{{ $s.detail }}</p>
+          </div>
+        </div></div>
+      </li>
+      {{- end }}
+    </ol>
+
+    <ul class="learn-facts reveal">
+      {{- range .facts }}
+      <li><strong>{{ .title }}</strong><span>{{ .text }}</span></li>
+      {{- end }}
+    </ul>
+  </div>
+</section>
+{{- end }}

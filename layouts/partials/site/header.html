@@ -1,0 +1,40 @@
+{{- /* Header. Nav menu is picked by page front matter `nav` (home | course | team | about | legal), default "home". */ -}}
+{{- $nav := .Params.nav | default "home" -}}
+{{- $isCourse := and (eq .Section "courses") .IsPage -}}
+<header class="site-header" id="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="{{ "/" | relURL }}" aria-label="{{ i18n "brand_home_aria" }}">
+      <span class="brand-name">QAStudy<span class="brand-accent">.online</span></span>
+      <span class="brand-sub">{{ site.Params.brand_sub }}</span>
+    </a>
+
+    <nav class="site-nav" id="site-nav" aria-label="{{ i18n "nav_main_aria" }}">
+      <ul class="nav-list">
+        {{- if $isCourse }}
+        {{- range slice (dict "id" "program" "ok" .Params.modules) (dict "id" "project" "ok" .Params.project) (dict "id" "format" "ok" .Params.format) (dict "id" "price" "ok" .Params.price) (dict "id" "faq" "ok" .Params.faq) }}
+        {{- if .ok }}
+        <li><a href="#{{ .id }}">{{ i18n (printf "nav_course_%s" .id) }}</a></li>
+        {{- end }}
+        {{- end }}
+        {{- else }}
+        {{- range index site.Menus (printf "nav_%s" $nav) }}
+        <li><a href="{{ if hasPrefix .URL "#" }}{{ .URL }}{{ else }}{{ .URL | relURL }}{{ end }}">{{ .Name }}</a></li>
+        {{- end }}
+        {{- end }}
+      </ul>
+      {{- if $isCourse }}
+      {{ partial "ui/cta.html" (dict "page" . "place" "header" "class" "btn btn-outline header-cta" "arrow" true) }}
+      {{- else if eq $nav "team" }}
+      <a class="btn btn-outline header-cta" href="#courses" data-event="team_programs_click">{{ i18n "cta_choose_program" }} <span class="arrow" aria-hidden="true">→</span></a>
+      {{- else if .IsHome }}
+      <a class="btn btn-outline header-cta" href="#programs" data-event="header_programs_click">{{ i18n "cta_choose_program" }} <span class="arrow" aria-hidden="true">→</span></a>
+      {{- else }}
+      <a class="btn btn-outline header-cta" href="{{ "/#programs" | relURL }}">{{ i18n "cta_choose_program" }} <span class="arrow" aria-hidden="true">→</span></a>
+      {{- end }}
+    </nav>
+
+    <button class="burger" id="burger" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="{{ i18n "nav_open" }}" data-label-open="{{ i18n "nav_open" }}" data-label-close="{{ i18n "nav_close" }}">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>

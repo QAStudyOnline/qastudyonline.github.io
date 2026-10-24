@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>QAStudy.online — Engineering School для QA: AI Quality, Performance, QA Architecture</title>
+  <meta name="description" content="QAStudy.online — інженерна школа для QA, які вже працюють у професії. Три програми: Agentic QA, Performance Testing with k6, Scale Quality. Малі групи, персональний review від практика, робочий артефакт на виході.">
+  <link rel="canonical" href="https://qastudy.online/">
+  <meta name="theme-color" content="#07061A">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="QAStudy.online">
+  <meta property="og:locale" content="uk_UA">
+  <meta property="og:url" content="https://qastudy.online/">
+  <meta property="og:title" content="Твій Next Level у QA Engineering — QAStudy.online">
+  <meta property="og:description" content="Інженерна школа для Middle · Senior · Lead · Architect QA. AI Quality, Performance Engineering, QA Architecture.">
+  <meta property="og:image" content="https://qastudy.online/assets/img/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Твій Next Level у QA Engineering — QAStudy.online">
+  <meta name="twitter:description" content="Інженерна школа для Middle · Senior · Lead · Architect QA. AI Quality, Performance Engineering, QA Architecture.">
+  <meta name="twitter:image" content="https://qastudy.online/assets/img/og-image.jpg">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "QAStudy.online",
+    "url": "https://qastudy.online/",
+    "logo": "https://qastudy.online/assets/img/logo.svg",
+    "founder": { "@type": "Person", "name": "Yehor Maksymchuk", "url": "https://qastudy.online/team/yehor-maksymchuk/" },
+    "sameAs": [
+      "https://www.youtube.com/@qastudy.online",
+      "https://t.me/qastudy",
+      "https://www.linkedin.com/in/yehor-maksymchuk-271039240/",
+      "https://github.com/QAStudyOnline"
+    ]
+  }
+  </script>
+
+  <!-- ANALYTICS: вставте GA4 / GTM snippet тут. Події пушаться у window.dataLayer (див. assets/js/main.js) -->
+  <script>window.dataLayer = window.dataLayer || [];</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Перейти до контенту</a>
+
+<header class="site-header" id="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="./" aria-label="QAStudy.online — на головну">
+      <span class="brand-name">QAStudy<span class="brand-accent">.online</span></span>
+      <span class="brand-sub">Engineering School</span>
+    </a>
+
+    <nav class="site-nav" id="site-nav" aria-label="Головна навігація">
+      <ul class="nav-list">
+        <li><a href="#programs">Програми</a></li>
+        <li><a href="#why-qastudy">Про школу</a></li>
+        <li><a href="#learning">Як навчаємо</a></li>
+        <li><a href="#founder">Викладач</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+      <a class="btn btn-outline header-cta" href="#programs" data-event="header_programs_click">Обрати програму <span class="arrow" aria-hidden="true">→</span></a>
+    </nav>
+
+    <button class="burger" id="burger" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Відкрити меню">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- 01 HERO -->
+  <section class="hero section-dark" id="hero">
+    <span class="deco deco-1" aria-hidden="true"></span>
+    <span class="deco deco-2" aria-hidden="true"></span>
+    <div class="container hero-grid">
+      <div class="hero-content glass reveal">
+        <span class="stamp" aria-label="Для QA-фахівців із досвідом">Для QA-фахівців <br>із досвідом</span>
+        <ol class="level-path" aria-label="Рівні, з якими працюємо"><li>Middle</li><li>Senior</li><li>Lead</li><li>Architect</li></ol>
+        <h1 class="hero-title">Твій Next Level <br><span class="accent">у QA Engineering</span></h1>
+        <p class="lead">Інженерна школа для QA, які переросли свою роль.</p>
+        <ul class="pills"><li><a href="#program-agentic-qa" data-event="hero_pill_click">AI Quality</a></li><li><a href="#program-k6" data-event="hero_pill_click">Performance Engineering</a></li><li><a href="#program-scale-quality" data-event="hero_pill_click">QA Architecture</a></li></ul>
+        <div class="hero-actions">
+          <a class="btn btn-primary btn-lg" href="#programs" data-event="hero_direction_click">Обрати програму <span class="arrow" aria-hidden="true">→</span></a>
+          <a class="link-underline link-light" href="about/">Детальніше про QAStudy.online</a>
+        </div>
+        <ul class="proof-line">
+          <li>Малі групи</li>
+          <li>Особистий review від архітектора</li>
+          <li>Готовий артефакт у портфоліо</li>
+        </ul>
+      </div>
+      <a class="scroll-cue" href="#programs" data-event="hero_direction_click">
+        <span class="scroll-cue-text">Три задачі. Одна з них — ваша.</span>
+        <span class="scroll-cue-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 4v14M6 12l6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </a>
+    </div>
+  </section>
+
+  <!-- 02 PROGRAMS (напрями + програми + компетенції) -->
+  <section class="section section-light programs" id="programs">
+    <div class="container">
+      <header class="section-head reveal">
+        <p class="eyebrow">02. Програми</p>
+        <h2 class="h2">Впізнайте свою задачу — <br>і свій <span class="accent">наступний крок</span></h2>
+        <p class="section-support">Три спеціалізації — три різні кар’єрні траєкторії. Знайдіть репліку, яка звучить як ваша.</p>
+      </header>
+
+      <div class="grid-3 program-list reveal">
+        <article class="program" id="program-agentic-qa" data-href="courses/agentic-qa/">
+          <div class="col-meta"><span class="col-num">01</span><span class="col-tag">AI Quality</span></div>
+          <blockquote class="situation">«У продукті з’явився AI, і я не знаю, як гарантувати його якість»</blockquote>
+          <div class="program-head">
+            <!-- Статус набору: підтвердити/оновити дати перед деплоєм -->
+            <p class="program-status"><span class="status-dot" aria-hidden="true"></span>Набір відкрито · старт 10.11.2026</p>
+            <h3 class="h3 program-title">Agentic QA</h3>
+            <p class="program-transition">Middle+ QA → AI Quality Engineer</p>
+          </div>
+          <div class="sys-group">
+            <p class="mini-label">Ви опануєте</p>
+            <ul class="skill-list"><li>Evals та LLM-as-a-Judge</li><li>Тестування RAG і AI-агентів</li><li>Red teaming за OWASP LLM Top 10</li><li>Quality gates у CI/CD</li></ul>
+          </div>
+          <div class="sys-group program-outputs">
+            <p class="mini-label">Ви створите</p>
+            <ul><li>AI Test Strategy</li><li>Eval Suite</li><li>AI Test Framework</li></ul>
+          </div>
+          <dl class="program-meta">
+            <div><dt>Рівень</dt><dd>Middle–Lead</dd></div>
+            <div><dt>Занять</dt><dd>21</dd></div>
+            <div><dt>Тривалість</dt><dd>11–14 тижнів</dd></div>
+          </dl>
+          <a class="btn btn-primary program-cta" href="courses/agentic-qa/" data-event="program_agentic_click">Переглянути програму <span class="arrow" aria-hidden="true">→</span></a>
+        </article>
+        <article class="program" id="program-k6" data-href="courses/k6-performance-testing/">
+          <div class="col-meta"><span class="col-num">02</span><span class="col-tag">Performance Engineering</span></div>
+          <blockquote class="situation">«Хочу відповідати за продуктивність системи, а не лише за функціонал»</blockquote>
+          <div class="program-head">
+            <!-- Статус набору: підтвердити/оновити дати перед деплоєм -->
+            <div class="program-status-wrap"><div class="status-row"><p class="program-status status-soon"><span class="status-dot" aria-hidden="true"></span>Набір скоро відкриється</p><button class="waitlist-toggle" type="button" data-course="k6" aria-expanded="false" data-event="waitlist_open"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 16V11a6 6 0 0112 0v5l1.5 2h-15zM10 20a2 2 0 004 0" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Повідомити</span></button></div><form class="waitlist" hidden data-course="k6"><label class="sr-only" for="wl-k6">Telegram або email</label><input id="wl-k6" name="contact" type="text" placeholder="@telegram або email" autocomplete="email" required><button class="waitlist-send" type="submit" aria-label="Надіслати">→</button><p class="waitlist-msg" role="status" aria-live="polite"></p></form></div>
+            <h3 class="h3 program-title">Performance Testing with k6</h3>
+            <p class="program-transition">QA / AQA / DevOps → Performance Engineer</p>
+          </div>
+          <div class="sys-group">
+            <p class="mini-label">Ви опануєте</p>
+            <ul class="skill-list"><li>НФР і навантажувальні тести в k6</li><li>Метрики та дашборди Grafana</li><li>Performance gates у CI/CD та Kubernetes</li><li>Chaos testing</li></ul>
+          </div>
+          <div class="sys-group program-outputs">
+            <p class="mini-label">Ви створите</p>
+            <ul><li>Load Model та k6 Suite</li><li>Observability-стек</li><li>Performance Report</li></ul>
+          </div>
+          <dl class="program-meta">
+            <div><dt>Рівень</dt><dd>Middle–Senior</dd></div>
+            <div><dt>Занять</dt><dd>15</dd></div>
+            <div><dt>Тривалість</dt><dd>15 тижнів</dd></div>
+          </dl>
+          <a class="btn btn-primary program-cta" href="courses/k6-performance-testing/" data-event="program_performance_click">Переглянути програму <span class="arrow" aria-hidden="true">→</span></a>
+        </article>
+        <article class="program" id="program-scale-quality" data-href="courses/scale-quality/">
+          <div class="col-meta"><span class="col-num">03</span><span class="col-tag">QA Architecture</span></div>
+          <blockquote class="situation">«Хочу впливати на якість на рівні архітектури і процесів, а не окремих тестів»</blockquote>
+          <div class="program-head">
+            <!-- Статус набору: підтвердити/оновити дати перед деплоєм -->
+            <div class="program-status-wrap"><div class="status-row"><p class="program-status status-soon"><span class="status-dot" aria-hidden="true"></span>Набір скоро відкриється</p><button class="waitlist-toggle" type="button" data-course="scale-quality" aria-expanded="false" data-event="waitlist_open"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 16V11a6 6 0 0112 0v5l1.5 2h-15zM10 20a2 2 0 004 0" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Повідомити</span></button></div><form class="waitlist" hidden data-course="scale-quality"><label class="sr-only" for="wl-scale-quality">Telegram або email</label><input id="wl-scale-quality" name="contact" type="text" placeholder="@telegram або email" autocomplete="email" required><button class="waitlist-send" type="submit" aria-label="Надіслати">→</button><p class="waitlist-msg" role="status" aria-live="polite"></p></form></div>
+            <h3 class="h3 program-title">Scale Quality</h3>
+            <p class="program-transition">Senior QA / Lead → QA Architect / Head of QA</p>
+          </div>
+          <div class="sys-group">
+            <p class="mini-label">Ви опануєте</p>
+            <ul class="skill-list"><li>Архітектура як карта ризиків</li><li>Risk-based стратегія за ISO 29119</li><li>DORA-метрики та governance</li><li>Комунікація з product і C-level</li></ul>
+          </div>
+          <div class="sys-group program-outputs">
+            <p class="mini-label">Ви створите</p>
+            <ul><li>Quality Strategy</li><li>Risk Map</li><li>Governance Framework</li></ul>
+          </div>
+          <dl class="program-meta">
+            <div><dt>Рівень</dt><dd>Senior–Architect</dd></div>
+            <div><dt>Занять</dt><dd>35</dd></div>
+            <div><dt>Тривалість</dt><dd>~33 тижні</dd></div>
+          </dl>
+          <a class="btn btn-primary program-cta" href="courses/scale-quality/" data-event="program_scale_click">Переглянути програму <span class="arrow" aria-hidden="true">→</span></a>
+        </article>
+      </div>
+
+      <p class="programs-note reveal">Не впевнені, яка програма підійде? <a href="#contact" data-open-form data-event="question_cta_click">Напишіть нам</a> — допоможемо обрати.</p>
+    </div>
+  </section>
+
+  <!-- 03 LEARNING -->
+  <section class="section section-dark learning" id="learning">
+    <div class="container">
+      <header class="section-head reveal">
+        <p class="eyebrow eyebrow-dark">03. Як навчаємо</p>
+        <h2 class="h2">Навчання побудоване навколо <br><span class="accent">реальної інженерної роботи</span></h2>
+      </header>
+
+      <ol class="steps reveal">
+        <li class="step" style="--i:0" tabindex="0" aria-label="Етап 01. Наведіть або натисніть, щоб побачити деталі">
+          <div class="step-inner"><div class="step-card">
+            <div class="step-face step-front">
+          <span class="step-num">01</span>
+          <h3 class="h3">Розібрати задачу</h3>
+          <p class="body body-dark">Спочатку контекст і ризики — потім код.</p>
+              <span class="step-hint" aria-hidden="true">Детальніше ↻</span>
+            </div>
+            <div class="step-face step-back">
+              <span class="step-num">01</span>
+              <p class="step-detail">Ви отримуєте задачу, схожу на production: контекст, обмеження, неповні дані. Разом визначаємо ризики і формулюємо, яке рішення тут потрібне — до першого рядка коду.</p>
+            </div>
+          </div></div>
+        </li>
+        <li class="step" style="--i:1" tabindex="0" aria-label="Етап 02. Наведіть або натисніть, щоб побачити деталі">
+          <div class="step-inner"><div class="step-card">
+            <div class="step-face step-front">
+          <span class="step-num">02</span>
+          <h3 class="h3">Побудувати рішення</h3>
+          <p class="body body-dark">Пишете код, стратегію або модель навантаження.</p>
+              <span class="step-hint" aria-hidden="true">Детальніше ↻</span>
+            </div>
+            <div class="step-face step-back">
+              <span class="step-num">02</span>
+              <p class="step-detail">Реалізуєте підхід у практичному завданні: пишете код, стратегію або модель навантаження. Кожне домашнє завдання стає частиною вашого фінального артефакту.</p>
+            </div>
+          </div></div>
+        </li>
+        <li class="step" style="--i:2" tabindex="0" aria-label="Етап 03. Наведіть або натисніть, щоб побачити деталі">
+          <div class="step-inner"><div class="step-card">
+            <div class="step-face step-front">
+          <span class="step-num">03</span>
+          <h3 class="h3">Пройти review</h3>
+          <p class="body body-dark">Архітектор розбирає ваше рішення: логіку, trade-offs, слабкі місця.</p>
+              <span class="step-hint" aria-hidden="true">Детальніше ↻</span>
+            </div>
+            <div class="step-face step-back">
+              <span class="step-num">03</span>
+              <p class="step-detail">Викладач особисто розбирає ваше рішення: логіку, trade-offs, слабкі місця, альтернативи. Ви захищаєте свій вибір і бачите, як його оцінив би архітектор.</p>
+            </div>
+          </div></div>
+        </li>
+        <li class="step" style="--i:3" tabindex="0" aria-label="Етап 04. Наведіть або натисніть, щоб побачити деталі">
+          <div class="step-inner"><div class="step-card">
+            <div class="step-face step-front">
+          <span class="step-num">04</span>
+          <h3 class="h3">Застосувати у роботі</h3>
+          <p class="body body-dark">Результат переїжджає у ваш продукт ще до кінця програми.</p>
+              <span class="step-hint" aria-hidden="true">Детальніше ↻</span>
+            </div>
+            <div class="step-face step-back">
+              <span class="step-num">04</span>
+              <p class="step-detail">Артефакт і підхід залишаються у вас. Ви адаптуєте їх під свій продукт або команду ще під час навчання — і приносите результат на роботу до завершення програми.</p>
+            </div>
+          </div></div>
+        </li>
+      </ol>
+
+      <ul class="learn-facts reveal">
+        <li><strong>Веде практик</strong><span>QA-архітектор із US fintech. Усе, чого ви вчитеся, він застосовує на своїх проєктах просто зараз.</span></li>
+        <li><strong>Персональний review</strong><span>Кожне рішення отримує розбір від викладача: чому працює, де зламається, як зробити краще.</span></li>
+        <li><strong>Робочий артефакт</strong><span>Тест-стратегія, AI-фреймворк або performance-стек, які ви заберете у свій проєкт і на наступне інтерв’ю.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 04 FOUNDER -->
+  <section class="section section-light founder" id="founder">
+    <div class="container founder-grid">
+      <div class="founder-photo reveal">
+        <img src="assets/img/founder.webp" width="540" height="851" loading="lazy" decoding="async" alt="Єгор Максимчук — засновник і викладач QAStudy.online">
+      </div>
+      <div class="founder-content reveal">
+        <p class="eyebrow">04. Викладач</p>
+        <h2 class="h2">Автор навчальних програм <br>і лектор — <span class="accent">Єгор Максимчук</span></h2>
+        <p class="founder-position">QA &amp; Performance Architect · AI Agent Development &amp; Testing · 14+ років в IT</p>
+
+        <blockquote class="founder-quote">
+          <p>«Я бачив десятки сильних інженерів, які вперлися в стелю не тому, що погано тестують, а тому, що ніхто не показав їм системний, інженерний рівень професії. Я викладаю рівно те, що роблю щодня на реальних проєктах».</p>
+        </blockquote>
+
+        <ul class="proof-list">
+          <li><strong>14+</strong><span>років в IT</span></li>
+          <li><strong>22</strong><span>скрам-команди у зоні відповідальності</span></li>
+          <li><strong>6</strong><span>доменів — від fintech до держсектору</span></li>
+          <li><strong>US fintech</strong><span>Performance Architect зараз</span></li>
+        </ul>
+
+        <ul class="badges" aria-label="Сертифікації">
+          <li><img src="assets/img/badge-copilot.svg" width="64" height="64" loading="lazy" alt="GitHub Copilot — Microsoft certification"></li>
+          <li><img src="assets/img/badge-az900.svg" width="64" height="64" loading="lazy" alt="Microsoft Certified: Azure Fundamentals (AZ-900)"></li>
+          <li><img src="assets/img/badge-icp-apm.webp" width="64" height="64" loading="lazy" alt="ICAgile Certified Professional — ICP-APM"></li>
+          <li><img src="assets/img/badge-anthropic-architect-pro.webp" width="64" height="64" loading="lazy" alt="Anthropic Certificate — Architect Professional"></li>
+          <li><img src="assets/img/badge-anthropic-architect-found.webp" width="64" height="64" loading="lazy" alt="Anthropic Certificate — Architect Foundations"></li>
+          <li><img src="assets/img/badge-anthropic-associate-found.webp" width="64" height="64" loading="lazy" alt="Anthropic Certificate — Associate Foundations"></li>
+          <li><img src="assets/img/badge-anthropic-developer-found.webp" width="64" height="64" loading="lazy" alt="Anthropic Certificate — Developer Foundations"></li>
+        </ul>
+
+        <div class="founder-links">
+          <ul class="founder-social">
+            <li><a href="https://www.linkedin.com/in/yehor-maksymchuk-271039240/" target="_blank" rel="noopener" data-event="founder_social_click" data-network="linkedin">LinkedIn</a></li>
+            <li><a href="https://github.com/QAStudyOnline" target="_blank" rel="noopener" data-event="founder_social_click" data-network="github">GitHub</a></li>
+            <li><a href="https://www.youtube.com/@qastudy.online" target="_blank" rel="noopener" data-event="founder_social_click" data-network="youtube">YouTube</a></li>
+            <li><a href="https://t.me/qastudy" target="_blank" rel="noopener" data-event="founder_social_click" data-network="telegram">Telegram</a></li>
+          </ul>
+          <a class="link-underline" href="team/yehor-maksymchuk/" data-event="founder_profile_click">Детальніше про викладача <span class="arrow" aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 WHY -->
+  <section class="section section-dark why" id="why-qastudy">
+    <div class="container why-grid">
+      <div class="why-intro reveal">
+        <p class="eyebrow eyebrow-dark">05. Чому QAStudy.online</p>
+        <h2 class="h2">Тут вас <br>знатимуть <span class="accent">особисто</span></h2>
+        <p class="section-support section-support-dark">Кілька інженерів, один архітектор і ваш проєкт на столі. Так працює інженерна майстерня — і так працює QAStudy.online. Випускаємо небагато, за кожного готові поручитися.</p>
+      </div>
+      <ol class="principles reveal">
+        <li class="principle">
+          <span class="principle-num">01</span>
+          <h3 class="h4">Група без задніх рядів</h3>
+          <p class="body body-dark">Місць у групі небагато. Кожен ваш commit прочитають, кожне рішення обговорять. Відсидітися не вийде.</p>
+        </li>
+        <li class="principle">
+          <span class="principle-num">02</span>
+          <h3 class="h4">Вхід за досвідом</h3>
+          <p class="body body-dark">Перед стартом ми запитаємо, де ви працюєте і що тестуєте. У групі всі говорять однією мовою — і рухаються в одному темпі.</p>
+        </li>
+        <li class="principle">
+          <span class="principle-num">03</span>
+          <h3 class="h4">Автор програми — ваш викладач</h3>
+          <p class="body body-dark">Кожну програму Єгор Максимчук склав сам — і сам веде кожне заняття. Між вами й експертизою немає посередників.</p>
+        </li>
+        <li class="principle">
+          <span class="principle-num">04</span>
+          <h3 class="h4">Дефіцитні спеціалізації</h3>
+          <p class="body body-dark">AI Quality, Performance Engineering, QA Architecture — ролі, які компанії закривають місяцями. Саме на них ми й готуємо.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- 06 FAQ -->
+  <section class="section section-light faq" id="faq">
+    <div class="container faq-grid">
+      <div class="faq-intro reveal">
+        <p class="eyebrow">06. FAQ</p>
+        <h2 class="h2">Відповіді <br>на запитання <br><span class="accent">перед стартом</span></h2>
+      </div>
+
+      <div class="faq-list reveal">
+        <details class="faq-item" open>
+          <summary><span class="faq-num">01</span><span class="faq-q">Для якого рівня QA створені програми?</span><span class="faq-icon" aria-hidden="true"></span></summary>
+          <div class="faq-a"><p>Middle+ — Agentic QA та Performance Testing with k6. Senior / Lead — Scale Quality. Ми працюємо з тими, хто вже тестує і хоче рости далі; програм для входу в IT з нуля немає.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-num">02</span><span class="faq-q">Як зрозуміти, яка програма мені підходить?</span><span class="faq-icon" aria-hidden="true"></span></summary>
+          <div class="faq-a"><p>AI у продукті — Agentic QA. Продуктивність системи — Performance Testing with k6. Якість на рівні архітектури і процесів — Scale Quality. Сумніваєтеся — <a href="#contact" data-open-form>напишіть нам</a>.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-num">03</span><span class="faq-q">Як проходить навчання?</span><span class="faq-icon" aria-hidden="true"></span></summary>
+          <div class="faq-a"><p>Онлайн, у малій групі. На кожному занятті — практика і домашнє завдання, кожне рішення проходить персональний review. Кожен модуль завершується робочим артефактом.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-num">04</span><span class="faq-q">Скільки часу потрібно щотижня?</span><span class="faq-icon" aria-hidden="true"></span></summary>
+          <!-- NEEDS CONFIRMATION: weekly commitment -->
+          <div class="faq-a"><p>Одне заняття плюс домашнє завдання. Точний розклад і навантаження вказані на сторінці кожної програми.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-num">05</span><span class="faq-q">Що потрібно знати на старті?</span><span class="faq-icon" aria-hidden="true"></span></summary>
+          <div class="faq-a"><p>Досвід роботи в QA і розуміння того, як влаштована система, яку ви тестуєте. Для Performance Testing with k6 знадобиться JavaScript на рівні читання коду; для Agentic QA — Python або JS.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-num">06</span><span class="faq-q">Що я матиму після завершення?</span><span class="faq-icon" aria-hidden="true"></span></summary>
+          <div class="faq-a"><p>Робочий артефакт для вашого проєкту і портфоліо: тест-стратегію, AI-фреймворк або performance-стек. Фінальний проєкт захищається перед викладачем.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-num">07</span><span class="faq-q">Як подати заявку і що буде далі?</span><span class="faq-icon" aria-hidden="true"></span></summary>
+          <div class="faq-a"><p>На сторінці програми — кнопка «Залишити заявку». Після цього ми зв’яжемося, коротко обговоримо ваш рівень і задачі та підтвердимо місце в групі.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary><span class="faq-num">08</span><span class="faq-q">Чи можна почати з матеріалів, а не з програми?</span><span class="faq-icon" aria-hidden="true"></span></summary>
+          <div class="faq-a"><p>Так. YouTube, Telegram і GitHub відкриті для всіх — там видно, як ми думаємо і чого навчаємо.</p></div>
+        </details>
+      </div>
+
+      <div class="faq-help glass reveal">
+        <div>
+          <p class="h4">Не знайшли відповідь?</p>
+          <p class="body">Напишіть нам — допоможемо розібратися та обрати програму.</p>
+        </div>
+        <a class="btn btn-primary" href="#contact" data-event="question_cta_click" data-open-form>Поставити питання <span class="arrow" aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 07 FINAL CTA -->
+  <section class="section section-dark final-cta" id="contact">
+    <span class="deco deco-3" aria-hidden="true"></span>
+    <div class="container cta-grid">
+      <div class="cta-content reveal">
+        <p class="eyebrow eyebrow-dark">07. Наступний крок</p>
+        <h2 class="h2">Готові до <br><span class="accent">наступного рівня?</span></h2>
+        <p class="lead lead-dark">Три програми — три траєкторії. Оберіть свою або напишіть нам, і ми допоможемо визначитися.</p>
+      </div>
+      <div class="cta-actions reveal">
+        <a class="btn btn-primary btn-xl" href="#programs" data-event="hero_direction_click">Ознайомитися з програмами <span class="arrow" aria-hidden="true">→</span></a>
+        <div class="cta-channels">
+          <a href="#contact" data-open-form data-event="question_cta_click">
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3C7 3 3 6.4 3 10.5c0 2.3 1.3 4.4 3.3 5.8L5.5 21l4.3-2.3c.7.1 1.4.2 2.2.2 5 0 9-3.4 9-7.5S17 3 12 3z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>Поставити питання
+          </a>
+          <span class="sep" aria-hidden="true"></span>
+          <a href="https://t.me/qastudy" target="_blank" rel="noopener" data-event="telegram_click">
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 4L3 11.2l6.4 2.2L18 7l-6.6 7.6.4 5.4 3-3.3 4.4 3.3L21 4z" fill="currentColor"/></svg>Telegram
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="./" aria-label="QAStudy.online">
+          <span class="brand-name">QAStudy<span class="brand-accent">.online</span></span>
+          <span class="brand-sub">Engineering School</span>
+        </a>
+        <p class="footer-tagline">Наступний рівень для QA-інженерів: <br>AI Quality, Performance Engineering, QA Architecture.</p>
+        <ul class="footer-social">
+          <li><a href="https://www.youtube.com/@qastudy.online" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 8.2c-.2-1.4-.9-2.3-2.3-2.5C17.8 5.4 12 5.4 12 5.4s-5.8 0-7.7.3C2.9 5.9 2.2 6.8 2 8.2 1.8 9.9 1.8 12 1.8 12s0 2.1.2 3.8c.2 1.4.9 2.3 2.3 2.5 1.9.3 7.7.3 7.7.3s5.8 0 7.7-.3c1.4-.2 2.1-1.1 2.3-2.5.2-1.7.2-3.8.2-3.8s0-2.1-.2-3.8zM10 15V9l5.2 3L10 15z" fill="currentColor"/></svg></a></li>
+          <li><a href="https://t.me/qastudy" target="_blank" rel="noopener" aria-label="Telegram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 4L3 11.2l6.4 2.2L18 7l-6.6 7.6.4 5.4 3-3.3 4.4 3.3L21 4z" fill="currentColor"/></svg></a></li>
+          <li><a href="https://www.linkedin.com/in/yehor-maksymchuk-271039240/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 8.5H3.6V21h2.9V8.5zM5 3.5a1.7 1.7 0 100 3.4 1.7 1.7 0 000-3.4zM21 13.4c0-3.4-1.8-5.1-4.3-5.1-2 0-2.9 1.1-3.4 1.9V8.5h-2.9V21h2.9v-7c0-1.8.8-2.9 2.3-2.9s2.4 1 2.4 2.9v7H21v-7.6z" fill="currentColor"/></svg></a></li>
+          <li><a href="https://github.com/QAStudyOnline" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 00-3.2 19.5c.5.1.7-.2.7-.5v-1.8c-2.8.6-3.4-1.2-3.4-1.2-.5-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.6 2.4 1.1 3 .9.1-.7.4-1.1.6-1.4-2.2-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7-.1-.2-.4-1.2.1-2.6 0 0 .8-.3 2.8 1a9.6 9.6 0 015 0c1.9-1.3 2.8-1 2.8-1 .5 1.4.2 2.4.1 2.6.6.7 1 1.6 1 2.7 0 3.9-2.4 4.7-4.6 5 .4.3.7.9.7 1.9v2.8c0 .3.2.6.7.5A10 10 0 0012 2z" fill="currentColor"/></svg></a></li>
+        </ul>
+      </div>
+      <nav class="footer-col" aria-label="Програми">
+        <h3 class="footer-title">Програми</h3>
+        <ul>
+          <li><a href="courses/agentic-qa/">Agentic QA<span class="arrow" aria-hidden="true">→</span></a></li>
+          <li><a href="courses/k6-performance-testing/">Performance Testing with k6<span class="arrow" aria-hidden="true">→</span></a></li>
+          <li><a href="courses/scale-quality/">Scale Quality<span class="arrow" aria-hidden="true">→</span></a></li>
+        </ul>
+      </nav>
+      <nav class="footer-col" aria-label="QAStudy.online">
+        <h3 class="footer-title">QAStudy.online</h3>
+        <ul>
+          <li><a href="./">Головна<span class="arrow" aria-hidden="true">→</span></a></li>
+          <li><a href="./about/">Про школу<span class="arrow" aria-hidden="true">→</span></a></li>
+          <li><a href="./team/yehor-maksymchuk/">Викладач<span class="arrow" aria-hidden="true">→</span></a></li>
+          <li><a href="./#learning">Як навчаємо<span class="arrow" aria-hidden="true">→</span></a></li>
+        </ul>
+      </nav>
+      <nav class="footer-col" aria-label="Матеріали">
+        <h3 class="footer-title">Матеріали</h3>
+        <ul>
+          <li><a href="https://www.youtube.com/@qastudy.online" target="_blank" rel="noopener">YouTube<span class="arrow" aria-hidden="true">→</span></a></li>
+          <li><a href="https://t.me/qastudy" target="_blank" rel="noopener">Telegram<span class="arrow" aria-hidden="true">→</span></a></li>
+          <li><a href="https://www.linkedin.com/in/yehor-maksymchuk-271039240/" target="_blank" rel="noopener">LinkedIn<span class="arrow" aria-hidden="true">→</span></a></li>
+          <li><a href="https://github.com/QAStudyOnline" target="_blank" rel="noopener">GitHub<span class="arrow" aria-hidden="true">→</span></a></li>
+        </ul>
+      </nav>
+      <nav class="footer-col" aria-label="Інформація">
+        <h3 class="footer-title">Інформація</h3>
+        <ul>
+          <li><a href="#contact" data-open-form>Контакти<span class="arrow" aria-hidden="true">→</span></a></li>
+          <li><a href="./oferta/">Публічна оферта<span class="arrow" aria-hidden="true">→</span></a></li>
+          <li><a href="./privacy/">Політика конфіденційності<span class="arrow" aria-hidden="true">→</span></a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <ul class="footer-legal">
+        <li>© QAStudy.online <span id="year">2026</span></li>
+        <li><a href="./oferta/">Публічна оферта</a></li>
+        <li><a href="./privacy/">Політика конфіденційності</a></li>
+        <li><a href="./terms/">Умови використання</a></li>
+        <li><a href="#known-issues" id="known-issues" class="known-issues">Known issues <span class="ki-count">3</span></a></li>
+      </ul>
+      <div class="footer-ask">
+        <span class="footer-ask-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3C7 3 3 6.4 3 10.5c0 2.3 1.3 4.4 3.3 5.8L5.5 21l4.3-2.3c.7.1 1.4.2 2.2.2 5 0 9-3.4 9-7.5S17 3 12 3z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></span>
+        <div><p>Є питання?</p><a href="https://t.me/qastudy" target="_blank" rel="noopener" data-event="telegram_click">Написати в Telegram <span class="arrow" aria-hidden="true">→</span></a></div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- CONTACT FORM (modal) -->
+<div class="modal" id="contact-modal" role="dialog" aria-modal="true" aria-labelledby="contact-title" hidden>
+  <div class="modal-backdrop" data-close-form></div>
+  <div class="modal-panel">
+    <button class="modal-close" type="button" aria-label="Закрити" data-close-form>×</button>
+    <p class="eyebrow eyebrow-dark">Поставити питання</p>
+    <h2 class="h3" id="contact-title">Розкажіть про свою задачу — допоможемо обрати програму</h2>
+
+    <!-- FORMSPREE: замініть FORM_ENDPOINT на https://formspree.io/f/xxxxxxxx -->
+    <form class="contact-form" id="contact-form" action="https://formspree.io/f/FORM_ENDPOINT" method="POST" novalidate>
+      <div class="field-row">
+        <div class="field">
+          <label for="f-telegram">Telegram</label>
+          <input id="f-telegram" name="telegram" type="text" autocomplete="off" required aria-describedby="f-telegram-err" placeholder="@username">
+          <p class="field-error" id="f-telegram-err"></p>
+        </div>
+        <div class="field">
+          <label for="f-phone">Телефон</label>
+          <input id="f-phone" name="phone" type="tel" autocomplete="tel" required aria-describedby="f-phone-err" placeholder="+380">
+          <p class="field-error" id="f-phone-err"></p>
+        </div>
+      </div>
+      <div class="field">
+        <label for="f-email">Email</label>
+        <input id="f-email" name="email" type="email" autocomplete="email" required aria-describedby="f-email-err" placeholder="name@company.com">
+        <p class="field-error" id="f-email-err"></p>
+      </div>
+      <div class="field">
+        <label for="f-role">Поточна роль</label>
+        <select id="f-role" name="role" required aria-describedby="f-role-err">
+          <option value="">Оберіть</option>
+          <option>QA Engineer (Middle)</option>
+          <option>Automation QA / SDET</option>
+          <option>Senior QA</option>
+          <option>QA Lead / Head of QA</option>
+          <option>DevOps / SRE</option>
+          <option>Інше</option>
+        </select>
+        <p class="field-error" id="f-role-err"></p>
+      </div>
+      <div class="field">
+        <label for="f-message">Ваше питання або коротко про задачу</label>
+        <textarea id="f-message" name="message" rows="4" required aria-describedby="f-message-err" placeholder="З якими задачами працюєте зараз і куди хочете рухатися. Якщо вже знаєте програму — вкажіть її."></textarea>
+        <p class="field-error" id="f-message-err"></p>
+      </div>
+
+      <!-- honeypot -->
+      <div class="hp" aria-hidden="true"><label>Website<input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label></div>
+      <!-- hidden tracking fields -->
+      <input type="hidden" name="_subject" value="QAStudy.online — питання з головної">
+      <input type="hidden" name="source" id="f-source" value="home">
+      <input type="hidden" name="page" id="f-page" value="">
+      <input type="hidden" name="utm" id="f-utm" value="">
+      <input type="hidden" name="referrer" id="f-referrer" value="">
+
+      <p class="form-privacy">Надсилаючи форму, ви погоджуєтесь із <a href="privacy/">політикою конфіденційності</a>. Відповідаємо протягом робочого дня.</p>
+      <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+
+      <button class="btn btn-primary btn-lg" type="submit" id="form-submit"><span class="btn-label">Надіслати</span><span class="btn-loading" aria-hidden="true">Надсилаємо…</span></button>
+      <p class="form-alt">Або одразу в Telegram: <a href="https://t.me/qastudy" target="_blank" rel="noopener" data-event="telegram_click">@qastudy</a></p>
+    </form>
+
+    <div class="form-success" id="form-success" hidden>
+      <p class="h4">Дякуємо! Ми отримали ваше повідомлення.</p>
+      <p class="body body-dark">Відповімо у Telegram або на email протягом робочого дня та допоможемо обрати програму.</p>
+      <a class="link-underline link-accent" href="https://t.me/qastudy" target="_blank" rel="noopener">Або напишіть одразу в Telegram <span class="arrow" aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</div>
+
+<script src="assets/js/easter.js" defer></script>
+<script src="assets/js/cursor.js" defer></script>
+<script src="assets/js/exit.js" defer></script>
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>

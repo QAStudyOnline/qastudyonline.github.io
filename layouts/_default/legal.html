@@ -1,20 +1,29 @@
-{{ define "head" }}
-  <meta property="og:title" content="{{ .Title }} | {{ .Site.Title }}">
-  <meta property="og:description" content="{{ .Description }}">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="{{ .Permalink }}">
-  <link rel="canonical" href="{{ .Permalink }}">
-{{ end }}
-
 {{ define "main" }}
-<article class="legal-page">
+<section class="section section-dark legal-hero" id="hero">
   <div class="container">
-    <header class="legal-header">
-      <h1 class="legal-title">{{ .Title }}</h1>
-    </header>
-    <div class="prose">
-      {{ .Content }}
-    </div>
+    <p class="eyebrow eyebrow-dark">{{ i18n "legal_kicker" }}</p>
+    <h1 class="h2">{{ .Title }}</h1>
+    {{- with .Params.sub }}
+    <p class="lead lead-dark legal-sub">{{ . }}</p>
+    {{- end }}
+    {{- with .Params.edition }}
+    <p class="legal-edition">{{ . }}</p>
+    {{- end }}
   </div>
-</article>
+</section>
+<section class="section section-dark legal-body-section">
+  <div class="container legal-grid">
+    <nav class="legal-toc glass" aria-label="{{ i18n "legal_toc" }}">
+      <p class="mini-label mini-label-dark">{{ i18n "legal_toc" }}</p>
+      <ol>
+        {{- range .Fragments.Headings }}
+        <li><a href="#{{ .ID }}">{{ .Title | safeHTML }}</a></li>
+        {{- end }}
+      </ol>
+    </nav>
+    <article class="legal-body glass">
+      {{ .Content }}
+    </article>
+  </div>
+</section>
 {{ end }}

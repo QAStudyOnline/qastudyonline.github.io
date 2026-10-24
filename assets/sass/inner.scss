@@ -1,0 +1,8 @@
+// Inner pages only (course, team, legal, about, stub). Loaded after main.css, as course.css was in the static build.
+@import 'pages/course';
+@import 'pages/team';
+@import 'pages/legal';
+@import 'pages/course-lamp';
+@import 'pages/stub';
+@import 'pages/about';
+@import 'pages/404';

@@ -1,0 +1,25 @@
+/* ---------- v9.1: clickable pills & cards, neater waitlist ---------- */
+.pills a { display: inline-block; padding: 10px 18px; margin: -10px -18px; border-radius: 999px; color: inherit; transition: background var(--t-fast), border-color var(--t-fast); }
+.pills li { transition: border-color var(--t-fast), background var(--t-fast); }
+.pills li:hover { border-color: var(--accent-soft); background: rgba(107,92,255,.16); }
+.program[data-href] { cursor: pointer; transition: border-color var(--t-fast), transform 260ms var(--ease); }
+.program[data-href]:hover { border-color: var(--accent-soft); }
+.program.is-target { border-color: var(--accent-soft); box-shadow: 0 0 0 4px rgba(107,92,255,.18); }
+
+.program-status-wrap { margin-bottom: 14px; }
+.status-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.program-status-wrap .program-status { margin-bottom: 0; }
+.waitlist-toggle { display: inline-flex; align-items: center; gap: 6px; height: 28px; padding: 0 10px 0 8px; border-radius: 999px; border: 1px solid var(--glass-border); background: rgba(255,255,255,.04); font-size: 12px; font-weight: 500; letter-spacing: .02em; color: var(--text-secondary-dark); transition: color var(--t-fast), border-color var(--t-fast), background var(--t-fast); }
+.waitlist-toggle svg { width: 13px; height: 13px; }
+.waitlist-toggle:hover, .waitlist-toggle[aria-expanded="true"] { color: #fff; border-color: #FFC960; background: rgba(255,201,96,.10); }
+.waitlist { margin-top: 12px; gap: 8px; }
+.waitlist input { border-radius: 999px; padding: 8px 16px; min-height: 40px; }
+.waitlist-send { width: 40px; height: 40px; }
+.waitlist-msg { margin-top: 8px; }
+
+/* Lamps reused on course page */
+.status-dot-open { background: #7CFFB2; box-shadow: 0 0 0 3px rgba(124,255,178,.18); animation: lamp-open 2.4s ease-in-out infinite; }
+@keyframes lamp-open { 0%,100% { box-shadow: 0 0 0 3px rgba(124,255,178,.18); } 50% { box-shadow: 0 0 0 5px rgba(124,255,178,.34); } }
+.status-dot-soon { background: #FFC960; box-shadow: 0 0 0 3px rgba(255,201,96,.18); animation: lamp 2.4s ease-in-out infinite; }
+@media (prefers-reduced-motion: reduce) { .status-dot, .status-dot-open, .status-dot-soon { animation: none !important; } }
+

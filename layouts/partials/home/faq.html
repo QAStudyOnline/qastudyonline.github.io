@@ -1,0 +1,22 @@
+{{- with .Params.faq }}
+<section class="section section-light faq" id="faq">
+  <div class="container faq-grid">
+    <div class="faq-intro reveal">
+      <p class="eyebrow">{{ .eyebrow }}</p>
+      <h2 class="h2">{{ .title | safeHTML }}</h2>
+    </div>
+
+    <div class="faq-list reveal">
+      {{ partial "ui/faq-list.html" .items }}
+    </div>
+
+    <div class="faq-help glass reveal">
+      <div>
+        <p class="h4">{{ .help_title }}</p>
+        <p class="body">{{ .help_text }}</p>
+      </div>
+      <a class="btn btn-primary" href="#contact" data-event="question_cta_click" data-open-form>{{ i18n "ask_question" }} <span class="arrow" aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</section>
+{{- end }}

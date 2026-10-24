@@ -1,0 +1,25 @@
+{{- with .Params.format }}
+<section class="section section-dark" id="format">
+  <div class="container">
+    <header class="section-head reveal">
+      <p class="eyebrow eyebrow-dark">{{ partial "course/num.html" $ }}. {{ i18n "course_format" }}</p>
+      <h2 class="h2">{{ i18n "course_format_title" | safeHTML }}</h2>
+    </header>
+    <ul class="format-list reveal">
+      {{- range . }}
+      <li class="format-item glass"><strong>{{ .title }}</strong><span>{{ .desc }}</span></li>
+      {{- end }}
+    </ul>
+    {{- with $.Params.stack }}
+    <div class="stack reveal">
+      <div class="stack-head"><p class="eyebrow eyebrow-dark">{{ i18n "course_stack" }}</p><p class="stack-note">{{ i18n "course_stack_note" }}</p></div>
+      <div class="stack-groups">
+        {{- range . }}
+        <div class="stack-group"><p class="stack-group-name">{{ .group }}</p><ul class="tools">{{ range .items }}<li class="tool">{{ . }}</li>{{ end }}</ul></div>
+        {{- end }}
+      </div>
+    </div>
+    {{- end }}
+  </div>
+</section>
+{{- end }}

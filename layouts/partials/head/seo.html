@@ -1,0 +1,49 @@
+{{- /* Title, description, canonical, robots, Open Graph, Twitter, icons, fonts, CSS. */ -}}
+{{- $title := .Params.seo_title | default (printf "%s — %s" .Title site.Title) -}}
+{{- $robots := .Params.robots -}}
+{{- if eq .Kind "404" }}{{ $title = i18n "title_404" }}{{ $robots = "noindex" }}{{ end -}}
+{{- $desc := .Description | default site.Params.description -}}
+{{- $ogTitle := .Params.og_title | default $title -}}
+{{- $ogDesc := .Params.og_description | default $desc -}}
+{{- $imgPath := .Params.og_image | default site.Params.og_image -}}
+{{- $img := "" -}}
+{{- with resources.Get $imgPath }}{{ $img = .Permalink }}{{ else }}{{ $img = $imgPath | absURL }}{{ end -}}
+<title>{{ $title }}</title>
+<meta name="description" content="{{ $desc }}">
+{{- if ne .Kind "404" }}
+<link rel="canonical" href="{{ .Permalink }}">
+{{- end }}
+{{- with $robots }}
+<meta name="robots" content="{{ . }}">
+{{- end }}
+<meta name="theme-color" content="{{ site.Params.theme_color }}">
+
+<meta property="og:type" content="{{ .Params.og_type | default "website" }}">
+<meta property="og:site_name" content="{{ site.Title }}">
+<meta property="og:locale" content="uk_UA">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:title" content="{{ $ogTitle }}">
+<meta property="og:description" content="{{ $ogDesc }}">
+<meta property="og:image" content="{{ $img }}">
+{{- if not .Params.og_image }}
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+{{- end }}
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ $ogTitle }}">
+<meta name="twitter:description" content="{{ $ogDesc }}">
+<meta name="twitter:image" content="{{ $img }}">
+
+<link rel="icon" href="{{ "favicon.svg" | relURL }}" type="image/svg+xml">
+<link rel="apple-touch-icon" href="{{ "apple-touch-icon.png" | relURL }}">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+{{- $main := resources.Get "sass/main.scss" | css.Sass | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $main.RelPermalink }}">
+{{- if not .IsHome }}
+{{- $inner := resources.Get "sass/inner.scss" | css.Sass | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $inner.RelPermalink }}">
+{{- end }}

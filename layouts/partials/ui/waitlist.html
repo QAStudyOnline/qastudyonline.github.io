@@ -1,0 +1,14 @@
+{{- /* "Набір скоро відкриється" lamp + quiet waitlist chip. Context: course page (enrollment soon). */ -}}
+{{- $key := .Params.card.waitlist | default .File.ContentBaseName -}}
+<div class="program-status-wrap">
+  <div class="status-row">
+    <p class="program-status status-soon"><span class="status-dot" aria-hidden="true"></span>{{ .Params.enrollment.label }}</p>
+    <button class="waitlist-toggle" type="button" data-course="{{ $key }}" aria-expanded="false" data-event="waitlist_open">{{ partial "ui/icon.html" (dict "name" "bell") }}<span>{{ i18n "waitlist_notify" }}</span></button>
+  </div>
+  <form class="waitlist" hidden data-course="{{ $key }}">
+    <label class="sr-only" for="wl-{{ $key }}">{{ i18n "waitlist_label" }}</label>
+    <input id="wl-{{ $key }}" name="contact" type="text" placeholder="{{ i18n "waitlist_placeholder" }}" autocomplete="email" required>
+    <button class="waitlist-send" type="submit" aria-label="{{ i18n "form_send" }}">→</button>
+    <p class="waitlist-msg" role="status" aria-live="polite"></p>
+  </form>
+</div>

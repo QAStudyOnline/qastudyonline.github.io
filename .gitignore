@@ -9,13 +9,13 @@ coverage
 .idea/
 
 # Hugo generated output (rebuilt by CI)
-./public/
+/public/
 /resources/_gen/
 .hugo_build.lock
 
 # Playwright MCP dev artifacts
-./.playwright-mcp/
-./.idea/
+/.playwright-mcp/
+/.idea/
 
 # Ignore all files in the .claude directory
 .claude/plans
@@ -31,8 +31,11 @@ coverage
 .claude_plugins
 .claude_extensions
 .claude_backups
-./CONTENT_GUIDE.md
+/CONTENT_GUIDE.md
 jekyll-design-system.txt
 
 .playwright-mcp/*
 
+
+# Static design package: generator bytecode
+/feature/**/__pycache__/

@@ -1,6 +1,13 @@
 {{ define "main" }}
-{{ partial "hero.html" . }}
-<div class="container">
-  {{ .Content }}
-</div>
+{{ partial "home/hero.html" . }}
+{{ partial "home/programs.html" . }}
+{{ partial "home/learning.html" . }}
+{{ partial "ui/founder.html" (dict "dark" false "quote" true "events" true "eyebrow" .Params.founder.eyebrow "title" .Params.founder.title) }}
+{{ partial "home/why.html" . }}
+{{ partial "home/faq.html" . }}
+{{ partial "home/final-cta.html" . }}
+{{ end }}
+
+{{ define "after_footer" }}
+{{ partial "site/modal-form.html" . }}
 {{ end }}

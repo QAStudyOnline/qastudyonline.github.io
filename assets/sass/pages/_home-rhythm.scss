@@ -1,0 +1,66 @@
+/* ---------- Color-rhythm variants ---------- */
+.btn-ghost { border: 1px solid var(--accent); color: var(--accent); background: transparent; }
+.btn-ghost:hover { background: var(--accent); color: #fff; }
+.btn-ghost-dark { border: 1px solid var(--accent-soft); color: #fff; background: transparent; }
+.btn-ghost-dark:hover { border-color: #fff; }
+
+/* Programs on light */
+.section-light .program-status { color: var(--text-secondary); }
+.section-light .program-transition { color: var(--text-secondary); }
+.section-light .program-outputs ul li { color: var(--text-primary); }
+.section-light .program-outputs ul li::before { background: var(--accent); }
+.section-light .program-meta, .section-light .program-meta div { border-color: var(--border-light); }
+.section-light .program-meta dt { color: var(--text-secondary); }
+.section-light .sys-group { border-color: var(--border-light); }
+.section-light .programs-note { border-color: var(--border-light); color: var(--text-secondary); }
+.section-light .programs-note a { color: var(--accent); border-color: var(--accent); }
+.section-light .programs-note a:hover { color: var(--accent-hover); }
+
+/* Learning on dark */
+.section-dark .steps, .section-dark .step, .section-dark .step:nth-child(n+3) { border-color: var(--border-dark); }
+.section-dark .step-num { color: var(--text-secondary-dark); }
+.section-dark .step-num::after { background: var(--border-dark); }
+.section-dark .step:not(:last-child) .h3::after { color: var(--accent-soft); }
+.section-dark .step::before { background: var(--accent-soft); }
+
+/* Comparison on dark */
+.section-dark .compare, .section-dark .compare-head, .section-dark .compare-row { border-color: var(--border-dark); }
+.section-dark .compare-head { color: var(--text-secondary-dark); }
+.section-dark .compare-head-us { color: var(--accent-soft); }
+.section-dark .compare-them { color: var(--text-secondary-dark); }
+.section-dark .compare-them p:last-child { text-decoration-color: rgba(174,185,200,.45); }
+.section-dark .compare-label { color: var(--text-secondary-dark); }
+.section-dark .compare-us { border-left-color: var(--accent-soft); background: linear-gradient(90deg, rgba(111,163,255,.08), rgba(111,163,255,0) 60%); }
+.section-dark .compare-us .compare-label { color: var(--accent-soft); }
+.section-dark .compare-us p:last-child { color: var(--text-on-dark); }
+.section-dark .compare-vs::before { background: var(--border-dark); }
+.section-dark .compare-vs::after { color: var(--accent-soft); background: var(--bg-dark); }
+
+/* ---------- Learning facts strip ---------- */
+.learn-facts { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 56px; border-top: 1px solid var(--border-dark); }
+.learn-facts li { padding: 32px 32px 0 32px; display: flex; flex-direction: column; gap: 10px; border-left: 1px solid var(--border-dark); }
+.learn-facts li:first-child { border-left: 0; padding-left: 0; }
+.learn-facts li:last-child { padding-right: 0; }
+.learn-facts strong { font-size: 19px; font-weight: 600; color: #fff; }
+.learn-facts span { font-size: 16px; line-height: 1.5; color: var(--text-secondary-dark); }
+
+/* ---------- Why: boutique principles ---------- */
+.why-grid { display: grid; grid-template-columns: 40% 1fr; gap: 80px; align-items: start; }
+.why-intro { position: static; }
+.principles { display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid var(--border-dark); border-left: 1px solid var(--border-dark); }
+.principle { padding: 36px 32px 40px; border-right: 1px solid var(--border-dark); border-bottom: 1px solid var(--border-dark); }
+.principle-num { display: block; font-size: 14px; letter-spacing: .12em; color: var(--accent-soft); margin-bottom: 40px; }
+.principle .h4 { color: #fff; margin-bottom: 12px; }
+@media (max-width: 1023px) {
+  .learn-facts { grid-template-columns: 1fr; }
+  .learn-facts li, .learn-facts li:first-child { border-left: 0; padding: 24px 0 0; }
+  .why-grid { grid-template-columns: 1fr; gap: 40px; }
+  .why-intro { position: static; }
+}
+@media (max-width: 767px) {
+  .principles { grid-template-columns: 1fr; }
+  .principle { padding: 24px 20px 28px; }
+  .principle-num { margin-bottom: 20px; }
+}
+
+

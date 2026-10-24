@@ -1,0 +1,30 @@
+{{- /* Home program card, built from a course page. Args: page, index. */ -}}
+{{- $p := .page -}}
+{{- $card := $p.Params.card -}}
+<article class="program" id="{{ $card.anchor }}" data-href="{{ $p.RelPermalink }}">
+  <div class="col-meta"><span class="col-num">{{ printf "%02d" (add .index 1) }}</span><span class="col-tag">{{ $p.Params.direction }}</span></div>
+  <blockquote class="situation">{{ $card.quote }}</blockquote>
+  <div class="program-head">
+    {{- if eq $p.Params.enrollment.state "open" }}
+    <p class="program-status"><span class="status-dot" aria-hidden="true"></span>{{ $p.Params.enrollment.label }}</p>
+    {{- else }}
+    {{ partial "ui/waitlist.html" $p }}
+    {{- end }}
+    <h3 class="h3 program-title">{{ $p.Title }}</h3>
+    <p class="program-transition">{{ $p.Params.transition }}</p>
+  </div>
+  <div class="sys-group">
+    <p class="mini-label">{{ i18n "card_master" }}</p>
+    <ul class="skill-list">{{ range $card.master }}<li>{{ . }}</li>{{ end }}</ul>
+  </div>
+  <div class="sys-group program-outputs">
+    <p class="mini-label">{{ i18n "card_create" }}</p>
+    <ul>{{ range $card.create }}<li>{{ . }}</li>{{ end }}</ul>
+  </div>
+  <dl class="program-meta">
+    {{- range $card.meta }}
+    <div><dt>{{ .label }}</dt><dd>{{ .value }}</dd></div>
+    {{- end }}
+  </dl>
+  <a class="btn btn-primary program-cta" href="{{ $p.RelPermalink }}" data-event="{{ $card.event }}">{{ i18n "view_program" }} <span class="arrow" aria-hidden="true">→</span></a>
+</article>

@@ -1,0 +1,6 @@
+{{- /* Image from assets/. Args: src, alt, w, h (required for SVG), class, lazy (default true), priority (bool). */ -}}
+{{- $r := resources.Get .src -}}
+{{- if not $r }}{{ errorf "ui/img: assets/%s not found" .src }}{{ end -}}
+{{- $w := .w -}}{{- if not $w }}{{ $w = $r.Width }}{{ end -}}
+{{- $h := .h -}}{{- if not $h }}{{ $h = $r.Height }}{{ end -}}
+<img src="{{ $r.RelPermalink }}" width="{{ $w }}" height="{{ $h }}"{{ with .class }} class="{{ . }}"{{ end }}{{ if .priority }} fetchpriority="high"{{ else if ne .lazy false }} loading="lazy"{{ end }} decoding="async" alt="{{ .alt }}">

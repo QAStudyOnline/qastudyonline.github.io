@@ -1,0 +1,33 @@
+/* ---------- Hero scroll cue ---------- */
+.hero-grid { grid-template-rows: 1fr auto; min-height: calc(100svh - var(--header-h)); padding: 32px 0 20px; row-gap: 20px; }
+.hero-content { padding: 52px 56px; }
+.scroll-cue { display: flex; flex-direction: column; align-items: center; gap: 10px; color: var(--text-on-dark); text-align: center; padding: 6px 0; }
+.scroll-cue-text { font-size: 16px; font-weight: 500; letter-spacing: -.005em; }
+.scroll-cue-arrow { width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--glass-border); background: rgba(255,255,255,.04); display: flex; align-items: center; justify-content: center; color: var(--accent-soft); animation: cue-bounce 1.8s ease-in-out infinite; }
+.scroll-cue-arrow svg { width: 20px; height: 20px; }
+.scroll-cue:hover .scroll-cue-arrow { border-color: #fff; color: #fff; }
+@keyframes cue-bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(8px); } }
+@media (prefers-reduced-motion: reduce) { .scroll-cue-arrow { animation: none; } }
+@media (max-width: 1023px) { .hero-grid { min-height: 0; } .hero-content { padding: 44px 28px; } }
+@media (max-width: 767px) { .hero-content { padding: 36px 20px; } .scroll-cue-text { font-size: 15px; } }
+
+/* Fit hero card + scroll cue into the first screen */
+@media (min-width: 1024px) {
+  .hero-grid { padding: 20px 0 14px; row-gap: 12px; }
+  .hero-content { padding: 40px 56px 36px; }
+  .hero-title { font-size: clamp(44px, 5.4vw, 80px); }
+  .hero .level-path { margin-bottom: 22px; }
+  .hero .lead { margin-top: 20px; }
+  .hero .pills { margin-top: 16px; }
+  .hero-actions { margin-top: 28px; }
+  .proof-line { margin-top: 26px; }
+}
+@media (min-width: 1024px) and (max-height: 820px) {
+  .hero-title { font-size: clamp(40px, 4.6vw, 64px); }
+  .hero-content { padding: 30px 48px 28px; }
+  .proof-line { display: none; }
+}
+
+.field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+@media (max-width: 767px) { .field-row { grid-template-columns: 1fr; } }
+

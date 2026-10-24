@@ -1,0 +1,13 @@
+{{- /* Standalone redirect page for retired section URLs (/courses/, /team/). GitHub Pages cannot send 301s. */ -}}
+{{- $to := .Params.redirect_to | relURL -}}
+<!DOCTYPE html>
+<html lang="{{ site.Language.Locale }}">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ .Title }}</title>
+  <link rel="canonical" href="{{ .Params.redirect_to | absURL }}">
+  <meta name="robots" content="noindex">
+  <meta http-equiv="refresh" content="0; url={{ $to }}">
+</head>
+<body><a href="{{ $to }}">{{ $to }}</a></body>
+</html>

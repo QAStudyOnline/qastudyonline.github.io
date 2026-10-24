@@ -1,0 +1,31 @@
+/* ---------- v5.4: flip cards in "Як навчаємо" ---------- */
+.steps .step, .steps .step:first-child, .steps .step:last-child, .steps .step:nth-child(2n+1), .section-dark .steps .step { padding: 0; border: 0; background: transparent; perspective: 1400px; outline: none; }
+.step-card { position: relative; min-height: 320px; height: 100%; transform-style: preserve-3d; transition: transform 700ms cubic-bezier(.3,.7,.2,1); will-change: transform; }
+.step:hover .step-card, .step:focus-visible .step-card, .step.is-flipped .step-card { transform: rotateY(180deg); }
+.step:focus-visible { outline: 2px solid var(--accent-soft); outline-offset: 4px; border-radius: var(--radius-card); }
+.step-face { position: absolute; inset: 0; padding: 32px 28px; border: 1px solid var(--glass-border); border-radius: var(--radius-card); background: var(--glass); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); backface-visibility: hidden; -webkit-backface-visibility: hidden; display: flex; flex-direction: column; }
+.step-back { transform: rotateY(180deg); background: linear-gradient(160deg, rgba(107,92,255,.28), rgba(12,10,40,.75)); border-color: rgba(143,132,255,.55); }
+.step-back .step-num { opacity: 1 !important; color: var(--accent-soft); }
+.step-detail { font-size: 15.5px; line-height: 1.55; color: var(--text-on-dark); }
+.step-hint { margin-top: auto; padding-top: 16px; font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--accent-soft); opacity: .8; }
+.step .h3 { padding-right: 36px; }
+.step .body { margin-bottom: 0; }
+
+/* Nudge on the first card until the user interacts */
+@keyframes step-nudge {
+  0%, 82%, 100% { transform: rotateY(0); }
+  88% { transform: rotateY(-14deg); }
+  94% { transform: rotateY(6deg); }
+}
+/* Nudge lives on a separate wrapper so it never fights the flip transition on .step-card */
+.step-inner { height: 100%; transform-style: preserve-3d; }
+.steps.is-visible .step:first-child:not(.was-touched) .step-inner { animation: step-nudge 5s ease-in-out 1.6s infinite; }
+.steps .step.was-touched .step-inner { animation: none; }
+@media (prefers-reduced-motion: reduce) { .step-inner { animation: none !important; } .step-card { transition: none; } }
+@media (max-width: 1023px) { .step-card { min-height: 280px; } .steps .step, .steps .step:nth-child(n+3) { border-top: 0 !important; } }
+@media (max-width: 767px) {
+  .steps .step, .steps .step:nth-child(2n+1) { padding: 0 0 0 0; border-left: 0; display: block; }
+  .step::before { display: none; }
+  .step-card { min-height: 240px; }
+}
+

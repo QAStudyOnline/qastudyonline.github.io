@@ -1,0 +1,29 @@
+/* ==========================================================================
+   QAStudy.online — Home  (v3)
+   Design tokens per Technical Handoff §3
+   ========================================================================== */
+:root {
+  --bg-dark: #07111C;
+  --bg-dark-2: #0B1622;
+  --bg-light: #F6F8FB;
+  --surface-light: #FFFFFF;
+  --text-on-dark: #F4F7FB;
+  --text-secondary-dark: #AEB9C8;
+  --text-primary: #0D1726;
+  --text-secondary: #657188;
+  --accent: #2476FF;
+  --accent-hover: #125FE4;
+  --accent-soft: #6FA3FF;
+  --border-dark: rgba(160, 185, 215, 0.22);
+  --border-light: #DCE3ED;
+
+  --font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --container: 1360px;
+  --gutter: 64px;
+  --section-y: 128px;
+  --header-h: 84px;
+  --ease: cubic-bezier(.2,.6,.2,1);
+  --t-fast: 200ms;
+  --radius: 4px;
+}
+

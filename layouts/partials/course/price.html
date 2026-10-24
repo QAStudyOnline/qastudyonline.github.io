@@ -1,0 +1,41 @@
+{{- with .Params.price }}
+{{- $c := $.Params.cohort -}}
+<section class="section section-dark" id="price">
+  <div class="container">
+    <header class="section-head reveal">
+      <p class="eyebrow eyebrow-dark">{{ partial "course/num.html" $ }}. {{ i18n "course_price" }}</p>
+      <h2 class="h2">{{ i18n "course_price_title" | safeHTML }}</h2>
+    </header>
+    <div class="price-grid">
+      <div class="price-card glass reveal">
+        <p class="price-label">{{ i18n "price_full" }}</p>
+        <p class="price-amount">{{ .amount }}</p>
+        <p class="price-note">{{ .note }}</p>
+        <p class="mini-label mini-label-dark">{{ i18n "price_included" }}</p>
+        <ul class="skill-list skill-list-dark">{{ range .included }}<li>{{ . }}</li>{{ end }}</ul>
+        {{ partial "ui/cta.html" (dict "page" $ "place" "price" "class" "btn btn-primary btn-lg" "arrow" true) }}
+      </div>
+      <div class="price-side">
+        {{- with $c }}
+        <div class="cohort glass reveal">
+          <p class="mini-label mini-label-dark">{{ i18n "cohort_next" }}</p>
+          <p class="cohort-date"><time datetime="{{ .date_iso }}">{{ .date }}</time></p>
+          <ul class="cohort-details">{{ range .details }}<li>{{ . }}</li>{{ end }}</ul>
+          <p class="cohort-note">{{ .note }}</p>
+        </div>
+        {{- end }}
+        {{- range slice .company .aside }}{{ with . }}
+        <div class="company glass reveal">
+          <span class="company-icon" aria-hidden="true">{{ partial "ui/icon.html" (dict "name" "building") }}</span>
+          <p class="h4">{{ .title }}</p>
+          <p class="body body-dark">{{ .text }}</p>
+          {{- with .links }}
+          <p class="body body-dark">{{ i18n "sources" }}: {{ range $i, $l := . }}{{ if $i }} · {{ end }}<a class="inline-link" href="{{ $l.url }}" target="_blank" rel="noopener">{{ $l.text }}</a>{{ end }}</p>
+          {{- end }}
+        </div>
+        {{- end }}{{ end }}
+      </div>
+    </div>
+  </div>
+</section>
+{{- end }}

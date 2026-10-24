@@ -1,0 +1,23 @@
+{{ define "main" }}
+<section class="hero section-dark stub-hero" id="hero">
+  <span class="deco deco-1" aria-hidden="true"></span>
+  <span class="deco deco-2" aria-hidden="true"></span>
+  <div class="container stub-grid">
+    <article class="stub-card glass reveal">
+      <span class="stamp stamp-status stamp-wip" aria-label="{{ i18n "stub_wip_aria" }}">Under <br>construction</span>
+      <p class="eyebrow eyebrow-dark">{{ .Params.kicker }}</p>
+      <p class="stub-ups">UPS. <span class="accent">Unexpected result</span></p>
+      <h1 class="h2 stub-title">{{ .Title }}</h1>
+      {{- with .Params.lamp }}
+      <p class="program-status status-soon course-lamp"><span class="status-dot status-dot-soon" aria-hidden="true"></span>{{ . }}</p>
+      {{- end }}
+      <p class="stub-eta"><span class="stub-eta-label">Status</span>{{ .Params.eta }}. Expected: повний контент. Actual: ця сторінка.</p>
+      <p class="lead lead-dark stub-text">{{ .Params.text }}</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary btn-lg" href="{{ .Params.primary.url }}"{{ if hasPrefix .Params.primary.url "http" }} target="_blank" rel="noopener"{{ end }}>{{ .Params.primary.label }} <span class="arrow" aria-hidden="true">→</span></a>
+        <a class="link-underline link-light" href="{{ .Params.secondary.url }}"{{ if hasPrefix .Params.secondary.url "http" }} target="_blank" rel="noopener"{{ end }}>{{ .Params.secondary.label }}</a>
+      </div>
+    </article>
+  </div>
+</section>
+{{ end }}

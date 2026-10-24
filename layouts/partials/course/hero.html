@@ -1,0 +1,26 @@
+<section class="hero section-dark course-hero" id="hero">
+  <span class="deco deco-1" aria-hidden="true"></span>
+  <span class="deco deco-2" aria-hidden="true"></span>
+  <div class="container course-hero-grid">
+    <div class="course-hero-content glass reveal">
+      <p class="eyebrow eyebrow-dark">{{ i18n "course_kicker" }} · {{ .Params.direction }}</p>
+      {{ partial "ui/lamp.html" . }}
+      <h1 class="hero-title course-title">{{ .Title }}</h1>
+      <p class="course-transition">{{ .Params.transition }}</p>
+      <p class="lead lead-dark course-promise">{{ .Params.promise }}</p>
+      <ul class="cmeta">
+        {{- range .Params.meta }}
+        <li><span class="cmeta-label">{{ .label }}</span><span class="cmeta-value">{{ .value }}</span></li>
+        {{- end }}
+      </ul>
+      <div class="hero-actions">
+        {{ partial "ui/cta.html" (dict "page" . "place" "hero" "class" "btn btn-primary btn-lg" "arrow" true) }}
+        <a class="link-underline link-light" href="#program">{{ i18n "course_program_link" }}</a>
+      </div>
+      {{ partial "ui/seats.html" . }}
+      <ol class="level-path course-path" aria-label="{{ i18n "levels_aria" }}">
+        {{- range .Params.level_path }}<li>{{ . }}</li>{{ end -}}
+      </ol>
+    </div>
+  </div>
+</section>

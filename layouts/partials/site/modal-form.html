@@ -1,0 +1,24 @@
+{{- /* "Поставити питання" modal (home only). */ -}}
+<div class="modal" id="contact-modal" role="dialog" aria-modal="true" aria-labelledby="contact-title" hidden>
+  <div class="modal-backdrop" data-close-form></div>
+  <div class="modal-panel">
+    <button class="modal-close" type="button" aria-label="{{ i18n "close" }}" data-close-form>×</button>
+    <p class="eyebrow eyebrow-dark">{{ i18n "modal_kicker" }}</p>
+    <h2 class="h3" id="contact-title">{{ i18n "modal_title" }}</h2>
+
+    <form class="contact-form" id="contact-form" action="{{ site.Params.forms.endpoint }}" method="POST" novalidate>
+      {{ partial "ui/form-fields.html" (dict "source" "home" "subject" (i18n "modal_subject") "messageRequired" true) }}
+      <p class="form-privacy">{{ i18n "form_privacy_before" }} <a href="{{ "/privacy/" | relURL }}">{{ i18n "form_privacy_link" }}</a>. {{ i18n "modal_reply_time" }}</p>
+      <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+
+      <button class="btn btn-primary btn-lg" type="submit" id="form-submit"><span class="btn-label">{{ i18n "form_send" }}</span><span class="btn-loading" aria-hidden="true">{{ i18n "form_sending" }}</span></button>
+      <p class="form-alt">{{ i18n "form_alt_telegram" }} <a href="{{ site.Params.social.telegram }}" target="_blank" rel="noopener" data-event="telegram_click">{{ site.Params.telegram_handle }}</a></p>
+    </form>
+
+    <div class="form-success" id="form-success" hidden>
+      <p class="h4">{{ i18n "modal_success_title" }}</p>
+      <p class="body body-dark">{{ i18n "modal_success_text" }}</p>
+      <a class="link-underline link-accent" href="{{ site.Params.social.telegram }}" target="_blank" rel="noopener">{{ i18n "modal_success_tg" }} <span class="arrow" aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,20 @@
+{{- with .Params.project }}
+{{- $title := .title | htmlEscape | replace " Project" ` <span class="accent">Project</span>` -}}
+<section class="section section-dark" id="project">
+  <div class="container project-grid">
+    <div class="reveal">
+      <p class="eyebrow eyebrow-dark">{{ partial "course/num.html" $ }}. {{ i18n "course_project" }}</p>
+      <h2 class="h2">{{ $title | safeHTML }}</h2>
+      <p class="section-support section-support-dark">{{ .intro }}</p>
+    </div>
+    <div class="repo glass reveal">
+      <div class="repo-bar"><span></span><span></span><span></span><span class="repo-path">github.com/you/{{ $.File.ContentBaseName }}-project</span></div>
+      <ul class="repo-list">
+        {{- range .items }}
+        <li><code class="repo-name">{{ .name }}</code><span class="repo-desc">{{ .desc }}</span></li>
+        {{- end }}
+      </ul>
+    </div>
+  </div>
+</section>
+{{- end }}

@@ -1,0 +1,11 @@
+/* ---------- Final CTA ---------- */
+.final-cta { background: var(--bg-dark-2); }
+.cta-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+.cta-content .lead { margin-top: 28px; max-width: 540px; }
+.cta-channels { display: flex; align-items: center; gap: 28px; margin-top: 32px; }
+.cta-channels a { display: inline-flex; align-items: center; gap: 10px; font-size: 17px; color: var(--text-on-dark); padding: 6px 0; transition: color var(--t-fast); }
+.cta-channels a:hover { color: var(--accent-soft); }
+.cta-channels .ico { color: var(--accent-soft); }
+.cta-channels .sep { width: 1px; height: 24px; background: var(--border-dark); }
+.cta-support { margin-top: 24px; font-size: 15px; color: var(--text-secondary-dark); }
+
