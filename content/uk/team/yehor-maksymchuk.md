@@ -1,7 +1,7 @@
 ---
 about:
 - В IT з 2010 року. Пройшов шлях від ручного тестувальника в державному проєкті до QA-архітектора, який відповідає за стратегію й архітектуру якості в продуктах із мільйонами користувачів.
-- За цей час побудував не один фреймворк і процес з нуля — і бачив, що ламається під навантаженням і в реальному продакшені, а не в підручнику.
+- За цей час побудував не один framework і процес з нуля — і бачив, що ламається під навантаженням і в реальному продакшені, а не в підручнику.
 certifications:
 - img: badge-copilot.svg
   issuer: Microsoft / GitHub
@@ -41,7 +41,7 @@ companies:
 courses:
 - desc: Тестування LLM, RAG та AI-агентів — від першого eval до quality gates у production CI/CD.
   slug: agentic-qa
-- desc: Навантажувальні тести в k6, дашборди Grafana, performance gates у CI/CD та Kubernetes, chaos testing.
+- desc: Load tests в k6, dashboards Grafana, performance gates у CI/CD та Kubernetes, chaos testing.
   slug: k6-performance-testing
 - desc: 'QA-архітектура і стратегія якості, яка витримає ріст продукту й команди: ризики, метрики, governance.'
   slug: scale-quality
@@ -67,29 +67,29 @@ facts_line:
 founder_proof:
 - label: років в IT
   value: 14+
-- label: скрам-команди у зоні відповідальності
+- label: scrum teams у зоні відповідальності
   value: '22'
 - label: доменів — від fintech до держсектору
   value: '6'
 - label: Performance Architect зараз
   value: US fintech
-intro: 'Будую якість там, де її найважче втримати — у платіжних системах, healthcare-продуктах і AI-агентних застосунках. Зараз — архітектор перформенс- і автоматизаційної якості в US fintech, QA Architect, ментор і автор програм QAStudy.online.'
+intro: 'Будую якість там, де її найважче втримати — у платіжних системах, healthcare-продуктах і AI-агентних застосунках. Зараз — Performance & Automation Architect у US fintech, QA Architect, ментор і автор програм QAStudy.online.'
 name: Єгор Максимчук
 name_latin: Yehor Maksymchuk
 now:
-  text: 'Performance & Automation Architect у US fintech (платіжний провайдер): будую перформенс-фреймворки, observability-стек (k6, Grafana, InfluxDB, Prometheus, sitespeed.io), вбудовую навантажувальне тестування в CI/CD і розробляю AI-агентів для прискорення SDLC.'
+  text: 'Performance & Automation Architect у US fintech (платіжний провайдер): будую performance frameworks, observability-стек (k6, Grafana, InfluxDB, Prometheus, sitespeed.io), вбудовую load testing в CI/CD і розробляю AI-агентів для прискорення SDLC.'
   title: Чим займаюся зараз
 numbers:
 - label: років в IT
   value: 14+
-- label: скрам-команди у зоні відповідальності
+- label: scrum teams у зоні відповідальності
   value: '22'
 - label: доменів — від fintech до держсектору
   value: '6'
 og_image: img/founder.webp
 og_type: profile
 position: QA & Performance Architect · AI Agent Development & Testing
-quote: Я бачив десятки сильних інженерів, які вперлися в стелю не тому, що погано тестують, а тому, що ніхто не показав їм системний, інженерний рівень професії. Я викладаю рівно те, що роблю щодня на реальних проєктах. Групи маленькі — кожен отримує персональний фідбек на код і рішення.
+quote: Я бачив десятки сильних інженерів, які вперлися в стелю не тому, що погано тестують, а тому, що ніхто не показав їм системний, інженерний рівень професії. Я викладаю рівно те, що роблю щодня на реальних проєктах. Групи маленькі — кожен отримує персональний feedback на код і рішення.
 seo_title: Єгор Максимчук — QA & Performance Architect, автор і лектор QAStudy.online
 social:
 - name: LinkedIn

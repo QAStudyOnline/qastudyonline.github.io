@@ -74,7 +74,7 @@ if (cfg.enabled) {
     { sel: '.hero-title', text: 'BUG-002 · H1 містить англійське слово «Level». Локалізація неповна. By design.' },
     { sel: '.steps .step:first-child', text: 'BUG-003 · Картка рухається без дії користувача. Expected: статична. Actual: підморгує. By design.' },
     { sel: '.program-cta', text: 'BUG-004 · Гало кнопки 10px замість 8px за гайдлайном. Дизайнер наполягає.' },
-    { sel: '.level-path li:last-child', text: 'BUG-005 · Останній рівень білий, решта сірі. Це не баг, це ціль.' },
+    { sel: '.level-path li:last-child', text: 'BUG-005 · Останній рівень білий, решта сірі. Це не bug, це ціль.' },
     { sel: '#year', text: 'BUG-006 · Рік підставляє JS. Якщо бачите 2027 — вітаємо з Новим роком.' },
     { sel: '.faq-item[open]', text: 'BUG-007 · Перше питання відкрите за замовчуванням. Так, це навмисно.' },
     { sel: '.footer-legal li:first-child', text: 'BUG-008 · Знак © є, а патенту на QA Engineering немає. Working as intended.' }
@@ -117,7 +117,7 @@ if (cfg.enabled) {
       '<button class="egg-close" type="button" aria-label="Закрити">×</button>' +
       '<p class="egg-kicker">QA View · test run passed</p>' +
       '<h2 class="egg-title">Ви знайшли те, чого <span>не мали бачити</span></h2>' +
-      '<p class="egg-text">На сторінці підсвічено ' + n + ' «багів». Усі — Won’t fix. А ось це — fix:</p>' +
+      '<p class="egg-text">На сторінці підсвічено ' + n + ' «bugs». Усі — Won’t fix. А ось це — fix:</p>' +
       '<div class="egg-discount"><span class="egg-label">' + EASTER_CONFIG.discountLabel + '</span><code class="egg-code" id="egg-code">' + EASTER_CONFIG.promoCode + '</code><button class="btn btn-primary egg-copy" type="button">Скопіювати код</button></div>' +
       '<p class="egg-note">' + EASTER_CONFIG.promoValidNote + '</p>' +
       '<p class="egg-note">Esc — вийти з QA View. Пасхалок на сторінці три: консоль, форма і ця.</p>';
@@ -158,7 +158,7 @@ if (cfg.enabled) {
         box.innerHTML =
           '<button class="egg-close" type="button" aria-label="Закрити">×</button>' +
           '<p class="egg-kicker">Known issues · 3 open</p>' +
-          '<h2 class="egg-title">На цьому сайті є <span>баги</span>. Навмисні.</h2>' +
+          '<h2 class="egg-title">На цьому сайті є <span>bugs</span>. Навмисні.</h2>' +
           '<ul class="egg-list">' +
           '<li><strong>ISSUE-1</strong> Консоль браузера виводить зайве.</li>' +
           '<li><strong>ISSUE-2</strong> Форма надто багато знає про негативні кейси. Спробуйте її зламати.</li>' +

@@ -231,7 +231,7 @@ project:
   items:
   - desc: AI-застосунок, 300–800 рядків, з Claude Code або Copilot
     name: ai-application/
-  - desc: Тест-стратегія на 2–4 сторінки з go/no-go критеріями
+  - desc: Test strategy на 2–4 сторінки з go/no-go критеріями
     name: TEST_STRATEGY.md
   - desc: Risk-based coverage matrix
     name: coverage-matrix.xlsx
@@ -241,7 +241,7 @@ project:
     name: tests/agent/ · tests/security/
   - desc: AI test framework з LLM-as-a-Judge і звітом
     name: framework/
-  - desc: 'CI/CD pipeline: quality gates + AI code review + реліз'
+  - desc: 'CI/CD pipeline: quality gates + AI code review + release'
     name: .github/workflows/
   - desc: Agentic QA workflow для review, test generation, документації
     name: agentic-workflow/

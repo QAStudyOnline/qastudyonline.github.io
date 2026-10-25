@@ -48,8 +48,8 @@ format:
 - desc: 2–3 години на занятті, запис кожного.
   title: Живі заняття
 - desc: Розбір кожного домашнього завдання і peer review між студентами групи.
-  title: Персональний фідбек
-- desc: Персональний фідбек на кожне ДЗ, а не формальна перевірка «пройшов / не пройшов».
+  title: Персональний feedback
+- desc: Персональний feedback на кожне ДЗ, а не формальна перевірка «пройшов / не пройшов».
   title: Мала група
 - desc: Кожен студент захищає власний Capstone перед steering committee.
   title: Capstone-захист
@@ -81,16 +81,16 @@ modules:
   title: Mindset & Framing
 - color: green
   lessons:
-  - desc: Як архітектурний стиль системи диктує, де ставити тест-рівні й де народжуються ризики якості?
-    homework: Project X brief + адаптована тест-піраміда + перевірка tenant isolation.
+  - desc: Як архітектурний стиль системи диктує, де ставити test levels й де народжуються ризики якості?
+    homework: Project X brief + адаптована test pyramid + перевірка tenant isolation.
     'n': '1'
-    practice: розбір реальної архітектурної діаграми — класифікація стилю, позначення тест-рівнів і risk-точок.
+    practice: розбір реальної архітектурної діаграми — класифікація стилю, позначення test levels і risk-точок.
     title: Application architectures для QA
   - desc: Як із архітектурної картини знайти зони ризику й точки нетестованості раніше, ніж вони стануть інцидентом?
     homework: Architecture-to-risk map для Project X (компонент → ризик якості → тест-рівень).
     'n': '2'
     practice: позначення 5 risk hotspots на спільній діаграмі з аргументацією пріоритету.
-    title: 'Читання системи: testability, risk hotspots, тест-рівні'
+    title: 'Читання системи: testability, risk hotspots, test levels'
   - desc: Як той самий продукт вимагає різної стратегії, метрик і governance залежно від моделі залучення?
     homework: one-page порівняння керування якістю Project X як аутсорсер vs product owner.
     'n': '3'
@@ -121,7 +121,7 @@ modules:
     homework: Draft Test Strategy v1 (scope, approach, levels, objectives, risks-link).
     'n': '7'
     practice: написання секції «test approach + objectives» для навчального кейсу.
-    title: Написання тест-стратегії (Test Strategy v1)
+    title: Написання test strategy (Test Strategy v1)
   - desc: На яких даних і хто приймає go/no-go — і як явно прийняти залишковий ризик?
     homework: quality-gate / release-readiness checklist для Project X.
     'n': '8'
@@ -130,7 +130,7 @@ modules:
   lessons_count: 5 занять
   meta: заняття 4–8 · Senior → Lead
   num: 2
-  title: Ризики, тест-стратегія та документація
+  title: Ризики, test strategy та документація
 - color: red
   lessons:
   - desc: Чим «метрика для команди» відрізняється від «метрики для борду»?
@@ -143,7 +143,7 @@ modules:
     'n': '10'
     practice: інтерпретація набору DORA-даних — де команда сильна, де нестабільність.
     title: 'Delivery & quality analytics: DORA + DX Core 4'
-  - desc: Як зібрати дашборд, який реально читають?
+  - desc: Як зібрати dashboard, який реально читають?
     homework: GQM-дерево для Project X + рефайн mock dashboard.
     'n': '11'
     practice: GQM від однієї бізнес-цілі до 2–3 метрик.
@@ -157,7 +157,7 @@ modules:
     homework: release-process quality-control checklist для Project X.
     'n': '13'
     practice: нанесення quality signals на схему CI/CD pipeline.
-    title: Релізний процес і контроль якості на ньому
+    title: Release process і контроль якості на ньому
   lessons_count: 5 занять
   meta: заняття 9–13 · Lead
   num: 3
@@ -180,11 +180,11 @@ modules:
     practice: проєктування metamorphic-тестів і сурогатного oracle для недетермінованого виходу.
     title: Тестування AI-систем
   - desc: Які ризики AI неможливо «відтестувати» технічно?
-    homework: AI-risk register для Project X (hallucination, bias, privacy, drift) з мітигацією.
+    homework: AI-risk register для Project X (hallucination, bias, privacy, drift) з mitigation.
     'n': '17'
     practice: побудова AI-risk register на навчальному кейсі.
     title: Ризики й governance AI у QA
-  - desc: Як апгрейдити класичну тест-стратегію до AI-SDLC?
+  - desc: Як апгрейдити класичну test strategy до AI-SDLC?
     homework: AI-SDLC upgrade до Test Strategy v2.
     'n': '18'
     practice: модифікація одного наявного quality gate під AI-фічу.
@@ -209,9 +209,9 @@ modules:
     homework: QA-in-delivery model для Project X (де QA, як рухаються test-таски).
     'n': '21'
     practice: розміщення QA-активностей у Scrum-спринті vs Kanban-потоці.
-    title: Agile-фреймворки для QA-лідерів
+    title: Agile-frameworks для QA-лідерів
   - desc: Як зробити DoR/DoD/AC живими working agreements?
-    homework: working-agreements pack (DoR-чеклист, багаторівневий DoD, AC-шаблон + 3 приклади).
+    homework: working-agreements pack (DoR-checklist, багаторівневий DoD, AC-шаблон + 3 приклади).
     'n': '22'
     practice: переписати слабкий набір AC у Given/When/Then + додати testability в DoR.
     title: 'Working agreements: DoR / DoD / Acceptance Criteria'
@@ -236,11 +236,11 @@ modules:
     'n': '25'
     practice: переписати розпливчасте повідомлення у decision-oriented форму.
     title: Письмова комунікація технічного лідера
-  - desc: Як зробити, щоб «релізний ризик у $X» переважив «ми знайшли 200 багів»?
+  - desc: Як зробити, щоб «release risk у $X» переважив «ми знайшли 200 bugs»?
     homework: executive one-pager — обґрунтувати одне quality-рішення мовою бізнесу.
     'n': '26'
-    practice: зібрати бізнес-аргумент за/проти релізу для умовного борду.
-    title: Вплив на стейкхолдерів без формальної влади
+    practice: зібрати бізнес-аргумент за/проти release для умовного борду.
+    title: Вплив на stakeholders без формальної влади
   - desc: Як зібрати артефакти M1–M5 в один board-ready пакет без суперечностей?
     homework: Integrated Capstone Test Strategy package (M1–M5 в одному документі).
     'n': '27'
@@ -256,11 +256,11 @@ modules:
   title: Комунікація, вплив і захист Capstone
 - color: orange
   lessons:
-  - desc: Як перетворити сухі метрики на наратив, який топ-менеджмент запам'ятає? Структура «ситуація → ускладнення → вирішення → результат»; адаптація під аудиторію (команда / менеджмент / C-level).
+  - desc: Як перетворити сухі метрики на narrative, який топ-менеджмент запам'ятає? Структура «ситуація → ускладнення → вирішення → результат»; адаптація під аудиторію (команда / менеджмент / C-level).
     homework: storytelling-версія метрик-звіту Project X (до 1 стор. + нотатки для усної подачі).
     'n': '29'
     title: Storytelling для QA-лідера
-  - desc: Як «продати» QA-ініціативу через цінність для стейкхолдера — і подолати «нема часу / бюджету / не пріоритет»? Value proposition для QA-ініціативи; подолання заперечень; продаж тиском vs цінністю.
+  - desc: Як «продати» QA-ініціативу через цінність для stakeholder — і подолати «нема часу / бюджету / не пріоритет»? Value proposition для QA-ініціативи; подолання заперечень; продаж тиском vs цінністю.
     homework: pitch на продаж однієї QA-ініціативи Project X.
     'n': '30'
     title: 'How to Sell: продаж ідей і якості всередині організації'
@@ -272,7 +272,7 @@ modules:
     homework: one-page аналіз TaaS для частини тестування Project X.
     'n': '32'
     title: TaaS (Testing as a Service)
-  - desc: Як за перші два тижні в новому проєкті зібрати картину, якої ще немає? Стейкхолдери, процеси, болі команди, очікування клієнта; типові помилки — поспішні висновки.
+  - desc: Як за перші два тижні в новому проєкті зібрати картину, якої ще немає? Stakeholders, процеси, болі команди, очікування клієнта; типові помилки — поспішні висновки.
     homework: discovery plan для нового залучення на Project X.
     'n': '33'
     title: 'Discovery: оцінка проєкту на старті залучення'
@@ -290,13 +290,13 @@ modules:
   title: 'Лідерські навички: вплив, зміни та кризи'
 personas:
 - outcome: Навчитеся читати архітектуру системи як джерело ризиків, будувати risk-based стратегію й говорити з product мовою рішень — а не мовою дефектів.
-  quote: «Я добре тестую, але не знаю, як масштабувати вплив на якість за межами власних тасок»
+  quote: «Я добре тестую, але не знаю, як масштабувати вплив на якість за межами власних tasks»
   role: Senior QA → Lead
-- outcome: 'Отримаєте фреймворк QA-функції: RACI-модель, metrics-based управління — і вмітимете захищати quality-рішення перед steering committee.'
-  quote: «Я відповідаю за процес і релізи, але governance, OKR і C-level комунікація — моє слабке місце»
+- outcome: 'Отримаєте framework QA-функції: RACI-модель, metrics-based управління — і вмітимете захищати quality-рішення перед steering committee.'
+  quote: «Я відповідаю за процес і releases, але governance, OKR і C-level комунікація — моє слабке місце»
   role: Lead → Test Manager / Head of QA
 - outcome: 'Пройдете повний ланцюг: architecture-to-risk map, risk-based стратегія, DORA-метрики, тестування AI-систем, governance та стратегічний вплив.'
-  quote: «Хочу бути власником технічної тест-стратегії й архітектури якості на рівні продукту»
+  quote: «Хочу бути власником технічної test strategy й архітектури якості на рівні продукту»
   role: Senior QA / SDET → QA Architect
 price:
   amount: 120 000 грн
@@ -313,10 +313,10 @@ price:
   currency: UAH
   included:
   - Живі заняття 2–3 год + запис кожного
-  - Персональний фідбек на кожне домашнє завдання
+  - Персональний feedback на кожне домашнє завдання
   - Peer review між студентами групи
   - Capstone-захист перед steering committee
-  - Шаблони, canvas, чеклисти для всіх 19 артефактів
+  - Шаблони, canvas, checklists для всіх 19 артефактів
   - Telegram-спільнота групи та підтримка між заняттями
   - Board-ready Test Strategy пакет — реальний артефакт для портфоліо
   note: 'Повна вартість програми: 8 блоків, 35 занять, ~33 тижні.'
@@ -349,7 +349,7 @@ project:
     name: M6
   - desc: Defense deck + захист 20 хв + 15 хв питань від steering committee
     name: M6
-  - desc: 'Storytelling-наратив: метрики → наратив для топ-менеджменту'
+  - desc: 'Storytelling-narrative: метрики → narrative для топ-менеджменту'
     name: M7
   - desc: 'Sales pitch: продаж QA-ініціативи з відпрацюванням заперечень'
     name: M7
@@ -371,9 +371,9 @@ related:
 - k6-performance-testing
 seo_title: Scale Quality — QA-архітектура та стратегія якості для Senior і Lead | QAStudy.online
 skills:
-- Читати архітектуру системи (monolith, microservices, cloud-native) і перетворювати її на карту ризиків і тест-рівнів — бачити проблеми до того, як їх побачили розробники
+- Читати архітектуру системи (monolith, microservices, cloud-native) і перетворювати її на карту ризиків і test levels — бачити проблеми до того, як їх побачили розробники
 - Будувати project test strategy за ISO 29119 — від risk register до quality gates і release readiness
-- Вимірювати якість через delivery-метрики й будувати GQM-дашборди, які реально читають у команді
+- Вимірювати якість через delivery-метрики й будувати GQM-dashboards, які реально читають у команді
 - 'Тестувати AI-системи без детермінованого oracle: metamorphic-тести, red-teaming, CT-AI / CT-GenAI'
 - Проєктувати QA-функцію (CoE, RACI), каскадувати OKR/KPI і вести working agreements — керувати якістю організаційно, а не тільки технічно
 - Комунікувати ризик executives мовою бізнесу і захищати trade-offs перед steering committee
