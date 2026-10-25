@@ -31,6 +31,10 @@ certifications:
   issuer: Anthropic
   title: Certificate Developer — Foundations
   verify_url: https://www.credly.com/badges/9448be8e-589f-46f1-85bf-aecf42280123
+- img: badge-copilot.svg
+  issuer: Microsoft / GitHub
+  title: 'GitHub Certified: Agentic AI Developer'
+  verify_url: https://learn.microsoft.com/api/credentials/share/en-us/YehorMaksymchuk-4144/E87B0287B2D3A94C?sharingId=78E0E0732AD2E9F2
 companies:
 - name: SoftServe
   note: IT-сервіси
