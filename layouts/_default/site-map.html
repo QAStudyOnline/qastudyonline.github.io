@@ -1,0 +1,31 @@
+{{ define "main" }}
+<section class="section section-dark legal-hero" id="hero">
+  <div class="container">
+    <p class="eyebrow eyebrow-dark">{{ .Params.kicker }}</p>
+    <h1 class="h2">{{ .Title }}</h1>
+  </div>
+</section>
+<section class="section section-dark legal-body-section">
+  <div class="container">
+    <article class="legal-body glass sitemap-body">
+      {{- $courses := where site.RegularPages "Section" "courses" }}
+      {{- $team := where site.RegularPages "Section" "team" }}
+      <h2>Школа</h2>
+      <ul>
+        <li><a href="{{ "/" | relURL }}">Головна</a></li>
+        <li><a href="{{ "/about/" | relURL }}">Про школу</a></li>
+        <li><a href="{{ "/team/" | relURL }}">Автори</a>
+          <ul>{{ range $team.ByWeight }}<li><a href="{{ .RelPermalink }}">{{ .Params.name | default .Title }}</a></li>{{ end }}</ul>
+        </li>
+      </ul>
+      <h2>Курси</h2>
+      <ul>{{ range $courses.ByWeight }}<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>{{ end }}</ul>
+      <h2>Документи</h2>
+      <ul>
+        {{- range slice "oferta" "privacy" "terms" }}{{ with site.GetPage (printf "/%s" .) }}<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>{{ end }}{{ end }}
+      </ul>
+      <p><a href="{{ "sitemap.xml" | relURL }}">sitemap.xml</a></p>
+    </article>
+  </div>
+</section>
+{{ end }}

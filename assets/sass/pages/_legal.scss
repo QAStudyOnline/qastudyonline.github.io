@@ -21,3 +21,9 @@
 .legal-body td, .legal-body th { padding: 10px 12px; border: 1px solid var(--border-dark); text-align: left; vertical-align: top; }
 @media (max-width: 1023px) { .legal-grid { grid-template-columns: 1fr; } .legal-toc { position: static; } .legal-body { padding: 28px 22px; } }
 
+
+// Authors list and HTML sitemap
+.authors-grid { display: grid; gap: 24px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+.author-card { display: grid; gap: 20px; padding: 24px; img { width: 100%; height: auto; border-radius: 12px; } }
+.author-courses { list-style: none; padding: 0; margin: 12px 0 20px; display: flex; flex-wrap: wrap; gap: 8px 16px; }
+.sitemap-body ul ul { margin-top: 6px; }

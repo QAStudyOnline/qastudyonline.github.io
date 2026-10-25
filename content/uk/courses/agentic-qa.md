@@ -61,7 +61,7 @@ format:
   title: Персональний review
 - desc: Пропустили зустріч — подивитеся запис і здасте завдання у своєму темпі.
   title: Записи занять
-instructor_line: Автор внутрішнього курсу EPAM «AI-Infused Application Testing». Розробляє AI-агентів для SDLC і будує QA-архітектуру для AI-продуктів у US fintech.
+instructor_line: Розробляє AI-агентів для SDLC і будує QA-архітектуру для AI-продуктів у US fintech.
 lessons_total: 21
 level_path:
 - Middle

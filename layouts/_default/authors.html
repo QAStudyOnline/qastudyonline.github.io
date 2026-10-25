@@ -1,0 +1,29 @@
+{{ define "main" }}
+<section class="section section-dark legal-hero" id="hero">
+  <div class="container">
+    <p class="eyebrow eyebrow-dark">{{ .Params.kicker }}</p>
+    <h1 class="h2">{{ .Title }}</h1>
+    {{- with .Params.lead }}<p class="lead lead-dark legal-sub">{{ . }}</p>{{ end }}
+  </div>
+</section>
+<section class="section section-dark">
+  <div class="container authors-grid">
+    {{- range .Pages.ByWeight }}
+    <article class="author-card glass reveal">
+      {{ partial "ui/img.html" (dict "src" "img/founder.webp" "alt" (printf "%s — %s" .Params.name .Params.position) "w" 540 "h" 851) }}
+      <div class="author-card-body">
+        <h2 class="h3"><a href="{{ .RelPermalink }}">{{ .Params.name }}</a></h2>
+        <p class="team-position">{{ .Params.position }}</p>
+        <p class="body body-dark">{{ .Params.intro }}</p>
+        <ul class="author-courses">
+          {{- range .Params.courses }}
+          {{- with site.GetPage (printf "/courses/%s" .slug) }}<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>{{ end }}
+          {{- end }}
+        </ul>
+        <a class="btn btn-primary" href="{{ .RelPermalink }}">Про автора <span class="arrow" aria-hidden="true">→</span></a>
+      </div>
+    </article>
+    {{- end }}
+  </div>
+</section>
+{{ end }}

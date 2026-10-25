@@ -140,8 +140,8 @@ disableKinds    = ["taxonomy", "term", "RSS"]
   url = "#why"
   weight = 30
 [[languages.uk.menus.nav_about]]
-  name = "Викладач"
-  url = "/team/yehor-maksymchuk/"
+  name = "Автори"
+  url = "/team/"
   weight = 40
 [[languages.uk.menus.nav_about]]
   name = "Контакти"
@@ -153,8 +153,8 @@ disableKinds    = ["taxonomy", "term", "RSS"]
   url = "/#programs"
   weight = 10
 [[languages.uk.menus.nav_legal]]
-  name = "Викладач"
-  url = "/team/yehor-maksymchuk/"
+  name = "Автори"
+  url = "/team/"
   weight = 20
 [[languages.uk.menus.nav_legal]]
   name = "Оферта"
@@ -180,8 +180,8 @@ disableKinds    = ["taxonomy", "term", "RSS"]
   url = "/about/"
   weight = 20
 [[languages.uk.menus.footer_school]]
-  name = "Викладач"
-  url = "/team/yehor-maksymchuk/"
+  name = "Автори"
+  url = "/team/"
   weight = 30
 [[languages.uk.menus.footer_school]]
   name = "Як навчаємо"
@@ -192,6 +192,10 @@ disableKinds    = ["taxonomy", "term", "RSS"]
   name = "Публічна оферта"
   url = "/oferta/"
   weight = 10
+[[languages.uk.menus.footer_info]]
+  name = "Карта сайту"
+  url = "/sitemap/"
+  weight = 30
 [[languages.uk.menus.footer_info]]
   name = "Політика конфіденційності"
   url = "/privacy/"
