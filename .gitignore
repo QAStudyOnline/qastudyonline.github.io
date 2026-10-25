@@ -39,3 +39,4 @@ jekyll-design-system.txt
 
 # Static design package: generator bytecode
 /feature/**/__pycache__/
+public/
