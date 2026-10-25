@@ -1,0 +1,49 @@
+{{- /* Shared fields for the home modal and the course apply form.
+      Args: source (home | course-page), subject, course (optional), messageRequired (bool). */ -}}
+<div class="field-row">
+  <div class="field">
+    <label for="f-telegram">Telegram</label>
+    <input id="f-telegram" name="telegram" type="text" autocomplete="off" required aria-describedby="f-telegram-err" placeholder="@username">
+    <p class="field-error" id="f-telegram-err"></p>
+  </div>
+  <div class="field">
+    <label for="f-phone">{{ i18n "field_phone" }}</label>
+    <input id="f-phone" name="phone" type="tel" autocomplete="tel" required aria-describedby="f-phone-err" placeholder="+380">
+    <p class="field-error" id="f-phone-err"></p>
+  </div>
+</div>
+<div class="field">
+  <label for="f-email">Email</label>
+  <input id="f-email" name="email" type="email" autocomplete="email" required aria-describedby="f-email-err" placeholder="name@company.com">
+  <p class="field-error" id="f-email-err"></p>
+</div>
+<div class="field">
+  <label for="f-role">{{ i18n "field_role" }}</label>
+  <select id="f-role" name="role" required aria-describedby="f-role-err">
+    <option value="">{{ i18n "field_role_choose" }}</option>
+    {{- range slice "QA Engineer (Middle)" "Automation QA / SDET" "Senior QA" "QA Lead / Head of QA" "DevOps / SRE" (i18n "field_role_other") }}
+    <option>{{ . }}</option>
+    {{- end }}
+  </select>
+  <p class="field-error" id="f-role-err"></p>
+</div>
+<div class="field">
+  {{- if .messageRequired }}
+  <label for="f-message">{{ i18n "field_message_home" }}</label>
+  <textarea id="f-message" name="message" rows="4" required aria-describedby="f-message-err" placeholder="{{ i18n "field_message_home_ph" }}"></textarea>
+  {{- else }}
+  <label for="f-message">{{ i18n "field_message_course" }} <span class="opt">({{ i18n "optional" }})</span></label>
+  <textarea id="f-message" name="message" rows="3" aria-describedby="f-message-err" placeholder="{{ i18n "field_message_course_ph" }}"></textarea>
+  {{- end }}
+  <p class="field-error" id="f-message-err"></p>
+</div>
+
+<div class="hp" aria-hidden="true"><label>Website<input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label></div>
+<input type="hidden" name="_subject" value="{{ .subject }}">
+{{- with .course }}
+<input type="hidden" name="course" value="{{ . }}">
+{{- end }}
+<input type="hidden" name="source" value="{{ .source }}">
+<input type="hidden" name="page" value="">
+<input type="hidden" name="utm" value="">
+<input type="hidden" name="referrer" value="">

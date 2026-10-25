@@ -1,0 +1,15 @@
+/* ---------- Lamp + seats in course hero / sticky ---------- */
+.course-lamp { margin-bottom: 18px; font-size: 13.5px; }
+.course-lamp .status-dot { width: 9px; height: 9px; }
+.sticky-info .course-lamp { margin: 2px 0 0; font-size: 12.5px; }
+.seats { margin-top: 30px; padding-top: 22px; border-top: 1px solid var(--border-dark); }
+.seats-row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.seat { width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; border: 1px dashed rgba(179,176,214,.45); color: rgba(179,176,214,.5); background: transparent; }
+.seat svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.seat-taken { border: 1px solid rgba(143,132,255,.7); background: rgba(107,92,255,.28); color: #fff; }
+.seat-add { border: 1px solid var(--accent-soft); background: var(--accent); color: #fff; font-size: 20px; font-weight: 600; line-height: 1; text-decoration: none; margin-left: 6px; transition: transform var(--t-fast), background var(--t-fast); }
+.seat-add:hover { background: var(--accent-hover); transform: scale(1.08); }
+.seats-text { margin-top: 12px; font-size: 14px; color: var(--text-secondary-dark); }
+.seats-text strong { color: #fff; }
+@media (max-width: 767px) { .seat { width: 30px; height: 30px; } .seat svg { width: 15px; height: 15px; } .course-path { display: none; } }
+

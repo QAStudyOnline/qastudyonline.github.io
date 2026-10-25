@@ -1,0 +1,25 @@
+/* ---------- Typography ---------- */
+.hero-title { font-size: clamp(48px, 5.6vw, 84px); line-height: 1.0; font-weight: 600; letter-spacing: -0.025em; }
+.h2 { font-size: clamp(36px, 4vw, 56px); line-height: 1.06; font-weight: 600; letter-spacing: -0.022em; }
+.h3 { font-size: clamp(22px, 1.9vw, 28px); line-height: 1.18; font-weight: 600; letter-spacing: -0.015em; }
+.h4 { font-size: clamp(20px, 1.6vw, 24px); line-height: 1.2; font-weight: 600; letter-spacing: -0.01em; }
+.h5 { font-size: 20px; line-height: 1.25; font-weight: 600; }
+.lead { font-size: clamp(18px, 1.5vw, 21px); line-height: 1.45; color: var(--text-secondary); }
+.lead-dark { color: var(--text-secondary-dark); }
+.body { font-size: 17px; line-height: 1.55; color: var(--text-secondary); }
+.body-dark { color: var(--text-secondary-dark); }
+.accent { color: var(--accent); }
+.section-dark .accent { color: var(--accent-soft); }
+.eyebrow { font-size: 12px; line-height: 1.2; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: var(--text-secondary); display: flex; align-items: center; gap: 20px; margin-bottom: 28px; }
+.eyebrow::after { content: ""; display: block; width: 88px; height: 1px; background: var(--border-light); }
+.eyebrow-dark { color: var(--text-secondary-dark); }
+.eyebrow-dark::after { background: var(--border-dark); }
+.mini-label { font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 500; color: var(--accent); display: flex; align-items: center; gap: 14px; margin: 0 0 12px; }
+.mini-label::after { content: ""; width: 40px; height: 1px; background: var(--border-light); }
+.mini-label-dark::after { background: var(--border-dark); }
+.section-dark .mini-label { color: var(--accent-soft); }
+
+.section-head { max-width: 900px; margin-bottom: 64px; }
+.section-support { margin-top: 20px; font-size: clamp(17px, 1.4vw, 20px); line-height: 1.5; color: var(--text-secondary); max-width: 760px; }
+.section-support-dark { color: var(--text-secondary-dark); }
+

@@ -1,113 +1,235 @@
 ---
-title: "Performance Testing з k6"
-description: "Практичний курс з навантажувального тестування на k6 для DevOps та QA: від НФР і написання тестів до Observability, CI/CD, Kubernetes та Chaos Engineering. 15 занять, 4 блоки, рівень Middle–Senior."
-date: 2026-06-15
-draft: false
-layout: "landing"
-
-# Картка в списку курсів
-level: "Middle–Senior"
-category: "Performance тестування"
-instructor: "Єгор Максимчук"
-duration: "15 тижнів"
-lessons: 15
-show_instructor: true
-
-# Посилання
-registration_url: "https://forms.gle/e8LFL62Qd7WwQNwX8"
-program_url: "/k6-performance-testing-program/"
-doc_label: "Програма курсу повністю"
-
-# Hero
-eyebrow: "Курс"
-subtitle: "Практичний курс для DevOps та QA: пишіть навантажувальні тести в k6, будуйте дашборди в Grafana, інтегруйте перформенс тестування в CI/CD та Kubernetes — і перевіряйте стійкість системи через chaos-тестування."
-cta_label: "Залишити заявку →"
-meta_pills:
-  - "15 занять"
-  - "Middle–Senior"
-  - "Практика + ДЗ на кожному занятті"
-
-audience:
-  heading: "Для кого цей курс"
-  cards:
-    - role: "QA-інженери (middle/senior)"
-      jtbd: "«Я вмію тестувати функціонал, але коли мене питають „а як воно поводиться під навантаженням“ — я губляюсь і не знаю, з чого почати». Навчишся формулювати НФР, писати й підтримувати k6-тести, читати метрики (InfluxQL/PromQL), будувати дашборди Grafana та знаходити регресії перформенсу до релізу."
-    - role: "DevOps-інженери (middle/senior)"
-      jtbd: "«У нас є CI/CD і моніторинг, але перформенс тести хтось запускає вручну раз на квартал — хочу, щоб це працювало автоматично і давало зрозумілий результат». Збудуєш observability-стек (k6 → storage → Grafana), вбудуєш k6 у CI/CD як gate, запустиш розподілені тести в Kubernetes через k6-operator і додаси AI-аналіз та chaos-експерименти."
-
-competencies:
-  heading: "Чого навчишся"
+aliases:
+- /k6-performance-testing-program/
+card:
+  anchor: program-k6
+  create:
+  - Load Model та k6 Suite
+  - Observability-стек
+  - Performance Report
+  event: program_performance_click
+  master:
+  - NFR і load tests в k6
+  - Метрики та dashboards Grafana
+  - Performance gates у CI/CD та Kubernetes
+  - Chaos testing
+  meta:
+  - label: Рівень
+    value: Middle–Senior
+  - label: Занять
+    value: '15'
+  - label: Тривалість
+    value: 15 тижнів
+  quote: «Хочу відповідати за продуктивність системи, а не лише за функціонал»
+  waitlist: k6
+description: 'Практичний курс з load testing на k6 для DevOps та QA: від NFR і написання тестів до Observability, CI/CD, Kubernetes та Chaos Engineering. 15 занять, 4 блоки, рівень Middle–Senior.'
+direction: Performance Engineering
+enrollment:
+  label: Набір скоро відкриється
+  state: soon
+form:
+  subject: QAStudy.online — заявка на Performance Testing with k6
+format:
+- desc: Теорія, практика на занятті та домашнє завдання на кожну тему.
+  title: Практика на кожному занятті
+- desc: Перевірка домашніх завдань і зворотний зв’язок від ментора.
+  title: Зворотний зв’язок
+- desc: k6, Grafana, Prometheus та k8s-маніфести — усе, що потрібно для фінального проєкту.
+  title: Готовий стек
+# NEEDS CONFIRMATION: lessons, modules and duration for this program (playbook §29)
+lessons_total: 15
+level_path:
+- Middle
+- Senior
+meta:
+- label: Занять
+  value: '15'
+- label: Тривалість
+  value: 15 тижнів
+- label: Рівень
+  value: Middle–Senior
+- label: Група
+  value: 8–12 осіб
+modules:
+- color: blue
+  lessons:
+  - desc: 'Розглянемо, що таке non-functional requirements (NFR): response time, throughput, error rate, scalability, availability, та як їх правильно формулювати разом із бізнесом і розробниками. Поговоримо, як вписати performance testing у процес розробки — коли і як часто запускати тести, хто відповідає за результати, як визначити baseline та критерії "пройшов/не пройшов". Окремо торкнемося ролі моніторингу як частини процесу: що моніторити постійно, а що перевіряти точково через load tests.'
+    homework: 'для свого (або наданого) проєкту сформулювати NFR для 3–5 ключових сценаріїв та описати процес performance testing на проєкті (етапи, відповідальні, частота, критерії прийняття). Здати: документ з таблицею NFR (сценарій / метрика / цільове значення / критичне значення) + текстовий опис або схема процесу.'
+    'n': '1'
+    practice: на прикладі тестового проєкту визначаємо NFR для двох-трьох ключових сценаріїв (наприклад, логін, пошук, оформлення замовлення) та накидаємо схему процесу — хто, коли, як часто запускає тести і куди йдуть результати.
+    title: NFR та побудова процесу performance testing на проєкті
+  lessons_count: 1 заняття
+  meta: заняття 1 · базовий рівень
+  num: 1
+  title: Основи процесу performance testing
+- color: green
+  lessons:
+  - desc: 'Розглянемо, як писати якісні load tests в k6: структура тесту (default function, setup/teardown), virtual users, stages та executors (constant-vus, ramping-vus, constant-arrival-rate тощо), checks і thresholds. Розберемо ключові метрики, які варто відстежувати завжди: http_req_duration (та його під-метрики), http_req_failed, vus/vus_max, iterations, data_sent/data_received, та що означає кожна з них у summary-звіті k6.'
+    homework: 'написати k6-тест для заданого сценарію (мінімум 3 ендпоінти, checks, thresholds на response time та error rate). Здати: файл k6-скрипта, скріншот/вивід summary з результатами запуску, короткий звіт — чому обрані саме такі thresholds і що показали отримані метрики.'
+    'n': '2'
+    practice: пишемо k6-тест для наданого API (кілька ендпоінтів, checks, thresholds на response time та error rate), запускаємо тест через CLI та аналізуємо summary-звіт.
+    title: Writing Tests, Key Metrics
+  - desc: 'Розглянемо два варіанти стандартної візуалізації результатів k6 без написання власних dashboards: вбудоване розширення k6 dashboard (web dashboard у реальному часі під час запуску, --out web-dashboard/HTML-звіт) та стандартний Grafana dashboard для k6 (на базі InfluxDB або Prometheus). Розберемо по панелях, що показує кожен з них: request rate, response time percentiles, error rate, VUs over time тощо, та коли який варіант доцільніше використовувати.'
+    homework: 'запустити тест із заняття 2 двома способами — з k6 dashboard extension та зі стандартним Grafana dashboard, зробити скріншоти. Здати: скріншоти обох dashboards, письмова інтерпретація — що показує кожна панель та які значення отримані для цього тесту, у чому переваги/обмеження кожного варіанта.'
+    'n': '3'
+    practice: запускаємо тест із заняття 2 з увімкненим k6 dashboard extension, а потім — з виводом у Grafana через стандартний dashboard, порівнюємо обидва представлення.
+    title: Default Dashboard (k6 dashboard extension та Grafana)
+  - desc: Розглянемо, як використовувати AI-інструменти для автогенерації k6-скриптів на основі специфікації API (OpenAPI/Swagger) або запису трафіку (HAR-файл). Поговоримо про стратегії промптингу для отримання якіснішого результату, типові помилки, які робить AI (неправильні checks, відсутні thresholds, хардкод даних), та як критично переглядати й доопрацьовувати згенерований код перед використанням у реальному проєкті.
+    homework: 'згенерувати за допомогою AI k6-тест для заданого сценарію (на основі специфікації API або HAR-файлу), доопрацювати та довести скрипт до робочого стану. Здати: оригінальний AI-згенерований скрипт, фінальний доопрацьований скрипт, короткий звіт (які помилки/недоліки були в згенерованому коді, що довелось виправити вручну).'
+    'n': '4'
+    practice: беремо специфікацію API або HAR-файл, генеруємо k6-скрипт за допомогою AI-інструменту, переглядаємо та виправляємо знайдені проблеми.
+    title: AI-Powered Test Generation
+  lessons_count: 3 заняття
+  meta: заняття 2–4 · середній рівень
+  num: 2
+  title: k6 — написання тестів, dashboards та AI-генерація
+- color: orange
+  lessons:
+  - desc: 'Розглянемо архітектуру observability-стеку для performance testing як ланцюжок: producer (k6, що генерує метрики) → collector/receiver → metric storage → visualization. Поговоримо про push vs pull моделі збору метрик, роль кожного компонента в системі, та зробимо огляд варіантів, які розглянемо в наступних заняттях — InfluxDB та Prometheus як storage, Grafana як visualization layer.'
+    homework: 'для свого проєкту описати, яку observability-архітектуру для performance tests планується використовувати (який storage, як k6 надсилає дані, де візуалізація) та обґрунтувати вибір. Здати: схема/діаграма архітектури (producer → collector → storage → visualization) + текстове обґрунтування вибору компонентів.'
+    'n': '5'
+    practice: малюємо схему observability-архітектури для стенду для performance testing та позначаємо, де в ній знаходиться k6, storage та Grafana, обговорюємо альтернативні конфігурації.
+    title: 'Концепція Observability: ключові метрики та компоненти'
+  - desc: 'Розглянемо модель даних InfluxDB: measurements, tags, fields, timestamps, та як k6 записує результати тестів у InfluxDB (вбудований output k6). Розберемо основи InfluxQL: SELECT-запити, GROUP BY time(), агрегаційні функції (mean, percentile, count), фільтрацію за tags.'
+    homework: 'запустити k6-тест з виводом у InfluxDB та написати 3–5 InfluxQL-запитів, що відповідають на конкретні питання (наприклад: p95 response time по кожному ендпоінту за часом, тренд error rate протягом тесту). Здати: список запитів з результатами (скріншоти/вивід), короткий опис, що показує кожен запит.'
+    'n': '6'
+    practice: надсилаємо результати k6-тесту в InfluxDB та пишемо InfluxQL-запити для вибірки середнього та p95 response time, згрупованих за часом та ендпоінтом.
+    title: InfluxDB як metric storage та InfluxQL
+  - desc: 'Розглянемо модель даних Prometheus: metrics, labels, time series, відмінність pull-моделі Prometheus від push-моделі InfluxDB та як k6 надсилає дані в Prometheus (remote write). Розберемо основи PromQL: rate(), агрегаційні функції, та особливо histogram_quantile() для обчислення перцентилів з histogram-метрик.'
+    homework: 'налаштувати k6 на надсилання метрик у Prometheus та написати 3–5 PromQL-запитів, серед яких обов''язково мінімум один з histogram_quantile(). Здати: запити з результатами/скріншотами, короткий опис, що показує кожен запит та чим він відрізняється від аналогічного InfluxQL-запиту з минулого заняття.'
+    'n': '7'
+    practice: налаштовуємо k6 на відправку метрик у Prometheus через remote write та пишемо PromQL-запити для error rate (через rate()) та p95 response time (через histogram_quantile()).
+    title: Prometheus як metric storage та PromQL
+  - desc: 'Розглянемо архітектуру Grafana: data sources, dashboards, panels, variables. Навчимось підключати одночасно InfluxDB та Prometheus як джерела даних в одній Grafana-інсталяції та будувати панелі на основі запитів, написаних у заняттях 6 та 7.'
+    homework: 'побудувати Grafana dashboard з мінімум 4 панелями — 2 на основі InfluxQL-запитів та 2 на основі PromQL-запитів з попередніх занять, додати variables для фільтрації. Здати: експорт dashboard (JSON) або скріншоти, опис кожної панелі та запиту, що в ній використано.'
+    'n': '8'
+    practice: підключаємо InfluxDB та Prometheus як data sources в Grafana, будуємо dashboard з панелями на базі обох джерел та додаємо змінну (variable) для фільтрації за ендпоінтом/тестовим запуском.
+    title: Grafana як основний opensource visualization tool та інтеграція з Influx і Prometheus
+  - desc: Розглянемо, як використовувати tags та groups у k6 для деталізації результатів — як вони мапляться на tags/fields у InfluxDB та на labels у Prometheus. Розберемо custom-метрики k6 (Trend, Counter, Gauge, Rate) та як їх можна аналізувати в обох storage. Окремо створимо власний load-профіль (ramp-up → steady state → spike → ramp-down) за допомогою executors, що імітує реальну поведінку користувачів, і протегуємо сценарії для подальшої фільтрації в dashboards.
+    homework: 'доопрацювати тест з попередніх занять — додати tags/groups, мінімум одну custom-метрику та власний load-профіль (мінімум 3 етапи навантаження), надіслати результати в InfluxDB і Prometheus, оновити Grafana-dashboard з панелями, що фільтруються/групуються за тегами. Здати: k6-скрипт з tags/groups/custom-метриками та конфігурацією load-профілю, оновлений dashboard (експорт/скріншоти), короткий звіт з інтерпретацією результатів.'
+    'n': '9'
+    practice: додаємо tags/groups та custom-метрику до існуючого тесту, будуємо багатоетапний load-профіль, надсилаємо результати одночасно в InfluxDB та Prometheus, оновлюємо Grafana-панелі з фільтрацією за тегами.
+    title: 'k6: відправка метрик з tags, groups та fields для Influx і Prometheus + load-профілі'
+  lessons_count: 5 занять
+  meta: заняття 5–9 · середній рівень
+  num: 3
+  title: 'Observability та метрики: InfluxDB, Prometheus, Grafana'
+- color: violet
+  lessons:
+  - desc: Розглянемо модуль k6 browser та чим він відрізняється від протокольних тестів — коли потрібно тестувати саме UI performance, а не тільки backend. Розберемо ключові метрики Web Vitals (LCP, FCP, CLS, TTI) та як їх вимірювати через k6 browser. Поговоримо про комбіновані сценарії, де частина VU генерує фонове навантаження на API, а інша — відкриває сторінки в браузері та вимірює UI-метрики.
+    homework: 'написати k6 browser-тест для 1–2 ключових сторінок проєкту, що вимірює Web Vitals під фоновим навантаженням на API (комбінований сценарій). Здати: k6-скрипт (browser + протокольна частина), звіт зі значеннями Web Vitals до/під навантаженням, висновки щодо UI performance.'
+    'n': '10'
+    practice: пишемо k6 browser-тест для заданої сторінки, який відкриває сторінку, виконує дії користувача (клік, скрол, заповнення форми) та збирає метрики Web Vitals.
+    title: UI Performance Testing за допомогою k6 browser-тестів
+  - desc: Навчимось будувати в Grafana dashboards, які дозволяють порівнювати результати кількох запусків тестів (baseline vs поточний, release vs release). Розберемо роботу з тегами/annotations у k6, змінними (variables) у Grafana та способи візуалізації трендів у часі — щоб легко помічати регресії, покращення та довгострокові тенденції.
+    homework: 'запустити один і той же тест мінімум 2–3 рази (з різними версіями коду/конфігурації) та побудувати порівняльний dashboard у Grafana, що показує зміну метрик між запусками. Здати: експорт/скріншоти порівняльного dashboard, короткий звіт — чи є регресія, за якими метриками, можливі причини.'
+    'n': '11'
+    practice: налаштовуємо теги для запусків k6, будуємо в Grafana dashboard з variable для вибору запуску та порівнюємо два запуски за основними метриками.
+    title: Побудова dashboard для порівняння результатів між запусками
+  - desc: 'Покроково розберемо, як інтегрувати k6-тести в CI/CD pipeline (GitHub Actions, GitLab CI або інший інструмент за домовленістю). Поговоримо про стратегії запуску: smoke performance tests на кожен PR, повноцінні тести на staging перед release, thresholds як критерій pass/fail для pipeline, а також про публікацію результатів (артефакти, звіти, нотифікації в Slack/Teams).'
+    homework: 'інтегрувати раніше написаний k6-тест у CI/CD pipeline з thresholds, налаштувати збереження результатів як артефактів та (опційно) нотифікацію про результат. Здати: конфігураційний файл pipeline, скріншоти/логи успішного та проваленого запусків (наприклад, штучно занижений threshold).'
+    'n': '12'
+    practice: налаштовуємо pipeline, який запускає k6-тест з thresholds і завалює білд, якщо performance не відповідає вимогам.
+    title: CI/CD інтеграція
+  - desc: 'Розглянемо, як деплоїти та запускати k6-тести всередині Kubernetes-кластера за допомогою k6-operator. Поговоримо про best practices: розподіл навантаження між кількома подами (distributed execution), управління ресурсами (requests/limits), вибір кількості та розміру воркерів залежно від цільового навантаження, а також про збір метрик з розподілених тестів у централізований Grafana dashboard.'
+    homework: 'розгорнути k6-operator у власному/тестовому кластері, налаштувати TestRun для запуску раніше написаного тесту в розподіленому режимі (мінімум 2 воркери) з відправкою метрик у Prometheus/InfluxDB. Здати: файли маніфестів (operator config, TestRun), скріншоти логів/подів під час запуску, скріншот dashboard з агрегованими метриками.'
+    'n': '13'
+    practice: встановлюємо k6-operator у тестовий кластер (kind/minikube), створюємо TestRun-маніфест та запускаємо розподілений тест на декілька подів.
+    title: Запуск k6-тестів у Kubernetes з k6-operator
+  - desc: Розглянемо, як підключити AI-агента до можливостей машинного навчання/статистичного аналізу (MSP) у Grafana для автоматичного аналізу результатів k6-тестів. Поговоримо про автоматичне виявлення аномалій (anomaly detection), порівняння з історичними даними та генерацію зрозумілих текстових висновків для команди — без необхідності вручну переглядати кожен dashboard після кожного запуску.
+    homework: 'налаштувати AI-агента для аналізу результатів одного з раніше виконаних тестових запусків (за вибором — порівняльний dashboard із заняття 11 або dashboard з Kubernetes-запуску із заняття 13), зафіксувати, які аномалії/висновки агент виявив. Здати: опис налаштування інтеграції, згенерований AI-звіт, коментар студента — чи погоджується він з висновками агента і чому.'
+    'n': '14'
+    practice: підключаємо AI-агента до Grafana-dashboard з результатами одного з попередніх запусків та отримуємо автоматичний звіт з виявленими аномаліями.
+    title: AI-агент з Grafana MSP та API для аналізу результатів k6-тестів
+  - desc: 'Розглянемо основи chaos engineering у контексті performance testing: чому важливо перевіряти не лише поведінку системи під навантаженням, а й її стійкість до збоїв під навантаженням одночасно. Розберемо розширення xk6-disruptor та як воно інтегрується з k6-тестами: внесення мережевих затримок та помилок (HTTP/gRPC faults), збої на рівні Pod у Kubernetes (pod disruptor), обмеження ресурсів. Поговоримо, як комбінувати load-тест з контрольованим chaos-експериментом та інтерпретувати вплив на метрики (response time, error rate) під час та після збою.'
+    homework: 'спроєктувати та провести chaos-експеримент — комбінацію load-тесту з xk6-disruptor (наприклад, pod disruptor для сервісу в Kubernetes або HTTP fault для конкретного ендпоінта), зафіксувати поведінку системи до, під час та після збою. Здати: k6-скрипт/конфігурація з xk6-disruptor, скріншоти dashboard "до/під час/після" збою, звіт з висновками про стійкість системи та рекомендаціями.'
+    'n': '15'
+    practice: запускаємо k6-тест з фоновим навантаженням та одночасно вносимо HTTP-фолт (наприклад, затримку або помилку) за допомогою xk6-disruptor, спостерігаємо за зміною метрик у Grafana в реальному часі.
+    title: Chaos Testing разом з xk6-disruptor
+  lessons_count: 6 занять
+  meta: заняття 10–15 · просунутий
+  num: 4
+  title: Просунуте performance testing та DevOps-інтеграція
+personas:
+- outcome: Навчитеся формулювати NFR, писати й підтримувати k6-тести, читати метрики (InfluxQL/PromQL), будувати dashboards Grafana та знаходити регресії performance до release.
+  quote: «Я вмію тестувати функціонал, але коли мене питають „а як воно поводиться під навантаженням“ — я губляюсь і не знаю, з чого почати»
+  role: QA-інженери (middle/senior)
+- outcome: Збудуєте observability-стек (k6 → storage → Grafana), вбудуєте k6 у CI/CD як gate, запустите розподілені тести в Kubernetes через k6-operator і додасте AI-аналіз та chaos-експерименти.
+  quote: «У нас є CI/CD і моніторинг, але performance tests хтось запускає вручну раз на квартал — хочу, щоб це працювало автоматично і давало зрозумілий результат»
+  role: DevOps-інженери (middle/senior)
+price:
+  amount: 33 000 грн
+  aside:
+    links:
+    - text: DOU, зарплатний звіт QA, зима 2026
+      url: https://dou.ua/lenta/articles/salary-report-qa-winter-2026/
+    text: Performance Engineer та SDET — серед позицій з найвищими зарплатами в тестуванні, що часто прирівнюються до Senior-розробника. За даними зимового зарплатного звіту DOU 2026, медіанна зарплата DevOps/SRE — $4200, QA Tech Lead — $4600. Курс готує саме до переходу в ці напрямки.
+    title: Чому курс окупається
+  currency: UAH
+  included:
+  - 15 занять із практикою з ментором на кожному занятті
+  - Перевірка домашніх завдань і зворотний зв’язок
+  - 'Готовий стек технологій: k6, Grafana, Prometheus, k8s-маніфести'
+  - Фінальний проєкт з реальним стеком для performance testing
+  note: 'Повна вартість програми: 15 занять по 2–3 години практики з ментором, перевірка ДЗ та зворотний зв’язок, готовий стек технологій.'
+  value: 33000
+program_intro: 'Курс іде від процесу і NFR до observability, CI/CD, Kubernetes та chaos-тестування: теорія, практика на занятті і домашнє завдання на кожну тему.'
+project:
+  intro: 'Ви проходите повний цикл performance testing з реальним стеком і здаєте:'
   items:
-    - label: "НФР і процес"
-      text: "Формулювати НФР і будувати процес перформенс тестування на проєкті."
-    - label: "Тести в k6"
-      text: "Писати якісні навантажувальні тести в k6, включно з AI-генерацією."
-    - label: "Аналіз метрик"
-      text: "Глибоко аналізувати метрики через InfluxDB (InfluxQL) та Prometheus (PromQL)."
-    - label: "Дашборди Grafana"
-      text: "Будувати дашборди в Grafana, включно з порівнянням run-to-run."
-    - label: "UI Performance"
-      text: "Тестувати UI-перформенс через k6 browser та вимірювати Web Vitals."
-    - label: "CI/CD та Kubernetes"
-      text: "Інтегрувати k6 в CI/CD та запускати розподілені тести в Kubernetes (k6-operator)."
-    - label: "AI-аналіз і Chaos"
-      text: "Підключати AI-агента для аналізу результатів і робити Chaos Testing з xk6-disruptor."
-
-curriculum:
-  heading: "Програма курсу"
-  blocks:
-    - title: "Блок 1. Основи процесу перформенс тестування"
-      meta: "заняття 1 · базовий рівень"
-      open: true
-      lessons:
-        - "Заняття 1. НФР та побудова процесу перформенс тестування на проєкті"
-    - title: "Блок 2. k6 — написання тестів, дашборди та AI-генерація"
-      meta: "заняття 2–4 · середній рівень"
-      lessons:
-        - "Заняття 2. Writing Tests, Key Metrics"
-        - "Заняття 3. Default Dashboard (k6 dashboard extension та Grafana)"
-        - "Заняття 4. AI-Powered Test Generation"
-    - title: "Блок 3. Observability та метрики: InfluxDB, Prometheus, Grafana"
-      meta: "заняття 5–9 · середній рівень"
-      lessons:
-        - "Заняття 5. Концепція Observability: ключові метрики та компоненти"
-        - "Заняття 6. InfluxDB як metric storage та InfluxQL"
-        - "Заняття 7. Prometheus як metric storage та PromQL"
-        - "Заняття 8. Grafana як основний opensource visualization tool та інтеграція з Influx і Prometheus"
-        - "Заняття 9. k6: відправка метрик з tags, groups та fields для Influx і Prometheus + load-профілі"
-    - title: "Блок 4. Просунуте перформенс тестування та DevOps-інтеграція"
-      meta: "заняття 10–15 · просунутий"
-      lessons:
-        - "Заняття 10. UI Performance Testing за допомогою k6 browser-тестів"
-        - "Заняття 11. Побудова дашборду для порівняння результатів між запусками"
-        - "Заняття 12. CI/CD інтеграція"
-        - "Заняття 13. Запуск k6-тестів у Kubernetes з k6-operator"
-        - "Заняття 14. AI-агент з Grafana MSP для аналізу результатів k6-тестів"
-        - "Заняття 15. Chaos Testing разом з xk6-disruptor"
-
-final_project:
-  heading: "Фінальний проєкт"
-  intro: "Студент проходить повний цикл перформенс тестування з реальним стеком і здає:"
+  - desc: документ з NFR для 3–5 сценаріїв + опис процесу performance testing
+    name: NFR та процес
+  - desc: мінімум 3 сценарії з checks і thresholds (частково AI-генеровані)
+    name: Протокольні k6-тести
+  - desc: k6 browser-тест з вимірюванням Web Vitals
+    name: Browser-тест(и)
+  - desc: custom load-профіль, tags/groups, метрики в InfluxDB та Prometheus
+    name: Observability-стек
+  - desc: стандартний + кастомний + порівняльний (run-to-run)
+    name: Dashboards
+  - desc: k6-тести з thresholds як gate
+    name: CI/CD pipeline
+  - desc: TestRun через k6-operator
+    name: Kubernetes-запуск
+  - desc: звіт від AI-агента (Grafana MSP)
+    name: AI-аналіз
+  - desc: load-тест + xk6-disruptor, звіт про стійкість системи
+    name: Chaos-експеримент
+  title: Повний цикл performance testing
+promise: 'Практичний курс для DevOps та QA: пишіть load tests в k6, будуйте dashboards в Grafana, інтегруйте performance testing в CI/CD та Kubernetes — і перевіряйте стійкість системи через chaos-тестування.'
+registration_url: https://forms.gle/e8LFL62Qd7WwQNwX8
+related:
+- agentic-qa
+- scale-quality
+seo_title: Performance Testing with k6 — load testing для QA та DevOps | QAStudy.online
+skills:
+- Формулювати NFR і будувати процес performance testing на проєкті
+- Писати якісні load tests в k6, включно з AI-генерацією
+- Глибоко аналізувати метрики через InfluxDB (InfluxQL) та Prometheus (PromQL)
+- Будувати dashboards в Grafana, включно з порівнянням run-to-run
+- Тестувати UI performance через k6 browser та вимірювати Web Vitals
+- Інтегрувати k6 в CI/CD та запускати розподілені тести в Kubernetes (k6-operator)
+- Підключати AI-агента для аналізу результатів і робити Chaos Testing з xk6-disruptor
+stack:
+- group: Load testing
   items:
-    - "НФР та процес — документ з НФР для 3–5 сценаріїв + опис процесу перформенс тестування"
-    - "Протокольні k6-тести — мінімум 3 сценарії з checks і thresholds (частково AI-генеровані)"
-    - "Browser-тест(и) — k6 browser-тест з вимірюванням Web Vitals"
-    - "Observability-стек — custom load-профіль, tags/groups, метрики в InfluxDB та Prometheus"
-    - "Дашборди — стандартний + кастомний + порівняльний (run-to-run)"
-    - "CI/CD пайплайн — k6-тести з thresholds як gate"
-    - "Kubernetes-запуск — TestRun через k6-operator"
-    - "AI-аналіз — звіт від AI-агента (Grafana MSP)"
-    - "Chaos-експеримент — load-тест + xk6-disruptor, звіт про стійкість системи"
-
-pricing:
-  heading: "Чому саме 33 000 грн"
-  price_note: "33 000 грн за весь курс"
-  caption: "Це 15 занять по 2-3 години практики з ментором, перевірка ДЗ та зворотний зв'язок, плюс готовий стек технологій (k6, Grafana, Prometheus, k8s-маніфести)."
-  career: "Навички курсу ведуть у напрямки, які в QA оплачуються найвище: Performance Engineer та SDET — серед позицій з найвищими зарплатами в тестуванні, що часто прирівнюються до Senior-розробника. За даними зимового зарплатного звіту DOU 2026, медіанна зарплата DevOps/SRE — $4200, QA Tech Lead — $4600. Курс готує саме до переходу в ці напрямки."
-  source:
-    text: "DOU, зарплатний звіт QA, зима 2026"
-    url: "https://dou.ua/lenta/articles/salary-report-qa-winter-2026/"
-
-bottom_cta:
-  text: "15 занять, практика на кожному занятті, фінальний проєкт з реальним стеком для перформенс тестування."
+  - k6
+  - k6 browser
+  - xk6-disruptor
+- group: Observability
+  items:
+  - InfluxDB
+  - Prometheus
+  - Grafana
+- group: Інфраструктура
+  items:
+  - CI/CD
+  - Kubernetes
+  - k6-operator
+- group: AI
+  items:
+  - AI-агент (Grafana MSP)
+title: Performance Testing with k6
+transition: QA / AQA / DevOps → Performance Engineer
+weight: 2
 ---

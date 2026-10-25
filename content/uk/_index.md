@@ -1,156 +1,105 @@
 ---
-title: "Тестування AI-агентних систем — курс Agentic QA"
-description: "Навчись тестувати AI-агентів, RAG-системи і agentic pipelines — від першого eval до production CI/CD"
+title: "QAStudy.online"
+seo_title: "QAStudy.online — Engineering School для QA: AI Quality, Performance, QA Architecture"
+description: "QAStudy.online — інженерна школа для QA, які вже працюють у професії. Три програми: Agentic QA, Performance Testing with k6, Scale Quality. Малі групи, персональний review від практика, робочий артефакт на виході."
+og_title: "Твій Next Level у QA Engineering — QAStudy.online"
+og_description: "Інженерна школа для Middle · Senior · Lead · Architect QA. AI Quality, Performance Engineering, QA Architecture."
 
 hero:
-  title: "Опануй Тестування AI-Агентних Систем"
-  description: "Курс Agentic QA: навчись тестувати AI-агентів, RAG-системи і agentic pipelines — від першого eval до production-ready CI/CD. 21 заняття для QA, SDET і Tech Lead інженерів."
-  primary_cta:
-    text: "Подати заявку"
-    url: "/courses/agentic-qa/"
-  secondary_cta:
-    text: "Переглянути курс"
-    url: "/courses/agentic-qa/"
+  stamp: "Для QA-фахівців <br>із досвідом"
+  stamp_aria: "Для QA-фахівців із досвідом"
+  level_path: ["Middle", "Senior", "Lead", "Architect"]
+  title: 'Твій Next Level <br><span class="accent">у QA Engineering</span>'
+  lead: "Інженерна школа для QA, які переросли свою роль."
+  pills:
+    - { label: "AI Quality", course: "agentic-qa" }
+    - { label: "Performance Engineering", course: "k6-performance-testing" }
+    - { label: "QA Architecture", course: "scale-quality" }
+  cta: "Обрати програму"
+  about_link: "Детальніше про QAStudy.online"
+  proof:
+    - "Малі групи"
+    - "Особистий review від архітектора"
+    - "Готовий артефакт у портфоліо"
+  scroll_cue: "Три задачі. Одна з них — ваша."
+
+programs:
+  eyebrow: "02. Програми"
+  title: 'Впізнайте свою задачу — <br>і свій <span class="accent">наступний крок</span>'
+  support: "Три спеціалізації — три різні кар’єрні траєкторії. Знайдіть репліку, яка звучить як ваша."
+  note_before: "Не впевнені, яка програма підійде?"
+  note_link: "Напишіть нам"
+  note_after: "— допоможемо обрати."
+
+learning:
+  eyebrow: "03. Як навчаємо"
+  title: 'Навчання побудоване навколо <br><span class="accent">реальної інженерної роботи</span>'
+  steps:
+    - title: "Розібрати задачу"
+      summary: "Спочатку контекст і ризики — потім код."
+      detail: "Ви отримуєте задачу, схожу на production: контекст, обмеження, неповні дані. Разом визначаємо ризики і формулюємо, яке рішення тут потрібне — до першого рядка коду."
+    - title: "Побудувати рішення"
+      summary: "Пишете код, стратегію або модель навантаження."
+      detail: "Реалізуєте підхід у практичному завданні: пишете код, стратегію або модель навантаження. Кожне домашнє завдання стає частиною вашого фінального артефакту."
+    - title: "Пройти review"
+      summary: "Архітектор розбирає ваше рішення: логіку, trade-offs, слабкі місця."
+      detail: "Викладач особисто розбирає ваше рішення: логіку, trade-offs, слабкі місця, альтернативи. Ви захищаєте свій вибір і бачите, як його оцінив би архітектор."
+    - title: "Застосувати у роботі"
+      summary: "Результат переїжджає у ваш продукт ще до кінця програми."
+      detail: "Артефакт і підхід залишаються у вас. Ви адаптуєте їх під свій продукт або команду ще під час навчання — і приносите результат на роботу до завершення програми."
+  facts:
+    - title: "Веде практик"
+      text: "QA-архітектор із US fintech. Усе, чого ви вчитеся, він застосовує на своїх проєктах просто зараз."
+    - title: "Персональний review"
+      text: "Кожне рішення отримує розбір від викладача: чому працює, де зламається, як зробити краще."
+    - title: "Робочий артефакт"
+      text: "Test strategy, AI-framework або performance-стек, які ви заберете у свій проєкт і на наступне інтерв’ю."
+
+founder:
+  eyebrow: "04. Викладач"
+  title: 'Автор навчальних програм <br>і лектор — <span class="accent">Єгор Максимчук</span>'
+
+why:
+  eyebrow: "05. Чому QAStudy.online"
+  title: 'Тут вас <br>знатимуть <span class="accent">особисто</span>'
+  support: "Кілька інженерів, один архітектор і ваш проєкт на столі. Так працює інженерна майстерня — і так працює QAStudy.online. Випускаємо небагато, за кожного готові поручитися."
+  principles:
+    - title: "Група без задніх рядів"
+      text: "Місць у групі небагато. Кожен ваш commit прочитають, кожне рішення обговорять. Відсидітися не вийде."
+    - title: "Вхід за досвідом"
+      text: "Перед стартом ми запитаємо, де ви працюєте і що тестуєте. У групі всі говорять однією мовою — і рухаються в одному темпі."
+    - title: "Автор програми — ваш викладач"
+      text: "Кожну програму Єгор Максимчук склав сам — і сам веде кожне заняття. Між вами й експертизою немає посередників."
+    - title: "Дефіцитні спеціалізації"
+      text: "AI Quality, Performance Engineering, QA Architecture — ролі, які компанії закривають місяцями. Саме на них ми й готуємо."
+
+faq:
+  eyebrow: "06. FAQ"
+  title: 'Відповіді <br>на запитання <br><span class="accent">перед стартом</span>'
+  help_title: "Не знайшли відповідь?"
+  help_text: "Напишіть нам — допоможемо розібратися та обрати програму."
+  items:
+    - q: "Для якого рівня QA створені програми?"
+      a: "Middle+ — Agentic QA та Performance Testing with k6. Senior / Lead — Scale Quality. Ми працюємо з тими, хто вже тестує і хоче рости далі; програм для входу в IT з нуля немає."
+    - q: "Як зрозуміти, яка програма мені підходить?"
+      a: 'AI у продукті — Agentic QA. Продуктивність системи — Performance Testing with k6. Якість на рівні архітектури і процесів — Scale Quality. Сумніваєтеся — <a href="#contact" data-open-form>напишіть нам</a>.'
+    - q: "Як проходить навчання?"
+      a: "Онлайн, у малій групі. На кожному занятті — практика і домашнє завдання, кожне рішення проходить персональний review. Кожен модуль завершується робочим артефактом."
+    # NEEDS CONFIRMATION: weekly commitment
+    - q: "Скільки часу потрібно щотижня?"
+      a: "Одне заняття плюс домашнє завдання. Точний розклад і навантаження вказані на сторінці кожної програми."
+    - q: "Що потрібно знати на старті?"
+      a: "Досвід роботи в QA і розуміння того, як влаштована система, яку ви тестуєте. Для Performance Testing with k6 знадобиться JavaScript на рівні читання коду; для Agentic QA — Python або JS."
+    - q: "Що я матиму після завершення?"
+      a: "Робочий артефакт для вашого проєкту і портфоліо: test strategy, AI-framework або performance-стек. Фінальний проєкт захищається перед викладачем."
+    - q: "Як подати заявку і що буде далі?"
+      a: "На сторінці програми — кнопка «Залишити заявку». Після цього ми зв’яжемося, коротко обговоримо ваш рівень і задачі та підтвердимо місце в групі."
+    - q: "Чи можна почати з матеріалів, а не з програми?"
+      a: "Так. YouTube, Telegram і GitHub відкриті для всіх — там видно, як ми думаємо і чого навчаємо."
+
+final:
+  eyebrow: "07. Наступний крок"
+  title: 'Готові до <br><span class="accent">наступного рівня?</span>'
+  lead: "Три програми — три траєкторії. Оберіть свою або напишіть нам, і ми допоможемо визначитися."
+  cta: "Ознайомитися з програмами"
 ---
-
-<section class="py-20">
-  <div class="text-center mb-16">
-    <h2 class="h2 mb-4">Що ти опануєш на курсі Agentic QA</h2>
-    <p class="text-large text-gray-600">Практичні навички тестування AI-систем — від основ до production-ready пайплайну.</p>
-  </div>
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-    <div class="card">
-      <div class="card-body">
-        <h3 class="h4 text-primary mb-4">Тестування LLM</h3>
-        <ul class="space-y-2">
-          <li><a href="/courses/agentic-qa/" class="text-gray-600 hover:text-primary">Промпт та контекст інжиніринг</a></li>
-          <li><a href="/courses/agentic-qa/" class="text-gray-600 hover:text-primary">Метрики тестування ШІ</a></li>
-          <li><a href="/courses/agentic-qa/" class="text-gray-600 hover:text-primary">Тестування RAG-систем</a></li>
-          <li><a href="/courses/agentic-qa/" class="text-gray-600 hover:text-primary">Багатокрокові діалоги</a></li>
-          <li><a href="/courses/agentic-qa/" class="text-gray-600 hover:text-primary">Локальні моделі: Ollama</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-body">
-        <h3 class="h4 text-primary mb-4">Agentic Testing</h3>
-        <ul class="space-y-2">
-          <li><a href="/courses/agentic-qa/" class="text-gray-600 hover:text-primary">LLM as a Judge</a></li>
-          <li><a href="/courses/agentic-qa/" class="text-gray-600 hover:text-primary">Tool call testing і MCP</a></li>
-          <li><a href="/courses/agentic-qa/" class="text-gray-600 hover:text-primary">Observability і cost testing</a></li>
-          <li><a href="/courses/agentic-qa/" class="text-gray-600 hover:text-primary">AI-assisted Test Generation</a></li>
-          <li><a href="/courses/agentic-qa/" class="text-gray-600 hover:text-primary">Test Case Generation</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-body">
-        <h3 class="h4 text-primary mb-4">Безпека та Red Teaming</h3>
-        <ul class="space-y-2">
-          <li><a href="/courses/agentic-qa/" class="text-gray-600 hover:text-primary">OWASP LLM Top 10</a></li>
-          <li><a href="/courses/agentic-qa/" class="text-gray-600 hover:text-primary">Prompt Injection</a></li>
-          <li><a href="/courses/agentic-qa/" class="text-gray-600 hover:text-primary">Red Teaming сесії</a></li>
-          <li><a href="/courses/agentic-qa/" class="text-gray-600 hover:text-primary">Risk mapping</a></li>
-          <li><a href="/courses/agentic-qa/" class="text-gray-600 hover:text-primary">Тест-стратегія</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-body">
-        <h3 class="h4 text-primary mb-4">Eval та CI/CD</h3>
-        <ul class="space-y-2">
-          <li><a href="/courses/agentic-qa/" class="text-gray-600 hover:text-primary">Eval-suite з DeepEval</a></li>
-          <li><a href="/courses/agentic-qa/" class="text-gray-600 hover:text-primary">Promptfoo</a></li>
-          <li><a href="/courses/agentic-qa/" class="text-gray-600 hover:text-primary">Quality Gates у CI/CD</a></li>
-          <li><a href="/courses/agentic-qa/" class="text-gray-600 hover:text-primary">Agentic CI/CD</a></li>
-          <li><a href="/courses/agentic-qa/" class="text-gray-600 hover:text-primary">GitHub Actions pipeline</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="py-20 bg-gray-50">
-  <div class="container">
-    <div class="text-center mb-16">
-      <h2 class="h2 mb-4">Курс Agentic QA</h2>
-      <p class="text-large text-gray-600">Єдина практична програма з тестування AI-агентних систем українською.</p>
-    </div>
-    <div class="course-grid">
-      <div class="course-card">
-        <div class="course-image">
-          <div class="course-image-content">Agentic QA</div>
-        </div>
-        <div class="course-content">
-          <div class="course-category">Middle-Lead</div>
-          <h3 class="course-title">
-            <a href="/courses/agentic-qa/">Тестування AI-агентних систем</a>
-          </h3>
-          <p class="course-description">Навчись тестувати AI-агентів, RAG-системи і agentic pipelines — від першого eval до production CI/CD.</p>
-          <div class="course-instructor">
-            <div class="instructor-avatar"></div>
-            <span>Єгор Максимчук</span>
-          </div>
-          <div class="course-stats">
-            <div class="stat-item">
-              <svg class="icon" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path>
-              </svg>
-              11–14 тижнів
-            </div>
-            <div class="stat-item">
-              <svg class="icon" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"></path>
-              </svg>
-              21 заняття
-            </div>
-          </div>
-        </div>
-        <div class="course-meta">
-          <a href="/courses/agentic-qa/" class="btn btn-primary">Детальніше</a>
-        </div>
-      </div>
-    </div>
-    <div class="text-center mt-12">
-      <a href="/courses/agentic-qa/" class="btn btn-primary btn-lg">Подати заявку</a>
-    </div>
-  </div>
-</section>
-
-<section class="py-20">
-  <div class="container">
-    <div class="text-center mb-16">
-      <h2 class="h2 mb-4">Чому обирають QAStudy.online?</h2>
-      <p class="text-large text-gray-600">Практика на реальних AI-системах і production-ready результат у портфоліо</p>
-    </div>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <div class="text-center">
-        <div class="w-16 h-16 bg-primary-100 rounded-full d-flex align-center justify-center mx-auto mb-4">
-          <svg class="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20">
-            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-          </svg>
-        </div>
-        <h3 class="h4 mb-3">Сучасний стек</h3>
-        <p class="text-gray-600">DeepEval, Promptfoo, RAGAS, LLM-as-a-Judge, MCP — інструменти, які реально використовують у production.</p>
-      </div>
-      <div class="text-center">
-        <div class="w-16 h-16 bg-primary-100 rounded-full d-flex align-center justify-center mx-auto mb-4">
-          <svg class="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20">
-            <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"></path>
-          </svg>
-        </div>
-        <h3 class="h4 mb-3">Фінальний проєкт</h3>
-        <p class="text-gray-600">Збудуєш власний AI-додаток із повним циклом тестування і живим CI/CD pipeline для портфоліо.</p>
-      </div>
-      <div class="text-center">
-        <div class="w-16 h-16 bg-primary-100 rounded-full d-flex align-center justify-center mx-auto mb-4">
-          <svg class="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20">
-            <path d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"></path>
-          </svg>
-        </div>
-        <h3 class="h4 mb-3">Production-фокус</h3>
-        <p class="text-gray-600">Quality gates, red teaming за OWASP LLM Top 10 і agentic workflows — щоб не боятися production-інцидентів.</p>
-      </div>
-    </div>
-  </div>
-</section>

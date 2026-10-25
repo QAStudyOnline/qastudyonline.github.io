@@ -1,45 +1,215 @@
 baseURL = "https://qastudy.online/"
 title   = "QAStudy.online"
-defaultContentLanguage = "uk"
+defaultContentLanguage         = "uk"
 defaultContentLanguageInSubdir = false
+enableRobotsTXT = true
+disableKinds    = ["taxonomy", "term", "RSS"]
 
 [languages]
   [languages.uk]
-    languageName = "Українська"
-    languageCode = "uk"
+    label        = "Українська"
+    locale       = "uk"
     weight       = 1
     title        = "QAStudy.online"
     contentDir   = "content/uk"
     [languages.uk.params]
-      description = "Опануйте навички QA тестування від експертів галузі"
-
-[params]
-  email      = "info@qastudy.online"
-  telegram   = "https://t.me/qastudy"
-  linkedin   = "https://www.linkedin.com/in/yehor-maksymchuk-271039240/"
-  youtube    = "https://www.youtube.com/@qastudy.online"
-  github     = "https://github.com/QAStudyOnline"
-  brand_name = "QAStudy.online"
-
-[taxonomies]
-  level    = "levels"
-  category = "categories"
+      description = "Інженерна школа для QA: AI Quality, Performance Engineering, QA Architecture."
 
 [markup.goldmark.renderer]
   unsafe = true
 
-# ── Ukrainian menus ──────────────────────────────────────────────
-[[languages.uk.menus.main]]
-  name   = "Курси"
-  url    = "/courses/"
+[markup.tableOfContents]
+  startLevel = 2
+  endLevel   = 3
+
+[sitemap]
+  changefreq = "monthly"
+  priority   = 0.5
+
+# ── Site params ──────────────────────────────────────────────────
+[params]
+  brand_name = "QAStudy.online"
+  brand_sub  = "Engineering School"
+  theme_color = "#07061A"
+  og_image    = "img/og-image.jpg"
+  # Telegram handle on the old /about/ page was @qastudyonline — confirm which one is current.
+  telegram_handle = "@qastudy"
+
+  [params.social]
+    email    = "info@qastudy.online"
+    telegram = "https://t.me/qastudy"
+    linkedin = "https://www.linkedin.com/in/yehor-maksymchuk-271039240/"
+    youtube  = "https://www.youtube.com/@qastudy.online"
+    github   = "https://github.com/QAStudyOnline"
+
+  # Formspree. Empty endpoint → course CTAs fall back to the course's registration_url (Google Form).
+  # One form can serve everything; hidden fields source / course / intent tell the origin apart.
+  [params.forms]
+    endpoint          = ""   # e.g. "https://formspree.io/f/xxxxxxxx"
+    waitlist_endpoint = ""   # empty → uses `endpoint`
+
+  # Google Tag Manager container id (GTM-XXXXXXX). Empty → no snippet; events still go to window.dataLayer.
+  [params.analytics]
+    gtm_id = ""
+
+  # Easter eggs (assets/js/easter.js). The promo code must exist in the payment flow before launch.
+  [params.easter]
+    enabled        = true
+    discount_label = "−10% на будь-яку програму"
+    promo_code     = "EXPECTED_RESULT"
+    valid_note     = "Назвіть код у заявці або в Telegram. Діє для першої групи після знахідки."
+
+  # Exit-intent popup (assets/js/exit.js). Variants are picked at random by weight among the enabled ones.
+  [params.exit]
+    enabled                  = true
+    delay_seconds            = 10
+    cooldown_days            = 0     # 0 = show on every page view until the user converts
+    min_scroll_percent_mobile = 40
+    [params.exit.variants.telegram]
+      enabled = true
+      weight  = 1
+      kicker  = "Перш ніж піти"
+      title   = "Практичні нотатки з QA — <span>у Telegram</span>"
+      text    = "Ділимося робочими підходами з AI Quality, Performance і QA Architecture. Іноді філософствуємо про професію. Без реклами і щоденних розсилок."
+      cta     = "Підписатися на канал"
+      url     = "https://t.me/qastudy"
+      note    = "Канал відкритий, відписатися можна будь-коли."
+    [params.exit.variants.minicourse]
+      enabled = true
+      weight  = 1
+      kicker  = "Перш ніж піти"
+      title   = "Безкоштовний міні-курс <span>з тестування AI</span>"
+      text    = "Три короткі уроки: як розкласти AI-систему на ризики, що таке evals і як побудувати перший quality gate."
+      cta     = "Відкрити міні-курс"
+      url     = "/mini-course/"
+      note    = "Безкоштовно, без реєстрації."
+
+# ── Header navigation (one menu per page type; see layouts/partials/site/header.html) ──
+[[languages.uk.menus.nav_home]]
+  name = "Програми"
+  url = "/#programs"
   weight = 10
-
-[[languages.uk.menus.main]]
-  name   = "Автори й тренери"
-  url    = "/team/"
-  weight = 15
-
-[[languages.uk.menus.main]]
-  name   = "Про нас"
-  url    = "/about/"
+[[languages.uk.menus.nav_home]]
+  name = "Про школу"
+  url = "/#why-qastudy"
   weight = 20
+[[languages.uk.menus.nav_home]]
+  name = "Як навчаємо"
+  url = "/#learning"
+  weight = 30
+[[languages.uk.menus.nav_home]]
+  name = "Викладач"
+  url = "/#founder"
+  weight = 40
+[[languages.uk.menus.nav_home]]
+  name = "FAQ"
+  url = "/#faq"
+  weight = 50
+
+[[languages.uk.menus.nav_team]]
+  name = "Про мене"
+  url = "#about"
+  weight = 10
+[[languages.uk.menus.nav_team]]
+  name = "У цифрах"
+  url = "#numbers"
+  weight = 20
+[[languages.uk.menus.nav_team]]
+  name = "Сертифікації"
+  url = "#certs"
+  weight = 30
+[[languages.uk.menus.nav_team]]
+  name = "Програми"
+  url = "#courses"
+  weight = 40
+[[languages.uk.menus.nav_team]]
+  name = "Стек"
+  url = "#stack"
+  weight = 50
+
+[[languages.uk.menus.nav_about]]
+  name = "Місія"
+  url = "#mission"
+  weight = 10
+[[languages.uk.menus.nav_about]]
+  name = "Напрями"
+  url = "#directions"
+  weight = 20
+[[languages.uk.menus.nav_about]]
+  name = "Чому ми"
+  url = "#why"
+  weight = 30
+[[languages.uk.menus.nav_about]]
+  name = "Автори"
+  url = "/team/"
+  weight = 40
+[[languages.uk.menus.nav_about]]
+  name = "Контакти"
+  url = "#contacts"
+  weight = 50
+
+[[languages.uk.menus.nav_legal]]
+  name = "Програми"
+  url = "/#programs"
+  weight = 10
+[[languages.uk.menus.nav_legal]]
+  name = "Автори"
+  url = "/team/"
+  weight = 20
+[[languages.uk.menus.nav_legal]]
+  name = "Оферта"
+  url = "/oferta/"
+  weight = 30
+[[languages.uk.menus.nav_legal]]
+  name = "Конфіденційність"
+  url = "/privacy/"
+  weight = 40
+[[languages.uk.menus.nav_legal]]
+  name = "Умови"
+  url = "/terms/"
+  weight = 50
+
+# ── Footer ───────────────────────────────────────────────────────
+# The "Програми" column is generated from the course pages; "Матеріали" from [params.social].
+[[languages.uk.menus.footer_school]]
+  name = "Головна"
+  url = "/"
+  weight = 10
+[[languages.uk.menus.footer_school]]
+  name = "Про школу"
+  url = "/about/"
+  weight = 20
+[[languages.uk.menus.footer_school]]
+  name = "Автори"
+  url = "/team/"
+  weight = 30
+[[languages.uk.menus.footer_school]]
+  name = "Як навчаємо"
+  url = "/#learning"
+  weight = 40
+
+[[languages.uk.menus.footer_info]]
+  name = "Публічна оферта"
+  url = "/oferta/"
+  weight = 10
+[[languages.uk.menus.footer_info]]
+  name = "Карта сайту"
+  url = "/sitemap/"
+  weight = 30
+[[languages.uk.menus.footer_info]]
+  name = "Політика конфіденційності"
+  url = "/privacy/"
+  weight = 20
+
+[[languages.uk.menus.footer_legal]]
+  name = "Публічна оферта"
+  url = "/oferta/"
+  weight = 10
+[[languages.uk.menus.footer_legal]]
+  name = "Політика конфіденційності"
+  url = "/privacy/"
+  weight = 20
+[[languages.uk.menus.footer_legal]]
+  name = "Умови використання"
+  url = "/terms/"
+  weight = 30

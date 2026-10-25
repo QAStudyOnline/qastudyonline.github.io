@@ -1,0 +1,19 @@
+{{- with .Params.programs }}
+<section class="section section-light programs" id="programs">
+  <div class="container">
+    <header class="section-head reveal">
+      <p class="eyebrow">{{ .eyebrow }}</p>
+      <h2 class="h2">{{ .title | safeHTML }}</h2>
+      <p class="section-support">{{ .support }}</p>
+    </header>
+
+    <div class="grid-3 program-list reveal">
+      {{- range $i, $c := where site.RegularPages "Section" "courses" }}
+      {{ partial "home/program-card.html" (dict "page" $c "index" $i) }}
+      {{- end }}
+    </div>
+
+    <p class="programs-note reveal">{{ .note_before }} <a href="#contact" data-open-form data-event="question_cta_click">{{ .note_link }}</a> {{ .note_after }}</p>
+  </div>
+</section>
+{{- end }}

@@ -1,0 +1,7 @@
+{{- $n := partial "course/num.html" . -}}
+{{ partial "ui/founder.html" (dict
+  "dark" true
+  "eyebrow" (printf "%s. %s" $n (i18n "course_instructor"))
+  "title" (i18n "course_instructor_title")
+  "line" .Params.instructor_line
+) }}

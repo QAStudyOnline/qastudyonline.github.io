@@ -1,0 +1,20 @@
+{{- with .Params.why }}
+<section class="section section-dark why" id="why-qastudy">
+  <div class="container why-grid">
+    <div class="why-intro reveal">
+      <p class="eyebrow eyebrow-dark">{{ .eyebrow }}</p>
+      <h2 class="h2">{{ .title | safeHTML }}</h2>
+      <p class="section-support section-support-dark">{{ .support }}</p>
+    </div>
+    <ol class="principles reveal">
+      {{- range $i, $p := .principles }}
+      <li class="principle">
+        <span class="principle-num">{{ printf "%02d" (add $i 1) }}</span>
+        <h3 class="h4">{{ $p.title }}</h3>
+        <p class="body body-dark">{{ $p.text }}</p>
+      </li>
+      {{- end }}
+    </ol>
+  </div>
+</section>
+{{- end }}

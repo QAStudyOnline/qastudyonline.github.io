@@ -1,131 +1,25 @@
-// Footer component
+/* ---------- Footer ---------- */
+.site-footer { background: var(--bg-dark); color: var(--text-on-dark); border-top: 1px solid var(--border-dark); padding: 80px 0 48px; }
+.footer-grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr 1fr; gap: 48px; }
+.footer-tagline { margin-top: 28px; font-size: 17px; color: var(--text-secondary-dark); }
+.footer-social { display: flex; gap: 12px; margin-top: 28px; }
+.footer-social a { display: flex; align-items: center; justify-content: center; width: 48px; height: 48px; border: 1px solid var(--border-dark); color: #fff; transition: border-color var(--t-fast); }
+.footer-social a:hover { border-color: var(--accent-soft); }
+.footer-social svg { width: 20px; height: 20px; }
+.footer-title { font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 500; color: var(--text-secondary-dark); margin-bottom: 26px; }
+.footer-col li + li { margin-top: 16px; }
+.footer-col a { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; font-size: 17px; color: var(--text-on-dark); transition: color var(--t-fast); }
+.footer-col a .arrow { color: var(--accent-soft); }
+.footer-col a:hover { color: var(--accent-soft); }
+.footer-bottom { display: flex; justify-content: space-between; align-items: center; gap: 32px; margin-top: 64px; padding-top: 36px; border-top: 1px solid var(--border-dark); flex-wrap: wrap; }
+.footer-legal { display: flex; flex-wrap: wrap; font-size: 15px; color: var(--text-secondary-dark); }
+.footer-legal li { padding: 0 24px; border-left: 1px solid var(--border-dark); }
+.footer-legal li:first-child { padding-left: 0; border-left: 0; }
+.footer-legal a:hover { color: #fff; }
+.footer-ask { display: flex; align-items: center; gap: 20px; }
+.footer-ask-icon { width: 56px; height: 56px; border: 1px solid var(--border-dark); display: flex; align-items: center; justify-content: center; }
+.footer-ask-icon svg { width: 24px; height: 24px; color: #fff; }
+.footer-ask p { font-size: 15px; color: var(--text-secondary-dark); }
+.footer-ask a { font-size: 17px; font-weight: 600; color: var(--accent-soft); }
+.footer-ask a:hover { color: #fff; }
 
-.footer {
-  background-color: $gray-900;
-  color: $gray-300;
-  padding: $space-16 0 $space-8;
-}
-
-.footer-content {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: $space-8;
-  margin-bottom: $space-12;
-
-  @media (max-width: $breakpoint-md) {
-    grid-template-columns: 1fr;
-    text-align: center;
-    gap: $space-12;
-  }
-}
-
-.footer-section {
-  h3 {
-    color: $white;
-    font-size: $font-size-lg;
-    font-weight: $font-weight-semibold;
-    margin-bottom: $space-4;
-  }
-
-  p {
-    line-height: $line-height-relaxed;
-    margin-bottom: $space-4;
-  }
-}
-
-.footer-links {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-
-  li {
-    margin-bottom: $space-2;
-  }
-
-  a {
-    color: $gray-300;
-    text-decoration: none;
-    transition: $transition-colors;
-
-    &:hover {
-      color: $primary-400;
-      text-decoration: none;
-    }
-  }
-}
-
-.footer-brand {
-  .brand-info {
-    margin-bottom: $space-6;
-
-    h3 {
-      color: $primary-400;
-      font-size: $font-size-xl;
-      font-weight: $font-weight-extrabold;
-      margin-bottom: $space-3;
-    }
-  }
-
-  .social-links {
-    display: flex;
-    gap: $space-4;
-
-    @media (max-width: $breakpoint-md) {
-      justify-content: center;
-    }
-
-    a {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 2.5rem;
-      height: 2.5rem;
-      background-color: $gray-800;
-      color: $gray-300;
-      border-radius: $radius-md;
-      transition: $transition-all;
-
-      &:hover {
-        background-color: $primary-600;
-        color: $white;
-        transform: translateY(-2px);
-      }
-    }
-  }
-}
-
-.footer-bottom {
-  padding-top: $space-8;
-  border-top: 1px solid $gray-800;
-  text-align: center;
-  color: $gray-400;
-  font-size: $font-size-sm;
-
-  .footer-bottom-content {
-    display: flex;
-    flex-direction: column;
-    gap: $space-4;
-
-    @media (min-width: $breakpoint-md) {
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-    }
-  }
-
-  .footer-bottom-links {
-    display: flex;
-    gap: $space-6;
-    justify-content: center;
-
-    a {
-      color: $gray-400;
-      text-decoration: none;
-      transition: $transition-colors;
-
-      &:hover {
-        color: $primary-400;
-      }
-    }
-  }
-} 

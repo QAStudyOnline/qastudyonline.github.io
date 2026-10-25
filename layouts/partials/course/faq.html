@@ -1,0 +1,13 @@
+{{- with .Params.faq }}
+<section class="section section-dark faq" id="faq">
+  <div class="container faq-grid">
+    <div class="faq-intro reveal">
+      <p class="eyebrow eyebrow-dark">{{ partial "course/num.html" $ }}. FAQ</p>
+      <h2 class="h2">{{ i18n "course_faq_title" | safeHTML }}</h2>
+    </div>
+    <div class="faq-list reveal">
+      {{ partial "ui/faq-list.html" . }}
+    </div>
+  </div>
+</section>
+{{- end }}

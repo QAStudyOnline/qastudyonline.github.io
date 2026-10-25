@@ -1,0 +1,22 @@
+/* ---------- Program status lamps + quiet waitlist ---------- */
+.program-status-wrap { margin-bottom: 14px; }
+.program-status-wrap .program-status { margin-bottom: 8px; }
+.status-soon .status-dot { background: #FFC960; box-shadow: 0 0 0 3px rgba(255,201,96,.18); animation: lamp 2.4s ease-in-out infinite; }
+@keyframes lamp { 0%,100% { box-shadow: 0 0 0 3px rgba(255,201,96,.18); } 50% { box-shadow: 0 0 0 5px rgba(255,201,96,.32); } }
+.status-soon { color: #FFC960; }
+.waitlist-toggle { display: inline-flex; align-items: center; gap: 7px; font-size: 13px; color: var(--text-secondary-dark); border-bottom: 1px dashed rgba(179,176,214,.5); padding-bottom: 2px; transition: color var(--t-fast), border-color var(--t-fast); }
+.waitlist-toggle svg { width: 14px; height: 14px; }
+.waitlist-toggle:hover, .waitlist-toggle[aria-expanded="true"] { color: #fff; border-color: #fff; }
+.waitlist { position: relative; display: flex; gap: 8px; margin-top: 10px; }
+.waitlist[hidden] { display: none; }
+.waitlist input { flex: 1; min-height: 42px; padding: 8px 12px; font-size: 14px; background: rgba(255,255,255,.04); color: #fff; border: 1px solid var(--glass-border); border-radius: 12px; }
+.waitlist input:focus { outline: none; border-color: var(--accent-soft); }
+.waitlist-send { width: 42px; height: 42px; flex: none; border-radius: 50%; background: var(--accent); color: #fff; font-size: 18px; transition: background var(--t-fast); }
+.waitlist-send:hover { background: var(--accent-hover); }
+.waitlist-msg { position: absolute; left: 0; top: 100%; margin-top: 6px; font-size: 12.5px; color: var(--text-secondary-dark); }
+.waitlist-msg.ok { color: #7CFFB2; }
+.waitlist-msg.err { color: #FF8A8A; }
+.waitlist.is-done input, .waitlist.is-done .waitlist-send { display: none; }
+.waitlist.is-done .waitlist-msg { position: static; margin-top: 0; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+

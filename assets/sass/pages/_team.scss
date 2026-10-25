@@ -1,0 +1,92 @@
+/* ==========================================================================
+   Team / instructor page
+   ========================================================================== */
+.team-hero-grid { display: grid; grid-template-columns: 34% 1fr; gap: 32px; align-items: stretch; padding: 40px 0 56px; }
+.team-photo { position: relative; border-radius: var(--radius-card); overflow: hidden; border: 1px solid var(--glass-border); min-height: 520px; }
+.team-photo img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+.team-photo::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(11,10,34,0) 60%, rgba(11,10,34,.6) 100%); pointer-events: none; }
+.team-hero-content { padding: 52px 56px 44px; display: flex; flex-direction: column; }
+.team-name { font-size: clamp(40px, 5vw, 72px); letter-spacing: -.03em; }
+.team-position { margin-top: 14px; font-size: 18px; color: var(--accent-soft); font-weight: 500; }
+.team-facts { margin-top: 8px; font-size: 14px; letter-spacing: .06em; text-transform: uppercase; color: var(--text-secondary-dark); }
+.team-intro { margin-top: 22px; max-width: 640px; }
+.team-hero .hero-actions { justify-content: flex-start; margin-top: 30px; }
+.team-social { display: flex; flex-wrap: wrap; gap: 22px; margin-top: auto; padding-top: 30px; border-top: 1px solid var(--border-dark); }
+.team-social a { font-size: 15px; font-weight: 500; color: var(--text-secondary-dark); }
+.team-social a:hover { color: #fff; }
+
+.about-grid { display: grid; grid-template-columns: 40% 1fr; gap: 64px; align-items: start; }
+.about-grid .section-head { margin-bottom: 0; }
+.about-p { font-size: 18px; line-height: 1.6; }
+.about-p + .about-p { margin-top: 18px; }
+.now { margin-top: 28px; padding: 26px 28px; }
+.now .mini-label { margin-bottom: 12px; }
+
+.num-tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.num-tile { padding: 32px 28px; display: flex; flex-direction: column; gap: 8px; }
+.num-tile strong { font-size: clamp(40px, 4vw, 56px); font-weight: 700; letter-spacing: -.03em; line-height: 1; color: #fff; }
+.num-tile span { font-size: 15px; line-height: 1.45; color: var(--text-secondary-dark); }
+.num-meta { display: grid; grid-template-columns: 1fr 1.4fr 1fr; gap: 20px; margin-top: 24px; }
+.num-meta-col { padding: 22px 24px; border: 1px solid var(--glass-border); border-radius: 18px; background: var(--glass); }
+.num-meta-col .mini-label { margin-bottom: 14px; }
+
+.certs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.cert { display: flex; gap: 18px; padding: 22px 22px; align-items: flex-start; }
+.cert img { width: 64px; height: 64px; object-fit: contain; flex: none; }
+.cert-body { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.cert-title { font-size: 15.5px; font-weight: 600; line-height: 1.35; color: #fff; }
+.cert-issuer { font-size: 13px; color: var(--text-secondary-dark); }
+.cert-link { font-size: 14px; margin-top: 8px; align-self: flex-start; }
+
+.related-grid-3 { grid-template-columns: repeat(3, 1fr); }
+.related-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.related-level { font-size: 12px; padding: 5px 10px; border-radius: 999px; border: 1px solid var(--glass-border); color: var(--text-secondary-dark); white-space: nowrap; }
+.related-desc { font-size: 15.5px; line-height: 1.5; color: var(--text-secondary-dark); flex: 1; }
+
+.stack-groups-6 { grid-template-columns: repeat(3, 1fr); }
+.education { display: flex; align-items: baseline; gap: 18px; flex-wrap: wrap; margin-top: 28px; padding-top: 22px; border-top: 1px solid var(--border-dark); font-size: 16px; color: var(--text-on-dark); }
+.education .mini-label { margin: 0; }
+
+.team-quote-section { position: relative; overflow: hidden; }
+.team-quote { max-width: 900px; margin: 0 auto; padding: 44px 48px; text-align: center; }
+.team-quote p { font-size: clamp(20px, 2vw, 26px); line-height: 1.45; font-weight: 500; color: #fff; letter-spacing: -.01em; }
+.team-quote footer { margin-top: 20px; font-size: 15px; color: var(--accent-soft); }
+.team-cta { display: flex; justify-content: center; align-items: center; gap: 32px; flex-wrap: wrap; margin-top: 36px; }
+
+@media (max-width: 1279px) { .certs { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 1023px) {
+  .team-hero-grid { grid-template-columns: 1fr; }
+  .team-photo { max-width: 420px; min-height: 0; aspect-ratio: 4 / 5; }
+  .team-hero-content { padding: 36px 28px 30px; }
+  .about-grid { grid-template-columns: 1fr; gap: 32px; }
+  .num-tiles { grid-template-columns: 1fr; }
+  .num-meta { grid-template-columns: 1fr; }
+  .related-grid-3 { grid-template-columns: 1fr; }
+  .stack-groups-6 { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 767px) {
+  .team-hero-content { padding: 28px 20px 24px; }
+  .team-hero .hero-actions .btn { width: calc(100% - 12px); }
+  .certs { grid-template-columns: 1fr; }
+  .stack-groups-6 { grid-template-columns: 1fr; }
+  .team-quote { padding: 28px 20px; }
+}
+
+/* Companies / domains / education */
+.companies { display: grid; gap: 10px; }
+.company-tile { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; padding: 12px 14px; border-radius: 12px; background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.08); }
+.company-mark { font-size: 17px; font-weight: 700; letter-spacing: -.01em; color: #fff; }
+.company-note { font-size: 12px; color: var(--text-secondary-dark); white-space: nowrap; }
+.domains { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.domain-tile { display: flex; align-items: center; gap: 10px; padding: 10px 12px; border-radius: 12px; background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.08); font-size: 14px; color: #fff; }
+.domain-icon { display: flex; width: 30px; height: 30px; flex: none; align-items: center; justify-content: center; border-radius: 8px; background: rgba(107,92,255,.18); color: var(--accent-soft); }
+.domain-icon svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+.edu-card { position: relative; background: linear-gradient(160deg, rgba(107,92,255,.22), rgba(12,10,40,.6)); border-color: rgba(143,132,255,.5); }
+.edu-icon { display: flex; width: 44px; height: 44px; align-items: center; justify-content: center; border-radius: 12px; background: rgba(255,255,255,.08); color: #fff; margin-bottom: 16px; }
+.edu-icon svg { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.edu-degree { font-size: 20px; font-weight: 600; color: #fff; line-height: 1.25; }
+.edu-school { margin-top: 6px; font-size: 14px; line-height: 1.45; color: var(--text-secondary-dark); }
+.team-hero .hero-actions .btn-ghost-dark { margin: 10px 0; }
+@media (max-width: 1023px) { .num-meta { grid-template-columns: 1fr; } .domains { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 767px) { .domains { grid-template-columns: 1fr; } .team-hero .hero-actions .btn-ghost-dark { width: 100%; } }
+

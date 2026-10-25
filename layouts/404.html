@@ -1,55 +1,56 @@
 {{ define "main" }}
-<style>
-  .error-page {
-    min-height: 80vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 4rem 1rem;
-  }
-  .error-code {
-    font-size: 8rem;
-    font-weight: 900;
-    color: #7c3aed;
-    line-height: 1;
-    margin-bottom: 1rem;
-  }
-  .error-title {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #111827;
-    margin-bottom: 1rem;
-  }
-  .error-description {
-    color: #6b7280;
-    margin-bottom: 2rem;
-    max-width: 30rem;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .error-actions {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-</style>
-<div class="error-page">
-  <div>
-    <div class="error-code">404</div>
-    <h1 class="error-title">Сторінку не знайдено</h1>
-    <p class="error-description">
-      Вибачте, сторінку, яку ви шукаєте, не існує або була переміщена.
-    </p>
-    <div class="error-actions">
-      <a href="{{ "/" | relLangURL }}" class="btn btn-primary btn-lg">
-        На головну
-      </a>
-      <a href="{{ "/courses/" | relLangURL }}" class="btn btn-secondary btn-lg">
-        Переглянути курси
-      </a>
-    </div>
+<section class="bug-page hero section-dark">
+  <span class="deco deco-1" aria-hidden="true"></span>
+  <span class="deco deco-2" aria-hidden="true"></span>
+  <div class="container">
+    <article class="bug-card glass">
+      <div class="bug-head">
+        <span class="bug-id">Bug #404</span>
+        <span class="bug-tag sev">Severity: Low</span>
+        <span class="bug-tag">Priority: P4</span>
+        <span class="bug-tag status">Status: Won’t Fix</span>
+      </div>
+      <h1 class="bug-title">Сторінка не відповідає <span class="accent">expected result</span></h1>
+      <dl>
+        <div class="bug-field">
+          <dt>Steps to reproduce</dt>
+          <dd><ol>
+            <li>Ввести адресу <code id="bug-url">/…</code></li>
+            <li>Натиснути Enter.</li>
+            <li>Спостерігати.</li>
+          </ol></dd>
+        </div>
+        <div class="bug-field">
+          <dt>Expected result</dt>
+          <dd>Сторінка з корисним контентом про QA Engineering.</dd>
+        </div>
+        <div class="bug-field">
+          <dt>Actual result</dt>
+          <dd>Ця сторінка. Контент відсутній, натомість bug report.</dd>
+        </div>
+        <div class="bug-field">
+          <dt>Environment</dt>
+          <dd><code id="bug-env">prod</code></dd>
+        </div>
+        <div class="bug-field">
+          <dt>Root cause</dt>
+          <dd>Сторінку перенесли, видалили або її ніколи не існувало. Регресійний тест не покрив цей кейс — додамо.</dd>
+        </div>
+      </dl>
+      <div class="bug-actions">
+        <a class="btn btn-primary" href="{{ "/" | relURL }}">На головну <span class="arrow" aria-hidden="true">→</span></a>
+        <a class="link-underline" href="{{ "/#programs" | relURL }}">Переглянути програми</a>
+        <a class="link-underline" href="{{ site.Params.social.telegram }}" target="_blank" rel="noopener">Повідомити про bug у Telegram</a>
+      </div>
+    </article>
   </div>
-</div>
+</section>
+{{ end }}
+
+{{ define "after_footer" }}
+<script>
+  document.getElementById('bug-url').textContent = location.pathname + location.search;
+  document.getElementById('bug-env').textContent = 'prod · ' + navigator.userAgent.replace(/^Mozilla\/5\.0\s*/, '').slice(0, 90) + '…';
+  console.log('%cBug #404%c reproduced. Steps: 1) відкрити неіснуючу адресу. 2) …ось.', 'color:#8F84FF;font-weight:700', 'color:inherit');
+</script>
 {{ end }}

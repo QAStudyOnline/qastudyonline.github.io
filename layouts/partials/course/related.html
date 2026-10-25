@@ -1,0 +1,20 @@
+{{- with .Params.related }}
+<section class="section section-dark" id="related">
+  <div class="container">
+    <header class="section-head reveal">
+      <p class="eyebrow eyebrow-dark">{{ i18n "course_related" }}</p>
+      <h2 class="h2 h2-compact">{{ i18n "course_related_title" | safeHTML }}</h2>
+    </header>
+    <div class="related-grid reveal">
+      {{- range . }}{{ with site.GetPage (printf "/courses/%s" .) }}
+      <a class="related-card glass" href="{{ .RelPermalink }}">
+        <span class="col-tag col-tag-accent">{{ .Params.direction }}</span>
+        <span class="related-title">{{ .Title }}</span>
+        <span class="related-quote">{{ .Params.card.quote }}</span>
+        <span class="link-underline">{{ i18n "view_program" }} <span class="arrow" aria-hidden="true">→</span></span>
+      </a>
+      {{- end }}{{ end }}
+    </div>
+  </div>
+</section>
+{{- end }}

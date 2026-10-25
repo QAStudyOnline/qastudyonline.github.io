@@ -1,0 +1,7 @@
+{{- /* One esbuild bundle per page group: home.js (home) and inner.js (course, team, legal, about, stub, 404).
+      Site params are injected as `@params` so config lives in hugo.toml. */ -}}
+{{- $entry := cond .IsHome "js/home.js" "js/inner.js" -}}
+{{- $params := dict "forms" site.Params.forms "easter" site.Params.easter "exit" site.Params.exit "telegram" site.Params.social.telegram "telegramHandle" site.Params.telegram_handle -}}
+{{- $opts := dict "targetPath" (printf "js/%s" (path.Base $entry)) "params" $params "minify" hugo.IsProduction "target" "es2018" -}}
+{{- $js := resources.Get $entry | js.Build $opts | fingerprint -}}
+<script src="{{ $js.RelPermalink }}" defer></script>

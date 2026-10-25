@@ -1,0 +1,7 @@
+{{- /* FAQ accordion items (native <details>); the first one is open. Context: slice of {q, a}. */ -}}
+{{- range $i, $f := . }}
+<details class="faq-item"{{ if eq $i 0 }} open{{ end }}>
+  <summary><span class="faq-num">{{ printf "%02d" (add $i 1) }}</span><span class="faq-q">{{ $f.q }}</span><span class="faq-icon" aria-hidden="true"></span></summary>
+  <div class="faq-a"><p>{{ $f.a | safeHTML }}</p></div>
+</details>
+{{- end }}

@@ -1,0 +1,42 @@
+{{- /* Instructor block shared by the home page and course pages. Data comes from the team page front matter.
+      Args: dark (bool), eyebrow, title (HTML), quote (bool), line (optional text), events (bool). */ -}}
+{{- $t := site.GetPage "/team/yehor-maksymchuk" -}}
+{{- $s := site.Params.social -}}
+<section class="section {{ if .dark }}section-dark{{ else }}section-light{{ end }} founder" id="founder">
+  <div class="container founder-grid">
+    <div class="founder-photo reveal">
+      {{ partial "ui/img.html" (dict "src" "img/founder.webp" "alt" (printf "%s — %s" $t.Params.name (i18n "founder_photo_alt")) "w" 540 "h" 851) }}
+    </div>
+    <div class="founder-content reveal">
+      <p class="eyebrow{{ if .dark }} eyebrow-dark{{ end }}">{{ .eyebrow }}</p>
+      <h2 class="h2">{{ .title | safeHTML }}</h2>
+      <p class="founder-position">{{ $t.Params.position }} · {{ delimit $t.Params.facts_line " · " }}</p>
+      {{- if .quote }}
+      <blockquote class="founder-quote">
+        <p>«{{ $t.Params.quote }}»</p>
+      </blockquote>
+      {{- end }}
+      {{- with .line }}
+      <p class="body body-dark">{{ . }}</p>
+      {{- end }}
+      <ul class="proof-list">
+        {{- range $t.Params.founder_proof }}
+        <li><strong>{{ .value }}</strong><span>{{ .label }}</span></li>
+        {{- end }}
+      </ul>
+      <ul class="badges" aria-label="{{ i18n "certifications" }}">
+        {{- range $t.Params.certifications }}
+        <li>{{ partial "ui/img.html" (dict "src" (printf "img/%s" .img) "alt" .title "w" 64 "h" 64) }}</li>
+        {{- end }}
+      </ul>
+      <div class="founder-links">
+        <ul class="founder-social">
+          {{- range slice (dict "k" "linkedin" "n" "LinkedIn") (dict "k" "github" "n" "GitHub") (dict "k" "youtube" "n" "YouTube") (dict "k" "telegram" "n" "Telegram") }}
+          <li><a href="{{ index $s .k }}" target="_blank" rel="noopener"{{ if $.events }} data-event="founder_social_click" data-network="{{ .k }}"{{ end }}>{{ .n }}</a></li>
+          {{- end }}
+        </ul>
+        <a class="link-underline" href="{{ $t.RelPermalink }}"{{ if .events }} data-event="founder_profile_click"{{ end }}>{{ i18n "founder_profile_link" }} <span class="arrow" aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,4 @@
+{{- /* Running section number ("01", "02", …) so optional sections never leave gaps. Context: page. */ -}}
+{{- $n := add (.Store.Get "section_n" | default 0) 1 -}}
+{{- .Store.Set "section_n" $n -}}
+{{- return (printf "%02d" $n) -}}

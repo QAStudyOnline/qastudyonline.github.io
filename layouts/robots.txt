@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /flaky-tests/
+Sitemap: {{ "sitemap.xml" | absURL }}
+
+# Test plan: also yes.
+# Підказка для QA: пасхалки шукайте в консолі, у формі та в старому добром коді з приставки.

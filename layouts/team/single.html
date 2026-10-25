@@ -1,214 +1,140 @@
-{{ define "head" }}
-  {{ $t := index hugo.Data.trainers (.Params.trainer_data | default .File.ContentBaseName) }}
-  <meta property="og:title" content="{{ .Title }} | {{ .Site.Title }}">
-  <meta property="og:description" content="{{ .Description }}">
-  <meta property="og:type" content="profile">
-  <meta property="og:url" content="{{ .Permalink }}">
-  {{ with .Params.og_image }}<meta property="og:image" content="{{ . | absURL }}">{{ end }}
-  <link rel="canonical" href="{{ .Permalink }}">
-  {{ with $t }}
-  {{ $sameAs := slice }}
-  {{ range .links }}{{ $sameAs = $sameAs | append .url }}{{ end }}
-  {{ $ld := dict
-      "@context" "https://schema.org"
-      "@type" "Person"
-      "name" .name
-      "jobTitle" .role
-      "url" $.Permalink
-      "worksFor" (dict "@type" "Organization" "name" "EPAM")
-      "sameAs" $sameAs
-  }}
-  {{ with .photo }}{{ $ld = merge $ld (dict "image" (. | absURL)) }}{{ end }}
-  {{ with .education }}{{ $ld = merge $ld (dict "alumniOf" .) }}{{ end }}
-  <script type="application/ld+json">{{ $ld | jsonify | safeJS }}</script>
-  {{ end }}
-{{ end }}
-
 {{ define "main" }}
-{{ $t := index hugo.Data.trainers (.Params.trainer_data | default .File.ContentBaseName) }}
-{{ with $t }}
-<article class="trainer-page">
-
-  <!-- Hero -->
-  <header class="tp-hero">
-    <div class="container tp-hero__inner">
-      {{ with .photo }}
-      <img class="tp-hero__photo" src="{{ . | relURL }}"
-           alt="{{ $t.photo_alt | default $t.name }}" width="200" height="200">
-      {{ end }}
-      <div class="tp-hero__info">
-        <h1 class="tp-hero__name">{{ .name }}</h1>
-        {{ with .role }}<p class="tp-hero__role">{{ . }}</p>{{ end }}
-        <p class="tp-hero__meta">
-          {{ with .tagline }}<span>{{ . }}</span>{{ end }}
-          {{ with .location }}<span>· {{ . }}</span>{{ end }}
-        </p>
-        {{ with .intro }}<p class="tp-hero__intro">{{ . }}</p>{{ end }}
-        <div class="tp-hero__actions">
-          <a class="btn-cta" href="#courses">Подивитись курси →</a>
-          {{ with .links }}
-          <div class="tp-links">
-            {{ range . }}<a href="{{ .url }}" target="_blank" rel="noopener noreferrer">{{ .label }}</a>{{ end }}
-          </div>
-          {{ end }}
-        </div>
-      </div>
+{{- $tg := site.Params.social.telegram }}
+<section class="hero section-dark team-hero" id="hero">
+  <span class="deco deco-1" aria-hidden="true"></span>
+  <span class="deco deco-2" aria-hidden="true"></span>
+  <div class="container team-hero-grid">
+    <div class="team-photo reveal">
+      {{ partial "ui/img.html" (dict "src" "img/founder.webp" "alt" (printf "%s — %s" .Params.name .Params.position) "w" 540 "h" 851 "priority" true) }}
     </div>
-  </header>
-
-  <!-- About -->
-  {{ if or .about .now }}
-  <section class="tp-section">
-    <div class="container tp-narrow">
-      <h2 class="tp-h2">Коротко про мене</h2>
-      {{ with .about }}{{ range . }}<p class="tp-text">{{ . }}</p>{{ end }}{{ end }}
-      {{ with .now }}
-      <p class="tp-now"><strong>Чим займаюся зараз:</strong> {{ . }}</p>
-      {{ end }}
-    </div>
-  </section>
-  {{ end }}
-
-  <!-- Stats -->
-  {{ if or .stats .companies .domains }}
-  <section class="tp-section tp-section--alt">
-    <div class="container">
-      <h2 class="tp-h2">У цифрах</h2>
-      {{ with .stats }}
-      <div class="tp-stats">
-        {{ range . }}
-        <div class="tp-stat">
-          <span class="tp-stat__value">{{ .value }}</span>
-          <span class="tp-stat__label">{{ .label }}</span>
-        </div>
-        {{ end }}
+    <div class="team-hero-content glass reveal">
+      <p class="eyebrow eyebrow-dark">{{ i18n "team_kicker" }}</p>
+      <h1 class="hero-title team-name">{{ .Params.name }}</h1>
+      <p class="team-position">{{ .Params.position }}</p>
+      <p class="team-facts">{{ delimit .Params.facts_line " · " }}</p>
+      <p class="lead lead-dark team-intro">{{ .Params.intro }}</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary btn-lg" href="#courses" data-event="team_programs_click">{{ i18n "team_view_programs" }} <span class="arrow" aria-hidden="true">→</span></a>
+        <a class="btn btn-ghost-dark btn-lg" href="{{ $tg }}" target="_blank" rel="noopener" data-event="telegram_click">{{ i18n "team_write_tg" }}</a>
       </div>
-      {{ end }}
-      {{ with .companies }}
-      <div class="tp-chiprow">
-        <span class="tp-chiprow__label">Компанії:</span>
-        {{ range . }}<span class="chip">{{ . }}</span>{{ end }}
-      </div>
-      {{ end }}
-      {{ with .domains }}
-      <div class="tp-chiprow">
-        <span class="tp-chiprow__label">Домени:</span>
-        {{ range . }}<span class="chip">{{ . }}</span>{{ end }}
-      </div>
-      {{ end }}
-    </div>
-  </section>
-  {{ end }}
-
-  <!-- Credentials -->
-  {{ if or .certifications .recognition_badges }}
-  <section class="tp-section" id="credentials">
-    <div class="container">
-      {{ with .certifications }}
-      <h2 class="tp-h2">Сертифікації</h2>
-      <ul class="badge-grid">
-        {{ range . }}
-        {{ $b := . }}
-        <li class="badge{{ if not $b.image }} badge--text{{ end }}">
-          {{ if $b.verify_url }}<a class="badge__link" href="{{ $b.verify_url }}" target="_blank" rel="noopener noreferrer" title="Перевірити сертифікат">{{ end }}
-            {{ with $b.image }}<img class="badge__img" src="{{ . | relURL }}" alt="{{ $b.name }}" width="96" height="96" loading="lazy">{{ end }}
-            <span class="badge__name">{{ $b.name }}</span>
-            {{ with $b.issuer }}<span class="badge__issuer">{{ . }}</span>{{ end }}
-            {{ if $b.verify_url }}<span class="badge__verify">Перевірити →</span>{{ end }}
-          {{ if $b.verify_url }}</a>{{ end }}
-        </li>
-        {{ end }}
+      <ul class="team-social">
+        {{- range .Params.social }}
+        <li><a href="{{ .url }}" target="_blank" rel="noopener" data-event="founder_social_click" data-network="{{ lower .name }}">{{ .name }}</a></li>
+        {{- end }}
       </ul>
-      {{ end }}
-
-      {{ with .recognition_badges }}
-      <h2 class="tp-h2 tp-h2--sub">Визнання та нагороди</h2>
-      <ul class="badge-grid badge-grid--recognition">
-        {{ range . }}
-        {{ $b := . }}
-        <li class="badge{{ if not $b.image }} badge--text{{ end }}">
-          {{ with $b.image }}<img class="badge__img" src="{{ . | relURL }}" alt="{{ $b.name }}" width="80" height="80" loading="lazy">{{ end }}
-          <span class="badge__name">{{ $b.name }}</span>
-          {{ with $b.issuer }}<span class="badge__issuer">{{ . }}</span>{{ end }}
-        </li>
-        {{ end }}
-      </ul>
-      {{ end }}
     </div>
-  </section>
-  {{ end }}
+  </div>
+</section>
 
-  <!-- Testimonial -->
-  {{ with .testimonial }}
-  <section class="tp-section tp-section--alt">
-    <div class="container tp-narrow">
-      <blockquote class="tp-recognition">
-        <p class="tp-recognition__quote">{{ .quote }}</p>
-        <footer class="tp-recognition__by">
-          <strong>{{ .author }}</strong>{{ with .author_title }} — {{ . }}{{ end }}
-          {{ with .context }}<span class="tp-recognition__context">{{ . }}</span>{{ end }}
-        </footer>
-      </blockquote>
-    </div>
-  </section>
-  {{ end }}
-
-  <!-- Courses -->
-  {{ with .courses }}
-  <section class="tp-section" id="courses">
-    <div class="container">
-      <h2 class="tp-h2">Курси автора</h2>
-      <div class="tp-courses">
-        {{ range . }}
-        {{ $course := site.GetPage (printf "/courses/%s" .) }}
-        {{ with $course }}
-        <a class="tp-course-card" href="{{ .RelPermalink }}">
-          <h3 class="tp-course-card__title">{{ .Title }}</h3>
-          {{ with .Params.level }}<span class="tp-course-card__level">{{ . }}</span>{{ end }}
-          {{ with .Params.subtitle }}<p class="tp-course-card__desc">{{ . }}</p>{{ end }}
-          <span class="tp-course-card__more">Детальніше →</span>
-        </a>
-        {{ end }}
-        {{ end }}
+<section class="section section-dark" id="about">
+  <div class="container about-grid">
+    <header class="section-head reveal">
+      <p class="eyebrow eyebrow-dark">01. {{ i18n "team_about" }}</p>
+      <h2 class="h2">{{ i18n "team_about_title" | safeHTML }}</h2>
+    </header>
+    <div class="about-body reveal">
+      {{- range .Params.about }}
+      <p class="body body-dark about-p">{{ . }}</p>
+      {{- end }}
+      <div class="now glass">
+        <p class="mini-label mini-label-dark">{{ .Params.now.title }}</p>
+        <p class="body body-dark">{{ .Params.now.text }}</p>
       </div>
     </div>
-  </section>
-  {{ end }}
+  </div>
+</section>
 
-  <!-- Stack -->
-  {{ if or .stack .education }}
-  <section class="tp-section tp-section--alt">
-    <div class="container">
-      <h2 class="tp-h2">Технічний стек</h2>
-      {{ with .stack }}
-      <div class="tp-stack">
-        {{ range . }}
-        <div class="tp-stack__group">
-          <span class="tp-stack__label">{{ .group }}</span>
-          <div class="tp-stack__items">
-            {{ range .items }}<span class="chip">{{ . }}</span>{{ end }}
-          </div>
+<section class="section section-dark" id="numbers">
+  <div class="container">
+    <header class="section-head reveal">
+      <p class="eyebrow eyebrow-dark">02. {{ i18n "team_numbers" }}</p>
+      <h2 class="h2">{{ i18n "team_numbers_title" | safeHTML }}</h2>
+    </header>
+    <ul class="num-tiles reveal">
+      {{- range .Params.numbers }}
+      <li class="num-tile glass"><strong>{{ .value }}</strong><span>{{ .label }}</span></li>
+      {{- end }}
+    </ul>
+    <div class="num-meta reveal">
+      <div class="num-meta-col"><p class="mini-label mini-label-dark">{{ i18n "team_companies" }}</p>
+        <ul class="companies">{{ range .Params.companies }}<li class="company-tile"><span class="company-mark">{{ .name }}</span><span class="company-note">{{ .note }}</span></li>{{ end }}</ul></div>
+      <div class="num-meta-col"><p class="mini-label mini-label-dark">{{ i18n "team_domains" }}</p>
+        <ul class="domains">{{ range .Params.domains }}<li class="domain-tile"><span class="domain-icon" aria-hidden="true">{{ partial "ui/icon.html" (dict "name" (printf "domain-%s" .icon)) }}</span>{{ .name }}</li>{{ end }}</ul></div>
+      <div class="num-meta-col edu-card">
+        <p class="mini-label mini-label-dark">{{ i18n "team_education" }}</p>
+        <span class="edu-icon" aria-hidden="true">{{ partial "ui/icon.html" (dict "name" "edu") }}</span>
+        <p class="edu-degree">{{ .Params.education.degree }}</p>
+        <p class="edu-school">{{ .Params.education.school }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-dark" id="certs">
+  <div class="container">
+    <header class="section-head reveal">
+      <p class="eyebrow eyebrow-dark">03. {{ i18n "certifications" }}</p>
+      <h2 class="h2">{{ len .Params.certifications }} {{ i18n "team_certs_title" | safeHTML }}</h2>
+    </header>
+    <ul class="certs reveal">
+      {{- range .Params.certifications }}
+      <li class="cert glass">
+        {{ partial "ui/img.html" (dict "src" (printf "img/%s" .img) "alt" .title "w" 72 "h" 72) }}
+        <div class="cert-body">
+          <p class="cert-title">{{ .title }}</p>
+          <p class="cert-issuer">{{ .issuer }}</p>
+          <a class="link-underline cert-link" href="{{ .verify_url }}" target="_blank" rel="noopener">{{ i18n "team_verify" }} <span class="arrow" aria-hidden="true">→</span></a>
         </div>
-        {{ end }}
-      </div>
-      {{ end }}
-      {{ with .education }}<p class="tp-education"><strong>Освіта:</strong> {{ . }}</p>{{ end }}
-    </div>
-  </section>
-  {{ end }}
+      </li>
+      {{- end }}
+    </ul>
+  </div>
+</section>
 
-  <!-- Closing CTA -->
-  <section class="tp-cta">
-    <div class="container">
-      {{ with .why }}<p class="tp-cta__text">{{ . }}</p>{{ end }}
-      {{ with .links }}
-      <div class="tp-links tp-links--cta">
-        {{ range . }}<a href="{{ .url }}" target="_blank" rel="noopener noreferrer">{{ .label }}</a>{{ end }}
-      </div>
-      {{ end }}
+<section class="section section-dark" id="courses">
+  <div class="container">
+    <header class="section-head reveal">
+      <p class="eyebrow eyebrow-dark">04. {{ i18n "team_programs" }}</p>
+      <h2 class="h2">{{ i18n "team_programs_title" | safeHTML }}</h2>
+    </header>
+    <div class="related-grid related-grid-3 reveal">
+      {{- range .Params.courses }}{{ $desc := .desc }}{{ with site.GetPage (printf "/courses/%s" .slug) }}
+      <a class="related-card glass" href="{{ .RelPermalink }}" data-event="team_course_click">
+        <span class="related-head"><span class="col-tag col-tag-accent">{{ .Params.direction }}</span><span class="related-level">{{ (index .Params.card.meta 0).value }}</span></span>
+        <span class="related-title">{{ .Title }}</span>
+        <span class="related-desc">{{ $desc }}</span>
+        <span class="link-underline">{{ i18n "view_program" }} <span class="arrow" aria-hidden="true">→</span></span>
+      </a>
+      {{- end }}{{ end }}
     </div>
-  </section>
+  </div>
+</section>
 
-</article>
-{{ end }}
+<section class="section section-dark" id="stack">
+  <div class="container">
+    <header class="section-head reveal">
+      <p class="eyebrow eyebrow-dark">05. {{ i18n "team_stack" }}</p>
+      <h2 class="h2">{{ i18n "team_stack_title" | safeHTML }}</h2>
+    </header>
+    <div class="stack-groups stack-groups-6 reveal">
+      {{- range .Params.stack }}
+      <div class="stack-group"><p class="stack-group-name">{{ .group }}</p><ul class="tools">{{ range .items }}<li class="tool">{{ . }}</li>{{ end }}</ul></div>
+      {{- end }}
+    </div>
+  </div>
+</section>
+
+<section class="section section-dark team-quote-section" id="quote">
+  <span class="deco deco-3" aria-hidden="true"></span>
+  <div class="container">
+    <blockquote class="team-quote glass reveal">
+      <p>«{{ .Params.quote }}»</p>
+      <footer>— {{ .Params.name }}</footer>
+    </blockquote>
+    <div class="team-cta reveal">
+      <a class="btn btn-primary btn-lg" href="#courses" data-event="team_programs_click">{{ i18n "cta_choose_program" }} <span class="arrow" aria-hidden="true">→</span></a>
+      <a class="link-underline link-light" href="{{ $tg }}" target="_blank" rel="noopener" data-event="telegram_click">{{ i18n "team_write_tg_cta" }}</a>
+    </div>
+  </div>
+</section>
 {{ end }}

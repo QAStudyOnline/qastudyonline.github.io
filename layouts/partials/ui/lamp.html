@@ -1,0 +1,5 @@
+{{- /* Enrollment lamp for course hero / sticky bar. Context: course page. */ -}}
+{{- with .Params.enrollment }}
+{{- $soon := eq .state "soon" -}}
+<p class="program-status course-lamp{{ if $soon }} status-soon{{ end }}"><span class="status-dot {{ if $soon }}status-dot-soon{{ else }}status-dot-open{{ end }}" aria-hidden="true"></span>{{ .label }}</p>
+{{- end }}

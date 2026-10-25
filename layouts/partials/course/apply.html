@@ -1,0 +1,33 @@
+{{- /* Application block. Shown only while enrollment is open. Inline Formspree form when an endpoint is configured,
+      otherwise a button to the course's Google Form (registration_url). */ -}}
+{{- if eq .Params.enrollment.state "open" }}
+{{- $endpoint := site.Params.forms.endpoint -}}
+<section class="section section-dark apply" id="apply">
+  <span class="deco deco-3" aria-hidden="true"></span>
+  <div class="container apply-grid">
+    <div class="reveal">
+      <p class="eyebrow eyebrow-dark">{{ partial "course/num.html" . }}. {{ i18n "course_apply" }}</p>
+      <h2 class="h2">{{ i18n "course_apply_title" | safeHTML }} <span class="accent">{{ .Title }}</span></h2>
+      <p class="lead lead-dark">{{ i18n "course_apply_lead" }}</p>
+      <p class="apply-alt">{{ partial "ui/icon.html" (dict "name" "telegram" "class" "ico") }} {{ i18n "form_alt_telegram" }} <a href="{{ site.Params.social.telegram }}" target="_blank" rel="noopener" data-event="telegram_click">{{ site.Params.telegram_handle }}</a></p>
+    </div>
+    {{- if $endpoint }}
+    <form class="contact-form glass apply-form reveal" id="contact-form" action="{{ $endpoint }}" method="POST" novalidate data-form="course">
+      {{ partial "ui/form-fields.html" (dict "source" "course-page" "subject" .Params.form.subject "course" .Title) }}
+      <p class="form-privacy">{{ i18n "form_privacy_before" }} <a href="{{ "/privacy/" | relURL }}">{{ i18n "form_privacy_link" }}</a>.</p>
+      <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+      <button class="btn btn-primary btn-lg" type="submit" id="form-submit"><span class="btn-label">{{ i18n "cta_apply" }}</span><span class="btn-loading" aria-hidden="true">{{ i18n "form_sending" }}</span></button>
+    </form>
+    <div class="form-success glass" id="form-success" hidden>
+      <p class="h4">{{ i18n "course_apply_success_title" }}</p>
+      <p class="body body-dark">{{ i18n "course_apply_success_text" }}</p>
+    </div>
+    {{- else }}
+    <div class="contact-form glass apply-form reveal">
+      <p class="body body-dark">{{ i18n "course_apply_fallback" }}</p>
+      {{ partial "ui/cta.html" (dict "page" . "place" "apply" "class" "btn btn-primary btn-lg" "arrow" true) }}
+    </div>
+    {{- end }}
+  </div>
+</section>
+{{- end }}

@@ -1,0 +1,57 @@
+{{- with .Params.modules }}
+<section class="section section-dark program-section" id="program">
+  <div class="container">
+    <header class="section-head section-head-center reveal">
+      <p class="eyebrow eyebrow-dark eyebrow-center">{{ partial "course/num.html" $ }}. {{ i18n "course_program" }}</p>
+      <h2 class="h2">{{ i18n "modules_count" (len .) }} <span class="accent">{{ $.Title }}</span></h2>
+      <p class="program-facts">{{ i18n "lessons_count" (int $.Params.lessons_total) }} · {{ i18n "course_program_facts" }}</p>
+      <p class="section-support section-support-dark section-support-center">{{ $.Params.program_intro }}</p>
+      <button class="link-underline toggle-all" type="button" id="toggle-all" data-open="{{ i18n "expand_all" }}" data-close="{{ i18n "collapse_all" }}">{{ i18n "expand_all" }}</button>
+    </header>
+    <div class="modules reveal">
+      {{- range $i, $m := . }}
+      <details class="module module-{{ $m.color }}"{{ if eq $i 0 }} open{{ end }}>
+        <summary>
+          <span class="module-num">{{ $m.num }}</span>
+          <span class="module-head">
+            <span class="module-title">{{ $m.title }}</span>
+            <span class="module-meta">{{ with $m.meta }}{{ . }}{{ else }}{{ $m.lessons_count }}{{ with $m.artifacts }} · {{ delimit . " · " }}{{ end }}{{ end }}</span>
+          </span>
+          <span class="module-tag">{{ i18n "module" }} {{ $m.num }}</span>
+          <span class="module-chevron" aria-hidden="true"></span>
+        </summary>
+        <div class="module-body">
+          <ol class="lessons">
+            {{- range $m.lessons }}
+            <li class="lesson">
+              <span class="lesson-n">{{ if findRE `^[0-9]+$` (string .n) }}{{ i18n "lesson" }} {{ .n }}{{ else }}{{ .n }}{{ end }}</span>
+              <div>
+                <p class="lesson-title">{{ .title }}</p>
+                <p class="lesson-desc">{{ .desc }}</p>
+                {{- with .practice }}
+                <p class="lesson-desc lesson-extra"><strong>{{ i18n "lesson_practice" }}</strong> {{ . }}</p>
+                {{- end }}
+                {{- with .homework }}
+                <p class="lesson-desc lesson-extra"><strong>{{ i18n "lesson_homework" }}</strong> {{ . }}</p>
+                {{- end }}
+              </div>
+            </li>
+            {{- end }}
+          </ol>
+          {{- if or $m.milestone $m.output }}
+          <div class="module-foot">
+            {{- with $m.milestone }}
+            <div class="module-milestone"><span class="mf-icon" aria-hidden="true">⚑</span><div><span class="mf-label">{{ i18n "module_milestone" }}</span><strong>«{{ . }}»</strong></div></div>
+            {{- end }}
+            {{- with $m.output }}
+            <div class="module-output"><span class="mf-icon" aria-hidden="true">◈</span><div><span class="mf-label">{{ i18n "module_output" }}</span><span>{{ . }}</span></div></div>
+            {{- end }}
+          </div>
+          {{- end }}
+        </div>
+      </details>
+      {{- end }}
+    </div>
+  </div>
+</section>
+{{- end }}

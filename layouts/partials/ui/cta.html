@@ -1,0 +1,19 @@
+{{- /* Course CTA. Args: page, place, class, label (optional), aria (optional), arrow (bool).
+      open + Formspree configured → #apply ; open + no endpoint → registration_url (Google Form) ; soon → home card with waitlist. */ -}}
+{{- $p := .page -}}
+{{- $e := $p.Params.enrollment | default dict -}}
+{{- $soon := eq (index $e "state") "soon" -}}
+{{- $href := "#apply" -}}
+{{- $ext := false -}}
+{{- $label := .label -}}
+{{- if $soon -}}
+  {{- with $p.Params.card }}{{ $href = printf "/#%s" .anchor | relURL }}{{ end -}}
+  {{- $label = $label | default (i18n "cta_notify") -}}
+{{- else -}}
+  {{- $label = $label | default (i18n "cta_apply") -}}
+  {{- if and (not site.Params.forms.endpoint) $p.Params.registration_url -}}
+    {{- $href = printf "%s?utm_source=site&utm_medium=cta&utm_campaign=%s" $p.Params.registration_url $p.File.ContentBaseName -}}
+    {{- $ext = true -}}
+  {{- end -}}
+{{- end -}}
+<a class="{{ .class }}" href="{{ $href }}"{{ if $ext }} target="_blank" rel="noopener"{{ end }} data-event="course_apply_click" data-place="{{ .place }}"{{ with .aria }} aria-label="{{ . }}"{{ end }}>{{ $label }}{{ if .arrow }} <span class="arrow" aria-hidden="true">→</span>{{ end }}</a>

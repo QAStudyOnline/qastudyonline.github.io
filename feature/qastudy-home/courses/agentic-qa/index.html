@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Agentic QA — курс з тестування LLM, RAG та AI-агентів | QAStudy.online</title>
+  <meta name="description" content="Agentic QA: 6 модулів, 21 заняття. Навчіться тестувати LLM, RAG і AI-агентів — від risk strategy та evals до quality gates у CI/CD. Малі групи, персональний review, production-ready проєкт у GitHub.">
+  <link rel="canonical" href="https://qastudy.online/courses/agentic-qa/">
+  <meta name="theme-color" content="#07061A">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="QAStudy.online">
+  <meta property="og:locale" content="uk_UA">
+  <meta property="og:url" content="https://qastudy.online/courses/agentic-qa/">
+  <meta property="og:title" content="Agentic QA — AI Quality · QAStudy.online">
+  <meta property="og:description" content="Навчіться тестувати системи без одного правильного expected result: LLM, RAG та AI-агенти — від risk strategy до quality gates у production CI/CD.">
+  <meta property="og:image" content="https://qastudy.online/assets/img/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <link rel="stylesheet" href="../../assets/css/course.css">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Course",
+  "name": "Agentic QA",
+  "description": "Agentic QA: 6 модулів, 21 заняття. Навчіться тестувати LLM, RAG і AI-агентів — від risk strategy та evals до quality gates у CI/CD. Малі групи, персональний review, production-ready проєкт у GitHub.",
+  "provider": {
+    "@type": "Organization",
+    "name": "QAStudy.online",
+    "url": "https://qastudy.online/"
+  },
+  "inLanguage": "uk",
+  "offers": {
+    "@type": "Offer",
+    "price": "40000",
+    "priceCurrency": "UAH",
+    "url": "https://qastudy.online/courses/agentic-qa/"
+  },
+  "hasCourseInstance": {
+    "@type": "CourseInstance",
+    "courseMode": "online",
+    "startDate": "2026-11-10",
+    "instructor": {
+      "@type": "Person",
+      "name": "Yehor Maksymchuk"
+    }
+  }
+}
+  </script>
+  <!-- ANALYTICS: вставте GA4 / GTM snippet тут -->
+  <script>window.dataLayer = window.dataLayer || [];</script>
+</head>
+<body class="course-page">
+<a class="skip-link" href="#main">Перейти до контенту</a>
+<header class="site-header" id="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="../../" aria-label="QAStudy.online — на головну">
+      <span class="brand-name">QAStudy<span class="brand-accent">.online</span></span>
+      <span class="brand-sub">Engineering School</span>
+    </a>
+    <nav class="site-nav" id="site-nav" aria-label="Головна навігація">
+      <ul class="nav-list">
+        <li><a href="#program">Програма</a></li>
+        <li><a href="#project">Проєкт</a></li>
+        <li><a href="#format">Формат</a></li>
+        <li><a href="#price">Вартість</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+      <a class="btn btn-outline header-cta" href="#apply" data-event="course_apply_click" data-place="header">Подати заявку <span class="arrow" aria-hidden="true">→</span></a>
+    </nav>
+    <button class="burger" id="burger" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Відкрити меню"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<main id="main">
+  <section class="hero section-dark course-hero" id="hero">
+    <span class="deco deco-1" aria-hidden="true"></span>
+    <span class="deco deco-2" aria-hidden="true"></span>
+    <div class="container course-hero-grid">
+      <div class="course-hero-content glass reveal">
+        <p class="eyebrow eyebrow-dark">Програма · AI Quality</p>
+        <p class="program-status course-lamp"><span class="status-dot status-dot-open" aria-hidden="true"></span>Набір відкрито · старт 10.11.2026</p>
+        <h1 class="hero-title course-title">Agentic QA</h1>
+        <p class="course-transition">Middle+ QA → AI Quality Engineer</p>
+        <p class="lead lead-dark course-promise">Навчіться тестувати системи без одного правильного expected result: LLM, RAG та AI-агенти — від risk strategy до quality gates у production CI/CD.</p>
+        <ul class="cmeta"><li><span class="cmeta-label">Занять</span><span class="cmeta-value">21</span></li><li><span class="cmeta-label">Тривалість</span><span class="cmeta-value">11–14 тижнів</span></li><li><span class="cmeta-label">Рівень</span><span class="cmeta-value">Middle–Lead</span></li><li><span class="cmeta-label">Група</span><span class="cmeta-value">8–12 осіб</span></li></ul>
+        <div class="hero-actions">
+          <a class="btn btn-primary btn-lg" href="#apply" data-event="course_apply_click" data-place="hero">Подати заявку <span class="arrow" aria-hidden="true">→</span></a>
+          <a class="link-underline link-light" href="#program">Програма курсу ↓</a>
+        </div>
+        <div class="seats" role="group" aria-label="Заповненість групи">
+          <div class="seats-row"><span class="seat seat-taken" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></svg></span><span class="seat seat-taken" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></svg></span><span class="seat seat-taken" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></svg></span><span class="seat seat-taken" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></svg></span><span class="seat seat-taken" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></svg></span><span class="seat" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></svg></span><span class="seat" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></svg></span><span class="seat" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></svg></span><span class="seat" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></svg></span><span class="seat" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></svg></span><span class="seat" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></svg></span><span class="seat" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></svg></span><a class="seat seat-add" href="#apply" data-event="course_apply_click" data-place="seats" aria-label="Приєднатися до групи">+</a></div>
+          <p class="seats-text"><strong>5 із 12</strong> місць у групі зайнято · залишилось 7</p>
+        </div>
+        <ol class="level-path course-path" aria-label="Рівні"><li>Middle</li><li>Senior</li><li>Lead</li></ol>
+      </div>
+    </div>
+  </section>
+  <section class="section section-dark" id="for-whom">
+    <div class="container">
+      <header class="section-head reveal">
+        <p class="eyebrow eyebrow-dark">01. Для кого</p>
+        <h2 class="h2">Три ситуації, з якими <br>приходять на <span class="accent">Agentic QA</span></h2>
+      </header>
+      <div class="personas reveal">
+        <article class="persona glass">
+          <p class="persona-role">QA Engineer, Middle+</p>
+          <blockquote class="situation situation-dark">«Проєкт перейшов на LLM, і я не знаю, як тестувати це по-нормальному»</blockquote>
+          <p class="mini-label mini-label-dark">Навчитеся</p>
+          <p class="body body-dark">Побудуєте test strategy для AI-функціональності та навчитеся вимірювати якість там, де немає одного правильного результату.</p>
+        </article>        <article class="persona glass">
+          <p class="persona-role">Automation QA / SDET</p>
+          <blockquote class="situation situation-dark">«Хочу конкретний технічний стек для тестування AI, а не „якось протестувати“»</blockquote>
+          <p class="mini-label mini-label-dark">Навчитеся</p>
+          <p class="body body-dark">Зберете власний AI test framework: datasets, evals, LLM-as-a-Judge, assertions, звіти — і вбудуєте його в CI/CD.</p>
+        </article>        <article class="persona glass">
+          <p class="persona-role">Tech Lead / QA Lead</p>
+          <blockquote class="situation situation-dark">«Боюся production-інцидентів з AI і не знаю, що запитати у команди»</blockquote>
+          <p class="mini-label mini-label-dark">Навчитеся</p>
+          <p class="body body-dark">Отримаєте risk map, coverage matrix і quality gates — інструменти, щоб керувати якістю AI-продукту, а не сподіватися на неї.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+  <section class="section section-dark" id="skills">
+    <div class="container">
+      <header class="section-head reveal">
+        <p class="eyebrow eyebrow-dark">02. Результат</p>
+        <h2 class="h2">Вісім речей, які ви <br>зможете робити <span class="accent">після курсу</span></h2>
+      </header>
+      <ol class="skill-tiles reveal"><li class="skill-tile glass"><span class="skill-idx">01</span><span class="skill-text">Будувати test strategy для AI-продуктів</span></li><li class="skill-tile glass"><span class="skill-idx">02</span><span class="skill-text">Тестувати системи без одного expected result</span></li><li class="skill-tile glass"><span class="skill-idx">03</span><span class="skill-text">Автоматизувати LLM та RAG evals</span></li><li class="skill-tile glass"><span class="skill-idx">04</span><span class="skill-text">Тестувати AI-агентів і tool calls</span></li><li class="skill-tile glass"><span class="skill-idx">05</span><span class="skill-text">Знаходити AI security-ризики</span></li><li class="skill-tile glass"><span class="skill-idx">06</span><span class="skill-text">Збирати власний AI test framework</span></li><li class="skill-tile glass"><span class="skill-idx">07</span><span class="skill-text">Вбудовувати quality gates у CI/CD</span></li><li class="skill-tile glass"><span class="skill-idx">08</span><span class="skill-text">Використовувати AI-агентів у QA workflow</span></li></ol>
+    </div>
+  </section>
+  <section class="section section-dark program-section" id="program">
+    <div class="container">
+      <header class="section-head section-head-center reveal">
+        <p class="eyebrow eyebrow-dark eyebrow-center">03. Програма курсу</p>
+        <h2 class="h2">6 модулів <span class="accent">Agentic QA</span></h2>
+        <p class="program-facts">21 занять · Практичні завдання · Фінальний проєкт</p>
+        <p class="section-support section-support-dark section-support-center">Курс побудований навколо реальних задач QA в AI-продуктах: від risk strategy та evals до автоматизованих quality gates у CI/CD.</p>
+        <button class="link-underline toggle-all" type="button" id="toggle-all" data-open="Розгорнути всі модулі" data-close="Згорнути всі">Розгорнути всі модулі</button>
+      </header>
+      <div class="modules reveal">
+      <details class="module module-blue" open>
+        <summary>
+          <span class="module-num">1</span>
+          <span class="module-head">
+            <span class="module-title">Як тестувати AI-продукт системно</span>
+            <span class="module-meta">2 заняття · Risk Map · Coverage Matrix · AI Test Strategy</span>
+          </span>
+          <span class="module-tag">Модуль 1</span>
+          <span class="module-chevron" aria-hidden="true"></span>
+        </summary>
+        <div class="module-body">
+          <ol class="lessons">
+            <li class="lesson">
+              <span class="lesson-n">Заняття 1</span>
+              <div><p class="lesson-title">Що змінюється для QA, коли в продукті зʼявляється AI</p><p class="lesson-desc">Розберетеся, чому звичайного pass/fail недостатньо для LLM та AI-агентів. Навчитеся бачити основні типи помилок і розуміти, що саме потрібно перевіряти.</p></div>
+            </li>            <li class="lesson">
+              <span class="lesson-n">Заняття 2</span>
+              <div><p class="lesson-title">Як побудувати test strategy для AI-продукту</p><p class="lesson-desc">Навчитеся розкладати AI-систему на компоненти й ризики, визначати пріоритети та будувати coverage під реальний продукт.</p></div>
+            </li>
+          </ol>
+          <div class="module-foot">
+            <div class="module-milestone"><span class="mf-icon" aria-hidden="true">⚑</span><div><span class="mf-label">Milestone модуля</span><strong>«Ви вмієте розібрати AI-систему як QA»</strong></div></div>
+            <div class="module-output"><span class="mf-icon" aria-hidden="true">◈</span><div><span class="mf-label">Результат модуля</span><span>Risk Map + Coverage Matrix + AI Test Strategy</span></div></div>
+          </div>
+        </div>
+      </details>      <details class="module module-green">
+        <summary>
+          <span class="module-num">2</span>
+          <span class="module-head">
+            <span class="module-title">Як вимірювати якість LLM і RAG</span>
+            <span class="module-meta">7 занять · Golden Dataset · LLM Eval Suite · RAG Evaluation · Model Benchmark</span>
+          </span>
+          <span class="module-tag">Модуль 2</span>
+          <span class="module-chevron" aria-hidden="true"></span>
+        </summary>
+        <div class="module-body">
+          <ol class="lessons">
+            <li class="lesson">
+              <span class="lesson-n">Заняття 3</span>
+              <div><p class="lesson-title">Як тестувати prompts і context</p><p class="lesson-desc">Навчитеся перевіряти, як зміни prompt та context впливають на результат, і знаходити проблеми до production.</p></div>
+            </li>            <li class="lesson">
+              <span class="lesson-n">Заняття 4</span>
+              <div><p class="lesson-title">Як оцінювати якість AI-відповідей</p><p class="lesson-desc">Розберетеся, що робити, коли немає одного правильного expected result, і які метрики потрібні саме вашому сценарію.</p></div>
+            </li>            <li class="lesson">
+              <span class="lesson-n">Заняття 5</span>
+              <div><p class="lesson-title">Як автоматизувати перевірку AI-відповідей</p><p class="lesson-desc">Створите повторювані eval-перевірки та навчитеся знаходити regression після зміни prompt або model.</p></div>
+            </li>            <li class="lesson">
+              <span class="lesson-n">Заняття 6</span>
+              <div><p class="lesson-title">Як тестувати RAG</p><p class="lesson-desc">Навчитеся визначати, де саме виникла проблема: у retrieval, context чи фінальній генерації відповіді.</p></div>
+            </li>            <li class="lesson">
+              <span class="lesson-n">Заняття 7</span>
+              <div><p class="lesson-title">Як тестувати довгі діалоги</p><p class="lesson-desc">Знаходитимете втрату контексту, суперечності та деградацію поведінки в multi-step сценаріях.</p></div>
+            </li>            <li class="lesson">
+              <span class="lesson-n">Заняття 8</span>
+              <div><p class="lesson-title">Як порівнювати різні моделі</p><p class="lesson-desc">Зможете порівнювати моделі за якістю, стабільністю, latency та cost і аргументовано обирати варіант для продукту.</p></div>
+            </li>            <li class="lesson">
+              <span class="lesson-n">Заняття 9</span>
+              <div><p class="lesson-title">Як використовувати локальні моделі для evals</p><p class="lesson-desc">Дізнаєтеся, коли локальні моделі підходять для QA-задач і як зменшити залежність від дорогих cloud-запитів.</p></div>
+            </li>
+          </ol>
+          <div class="module-foot">
+            <div class="module-milestone"><span class="mf-icon" aria-hidden="true">⚑</span><div><span class="mf-label">Milestone модуля</span><strong>«Ви вмієте вимірювати якість LLM і RAG»</strong></div></div>
+            <div class="module-output"><span class="mf-icon" aria-hidden="true">◈</span><div><span class="mf-label">Результат модуля</span><span>Golden Dataset + LLM Eval Suite + RAG Evaluation + Model Benchmark</span></div></div>
+          </div>
+        </div>
+      </details>      <details class="module module-orange">
+        <summary>
+          <span class="module-num">3</span>
+          <span class="module-head">
+            <span class="module-title">Як тестувати AI-агентів</span>
+            <span class="module-meta">5 занять · Agent Test Suite · Security Report · Observability Setup</span>
+          </span>
+          <span class="module-tag">Модуль 3</span>
+          <span class="module-chevron" aria-hidden="true"></span>
+        </summary>
+        <div class="module-body">
+          <ol class="lessons">
+            <li class="lesson">
+              <span class="lesson-n">Заняття 10</span>
+              <div><p class="lesson-title">Як використовувати LLM-as-a-Judge</p><p class="lesson-desc">Навчитеся автоматично оцінювати AI-відповіді за допомогою іншої моделі та розуміти межі надійності такого підходу.</p></div>
+            </li>            <li class="lesson">
+              <span class="lesson-n">Заняття 11</span>
+              <div><p class="lesson-title">Як перевіряти AI на небезпечні сценарії</p><p class="lesson-desc">Проведете базовий red teaming і навчитеся знаходити prompt injection, витік даних та інші security-ризики.</p></div>
+            </li>            <li class="lesson">
+              <span class="lesson-n">Заняття 12</span>
+              <div><p class="lesson-title">Як тестувати tool calls</p><p class="lesson-desc">Перевірятимете, який tool вибрав агент, з якими параметрами і чи правильно він побудував послідовність дій.</p></div>
+            </li>            <li class="lesson">
+              <span class="lesson-n">Заняття 13</span>
+              <div><p class="lesson-title">Як аналізувати поведінку агента через traces</p><p class="lesson-desc">Виявлятимете зайві кроки, loops, дорогі запити, latency-проблеми та неправильні tool calls.</p></div>
+            </li>            <li class="lesson">
+              <span class="lesson-n">Заняття 14</span>
+              <div><p class="lesson-title">Як контролювати якість AI-генерацій: tests, edge cases, review</p><p class="lesson-desc">Розберете практичні сценарії для test generation, edge-case discovery та code review і навчитеся перевіряти якість того, що згенерував AI.</p></div>
+            </li>
+          </ol>
+          <div class="module-foot">
+            <div class="module-milestone"><span class="mf-icon" aria-hidden="true">⚑</span><div><span class="mf-label">Milestone модуля</span><strong>«Ви вмієте знаходити помилки AI-агентів»</strong></div></div>
+            <div class="module-output"><span class="mf-icon" aria-hidden="true">◈</span><div><span class="mf-label">Результат модуля</span><span>Agent Test Suite + Security Report + Observability Setup</span></div></div>
+          </div>
+        </div>
+      </details>      <details class="module module-red">
+        <summary>
+          <span class="module-num">4</span>
+          <span class="module-head">
+            <span class="module-title">Як автоматизувати AI-тестування</span>
+            <span class="module-meta">2 заняття · Reusable AI Test Framework · CI/CD Quality Gates</span>
+          </span>
+          <span class="module-tag">Модуль 4</span>
+          <span class="module-chevron" aria-hidden="true"></span>
+        </summary>
+        <div class="module-body">
+          <ol class="lessons">
+            <li class="lesson">
+              <span class="lesson-n">Заняття 15</span>
+              <div><p class="lesson-title">Як зібрати власний AI test framework</p><p class="lesson-desc">Обʼєднаєте datasets, evals, assertions, reports та роботу з різними моделями в одну підтримувану систему.</p></div>
+            </li>            <li class="lesson">
+              <span class="lesson-n">Заняття 16</span>
+              <div><p class="lesson-title">Як додати AI quality checks у CI/CD</p><p class="lesson-desc">Запускатимете evals у pipeline, задаватимете thresholds і блокуватимете зміни, якщо якість AI-функціональності погіршилась.</p></div>
+            </li>
+          </ol>
+          <div class="module-foot">
+            <div class="module-milestone"><span class="mf-icon" aria-hidden="true">⚑</span><div><span class="mf-label">Milestone модуля</span><strong>«Ви вмієте автоматизувати AI-тестування»</strong></div></div>
+            <div class="module-output"><span class="mf-icon" aria-hidden="true">◈</span><div><span class="mf-label">Результат модуля</span><span>Reusable AI Test Framework + CI/CD Quality Gates</span></div></div>
+          </div>
+        </div>
+      </details>      <details class="module module-blue">
+        <summary>
+          <span class="module-num">5</span>
+          <span class="module-head">
+            <span class="module-title">Як використовувати AI-агентів у QA workflow</span>
+            <span class="module-meta">2 заняття · Code Review · Test Generation · Documentation</span>
+          </span>
+          <span class="module-tag">Модуль 5</span>
+          <span class="module-chevron" aria-hidden="true"></span>
+        </summary>
+        <div class="module-body">
+          <ol class="lessons">
+            <li class="lesson">
+              <span class="lesson-n">Заняття 17</span>
+              <div><p class="lesson-title">Agentic CI/CD</p><p class="lesson-desc">Побудуєте workflow, у якому AI-агент допомагає аналізувати код, review PR та запускати додаткові QA-перевірки.</p></div>
+            </li>            <li class="lesson">
+              <span class="lesson-n">Заняття 18</span>
+              <div><p class="lesson-title">Автоматичне оновлення тестів і документації</p><p class="lesson-desc">Навчитеся використовувати AI для генерації й оновлення тестів і документації через контрольований review-процес.</p></div>
+            </li>
+          </ol>
+          <div class="module-foot">
+            <div class="module-milestone"><span class="mf-icon" aria-hidden="true">⚑</span><div><span class="mf-label">Milestone модуля</span><strong>«Ви вмієте вбудувати AI-агентів у QA workflow»</strong></div></div>
+            <div class="module-output"><span class="mf-icon" aria-hidden="true">◈</span><div><span class="mf-label">Результат модуля</span><span>Agentic QA Workflow для Code Review, Test Generation і Documentation</span></div></div>
+          </div>
+        </div>
+      </details>      <details class="module module-violet">
+        <summary>
+          <span class="module-num">6</span>
+          <span class="module-head">
+            <span class="module-title">Фінальний Agentic QA Project</span>
+            <span class="module-meta">3 заняття · Production-ready Project у GitHub</span>
+          </span>
+          <span class="module-tag">Модуль 6</span>
+          <span class="module-chevron" aria-hidden="true"></span>
+        </summary>
+        <div class="module-body">
+          <ol class="lessons">
+            <li class="lesson">
+              <span class="lesson-n">Заняття 19</span>
+              <div><p class="lesson-title">Project Review</p><p class="lesson-desc">Отримаєте review архітектури, test strategy, coverage, evals, framework та CI/CD перед фінальним захистом.</p></div>
+            </li>            <li class="lesson">
+              <span class="lesson-n">Заняття 20–21</span>
+              <div><p class="lesson-title">Захист проєкту</p><p class="lesson-desc">Покажете повний pipeline у роботі та обґрунтуєте свої engineering decisions: coverage, thresholds, quality gates і залишкові ризики.</p></div>
+            </li>
+          </ol>
+          <div class="module-foot">
+            <div class="module-milestone"><span class="mf-icon" aria-hidden="true">⚑</span><div><span class="mf-label">Milestone модуля</span><strong>«Ви можете показати це роботодавцю»</strong></div></div>
+            <div class="module-output"><span class="mf-icon" aria-hidden="true">◈</span><div><span class="mf-label">Результат модуля</span><span>Production-ready Agentic QA Project у GitHub</span></div></div>
+          </div>
+        </div>
+      </details>
+      </div>
+    </div>
+  </section>
+  <section class="section section-dark" id="project">
+    <div class="container project-grid">
+      <div class="reveal">
+        <p class="eyebrow eyebrow-dark">04. Фінальний проєкт</p>
+        <h2 class="h2">Production-ready Agentic QA <span class="accent">Project</span></h2>
+        <p class="section-support section-support-dark">Ви самостійно будуєте AI-застосунок і повний цикл його тестування. Усе — у вашому GitHub, готове показати на інтерв’ю або принести у свою команду.</p>
+      </div>
+      <div class="repo glass reveal">
+        <div class="repo-bar"><span></span><span></span><span></span><span class="repo-path">github.com/you/agentic-qa-project</span></div>
+        <ul class="repo-list"><li><code class="repo-name">ai-application/</code><span class="repo-desc">AI-застосунок, 300–800 рядків, з Claude Code або Copilot</span></li><li><code class="repo-name">TEST_STRATEGY.md</code><span class="repo-desc">Тест-стратегія на 2–4 сторінки з go/no-go критеріями</span></li><li><code class="repo-name">coverage-matrix.xlsx</code><span class="repo-desc">Risk-based coverage matrix</span></li><li><code class="repo-name">evals/llm/ · evals/rag/</code><span class="repo-desc">LLM та RAG evals на golden dataset</span></li><li><code class="repo-name">tests/agent/ · tests/security/</code><span class="repo-desc">Agent tests, tool-call checks, red teaming</span></li><li><code class="repo-name">framework/</code><span class="repo-desc">AI test framework з LLM-as-a-Judge і звітом</span></li><li><code class="repo-name">.github/workflows/</code><span class="repo-desc">CI/CD pipeline: quality gates + AI code review + реліз</span></li><li><code class="repo-name">agentic-workflow/</code><span class="repo-desc">Agentic QA workflow для review, test generation, документації</span></li><li><code class="repo-name">README.md</code><span class="repo-desc">Документація і чесний опис: де AI допоміг, а де заважав</span></li></ul>
+      </div>
+    </div>
+  </section>
+  <section class="section section-dark" id="format">
+    <div class="container">
+      <header class="section-head reveal">
+        <p class="eyebrow eyebrow-dark">05. Як проходить навчання</p>
+        <h2 class="h2">Формат, у якому <br>доводять <span class="accent">до результату</span></h2>
+      </header>
+      <ul class="format-list reveal"><li class="format-item glass"><strong>Онлайн, у малій групі</strong><span>8–12 інженерів. Викладач бачить код і рішення кожного.</span></li><li class="format-item glass"><strong>Практика на кожному занятті</strong><span>Домашнє завдання після кожної зустрічі — і воно стає частиною вашого фінального проєкту.</span></li><li class="format-item glass"><strong>Персональний review</strong><span>Кожне домашнє завдання отримує розбір від викладача: чому працює, де зламається, як зробити краще.</span></li><li class="format-item glass"><strong>Записи занять</strong><span>Пропустили зустріч — подивитеся запис і здасте завдання у своєму темпі.</span></li></ul>
+      <div class="stack reveal">
+        <div class="stack-head"><p class="eyebrow eyebrow-dark">Стек курсу</p><p class="stack-note">Тільки те, що працює у production — без «оглядових» інструментів</p></div>
+        <div class="stack-groups"><div class="stack-group"><p class="stack-group-name">Evals</p><ul class="tools"><li class="tool">DeepEval</li><li class="tool">Promptfoo</li><li class="tool">RAGAS</li><li class="tool">LLM-as-a-Judge</li></ul></div><div class="stack-group"><p class="stack-group-name">Агенти та інструменти</p><ul class="tools"><li class="tool">MCP</li><li class="tool">Tool calls</li><li class="tool">Traces</li></ul></div><div class="stack-group"><p class="stack-group-name">Моделі</p><ul class="tools"><li class="tool">Ollama</li><li class="tool">Cloud LLM</li><li class="tool">Model Benchmark</li></ul></div><div class="stack-group"><p class="stack-group-name">Security</p><ul class="tools"><li class="tool">OWASP LLM Top 10</li><li class="tool">Red teaming</li></ul></div><div class="stack-group"><p class="stack-group-name">CI/CD та AI-асистенти</p><ul class="tools"><li class="tool">GitHub Actions</li><li class="tool">Claude Code</li><li class="tool">GitHub Copilot</li></ul></div></div>
+      </div>
+    </div>
+  </section>
+  <section class="section section-dark founder" id="founder">
+    <div class="container founder-grid">
+      <div class="founder-photo reveal">
+        <img src="../../assets/img/founder.webp" width="540" height="851" loading="lazy" decoding="async" alt="Єгор Максимчук — автор і лектор програми">
+      </div>
+      <div class="founder-content reveal">
+        <p class="eyebrow eyebrow-dark">06. Викладач</p>
+        <h2 class="h2">Автор програми <br>і лектор — <span class="accent">Єгор Максимчук</span></h2>
+        <p class="founder-position">QA &amp; Performance Architect · AI Agent Development &amp; Testing · 14+ років в IT</p>
+        <p class="body body-dark">Розробляє AI-агентів для SDLC і будує QA-архітектуру для AI-продуктів у US fintech.</p>
+        <ul class="proof-list">
+          <li><strong>14+</strong><span>років в IT</span></li>
+          <li><strong>22</strong><span>скрам-команди у зоні відповідальності</span></li>
+          <li><strong>6</strong><span>доменів — від fintech до держсектору</span></li>
+          <li><strong>US fintech</strong><span>Performance Architect зараз</span></li>
+        </ul>
+        <ul class="badges" aria-label="Сертифікації">
+          <li><img src="../../assets/img/badge-copilot.svg" width="64" height="64" loading="lazy" alt="GitHub Copilot — Microsoft certification"></li>
+          <li><img src="../../assets/img/badge-az900.svg" width="64" height="64" loading="lazy" alt="Microsoft Certified: Azure Fundamentals (AZ-900)"></li>
+          <li><img src="../../assets/img/badge-icp-apm.webp" width="64" height="64" loading="lazy" alt="ICAgile Certified Professional — ICP-APM"></li>
+          <li><img src="../../assets/img/badge-anthropic-architect-pro.webp" width="64" height="64" loading="lazy" alt="Anthropic Certificate — Architect Professional"></li>
+          <li><img src="../../assets/img/badge-anthropic-architect-found.webp" width="64" height="64" loading="lazy" alt="Anthropic Certificate — Architect Foundations"></li>
+          <li><img src="../../assets/img/badge-anthropic-associate-found.webp" width="64" height="64" loading="lazy" alt="Anthropic Certificate — Associate Foundations"></li>
+          <li><img src="../../assets/img/badge-anthropic-developer-found.webp" width="64" height="64" loading="lazy" alt="Anthropic Certificate — Developer Foundations"></li>
+        </ul>
+        <div class="founder-links">
+          <ul class="founder-social">
+            <li><a href="https://www.linkedin.com/in/yehor-maksymchuk-271039240/" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a href="https://github.com/QAStudyOnline" target="_blank" rel="noopener">GitHub</a></li>
+            <li><a href="https://www.youtube.com/@qastudy.online" target="_blank" rel="noopener">YouTube</a></li>
+            <li><a href="https://t.me/qastudy" target="_blank" rel="noopener">Telegram</a></li>
+          </ul>
+          <a class="link-underline" href="../../team/yehor-maksymchuk/">Детальніше про викладача <span class="arrow" aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section section-dark" id="price">
+    <div class="container">
+      <header class="section-head reveal">
+        <p class="eyebrow eyebrow-dark">07. Вартість</p>
+        <h2 class="h2">Скільки коштує <br><span class="accent">наступний рівень</span></h2>
+      </header>
+      <div class="price-grid">
+        <div class="price-card glass reveal">
+          <p class="price-label">Повна вартість</p>
+          <p class="price-amount">40 000 грн</p>
+          <p class="price-note">Повна вартість програми: 21 заняття, 11–14 тижнів. Матеріали, записи та review вже всередині.</p>
+          <p class="mini-label mini-label-dark">Що входить</p>
+          <ul class="skill-list skill-list-dark"><li>Усі матеріали курсу: презентації, код прикладів, лекційні нотатки</li><li>Персональний feedback на кожне домашнє завдання</li><li>Review фінального проєкту з викладачем</li><li>Доступ до записів занять</li><li>Власний production-ready проєкт у GitHub</li></ul>
+          <a class="btn btn-primary btn-lg" href="#apply" data-event="course_apply_click" data-place="price">Подати заявку <span class="arrow" aria-hidden="true">→</span></a>
+        </div>
+        <div class="price-side">
+        <div class="cohort glass reveal">
+          <p class="mini-label mini-label-dark">Найближчий старт</p>
+          <p class="cohort-date"><time datetime="2026-11-10">10 листопада 2026</time></p>
+          <ul class="cohort-details"><li>21 заняття</li><li>11–14 тижнів</li><li>група до 12 осіб</li><li>онлайн</li></ul>
+          <p class="cohort-note">Розклад занять узгоджуємо з групою перед стартом.</p>
+        </div>
+          <div class="company glass reveal">
+            <span class="company-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 21V5a1 1 0 011-1h8a1 1 0 011 1v16M14 9h5a1 1 0 011 1v11M4 21h17M8 8h2M8 12h2M8 16h2M17 13h1M17 17h1" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <p class="h4">Оплата від компанії</p>
+            <p class="body body-dark">Багато учасників навчаються за рахунок роботодавця. Надамо рахунок, договір і закриваючі документи — просто вкажіть це у заявці.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section section-dark faq" id="faq">
+    <div class="container faq-grid">
+      <div class="faq-intro reveal">
+        <p class="eyebrow eyebrow-dark">08. FAQ</p>
+        <h2 class="h2">Питання <br>перед <span class="accent">стартом</span></h2>
+      </div>
+      <div class="faq-list reveal">
+        <details class="faq-item" open>
+          <summary><span class="faq-num">01</span><span class="faq-q">Чи потрібно вміти програмувати?</span><span class="faq-icon" aria-hidden="true"></span></summary>
+          <div class="faq-a"><p>Так, на рівні читання і написання простого коду: Python або JavaScript. Ви будете писати evals, assertions і збирати framework — але з підтримкою Claude Code чи Copilot і з review від викладача.</p></div>
+        </details>        <details class="faq-item">
+          <summary><span class="faq-num">02</span><span class="faq-q">Що буде, якщо я пропущу заняття?</span><span class="faq-icon" aria-hidden="true"></span></summary>
+          <div class="faq-a"><p>Подивитеся запис і здасте домашнє завдання у своєму темпі. Review отримаєте так само, як і решта групи.</p></div>
+        </details>        <details class="faq-item">
+          <summary><span class="faq-num">03</span><span class="faq-q">Скільки часу потрібно щотижня?</span><span class="faq-icon" aria-hidden="true"></span></summary>
+          <div class="faq-a"><p>Одне заняття плюс домашнє завдання. Орієнтуйтеся на 4–6 годин на тиждень разом із практикою.</p></div>
+        </details>        <details class="faq-item">
+          <summary><span class="faq-num">04</span><span class="faq-q">Чи потрібен доступ до платних AI-моделей?</span><span class="faq-icon" aria-hidden="true"></span></summary>
+          <div class="faq-a"><p>Знадобиться доступ до однієї з cloud-моделей для практики. Окремий модуль присвячений локальним моделям — навчимо зменшувати залежність від дорогих запитів.</p></div>
+        </details>        <details class="faq-item">
+          <summary><span class="faq-num">05</span><span class="faq-q">Чи може за навчання заплатити компанія?</span><span class="faq-icon" aria-hidden="true"></span></summary>
+          <div class="faq-a"><p>Так. Надамо рахунок і документи для оплати юридичною особою — напишіть про це у заявці.</p></div>
+        </details>        <details class="faq-item">
+          <summary><span class="faq-num">06</span><span class="faq-q">Що буде після заявки?</span><span class="faq-icon" aria-hidden="true"></span></summary>
+          <div class="faq-a"><p>Ми зв’яжемося протягом робочого дня, коротко обговоримо ваш рівень і задачі та підтвердимо місце в групі.</p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+  <section class="section section-dark apply" id="apply">
+    <span class="deco deco-3" aria-hidden="true"></span>
+    <div class="container apply-grid">
+      <div class="reveal">
+        <p class="eyebrow eyebrow-dark">09. Заявка</p>
+        <h2 class="h2">Забронювати місце <br>у групі <span class="accent">Agentic QA</span></h2>
+        <p class="lead lead-dark">Залиште контакт — розкажемо про старт, формат і відповімо на питання протягом робочого дня.</p>
+        <p class="apply-alt"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 4L3 11.2l6.4 2.2L18 7l-6.6 7.6.4 5.4 3-3.3 4.4 3.3L21 4z" fill="currentColor"/></svg> Або одразу в Telegram: <a href="https://t.me/qastudy" target="_blank" rel="noopener" data-event="telegram_click">@qastudy</a></p>
+      </div>
+      <form class="contact-form glass apply-form reveal" id="contact-form" action="https://formspree.io/f/FORM_ENDPOINT" method="POST" novalidate>
+        <div class="field-row">
+          <div class="field">
+            <label for="f-telegram">Telegram</label>
+            <input id="f-telegram" name="telegram" type="text" autocomplete="off" required aria-describedby="f-telegram-err" placeholder="@username">
+            <p class="field-error" id="f-telegram-err"></p>
+          </div>
+          <div class="field">
+            <label for="f-phone">Телефон</label>
+            <input id="f-phone" name="phone" type="tel" autocomplete="tel" required aria-describedby="f-phone-err" placeholder="+380">
+            <p class="field-error" id="f-phone-err"></p>
+          </div>
+        </div>
+        <div class="field">
+          <label for="f-email">Email</label>
+          <input id="f-email" name="email" type="email" autocomplete="email" required aria-describedby="f-email-err" placeholder="name@company.com">
+          <p class="field-error" id="f-email-err"></p>
+        </div>
+        <div class="field">
+          <label for="f-role">Поточна роль</label>
+          <select id="f-role" name="role" required aria-describedby="f-role-err">
+            <option value="">Оберіть</option>
+            <option>QA Engineer (Middle)</option>
+            <option>Automation QA / SDET</option>
+            <option>Senior QA</option>
+            <option>QA Lead / Head of QA</option>
+            <option>DevOps / SRE</option>
+            <option>Інше</option>
+          </select>
+          <p class="field-error" id="f-role-err"></p>
+        </div>
+        <div class="field">
+          <label for="f-message">Питання або коротко про задачу <span class="opt">(необов’язково)</span></label>
+          <textarea id="f-message" name="message" rows="3" aria-describedby="f-message-err" placeholder="Що тестуєте зараз і чого очікуєте від курсу"></textarea>
+          <p class="field-error" id="f-message-err"></p>
+        </div>
+        <div class="hp" aria-hidden="true"><label>Website<input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label></div>
+        <input type="hidden" name="_subject" value="QAStudy.online — заявка на Agentic QA">
+        <input type="hidden" name="course" value="Agentic QA">
+        <input type="hidden" name="source" value="course-page">
+        <input type="hidden" name="page" id="f-page" value="">
+        <input type="hidden" name="utm" id="f-utm" value="">
+        <input type="hidden" name="referrer" id="f-referrer" value="">
+        <p class="form-privacy">Надсилаючи форму, ви погоджуєтесь із <a href="../../privacy/">політикою конфіденційності</a>.</p>
+        <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+        <button class="btn btn-primary btn-lg" type="submit" id="form-submit"><span class="btn-label">Подати заявку</span><span class="btn-loading" aria-hidden="true">Надсилаємо…</span></button>
+      </form>
+      <div class="form-success glass" id="form-success" hidden>
+        <p class="h4">Заявку отримали. Дякуємо!</p>
+        <p class="body body-dark">Зв’яжемося у Telegram або на email протягом робочого дня, розкажемо про старт і підтвердимо місце в групі.</p>
+      </div>
+    </div>
+  </section>
+  <section class="section section-dark" id="related">
+    <div class="container">
+      <header class="section-head reveal">
+        <p class="eyebrow eyebrow-dark">Інші програми</p>
+        <h2 class="h2 h2-compact">Якщо ваша задача <span class="accent">звучить інакше</span></h2>
+      </header>
+      <div class="related-grid reveal">
+        <a class="related-card glass" href="../k6-performance-testing/">
+          <span class="col-tag col-tag-accent">Performance Engineering</span>
+          <span class="related-title">Performance Testing with k6</span>
+          <span class="related-quote">«Хочу відповідати за продуктивність системи, а не лише за функціонал»</span>
+          <span class="link-underline">Переглянути програму <span class="arrow" aria-hidden="true">→</span></span>
+        </a>        <a class="related-card glass" href="../scale-quality/">
+          <span class="col-tag col-tag-accent">QA Architecture</span>
+          <span class="related-title">Scale Quality</span>
+          <span class="related-quote">«Хочу впливати на якість на рівні архітектури і процесів, а не окремих тестів»</span>
+          <span class="link-underline">Переглянути програму <span class="arrow" aria-hidden="true">→</span></span>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="../../" aria-label="QAStudy.online">
+          <span class="brand-name">QAStudy<span class="brand-accent">.online</span></span>
+          <span class="brand-sub">Engineering School</span>
+        </a>
+        <p class="footer-tagline">Наступний рівень для QA-інженерів: <br>AI Quality, Performance Engineering, QA Architecture.</p>
+        <ul class="footer-social">
+          <li><a href="https://www.youtube.com/@qastudy.online" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 8.2c-.2-1.4-.9-2.3-2.3-2.5C17.8 5.4 12 5.4 12 5.4s-5.8 0-7.7.3C2.9 5.9 2.2 6.8 2 8.2 1.8 9.9 1.8 12 1.8 12s0 2.1.2 3.8c.2 1.4.9 2.3 2.3 2.5 1.9.3 7.7.3 7.7.3s5.8 0 7.7-.3c1.4-.2 2.1-1.1 2.3-2.5.2-1.7.2-3.8.2-3.8s0-2.1-.2-3.8zM10 15V9l5.2 3L10 15z" fill="currentColor"/></svg></a></li>
+          <li><a href="https://t.me/qastudy" target="_blank" rel="noopener" aria-label="Telegram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 4L3 11.2l6.4 2.2L18 7l-6.6 7.6.4 5.4 3-3.3 4.4 3.3L21 4z" fill="currentColor"/></svg></a></li>
+          <li><a href="https://www.linkedin.com/in/yehor-maksymchuk-271039240/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 8.5H3.6V21h2.9V8.5zM5 3.5a1.7 1.7 0 100 3.4 1.7 1.7 0 000-3.4zM21 13.4c0-3.4-1.8-5.1-4.3-5.1-2 0-2.9 1.1-3.4 1.9V8.5h-2.9V21h2.9v-7c0-1.8.8-2.9 2.3-2.9s2.4 1 2.4 2.9v7H21v-7.6z" fill="currentColor"/></svg></a></li>
+          <li><a href="https://github.com/QAStudyOnline" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 00-3.2 19.5c.5.1.7-.2.7-.5v-1.8c-2.8.6-3.4-1.2-3.4-1.2-.5-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.6 2.4 1.1 3 .9.1-.7.4-1.1.6-1.4-2.2-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7-.1-.2-.4-1.2.1-2.6 0 0 .8-.3 2.8 1a9.6 9.6 0 015 0c1.9-1.3 2.8-1 2.8-1 .5 1.4.2 2.4.1 2.6.6.7 1 1.6 1 2.7 0 3.9-2.4 4.7-4.6 5 .4.3.7.9.7 1.9v2.8c0 .3.2.6.7.5A10 10 0 0012 2z" fill="currentColor"/></svg></a></li>
+        </ul>
+      </div>
+      <nav class="footer-col" aria-label="Програми">
+        <h3 class="footer-title">Програми</h3>
+        <ul>
+          <li><a href="../agentic-qa/">Agentic QA<span class="arrow" aria-hidden="true">→</span></a></li>
+          <li><a href="../k6-performance-testing/">Performance Testing with k6<span class="arrow" aria-hidden="true">→</span></a></li>
+          <li><a href="../scale-quality/">Scale Quality<span class="arrow" aria-hidden="true">→</span></a></li>
+        </ul>
+      </nav>
+      <nav class="footer-col" aria-label="QAStudy.online">
+        <h3 class="footer-title">QAStudy.online</h3>
+        <ul>
+          <li><a href="../../">Головна<span class="arrow" aria-hidden="true">→</span></a></li>
+          <li><a href="../../about/">Про школу<span class="arrow" aria-hidden="true">→</span></a></li>
+          <li><a href="../../team/yehor-maksymchuk/">Викладач<span class="arrow" aria-hidden="true">→</span></a></li>
+          <li><a href="../../#learning">Як навчаємо<span class="arrow" aria-hidden="true">→</span></a></li>
+        </ul>
+      </nav>
+      <nav class="footer-col" aria-label="Матеріали">
+        <h3 class="footer-title">Матеріали</h3>
+        <ul>
+          <li><a href="https://www.youtube.com/@qastudy.online" target="_blank" rel="noopener">YouTube<span class="arrow" aria-hidden="true">→</span></a></li>
+          <li><a href="https://t.me/qastudy" target="_blank" rel="noopener">Telegram<span class="arrow" aria-hidden="true">→</span></a></li>
+          <li><a href="https://www.linkedin.com/in/yehor-maksymchuk-271039240/" target="_blank" rel="noopener">LinkedIn<span class="arrow" aria-hidden="true">→</span></a></li>
+          <li><a href="https://github.com/QAStudyOnline" target="_blank" rel="noopener">GitHub<span class="arrow" aria-hidden="true">→</span></a></li>
+        </ul>
+      </nav>
+      <nav class="footer-col" aria-label="Інформація">
+        <h3 class="footer-title">Інформація</h3>
+        <ul>
+          <li><a href="#apply">Контакти<span class="arrow" aria-hidden="true">→</span></a></li>
+          <li><a href="../../oferta/">Публічна оферта<span class="arrow" aria-hidden="true">→</span></a></li>
+          <li><a href="../../privacy/">Політика конфіденційності<span class="arrow" aria-hidden="true">→</span></a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <ul class="footer-legal">
+        <li>© QAStudy.online <span id="year">2026</span></li>
+        <li><a href="../../oferta/">Публічна оферта</a></li>
+        <li><a href="../../privacy/">Політика конфіденційності</a></li>
+        <li><a href="../../terms/">Умови використання</a></li>
+        <li><a href="#known-issues" id="known-issues" class="known-issues">Known issues <span class="ki-count">3</span></a></li>
+      </ul>
+      <div class="footer-ask">
+        <span class="footer-ask-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3C7 3 3 6.4 3 10.5c0 2.3 1.3 4.4 3.3 5.8L5.5 21l4.3-2.3c.7.1 1.4.2 2.2.2 5 0 9-3.4 9-7.5S17 3 12 3z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></span>
+        <div><p>Є питання?</p><a href="https://t.me/qastudy" target="_blank" rel="noopener" data-event="telegram_click">Написати в Telegram <span class="arrow" aria-hidden="true">→</span></a></div>
+      </div>
+    </div>
+  </div>
+</footer>
+<div class="sticky-cta" id="sticky-cta" hidden>
+  <div class="container sticky-inner">
+    <div class="sticky-info"><strong>Agentic QA · 40 000 грн</strong><p class="program-status course-lamp"><span class="status-dot status-dot-open" aria-hidden="true"></span>Набір відкрито · старт 10.11.2026</p></div>
+    <a class="btn btn-primary" href="#apply" data-event="course_apply_click" data-place="sticky">Подати заявку <span class="arrow" aria-hidden="true">→</span></a>
+  </div>
+</div>
+<script src="../../assets/js/easter.js" defer></script>
+<script src="../../assets/js/cursor.js" defer></script>
+<script src="../../assets/js/exit.js" defer></script>
+<script src="../../assets/js/course.js" defer></script>
+</body>
+</html>
