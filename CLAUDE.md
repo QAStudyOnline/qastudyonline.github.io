@@ -107,7 +107,7 @@ card: {anchor, event, waitlist, quote, master: [], create: [], meta: [{label, va
 
 ## Before launch (needs the owner)
 - Create the Formspree form; set `params.forms.endpoint`. Send a test from each form (home modal, course application, waitlist)
-- Set `params.analytics.gtm_id`; check `form_submit`, `waitlist_submit`, `course_apply_click` in GTM Preview and mark them as conversions
+- GTM container `GTM-T9LJX9GJ` is set in `params.analytics.gtm_id`; add the GA4 tag in the GTM UI, check `form_submit`, `waitlist_submit`, `course_apply_click` in GTM Preview and mark them as conversions
 - Confirm facts: price, group size, start date, `seats_taken`; k6 15 lessons / 15 weeks and Scale Quality 35 lessons / ~33 weeks are marked `NEEDS CONFIRMATION` in their front matter
 - Register the easter-egg promo code in the payment flow (or change it); confirm the discount size
 - Confirm the Telegram handle (`@qastudy` on the site, `@qastudyonline` on the old About page)
