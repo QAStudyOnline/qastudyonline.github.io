@@ -50,7 +50,7 @@ disableKinds    = ["taxonomy", "term", "RSS"]
 
   # Google Tag Manager container id (GTM-XXXXXXX). Empty → no snippet; events still go to window.dataLayer.
   [params.analytics]
-    gtm_id = "GTM-T9LJX9GJ"
+    gtm_id = "G-KYSK5C1C4W"
 
   # Easter eggs (assets/js/easter.js). The promo code must exist in the payment flow before launch.
   [params.easter]
