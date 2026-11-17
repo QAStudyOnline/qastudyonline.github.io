@@ -299,7 +299,7 @@ personas:
   quote: «Хочу бути власником технічної test strategy й архітектури якості на рівні продукту»
   role: Senior QA / SDET → QA Architect
 price:
-  amount: 120 000 грн
+  amount:
   aside:
     links:
     - text: Glassdoor UK
@@ -320,7 +320,7 @@ price:
   - Telegram-спільнота групи та підтримка між заняттями
   - Board-ready Test Strategy пакет — реальний артефакт для портфоліо
   note: 'Повна вартість програми: 8 блоків, 35 занять, ~33 тижні.'
-  value: 120000
+  value:
 program_intro: 'Побудуйте QA-архітектуру та стратегію тестування, яка витримає ріст продукту і команди: від architecture-to-risk map до захисту Capstone перед steering committee.'
 project:
   intro: 'Протягом курсу ви будуєте реальний board-ready пакет для свого поточного проєкту — не навчальний кейс, а робочий артефакт, з яким виходите на наступну роль. 19 deliverables, єдиний захист:'

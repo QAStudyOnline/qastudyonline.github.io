@@ -25,8 +25,8 @@ card:
 description: 'Практичний курс з load testing на k6 для DevOps та QA: від NFR і написання тестів до Observability, CI/CD, Kubernetes та Chaos Engineering. 15 занять, 4 блоки, рівень Middle–Senior.'
 direction: Performance Engineering
 enrollment:
-  label: Набір скоро відкриється
-  state: soon
+  label: Набір відкрито · старт 08.04.2027
+  state: open
 form:
   subject: QAStudy.online — заявка на Performance Testing with k6
 format:
@@ -158,7 +158,7 @@ personas:
   quote: «У нас є CI/CD і моніторинг, але performance tests хтось запускає вручну раз на квартал — хочу, щоб це працювало автоматично і давало зрозумілий результат»
   role: DevOps-інженери (middle/senior)
 price:
-  amount: 33 000 грн
+  amount: 20 000 грн
   aside:
     links:
     - text: DOU, зарплатний звіт QA, зима 2026
@@ -172,7 +172,7 @@ price:
   - 'Готовий стек технологій: k6, Grafana, Prometheus, k8s-маніфести'
   - Фінальний проєкт з реальним стеком для performance testing
   note: 'Повна вартість програми: 15 занять по 2–3 години практики з ментором, перевірка ДЗ та зворотний зв’язок, готовий стек технологій.'
-  value: 33000
+  value: 20 000
 program_intro: 'Курс іде від процесу і NFR до observability, CI/CD, Kubernetes та chaos-тестування: теорія, практика на занятті і домашнє завдання на кожну тему.'
 project:
   intro: 'Ви проходите повний цикл performance testing з реальним стеком і здаєте:'
