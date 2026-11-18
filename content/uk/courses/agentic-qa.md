@@ -267,7 +267,7 @@ stack:
 - group: Evals
   items:
   - DeepEval
-  - Prompt
+  - Promptfoo
   - RAGAS
   - LLM-as-a-Judge
 - group: Агенти та інструменти
