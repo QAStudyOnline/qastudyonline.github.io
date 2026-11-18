@@ -6,11 +6,11 @@ certifications:
 - img: badge-copilot.svg
   issuer: Microsoft / GitHub
   title: GitHub Copilot
-  verify_url: https://learn.microsoft.com/en-us/users/yehormaksymchuk-4144/credentials/ea60e9a026b89efd
+  verify_url: https://learn.microsoft.com/en-us/users/yehormaksymchuk-4144/credentials/e8af311b9ce05d20
 - img: badge-az900.svg
   issuer: Microsoft
   title: 'Microsoft Certified: Azure Fundamentals (AZ-900)'
-  verify_url: https://learn.microsoft.com/en-us/users/yehormaksymchuk-4144/credentials/e8af311b9ce05d20
+  verify_url: https://learn.microsoft.com/en-us/users/yehormaksymchuk-4144/credentials/ea60e9a026b89efd
 - img: badge-icp-apm.webp
   issuer: ICAgile
   title: ICAgile Certified Professional — Agile Project & Delivery Management (ICP-APM)
@@ -35,6 +35,10 @@ certifications:
   issuer: Microsoft / GitHub
   title: 'GitHub Certified: Agentic AI Developer'
   verify_url: https://learn.microsoft.com/api/credentials/share/en-us/YehorMaksymchuk-4144/E87B0287B2D3A94C?sharingId=78E0E0732AD2E9F2
+- img: badge-az900.svg
+  issuer: Microsoft
+  title: 'Microsoft Certified: Azure AI Fundamentals'
+  verify_url: https://learn.microsoft.com/en-us/users/yehormaksymchuk-4144/credentials/ad1c4431d21ffc3d
 companies:
 - name: SoftServe
   note: IT-сервіси

@@ -22,8 +22,8 @@ card:
     value: 11–14 тижнів
   quote: «У продукті з’явився AI, і я не знаю, як гарантувати його якість»
 cohort:
-  date: 10 листопада 2026
-  date_iso: '2026-11-10'
+  date: 4 лютого 2027
+  date_iso: '2027-02-04'
   details:
   - 21 заняття
   - 11–14 тижнів
@@ -35,7 +35,7 @@ cohort:
 description: 'Agentic QA: 6 модулів, 21 заняття. Навчіться тестувати LLM, RAG і AI-агентів — від risk strategy та evals до quality gates у CI/CD. Малі групи, персональний review, production-ready проєкт у GitHub.'
 direction: AI Quality
 enrollment:
-  label: Набір відкрито · старт 10.11.2026
+  label: Набір відкрито · старт 04.02.2027
   state: open
 faq:
 - a: 'Так, на рівні читання і написання простого коду: Python або JavaScript. Ви будете писати evals, assertions і збирати framework — але з підтримкою Claude Code чи Copilot і з review від викладача.'
@@ -212,7 +212,7 @@ personas:
   quote: «Боюся production-інцидентів з AI і не знаю, що запитати у команди»
   role: Tech Lead / QA Lead
 price:
-  amount: 40 000 грн
+  amount: 25 000 грн
   company:
     text: Багато учасників навчаються за рахунок роботодавця. Надамо рахунок, договір і закриваючі документи — просто вкажіть це у заявці.
     title: Оплата від компанії
@@ -224,7 +224,7 @@ price:
   - Доступ до записів занять
   - Власний production-ready проєкт у GitHub
   note: 'Повна вартість програми: 21 заняття, 11–14 тижнів. Матеріали, записи та review вже всередині.'
-  value: 40000
+  value: 25 000
 program_intro: 'Курс побудований навколо реальних задач QA в AI-продуктах: від risk strategy та evals до автоматизованих quality gates у CI/CD.'
 project:
   intro: Ви самостійно будуєте AI-застосунок і повний цикл його тестування. Усе — у вашому GitHub, готове показати на інтерв’ю або принести у свою команду.
